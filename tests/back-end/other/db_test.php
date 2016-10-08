@@ -6,6 +6,6 @@
  * Time: 14:51
  */
 
-include_once '../../../private/functions/db_connect.php';
+include_once '../../../private/config.php';
 
 $PDO = db_connect();

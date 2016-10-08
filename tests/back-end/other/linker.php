@@ -6,6 +6,6 @@
  * Time: 14:44
  */
 
-include_once '../../../private/functions/linker.php';
+include_once '../../../private/config.php';
 
 print_r(link_parameters("languages/fr_FR"));
