@@ -1,0 +1,40 @@
+[
+    {
+        "general" : [
+            {
+            "date" : [
+                {
+                    "week" : ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],
+                    "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
+                    "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
+                    "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
+                    "format" : [
+                        {
+                            "short_form_date" : "dd/mm/yyyy",
+                            "long_form_date" : "d_MM_yyyy",
+                            "long_cut_date" : "d_M_yyyy",
+                            "short_time_form" : "hh:mm",
+                            "long_time_form" : "hh:mm:ss"
+                        }
+                    ]
+                }
+            ]
+            }
+        ],
+        "pages" : [
+            {
+                "home" : [
+                    {
+                        "name" : "Accueil",
+                        "parts" : [
+                            {
+                                
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+
+    }
+]

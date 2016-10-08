@@ -1,0 +1,17 @@
+[
+    {
+        "id" : "mac",
+        "name" : "Mac OS",
+        "headers" : ""
+    },
+    {
+        "id" : "win",
+        "name" : "Windows",
+        "headers" : ""
+    },
+    {
+        "id" : "lin",
+        "name" : "Linux",
+        "headers" : ""
+    }
+]

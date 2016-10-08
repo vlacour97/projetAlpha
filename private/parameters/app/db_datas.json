@@ -1,0 +1,7 @@
+{
+    "host" : "localhost",
+    "login" : "root",
+    "password" : "root",
+    "db_name" : "alpha",
+    "prefix" : "alp_"
+}

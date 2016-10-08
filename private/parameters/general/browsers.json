@@ -1,0 +1,27 @@
+[
+    {
+        "id" : "ie",
+        "name" : "Internet Explorer",
+        "headers" : ""
+    },
+    {
+        "id" : "safari",
+        "name" : "Safari",
+        "headers" : ""
+    },
+    {
+        "id" : "chrome",
+        "name" : "Google Chrome",
+        "headers" : ""
+    },
+    {
+        "id" : "opera",
+        "name" : "Opera",
+        "headers" : ""
+    },
+    {
+        "id" : "moz",
+        "name" : "Mozilla Firefox",
+        "headers" : ""
+    }
+]

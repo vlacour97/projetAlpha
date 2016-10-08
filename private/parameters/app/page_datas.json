@@ -1,0 +1,14 @@
+[
+    {
+        "id" : "home",
+        "logo" : "",
+        "inNavigation" : true,
+        "scriptLink" : ""
+    },
+    {
+        "id" : "other",
+        "logo" : "",
+        "inNavigation" : true,
+        "scriptLink" : ""
+    }
+]
