@@ -13,7 +13,7 @@ class crypt {
 
     /**
      * Permet de crypter des données
-     * @param $data
+     * @param mixed $data
      * @return string
      */
     static function encrypt($data) {
@@ -29,7 +29,7 @@ class crypt {
 
     /**
      * Permet de décrypter des données
-     * @param $data
+     * @param string $data
      * @return bool|mixed
      */
     static function decrypt($data) {
