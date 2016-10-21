@@ -7,24 +7,6 @@
             "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
             "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
             "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
-            "connector" : {
-                "at" : "à",
-                "y_s"  : "an",
-                "m_s"    : "mois",
-                "d_s"  : "jour",
-                "h_s"  : "heure",
-                "min_s": "minute",
-                "s_s"  : "seconde",
-                "y_p"  : "an",
-                "m_p"    : "mois",
-                "d_p"  : "jours",
-                "h_p"  : "heures",
-                "min_p": "minutes",
-                "s_p"  : "secondes",
-                "h"    : "h.",
-                "min"  : "min.",
-                "s"    : "sec."
-            },
             "format" :
                 {
                     "short_form_date" : "dd/mm/yyyy",
@@ -39,7 +21,7 @@
             "activation" :
                 {
                     "subject" : "Veuillez activer votre compte !",
-                    "long_text" : "Test"
+                    "long_text" : "JB love big cock"
                 }
         }
     }
