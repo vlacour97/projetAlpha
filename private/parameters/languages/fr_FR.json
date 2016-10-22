@@ -1,40 +1,125 @@
-[
+{
+    "general" :
     {
-        "general" : [
-            {
-            "date" : [
+        "date" :
+        {
+            "week" : ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],
+            "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
+            "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
+            "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
+            "connector" : {
+                "at" : "à",
+                "y_s"  : "an",
+                "m_s"  : "mois",
+                "d_s"  : "jour",
+                "h_s"  : "heure",
+                "min_s": "minute",
+                "s_s"  : "seconde",
+                "y_p"  : "an",
+                "m_p"  : "mois",
+                "d_p"  : "jours",
+                "h_p"  : "heures",
+                "min_p": "minutes",
+                "s_p"  : "secondes",
+                "h"    : "h",
+                "min"  : "min",
+                "s"    : "sec"
+            },
+            "format" :
                 {
-                    "week" : ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],
-                    "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
-                    "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
-                    "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
-                    "format" : [
-                        {
-                            "short_form_date" : "dd/mm/yyyy",
-                            "long_form_date" : "d_MM_yyyy",
-                            "long_cut_date" : "d_M_yyyy",
-                            "short_time_form" : "hh:mm",
-                            "long_time_form" : "hh:mm:ss"
-                        }
-                    ]
+                    "short_form_date" : "dd/mm/yyyy",
+                    "long_form_date" : "d MM yyyy",
+                    "long_cut_date" : "d M yyyy",
+                    "short_time_form" : "hh{h}mm",
+                    "long_time_form" : "hh:mm:ss",
+                    "the" : "le",
+                    "at" : "à"
                 }
-            ]
-            }
-        ],
-        "pages" : [
+        },
+        "mail" :
+        {
+            "general" :
             {
-                "home" : [
-                    {
-                        "name" : "Accueil",
-                        "parts" : [
-                            {
-                                
-                            }
-                        ]
-                    }
-                ]
+                "part1" : {
+                    "title" : "Simplicité",
+                    "content" : "Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles."
+                },
+                "part2" : {
+                    "title" : "Efficacité",
+                    "content" : "Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages."
+                },
+                "part3" : {
+                    "title" : "Ergonomie",
+                    "content" : "Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise."
+                }
+            },
+            "activation" :
+            {
+                "subject" : "Demande d'activation de votre compte",
+                "title" : "Votre compte est prêt !",
+                "content" : "Votre compte utilisateur est créé ! Vous pourrez commencer à l'utiliser dans quelques instants mais d'abord, veuillez confirmer votre inscription et compléter vos informations personnelles en cliquant sur le lien ci-dessous.",
+                "button_text" : "Confirmation d'inscription"
+            },
+            "confirmation" :
+            {
+                "subject" : "Confirmation d'activation de votre compte",
+                "title" : "Création de compte validée !",
+                "content" : "Félicitation! La création de votre compte est confirmée, vous pouvez maintenant vous connecter !",
+                "button_text" : "Connectez-vous"
+            },
+            "delete" :
+            {
+                "subject" : "Désactivation de votre compte",
+                "title" : "Votre compte a été supprimé",
+                "content" : "Votre compte gestion-stage.eu a été supprimé. Pour plus d'informations, contactez l'administrateur."
+            },
+            "message" :
+            {
+                "subject" : "Vous avez reçu un message de {user_name}",
+                "title" : "Vous avez reçu un message !",
+                "button_text" : "Répondre à {user_name}"
+            },
+            "question" :
+            {
+                "subject" : "Un questionnaire demande votre attention",
+                "title" : "Un questionnaire demande votre attention",
+                "content" : "De nouveaux questionnaires sont disponnibles, vous pouvez y répondre à partir de maintenant.",
+                "button_text" : "Répondre au questionnaire"
+            },
+            "reactivation" :
+            {
+                "subject" : "Votre compte à été remis en service !",
+                "title" : "Votre compte à été remis en service !",
+                "content" : "Félicitation! Vous pouvez à nouveau vous connecter à votre compte {app_html_link} !",
+                "button_text" : "Connectez-vous"
+            },
+            "reponse_question" :
+            {
+                "subject" : "Questionnaire validé !",
+                "title" : "Votre questionnaire a été validé !",
+                "content" : "Un de vos questionnaires a été validé par le tuteur école."
+            },
+            "forgotten_password" :
+            {
+                "subject" : "Mot de passe oublié ?",
+                "title" : "Changement de votre mot de passe",
+                "content" : "Vous avez oublié votre mots de passe et avez une demande pour le changer. Tout ce passe en cliquant sur ce bouton !",
+                "button_text" : "Changer de mot de passe"
             }
-        ]
 
+        }
     }
-]
+    ,
+    "pages" :
+        {
+            "home" :
+                {
+                    "name" : "Accueil",
+                    "parts" :
+                        {
+
+                        }
+                }
+        }
+
+}
