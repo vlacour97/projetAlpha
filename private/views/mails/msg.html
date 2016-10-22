@@ -924,19 +924,19 @@ div.preheader {
                 
 
                 <div class="column__padding--inline" style="margin-top:70px">
-                    <h1 class="size-30" style="font-family: open sans,sans-serif; font-size: 32px; line-height: 40px; text-align: center;" lang="x-size-40"><span class="font-open-sans"><span style="color:#ffffff">Vous avez reçu un message ! </span></span></h1>
+                    <h1 class="size-30" style="font-family: open sans,sans-serif; font-size: 32px; line-height: 40px; text-align: center;" lang="x-size-40"><span class="font-open-sans"><span style="color:#ffffff">{title}</span></span></h1>
                 </div>
                 
 
                 <div class="column__padding--inline" style="margin-top:40px">
                     <div class="size-16" style="font-family: open sans,sans-serif; font-size: 16px; line-height: 24px; background-color: #555555; border-radius: 3px; padding: .5em; margin-bottom: 2em; color:#FFFFFF;" lang="x-size-16">
-                        <i style="text-align: center; ">"Bonjour, j'ai une question à vous poser à propos de votre dernier questionnaire. Pouvez vous me répondre au plus vite SVP? ..."</i>
-                        <p style="text-align: right; margin: 0; Margin-top:10px;"><b>Jean François Lapiche</b>, 12:20</p></div>
+                        <i style="text-align: center; ">"{message_content}"</i>
+                        <p style="text-align: right; margin: 0; Margin-top:10px;"><b>{user_name}</b>, {action_time}</p></div>
                 </div>
 
                 <div class="column__padding--inline">
                     <div class="btn btn--flat btn--medium" style="text-align:center;">
-                        <a cs-button="" href="{link}" fix-pos="" data-vml-width="198" height="42" style="background-color: #f2be34; font-family: &#39;Open Sans&#39;, sans-serif; border-radius: 50px;" target="_blank">Répondre</a>
+                        <a cs-button="" href="{button_link}" fix-pos="" data-vml-width="198" height="42" style="background-color: #f2be34; font-family: &#39;Open Sans&#39;, sans-serif; border-radius: 50px;" target="_blank">{button_text}</a>
                     </div>
                 </div>
 
@@ -954,11 +954,11 @@ div.preheader {
                 <div class="column">
                     
                     <div class="logo emb-logo-margin-box" align="center" style="Margin-top:0px;Margin-bottom:0px;">
-                            <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="logo-center"><img src="../../../public/img/mails/mail.png" alt="" width="120px" style="max-width:120px"></div>
+                            <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="logo-center"><img src="{img_path}mail.png" alt="" width="120px" style="max-width:120px"></div>
                     </div>
 
                     <div class="column__padding--inline">
-                        <h1 class="size-30" style="font-family: open sans,sans-serif; font-size: 32px; line-height: 40px; text-align: center;" lang="x-size-40"><span class="font-open-sans"><span style="color:#fff">Projet Alpha</span></span></h1>
+                        <h1 class="size-30" style="font-family: open sans,sans-serif; font-size: 32px; line-height: 40px; text-align: center;" lang="x-size-40"><span class="font-open-sans"><span style="color:#fff">{app_name}</span></span></h1>
                     </div>
 
                     <div class="column__padding--inline">
@@ -977,17 +977,17 @@ div.preheader {
                 <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" role="presentation"><tr class="layout-full-width" style="background-color: #555555;"><td class="layout__edges">&nbsp;</td><td style="width: 200px" valign="top" class="w160"><![endif]-->
                 <div class="column">
 
-                    
+
                     <div class="logo emb-logo-margin-box" align="center">
-                        <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="../../../public/img/mails/simple.png" alt="" width="50" style="max-width:50px"></div>
+                        <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="{img_path}simple.png" alt="" width="50" style="max-width:50px"></div>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 17px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">Simplicité</span></span></p>
+                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 17px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">{part1_title}</span></span></p>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles.</span></span></p>
+                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">{part1_content}</span></span></p>
                     </div>
 
                 </div>
@@ -995,15 +995,15 @@ div.preheader {
                 <div class="column">
 
                     <div class="logo emb-logo-margin-box" align="center">
-                        <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="../../../public/img/mails/time.png" alt="" width="50" style="max-width:50px"></div>
+                        <div align="center"  style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="{img_path}time.png" alt="" width="50" style="max-width:50px"></div>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 20px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">Efficacité</span></span></p>
+                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 20px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">{part2_title}</span></span></p>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages.</span></span></p>
+                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">{part2_content}</span></span></p>
                     </div>
 
                 </div>
@@ -1011,15 +1011,15 @@ div.preheader {
                 <div class="column">
 
                     <div class="logo emb-logo-margin-box" align="center">
-                        <div align="center" style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="../../../public/img/mails/ergonomie.png" alt="" width="50" style="max-width:50px"></div>
+                        <div align="center" id="emb-email-header" style="font-size:0px !important;line-height:0 !important;" class="roundedImage"><img src="{img_path}ergonomie.png" alt="" width="50" style="max-width:50px"></div>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 17px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">Ergonomie</span></span></p>
+                        <p class="size-18" style="font-family: open sans,sans-serif; font-size: 17px; line-height: 26px; text-align: center;" lang="x-size-18"><span class="font-open-sans"><span style="color:#ffffff">{part3_title}</span></span></p>
                     </div>
 
                     <div class="column__padding--inline">
-                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise.</span></span></p>
+                        <p style="font-family: open sans,sans-serif; text-align: center;"><span class="font-open-sans"><span style="color:#DDD">{part3_content}</span></span></p>
                     </div>
 
                 </div>

@@ -816,7 +816,7 @@ class PDOQueries {
     static function show_message($id_message){
         if(!is_int($id_message))
             return false;
-        return self::$PDO->query("SELECT * from ".self::$prefix."messages where ID=".$id_message)->fetchAll();
+        return self::$PDO->query("SELECT * from ".self::$prefix."messages where ID=".$id_message)->fetchAll()[0];
     }
 
     /**
@@ -904,7 +904,7 @@ class PDOQueries {
     static function show_user($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query('SELECT *,CASE WHEN activation_date IS NULL THEN 0 ELSE 1 END as activated FROM '.self::$prefix.'users s1 LEFT JOIN '.self::$prefix.'show_last_stats_by_user s2 ON s1.ID = s2.ID_USER WHERE ID='.$id_user)->fetchAll();
+        return self::$PDO->query('SELECT *,CASE WHEN activation_date IS NULL THEN 0 ELSE 1 END as activated FROM '.self::$prefix.'users s1 LEFT JOIN '.self::$prefix.'show_last_stats_by_user s2 ON s1.ID = s2.ID_USER WHERE ID='.$id_user)->fetchAll()[0];
     }
 
     /**
