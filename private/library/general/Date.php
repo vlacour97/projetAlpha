@@ -200,9 +200,11 @@ class Date
         else
             $model = str_replace(['%Y','%y','{y}'],'',$model);
 
-
-        if(strpos($model,'{m}') !== false && $interval->m != 0)
-            $model = str_replace('{m}',$text['m'],$model);
+        if(strpos($model,'{m}') !== false && $interval->d != 0)
+            if($interval->y == 1)
+                $model = str_replace('{m}',$text['m_s'],$model);
+            else
+                $model = str_replace('{m}',$text['m_p'],$model);
         else
             $model = str_replace(['%M','%m','{m}'],'',$model);
 
