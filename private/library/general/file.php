@@ -27,27 +27,27 @@ class file {
 
         //Si le chemin et le fichier sont invalides on sort du programme
         if(!is_dir($path) || !is_array($file))
-            throw new \Exception('Les données entrées ne sont pas corrects');
+            throw new \Exception('Les données entrées ne sont pas corrects',0);
 
         //Si le fichier est vide on sort du programme
         if($file['tmp_name'] == "")
-            throw new \Exception('Veuillez mettre en ligne un fichier');
+            throw new \Exception('Veuillez mettre en ligne un fichier',0);
 
         //Si il y a une erreur dans le fichier on sort du programme
         if($file['error'] != "")
-            throw new \Exception('Erreur :'.$file['error']);
+            throw new \Exception('Erreur :'.$file['error'],2);
 
         //Si une taille maximum est demandé et que celle-ci n'est pas respecté on revois une erreur
         if(!is_null($size_max) && $file['size'] > $size_max)
-            throw new \Exception('La fichier est trop volumineux !');
+            throw new \Exception('La fichier est trop volumineux !',1);
 
         //Si une image est demandé et que ce n'ai pas le cas on sort du programme
         if($img_needed == true && !self::isIMG($file))
-            throw new \Exception('Le fichier n\'est pas une image !');
+            throw new \Exception('Le fichier n\'est pas une image !',1);
 
         //Si le fichier n'as l'extension demandé on sort du programme
         if((is_string($needed_extension) && self::file_infos($file)->extension != $needed_extension) || (is_array($needed_extension) && in_array(self::file_infos($file),$needed_extension)))
-            throw new \Exception('Le fichier n\'est pas valide !');
+            throw new \Exception('Le fichier n\'est pas valide !',1);
 
         //On formate le nom du fichier et on change le nom si un nom précis est demandé
         $file_name = $file['name'];
@@ -66,14 +66,14 @@ class file {
 
         //On upload le fichier et on envoi une exception en cas d'echec
         if(!move_uploaded_file($file['tmp_name'],$file_path))
-            throw new \Exception('Erreur lors de la mise en ligne du fichier');
+            throw new \Exception('Erreur lors de la mise en ligne du fichier',2);
 
         //Si un extension est demandé on convertis le fichier, si la conversion echoue on supprime le fichier et on revois un echec
         if(is_string($extension))
             if(!self::convert($file_path,$extension))
             {
                 self::delete($file_path);
-                throw new \Exception('Erreur lors de la conversion du fichier');
+                throw new \Exception('Erreur lors de la conversion du fichier',2);
             }
 
         //On retourne la reponse

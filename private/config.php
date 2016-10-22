@@ -24,3 +24,10 @@ define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');
 
 //Autres
 define('CRYPT_KEY','alpha');
+
+
+/**
+ * Lancement des tâches d'initialisation
+ */
+
+\general\PDOQueries::init();
