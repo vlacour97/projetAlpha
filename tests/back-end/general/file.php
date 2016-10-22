@@ -9,17 +9,20 @@
 
 include_once '../../../private/config.php';
 
-var_dump($dd = general\file::file_infos($_FILES['file']));
+if(isset($_FILES['file'])) var_dump($dd = general\file::file_infos($_FILES['file']));
 echo "<br>";
 var_dump($dd = general\file::file_infos('crypt.php'));
 echo "<br><br>";
 
 
 try{
-    general\file::upload('.',$_FILES['file'],null,'photo.jpg',true,'png',['jpeg','png']);
+    if(isset($_FILES['file'])) general\file::upload('.',$_FILES['file'],null,'photo.jpg',true);
 }catch(Exception $e)
 {
-    echo $e->getMessage();
+    if($e->getCode() == 1)
+        echo "Warning: ".$e->getMessage();
+    if($e->getCode() == 2)
+        echo "Danger: ".$e->getMessage();
 }
 
 ?>
