@@ -275,9 +275,8 @@ class mail {
         //On définie le sujet du mail
         $subject = str_replace('{user_name}',$what_changes['{user_name}'],$current_text['subject']);
 
-        echo $gabarit;
         //On envoi le mail et on renvoi un booleen de succés
-        return true;//self::send_email($recipient_datas['email'],$subject,$gabarit);
+        return self::send_email($recipient_datas['email'],$subject,$gabarit);
     }
 
     /**
