@@ -9,7 +9,7 @@
 namespace general;
 
 
-class Date
+class Date extends \mainClass
 {
     private $datetime;
     private $week;
@@ -26,7 +26,7 @@ class Date
      */
     function __construct($date, $lang="fr_FR")
     {
-        require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
+        parent::init();
 
         $lang_array = link_parameters('languages/'.$lang)["general"]["date"]; //création d'un tableau contenant les chaînes de caractères
         //création de variables inclues dans le tableau

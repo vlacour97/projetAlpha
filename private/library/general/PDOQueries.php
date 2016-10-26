@@ -9,13 +9,13 @@
 namespace general;
 
 
-class PDOQueries {
+class PDOQueries extends \mainClass{
 
     private static $PDO;
     private static $prefix;
 
     static function init(){
-        require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
+        parent::init();
         self::$PDO = db_connect();
         self::$prefix = link_parameters("app/db_datas")['prefix'];
     }
