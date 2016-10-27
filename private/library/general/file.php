@@ -97,6 +97,11 @@ class file {
                 $file['type'] = $type[0];
                 $file['extension'] = $type[1];
             }
+            if(isset($file['name']))
+            {
+                $type = explode('.',$file['name']);
+                $file['name'] = $type[0];
+            }
             unset($file['tmp_name']);
             unset($file['error']);
             foreach($file as $key=>$content)
@@ -106,7 +111,7 @@ class file {
         //L'argument est un chemin de fichier
         if(is_file($file)){
             $infos = pathinfo($file);
-            $response->name = $infos['filename'].".".$infos['extension'];
+            $response->name = $infos['filename'];
             $type = explode('/',mime_content_type($file));
             $response->type = $type[0];
             $response->size = filesize($file);

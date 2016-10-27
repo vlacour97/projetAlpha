@@ -9,7 +9,7 @@
 namespace general;
 
 
-class mail {
+class mail extends \mainClass{
 
     private static  $gabarit_path = "/private/views/mails/";
     private static  $img_path = "/public/img/mails/";
@@ -27,7 +27,7 @@ class mail {
      * @throws \Exception
      */
     static function send_email($mail,$sujet,$message){
-        require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
+        parent::init();
 
         //Récupération des données sur l'expéditeur
         $dest_infos = link_parameters('app_config');

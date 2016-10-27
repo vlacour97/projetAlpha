@@ -10,15 +10,16 @@
 /**
  * Inclusion des function génériques
  */
-include_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/db_connect.php';
-include_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/autoloader.php';
-include_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/linker.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/db_connect.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/autoloader.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/linker.php';
 
 /**
  * Définition des variables globales
  */
 
 //Paths
+define('ROOT',$_SERVER['DOCUMENT_ROOT']);
 define('AVATAR_IMG',$_SERVER['DOCUMENT_ROOT'].'/private/datas/users/');
 define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');
 
