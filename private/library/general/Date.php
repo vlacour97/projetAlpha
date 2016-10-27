@@ -24,11 +24,10 @@ class Date extends \mainClass
      * @param string $date Date à instancier
      * @param array $lang Les textes de langues
      */
-    function __construct($date, $lang="fr_FR")
+    function __construct($date)
     {
         parent::init();
-
-        $lang_array = link_parameters('languages/'.$lang)["general"]["date"]; //création d'un tableau contenant les chaînes de caractères
+        $lang_array = link_parameters('languages/'.self::$lang)["general"]["date"]; //création d'un tableau contenant les chaînes de caractères
         //création de variables inclues dans le tableau
         $this->week = $lang_array['week'];
         $this->cutWeek = $lang_array['cut_week'];
@@ -110,7 +109,7 @@ class Date extends \mainClass
 
         //On replace les occurences du style yyyy,dd,m,s,... par leur valeur
         $replace = array(
-            "search" => array('yyyy', 'yy', 'dd', 'd', 'mm','MM', 'hh', 'mn', 'ss', 'WW', 'W', '{a}','{h}','{min}','{s}', '[P]', '[p]','m', 'M', 'w', 'h'),
+            "search" => array('yyyy', 'yy', 'dd', 'd', 'mm','MM', 'hh', 'mn', 'ss', 'WW', 'W', '{at}','{h}','{min}','{s}', '[P]', '[p]','m', 'M', 'w', 'h'),
             "keyword" => array('{p1}','{p2}','{p3}','{p4}','{p5}','{p6}','{p7}','{p8}','{p9}','{p10}','{p11}','{p12}','{p13}','{p14}','{p15}','{p16}','{p17}','{p18}','{p19}','{p20}','{p21}', '{p22}'),
             "replace" => array(
                 $this->datetime->format('Y'),
@@ -185,11 +184,13 @@ class Date extends \mainClass
      * @param array $lang Les textes de langues
      * @return string La durée en toutes lettres
      */
-    static function DateInterval_Format($interval,$lang="fr_FR",$model = "%y {y} %m {m} %d {d} %h {h} %i {min} %s {s}"){
+    static function DateInterval_Format($interval,$model = "%y {y} %m {m} %d {d} %h {h} %i {min} %s {s}"){
 
         require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
 
-        $lang_array = link_parameters('languages/'.$lang)['general']['date'];
+        parent::init();
+
+        $lang_array = link_parameters('languages/'.self::$lang)['general']['date'];
         $text = $lang_array['connector'];
 
         if(strpos($model,'{y}') !== false && $interval->y != 0)

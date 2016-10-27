@@ -5,7 +5,7 @@
         {
             "week" : ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],
             "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
-            "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
+            "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","October","Novembre","Decembre"],
             "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
             "format" :
                 {
