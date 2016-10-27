@@ -18,6 +18,11 @@ $(function(){
        $(this).parent().parent().parent().children('div').addClass('hidden').parent().children('button').removeClass('hidden');
     });
 
-    
 
+    $(".ButtonInfo").click(function(e){
+        e.preventDefault();
+        $('#HelpModal').modal();
+    });
+
+ 
 });
