@@ -21,7 +21,7 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/linker.php';
 //Paths
 define('ROOT',$_SERVER['DOCUMENT_ROOT']);
 define('AVATAR_IMG',$_SERVER['DOCUMENT_ROOT'].'/private/datas/users/');
-define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');
+define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts');
 
 //Autres
 define('CRYPT_KEY','alpha');
