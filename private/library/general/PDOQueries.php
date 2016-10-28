@@ -754,6 +754,15 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Récupere le plus grand id de post
+     * @return int|bool
+     */
+    static function get_max_post_id(){
+        $datas = self::$PDO->query('SELECT max(ID) as maxID FROM posts')->fetchAll()[0];
+        return $datas['maxID'];
+    }
+
+    /**
      * Affiche les réponses au questionnaire d'un étudiant
      * @param int $id_student
      * @return bool|array

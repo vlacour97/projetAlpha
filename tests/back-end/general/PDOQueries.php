@@ -25,3 +25,5 @@ var_dump(\general\PDOQueries::initialize('2016-10-22 14:01:30'));
 
 
 var_dump(\general\PDOQueries::like_post(6,7));
+
+var_dump(\general\PDOQueries::get_max_post_id());
