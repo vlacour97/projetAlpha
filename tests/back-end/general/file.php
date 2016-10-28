@@ -14,7 +14,6 @@ echo "<br>";
 var_dump($dd = general\file::file_infos('crypt.php'));
 echo "<br><br>";
 
-
 try{
     if(isset($_FILES['file'])) general\file::upload('.',$_FILES['file'],null,'photo.jpg',true);
 }catch(Exception $e)

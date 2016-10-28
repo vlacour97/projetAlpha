@@ -154,6 +154,39 @@ class file {
     }
 
     /**
+     * Permet d'enregistrer des fichiers dans un fichier zip
+     * @param array|string $files_path
+     * @param string $zip_path
+     * @return bool
+     * @throws \Exception
+     */
+    static function zip_file($files_path,$zip_path){
+
+        if(!is_string($zip_path))
+            throw new \Exception('Mauvais format de fichier',1);
+
+        $zip = new \ZipArchive();
+
+        if (!$zip->open($zip_path, \ZipArchive::CREATE))
+            throw new \Exception('Impossible d\'ouvrir le fichier <$zip_path>',1);
+
+        if(is_array($files_path))
+        {
+            foreach($files_path as $content)
+                $zip->addFile($content);
+            return true;
+        }
+
+        if(is_file($files_path))
+        {
+            $zip->addFile($files_path);
+            return true;
+        }
+
+        throw new \Exception('Mauvais format de fichier',1);
+    }
+
+    /**
      * Determine si un fichier est une image
      * @param array/string $file Fichier ou chemin du fichier à analyser
      * @return bool Réponse si le fichier est une image
@@ -165,5 +198,6 @@ class file {
         //Retourne la reponse
         return $files_infos->type == "image";
     }
+
 
 } 
