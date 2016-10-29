@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Gestion-Stage Login</title>
+    <link href="../../../public/css/application.min.css" rel="stylesheet">
+    <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
+    <!--[if IE 9]>
+        <link href="../../../public/css/application-ie9-part2.css" rel="stylesheet">
+    <![endif]-->
+    <link rel="shortcut icon" href="../../../public/img/favicon.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <script>
+        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
+         chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
+         https://code.google.com/p/chromium/issues/detail?id=332189
+         */
+    </script>
+</head>
+<body class="login-page">
+
+<div class="container">
+    <main id="content" class="widget-login-container" role="main">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-lg-offset-3 col-sm-offset-3 col-xs-offset-3">
+                <h4 class="widget-login-logo animated fadeInUp">
+                    <i class="fa fa-circle text-gray"></i>
+                    Projet Alpha
+                    <i class="fa fa-circle text-warning"></i>
+                </h4>
+                <section class="widget widget-login animated fadeInUp">
+                    <header>
+                        <h3  align="center">Inscription</h3>
+
+
+                    </header>
+                    <div class="widget-body">
+
+                        <form class="form-horizontal login-form mt-lg">
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label">Nom</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Nom">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Prenom</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Prenom">
+                                </div>
+                            </div>
+                            <div class="col-md-12">
+                                &nbsp
+                            </div>
+                                <div class="form-group">
+                                    <label class="col-sm-3 control-label">Email</label>
+                                    <div class="col-sm-6">
+                                        <input  class="form-control"  disabled="disabled" placeholder="zeguigui80@gmail.com">
+                                    </div>
+                                </div>
+
+
+
+
+                            <div class="form-group has-success has-feedback">
+                                <label class="control-label col-sm-3" for="inputSuccess3">Mot de passe</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" id="inputSuccess3" aria-describedby="inputSuccess3Status" placeholder="Password">
+                                    <span class="glyphicon glyphicon-ok form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+                            <div class="form-group has-error has-feedback">
+                                <label class="control-label col-sm-3" for="inputError3">Confirmer</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" id="inputError3" aria-describedby="inputSuccess3Status" placeholder="Password">
+                                    <span class="glyphicon glyphicon-remove form-control-feedback" aria-hidden="true"></span>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                &nbsp
+                            </div>
+
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Pays</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control">
+                                        <option>France</option>
+                                        <option>Allemagne</option>
+                                        <option>Australie</option>
+                                        <option>Canada</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Ville</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Ville">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Code Postal</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Code Postal">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Adresse</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Adresse">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Complément d'adresse</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Complément d'adresse">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Société</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  placeholder="Société">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label">Langue</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control">
+                                        <option>English</option>
+                                        <option>Français</option>
+                                        <option>Espanol</option>
+                                        <option>Deutch</option>
+                                    </select>
+                                </div>
+                            </div>
+
+
+                            <div class="col-md-12">
+                                &nbsp
+                            </div>
+
+
+                            <div class="col-md-12 text-center ">
+                                <a class="mr-n-lg" href="#">Conditions générales d'utilisation</a>
+                            </div>
+
+                            <div class="col-md-12">
+                                &nbsp
+                            </div>
+
+                            <div class="col-lg-12">
+                                <div class="checkbox widget-login-info  text-center">
+                                    <label>
+                                        <input type="checkbox" id="checkbox1" value="1"> J'ai lu et j'accepte les conditions générales d'utilisation du site
+                                    </label>
+                                </div>
+                            </div>
+
+                            <div class="col-md-12">
+                                &nbsp
+                            </div>
+
+                            <div class="clearfix">
+                                <div class="btn-toolbar  text-center">
+                                    <a class="btn btn-inverse btn-sm" href="index.html">Valider</a>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+    </main>
+
+
+</div>
+<!-- The Loader. Is shown when pjax happens -->
+<div class="loader-wrap hiding hide">
+    <i class="fa fa-circle-o-notch fa-spin-fast"></i>
+</div>
+
+<!-- common libraries. required for every page-->
+<script src="../../../public/vendor/jquery/dist/jquery.min.js"></script>
+<script src="../../../public/vendor/jquery-pjax/jquery.pjax.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
+<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
+<script src="../../../public/vendor/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
+<script src="../../../public/vendor/widgster/widgster.js"></script>
+
+<!-- common app js -->
+<script src="../../../public/js/settings.js"></script>
+<script src="../../../public/js/app.js"></script>
+
+<!-- page specific libs -->
+<!-- page specific js -->
+</body>
+</html>
