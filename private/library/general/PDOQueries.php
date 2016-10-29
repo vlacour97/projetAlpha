@@ -87,9 +87,9 @@ class PDOQueries extends \mainClass{
      * @return bool
      */
     static function add_answer($id_student,$id_survey,$id_question,$id_answer,$comments){
-        if(!is_int($id_student) OR !is_int($id_survey) OR !is_int($id_question) OR !is_int($id_answer) OR !is_string($comments))
+        if(!is_int($id_student) || !is_int($id_survey) || !is_int($id_question) || !is_int($id_answer) || !is_string($comments))
             return false;
-        return self::$PDO->prepare('CALL '.self::$prefix.'add_answer(:id_student,:id_survey,:id_question,:id_answer,:comments)')->execute(array(':id_student'=>$id_student,':id_survey'=>$id_survey,':id_question' => $id_question,':id_answer' => $id_question,':comments' => $comments));
+        return self::$PDO->prepare('CALL '.self::$prefix.'add_answer(:id_student,:id_survey,:id_question,:id_answer,:comments)')->execute(array(':id_student'=>$id_student,':id_survey'=>$id_survey,':id_question' => $id_question,':id_answer' => $id_answer,':comments' => $comments));
     }
 
     /**
@@ -245,7 +245,7 @@ class PDOQueries extends \mainClass{
     }
 
     /**
-     * Supprime toute les question d'un étudiant
+     * Supprime toute les questions d'un étudiant
      * @param int $id_student
      * @return bool
      */
@@ -253,6 +253,14 @@ class PDOQueries extends \mainClass{
         if(!is_int($id_student))
             return false;
         return self::$PDO->prepare('CALL '.self::$prefix.'delete_all_answer(:id_student)')->execute(array(':id_student'=>$id_student));
+    }
+
+    /**
+     * Supprime toute les questions de tous les étudiants
+     * @return bool
+     */
+    static function delete_all_answer_for_all_students(){
+        return self::$PDO->prepare('CALL '.self::$prefix.'delete_all_answer_for_all_students()')->execute();
     }
 
     /**
@@ -558,6 +566,17 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Valide le questionnaire d'un étudiant
+     * @param int $id_student
+     * @return bool
+     */
+    static function validate_survey($id_student){
+        if(!is_int($id_student))
+            return false;
+        return self::$PDO->prepare('CALL '.self::$prefix.'validate_survey(:id_student)')->execute(array(':id_student'=>$id_student));
+    }
+
+    /**
      * Considére toute les notifications comme vus
      * @param int $id_user
      * @return bool
@@ -732,6 +751,19 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Vérifie si un etudiant existe
+     * @param int $id_student
+     * @return bool
+     */
+    static function isset_student($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'isset_student(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return $query->fetchAll()[0][0];
+    }
+
+    /**
      * Vérifie si l'utilisateur est un Tuteur Entreprise
      * @param int $id_user
      * @return bool
@@ -754,12 +786,64 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Renvoi la date butoire d'un étudiant
+     * @param int $id_student
+     * @return bool
+     */
+    static function get_deadline_date($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_deadline_date(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return $query->fetchAll()[0][0];
+    }
+
+    /**
      * Récupere le plus grand id de post
      * @return int|bool
      */
     static function get_max_post_id(){
         $datas = self::$PDO->query('SELECT max(ID) as maxID FROM posts')->fetchAll()[0];
         return $datas['maxID'];
+    }
+
+    /**
+     * Récupére l'identifiant du tuteur entreprise d'un étudiant
+     * @param int $id_student
+     * @return bool
+     */
+    static function get_TE_ID_of_student($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_TE_ID_of_student(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Récupére l'identifiant du tuteur IUT d'un étudiant
+     * @param int $id_student
+     * @return bool
+     */
+    static function get_TI_ID_of_student($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_TI_ID_of_student(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Determine si un le questionnaire d'un étudiant est envoyé
+     * @param int $id_student
+     * @return bool
+     */
+    static function have_answered($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'have_answered(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**
@@ -914,6 +998,20 @@ class PDOQueries extends \mainClass{
         if(!is_int($id_user))
             return false;
         return self::$PDO->query('SELECT *,CASE WHEN activation_date IS NULL THEN 0 ELSE 1 END as activated FROM '.self::$prefix.'users s1 LEFT JOIN '.self::$prefix.'show_last_stats_by_user s2 ON s1.ID = s2.ID_USER WHERE ID='.$id_user)->fetchAll()[0];
+    }
+
+    /**
+     * Determine si un le questionnaire d'un étudiant est validé
+     * @param int $id_student
+     * @return bool
+     */
+    static function survey_is_validate($id_student){
+        if(!is_int($id_student))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'survey_is_validate(:id_student)');
+        $query->execute(array(':id_student'=>$id_student));
+        return boolval($query->fetchAll()[0][0]);
+
     }
 
     /**

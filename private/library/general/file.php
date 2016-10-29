@@ -177,7 +177,7 @@ class file {
             return true;
         }
 
-        if(is_file($files_path))
+        if(is_string($files_path))
         {
             $zip->addFile($files_path);
             return true;

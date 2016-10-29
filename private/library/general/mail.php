@@ -482,5 +482,4 @@ class mail extends \mainClass{
         return self::send_email($user_datas['email'],$subject,$gabarit);
     }
 
-
 } 
