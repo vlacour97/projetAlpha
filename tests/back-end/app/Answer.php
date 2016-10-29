@@ -47,7 +47,7 @@ $answer = array(
     array('response' => 3, 'comment' => '')
 );
 
-\app\Answer::set_survey($survey,'Test1',5);
+\app\Answer::set_survey($survey,'Test1');
 /*
 
 if(\app\Answer::survey_is_completed($answer,5))

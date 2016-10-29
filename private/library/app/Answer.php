@@ -148,6 +148,9 @@ class Answer extends \mainClass{
      */
     static function set_survey($questions,$name,$id = null){
 
+        if(!is_dir(ROOT.self::$survey_path))
+            mkdir(ROOT.self::$survey_path);
+
         $survey_array = new \stdClass();
 
         self::add_creation_date($survey_array,$id);
