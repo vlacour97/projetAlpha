@@ -1,17 +1,5 @@
-[
-    {
-        "id" : "mobile",
-        "name" : "Mobile",
-        "headers" : ""
-    },
-    {
-        "id" : "tablet",
-        "name" : "Tablette",
-        "headers" : ""
-    },
-    {
-        "id" : "desktop",
-        "name" : "Ordinateur",
-        "headers" : ""
-    }
-]
+{
+    "mob" : "Mobile",
+    "tab" : "Tablet",
+    "des" : "Desktop"
+}

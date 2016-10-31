@@ -9,7 +9,7 @@
 namespace general;
 
 
-class crypt {
+class crypt extends \mainClass {
 
     /**
      * Permet de crypter des données
@@ -17,7 +17,7 @@ class crypt {
      * @return string
      */
     static function encrypt($data) {
-        include_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
+        parent::init();
         $data = serialize($data);
         $td = mcrypt_module_open(MCRYPT_DES,"",MCRYPT_MODE_ECB,"");
         $iv = mcrypt_create_iv(mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
@@ -33,7 +33,7 @@ class crypt {
      * @return bool|mixed
      */
     static function decrypt($data) {
-        include_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
+        parent::init();
         $td = mcrypt_module_open(MCRYPT_DES,"",MCRYPT_MODE_ECB,"");
         $iv = mcrypt_create_iv(mcrypt_enc_get_iv_size($td), MCRYPT_RAND);
         mcrypt_generic_init($td,CRYPT_KEY,$iv);

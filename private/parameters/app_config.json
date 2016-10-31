@@ -5,6 +5,8 @@
     "author" : "",
     "copyright" : "",
     "version" : 1.0,
-    "last-update" : "2016-10-08",
-    "admin_mail" : "contact@gestion-stage.eu"
+    "last_update" : "2016-10-08",
+    "admin_mail" : "contact@gestion-stage.eu",
+    "current_survey" : 2,
+    "deadline_date" : "2016-11-01"
 }
