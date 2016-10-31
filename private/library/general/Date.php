@@ -9,6 +9,8 @@
 namespace general;
 
 
+use app\Log;
+
 class Date extends \mainClass
 {
     private $datetime;
@@ -26,7 +28,7 @@ class Date extends \mainClass
      */
     function __construct($date)
     {
-        parent::init();
+        parent::init(Log::get_lang());
         $lang_array = link_parameters('languages/'.self::$lang)["general"]["date"]; //création d'un tableau contenant les chaînes de caractères
         //création de variables inclues dans le tableau
         $this->week = $lang_array['week'];
@@ -188,7 +190,7 @@ class Date extends \mainClass
 
         require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
 
-        parent::init();
+        parent::init(Log::get_lang());
 
         $lang_array = link_parameters('languages/'.self::$lang)['general']['date'];
         $text = $lang_array['connector'];

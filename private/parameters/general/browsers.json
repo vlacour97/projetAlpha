@@ -2,26 +2,46 @@
     {
         "id" : "ie",
         "name" : "Internet Explorer",
-        "headers" : ""
+        "regex" : "/msie/i"
     },
     {
-        "id" : "safari",
+        "id" : "fi",
+        "name" : "Firefox",
+        "regex" : "/firefox/i"
+    },
+    {
+        "id" : "sa",
         "name" : "Safari",
-        "headers" : ""
+        "regex" : "/safari/i"
     },
     {
-        "id" : "chrome",
-        "name" : "Google Chrome",
-        "headers" : ""
+        "id" : "ch",
+        "name" : "Chrome",
+        "regex" : "/chrome/i"
     },
     {
-        "id" : "opera",
+        "id" : "op",
         "name" : "Opera",
-        "headers" : ""
+        "regex" : "/opera/i"
     },
     {
-        "id" : "moz",
-        "name" : "Mozilla Firefox",
-        "headers" : ""
+        "id" : "ne",
+        "name" : "Netscape",
+        "regex" : "/netscape/i"
+    },
+    {
+        "id" : "ma",
+        "name" : "Maxthon",
+        "regex" : "/maxthon/i"
+    },
+    {
+        "id" : "ko",
+        "name" : "Konqueror",
+        "regex" : "/konqueror/i"
+    },
+    {
+        "id" : "hb",
+        "name" : "Handheld Browser",
+        "regex" : "/mobile/i"
     }
 ]
