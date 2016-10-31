@@ -813,6 +813,26 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Récupere le plus grand id de piece jointe de message
+     * @return int|bool
+     */
+    static function get_maxID_message_attachment(){
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_maxID_message_attachment()');
+        $query->execute();
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Récupere le plus grand id de piece jointe de post
+     * @return int|bool
+     */
+    static function get_maxID_post_attachment(){
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_maxID_post_attachment()');
+        $query->execute();
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
      * Récupere le plus grand id de post
      * @return int|bool
      */

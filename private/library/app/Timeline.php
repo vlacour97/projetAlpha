@@ -90,32 +90,46 @@ class Timeline extends \mainClass{
     static function save_post_attachments($id_post,$file,$description = ""){
         //récupération du type
         $type = file::file_infos($file)->type;
+        //Récupération de l'identifiant de la future piéce jointe sur la BDD
+        $id_post_attachment = PDOQueries::get_maxID_post_attachment() + 1;
 
+        //On vérifie les types
         if($type == "image"){
-
+            //Si c'est une image, on upload l'image
+            $filename = $id_post_attachment.'.jpg';
             try{
-                file::upload(POST_CONTENT,$file,1024*1024*10,$id_post.'.jpg');
+                file::upload(POST_CONTENT,$file,1024*1024*10,$filename);
             }catch(\Exception $e){
                 throw $e;
             }
 
-            $link = POST_CONTENT.'/'.$id_post.'.jpg';
+            $link = POST_CONTENT.'/'.$filename;
         }else{
+            //Sinon, on upload le contenu et on le mets dans un fichier zip
             $type = 'other';
+
+            //Génération de parametres
+            $filename_before_zip = $id_post_attachment.'.'.file::file_infos($file)->extension;
+            $filename = file::file_infos($file)->name;
+            $path_file = POST_CONTENT.'/'.$filename_before_zip;
+            $link = POST_CONTENT.'/'.$id_post_attachment.'.zip';
+
+            //Upload d'un fichier temporaire
             try{
-                file::upload(POST_CONTENT,$file,1024*1024*10);
+                file::upload(POST_CONTENT,$file,1024*1024*10,$filename_before_zip);
             }catch(\Exception $e){
                 throw $e;
             }
-            $path_file = POST_CONTENT.'/'.$file['name'];
-            $link = POST_CONTENT.'/'.$id_post.'.zip';
+
+            //Zippage du fichier
             try{
-                file::zip_file($path_file,$link);
+                file::zip_file($path_file,$link,$filename);
             }
             catch(\Exception $e){
                 throw $e;
             }
 
+            //Suppression du fichier temporaire
             file::delete($path_file);
         }
 
