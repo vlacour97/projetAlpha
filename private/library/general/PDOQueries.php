@@ -216,7 +216,7 @@ class PDOQueries extends \mainClass{
      * @return bool
      */
     static function add_user($name,$fname,$type,$email,$pwd,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled){
-        if(!is_string($name) OR !is_string($fname) OR !is_string($type) OR !is_string($email) OR !is_string($pwd) OR !is_string($phone) OR !is_string($address) OR !is_string($zip_code) OR !is_string($city) OR !is_string($country) OR !is_string($language) OR !is_bool($publication_entitled))
+        if(!is_string($name) OR !is_string($fname) OR !is_int($type) OR !is_string($email) OR !is_string($pwd) OR !is_string($phone) OR !is_string($address) OR !is_string($zip_code) OR !is_string($city) OR !is_string($country) OR !is_string($language) OR !is_bool($publication_entitled))
             return false;
         return self::$PDO->prepare('CALL '.self::$prefix.'add_user(:name,:fname,:type,:email,:pwd,:phone,:address,:zip_code,:city,:country,:language,:publication_entitled)')->execute(array(':name' => $name,':fname' => $fname,':type' => $type,':email' => $email,':pwd' => $pwd,':phone' => $phone,':address' => $address,':zip_code' => $zip_code,':city' => $city,':country' => $country,':language' => $language,':publication_entitled' => $publication_entitled));
     }
@@ -498,6 +498,18 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Modifie la langue d'un utilisateur
+     * @param int $id_user
+     * @param int $lang
+     * @return bool
+     */
+    static function set_user_language($id_user,$lang){
+        if(!is_int($id_user) && !is_string($lang))
+            return false;
+        return self::$PDO->prepare('CALL '.self::$prefix.'set_user_language(:id_user,:lang)')->execute(array(':id_user'=>$id_user,':lang'=>$lang));
+    }
+
+    /**
      * Supprime le droit de publication pour un utilisateur
      * @param int $id_user
      * @return bool
@@ -725,7 +737,9 @@ class PDOQueries extends \mainClass{
     static function is_activated($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'is_activated(:id_user)')->execute(array(':id_user'=>$id_user));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'is_activated(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**
@@ -831,6 +845,32 @@ class PDOQueries extends \mainClass{
         $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_TI_ID_of_student(:id_student)');
         $query->execute(array(':id_student'=>$id_student));
         return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Recupére l'identifiant d'un utilisateur grâce au mail
+     * @param int $email_user
+     * @return int
+     */
+    static function get_UserID_with_email($email_user){
+        if(!is_string($email_user))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_UserID_with_email(:email_user)');
+        $query->execute(array(':email_user'=>$email_user));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Recupére la language d'un utilisateur
+     * @param int $id_user
+     * @return string
+     */
+    static function get_User_language($id_user){
+        if(!is_int($id_user))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_User_language(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll()[0][0];
     }
 
     /**
@@ -1023,7 +1063,9 @@ class PDOQueries extends \mainClass{
     static function verification_connection($email,$password){
         if(!is_string($email) && !is_string($password))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'verification_connection(:email,:password)')->execute(array(':email'=>$email,':password' => $password));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'verification_connection(:email,:password)');
+        $query->execute(array(':email'=>$email,':password' => $password));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**
@@ -1032,9 +1074,39 @@ class PDOQueries extends \mainClass{
      * @return bool|array
      */
     static function verification_email($email){
-        if(!is_int($email))
+        if(!is_string($email))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'verification_email(:email)')->execute(array(':email'=>$email));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'verification_email(:email)');
+        $query->execute(array(':email'=>$email));
+        return boolval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Vérifie si un utilisateur peut se connecter
+     * @param string $id
+     * @param string $password
+     * @return bool
+     */
+    static function verification_id_password($id,$password){
+        echo 'ok';
+        if(!is_int($id) && !is_string($password))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'verification_id_password(:id,:password)');
+        $query->execute(array(':id'=>$id,':password' => $password));
+        return boolval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Vérifie si un Identifiant existe dans la base
+     * @param int $id_user
+     * @return bool
+     */
+    static function userID_exist($id_user){
+        if(!is_int($id_user))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'userID_exist(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     //Create Event

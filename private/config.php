@@ -6,6 +6,7 @@
  * Time: 14:56
  */
 
+session_start();
 
 /**
  * Inclusion des function génériques
@@ -32,3 +33,6 @@ define('CRYPT_KEY','alpha');
  */
 
 \general\PDOQueries::init();
+
+//TODO à retirer
+\app\Log::login('vlacour97@icloud.com','azerty');

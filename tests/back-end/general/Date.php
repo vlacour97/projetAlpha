@@ -6,11 +6,11 @@
  * Time: 16:19
  */
 
-require_once '../../../private/config.php';
+include_once '../../../private/config.php';
 
-$date1 = new \general\Date("2016-10-21 12:12:12", "fr_FR");
-$date2 = new \general\Date("now", "fr_FR");
-$date3 = new \general\Date("2016-01-01 14:00:50", "fr_FR");
+$date1 = new \general\Date("2016-10-21 12:12:12",'');
+$date2 = new \general\Date("now");
+$date3 = new \general\Date("2016-01-01 14:00:50");
 
 echo $date1->format("WW d M yyyy")."<br>";
 echo $date2->format()."<br>";
