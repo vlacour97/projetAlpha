@@ -117,7 +117,9 @@
                     "name" : "Accueil",
                     "parts" :
                         {
-
+                            "header" : {
+                                "title" : "Test"
+                            }
                         }
                 }
         }

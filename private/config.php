@@ -32,6 +32,7 @@ define('CRYPT_KEY','alpha');
  * Lancement des tâches d'initialisation
  */
 
+\mainClass::init();
 \general\PDOQueries::init();
 
 //TODO à retirer
