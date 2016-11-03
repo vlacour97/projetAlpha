@@ -19,7 +19,7 @@ $(function(){
     });
 
 
-    $(".ButtonInfo").click(function(e){
+    $(".HelpButton").click(function(e){
         e.preventDefault();
         $('#HelpModal').modal();
     });

@@ -483,252 +483,93 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>VOUS ETES ICI</li>
-            <li class="active">Questionnaires</li>
+            <li>YOU ARE HERE</li>
+            <li class="active">Tables Basic</li>
         </ol>
+        <h1 class="page-title">Dynamic - <span class="fw-semi-bold">Tables</span></h1>
+        <section class="widget">
+            <header>
+                <h4>Table <span class="fw-semi-bold">Styles</span></h4>
+            </header>
+            <div class="widget-body">
+                <p>
+                    Column sorting, live search, pagination. Built with
+                    <a href="http://www.datatables.net/" target="_blank">jQuery DataTables</a>
+                </p>
+                <div class="mt">
+                    <table id="students-table" class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>Id</th>
+                            <th>Nom / Prénom</th>
+                            <th class="no-sort hidden-xs">Tel</th>
+                            <th class="no-sort">Adresse Mail</th>
+                            <th class="hidden-xs no-sort">Adresse</th>
+                            <th class="no-sort">Statut</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td><span class="fw-semi-bold"><a class="User" href="#">Antoine Richard </a></span></td>
+                            <td class="hidden-xs"><span class="fw-semi-bold">01 23 45 67 89</span></td>
+                            <td> theguigui80@gmail.com</td>
+                            <td class="hidden-xs">12 Rue Général Tetess 80000 Amiens (FR)</td>
+                            <td>Etudiant DUT Informatique</td>
+                        </tr>
+
+                        <tr>
+                            <td>2</td>
+                            <td><span class="fw-semi-bold"><a class="User" href="#">Arnaud Clérentin </a></span></td>
+                            <td class="hidden-xs"><span class="fw-semi-bold">01 23 45 67 89</span></td>
+                            <td> theguigui80@gmail.com</td>
+                            <td class="hidden-xs">12 Rue Général Tetess 80000 Amiens (FR)</td>
+                            <td>Chef de Département DUT Informatique</td>
+                        </tr>
 
 
-            <div class="col-md-11"> <h1 class="page-title"><span class="fw-semi-bold">Questionnaire</span></h1></div>
-            <div class="cl-md-1 mb-n"><button type="button" class="HelpButton ButtonInfo btn btn-info">Info</button></div>
-
-        <section class="row bg-white">
-            <div class="col-md-12">
-                <div class="col-md-offset-1 col-md-7 mt-xlg">
-                    <h2> Rémi <span class="fw-semi-bold">Lemaire</span></h2>
+                        </tbody>
+                    </table>
                 </div>
-                <div class="col-md-4">
-                    <div class="clearfix">
-                        <ul id="myTabs" class="nav nav-tabs pull-left"> <!-- remove pull-left to get a cool effect too -->
-                            <li class="active"><a href="#student" data-toggle="tab">Etudiant</a></li>
-                            <li class=""><a href="#TI" data-toggle="tab">Tuteur IUT</a></li>
-                        </ul>
-                    </div>
-                    <div id="TableStudentTI" class="tab-content mb-lg">
-                        <div class="tab-pane clearfix active" id="student">
-                            <h2>Rémi Lemaire</h2>
-                            <p>tel : <a href="callto:0123456789"> 01 23 45 67 89</a></p>
-                            <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
-                        </div>
-                        <div class="tab-pane" id="TI">
-                            <h2>Arnaud Clérentin</h2>
-                            <p>tel : <a href="callto:01 23 45 67 89"> 01 23 45 67 89</a></p>
-                            <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="col-md-10 col-md-offset-1">
-                <ul class="list-unstyled mb-n">
-
-                    <li class="col-md-12 bg-gray-lighter" >
-                        <h3 class="display-inline-block fw-semi-bold col-md-2 text-align-center"> 1- </h3>
-                        <h3 class="display-inline-block fw-semi-bold col-md-8 "> Rémi Lemaire a t'il fait preuve d'assiduité durant son stage?</h3>
-                        <div class="col-md-12">
-                        <form >
-                            <div class="col-md-offset-5">
-                            <div class="radio radio-primary display-inline-block ml-n mr-n" >
-                                <input type="radio" name="radio2" id="1" value="option1">
-                                <label for="1">
-                                    Oui
-                                </label>
-                            </div>
-                            <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                <input type="radio" name="radio2" id="2" value="option1">
-                                <label for="2">
-                                    Non
-                                </label>
-                            </div>
-                            <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                <input type="radio" name="radio2" id="3" value="option1">
-                                <label for="3">
-                                    Autre
-                                </label>
-                            </div>
-                            </div>
-                            <div class="commentary ">
-                                <button type="button" class="addComment btn btn-link col-md-offset-5 "> Cliquez pour ajouter un commentaire </button>
-                                <div class="hidden col-md-offset-4">
-                                    <textarea rows="4" class=" col-md-6 " placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                    <div class="col-md-12"><button type="button" class="closeComment btn btn-link col-md-offset-3"> <i class="fa fa-times"></i></button></div>
-                                </div>
-
-                            </div>
-                        </form>
-                        </div>
-                    </li>
-                    <li>
-                        <div>
-                            &nbsp
-                        </div>
-                        <div>
-                            &nbsp
-                        </div>
-                    </li>
-
-                    <li class="col-md-12 bg-gray-lighter" >
-                        <h3 class="display-inline-block fw-semi-bold col-md-2 text-align-center"> 2- </h3>
-                        <h3 class="display-inline-block fw-semi-bold col-md-8 "> Rémi Lemaire a t'il fait preuve d'assiduité durant son stage? (texte plus long pour tester le retour à la ligne)</h3>
-                        <div class="col-md-12">
-                            <form >
-                                <div class="col-md-offset-5">
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n" >
-                                        <input type="radio" name="radio2" id="4" value="option1">
-                                        <label for="4">
-                                            Oui
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="5" value="option1">
-                                        <label for="5">
-                                            Non
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="6" value="option1">
-                                        <label for="6">
-                                            Autre
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="commentary ">
-                                    <button type="button" class="addComment btn btn-link col-md-offset-5 "> Cliquez pour ajouter un commentaire </button>
-                                    <div class="hidden col-md-offset-4">
-                                        <textarea rows="4" class=" col-md-6 " placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                        <div class="col-md-12"><button type="button" class="closeComment btn btn-link col-md-offset-3"> <i class="fa fa-times"></i></button></div>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-
-                    <li>
-                        <div>
-                            &nbsp
-                        </div>
-                        <div>
-                            &nbsp
-                        </div>
-                    </li>
-
-                    <li class="col-md-12 bg-gray-lighter">
-                        <h3 class="display-inline-block fw-semi-bold col-md-2 text-align-center"> 3- </h3>
-                        <h3 class="display-inline-block fw-semi-bold col-md-8 "> Rémi Lemaire a t'il fait preuve d'autonomie dans ses travaux? </h3>
-                        <div class="col-md-12">
-                            <form >
-                                <div class="col-md-offset-5">
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n" >
-                                        <input type="radio" name="radio2" id="7" value="option1">
-                                        <label for="7">
-                                            Oui
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="8" value="option1">
-                                        <label for="8">
-                                            Non
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="9" value="option1">
-                                        <label for="9">
-                                            Autre
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="commentary ">
-                                    <button type="button" class="addComment btn btn-link col-md-offset-5 "> Cliquez pour ajouter un commentaire </button>
-                                    <div class="hidden col-md-offset-4">
-                                        <textarea rows="4" class=" col-md-6 " placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                        <div class="col-md-12"><button type="button" class="closeComment btn btn-link col-md-offset-3"> <i class="fa fa-times"></i></button></div>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-
-                    <li>
-                        <div>
-                            &nbsp
-                        </div>
-                        <div>
-                            &nbsp
-                        </div>
-                    </li>
-
-                    <li class="col-md-12 bg-gray-lighter" >
-                        <h3 class="display-inline-block fw-semi-bold col-md-2 text-align-center"> 4- </h3>
-                        <h3 class="display-inline-block fw-semi-bold col-md-8 "> Rémi Lemaire a t'il su s'intégrer dans l'entreprise et dans son équipe? </h3>
-                        <div class="col-md-12">
-                            <form >
-                                <div class="col-md-offset-5">
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n" >
-                                        <input type="radio" name="radio2" id="10" value="option1">
-                                        <label for="10">
-                                            Oui
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="11" value="option1">
-                                        <label for="11">
-                                            Non
-                                        </label>
-                                    </div>
-                                    <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                        <input type="radio" name="radio2" id="12" value="option1">
-                                        <label for="12">
-                                            Autre
-                                        </label>
-                                    </div>
-                                </div>
-                                <div class="commentary ">
-                                    <button type="button" class="addComment btn btn-link col-md-offset-5 "> Cliquez pour ajouter un commentaire </button>
-                                    <div class="hidden col-md-offset-4">
-                                        <textarea rows="4" class=" col-md-6 " placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                        <div class="col-md-12"><button type="button" class="closeComment btn btn-link col-md-offset-3"> <i class="fa fa-times"></i></button></div>
-                                    </div>
-
-                                </div>
-                            </form>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-
-            <div class="col-md-12">
-                &nbsp
-            </div>
-
-            <div class="col-md-12 text-center mt-n mb-lg">
-                <button type="button" class="btn btn-info">Enregistrer</button>
-                <button type="button" class="btn btn-primary">Envoyer</button>
             </div>
         </section>
     </main>
 </div>
 
-
-<div class="modal fade" id="HelpModal" tabindex="-1" role="dialog" aria-labelledby="HelpModal">
+<!-- Modal Etudiants -->
+<div class="modal fade" id="OptionModal" tabindex="-1" role="dialog" aria-labelledby="StudentsModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="TIModalLabel">Informations</h4>
+                <h4 class="modal-title" id="StudentModalLabel">Informations et Options</h4>
             </div>
             <div class="modal-body text-center">
-                <p> Ici explication des questionnaires -- Siquis enim militarium vel honoratorum aut nobilis inter suos rumore tenus esset insimulatus fovisse partes hostiles, iniecto onere catenarum in modum beluae trahebatur et inimico urgente vel nullo, quasi sufficiente hoc solo, quod nominatus esset aut delatus aut postulatus, capite vel multatione bonorum aut insulari solitudine damnabatur.</p>
+                <div class="form-group text-center">
+                    <img src="../../../../public/img/login/profile.png" alt="profile" class="img-circle" align="center" width="38px" height ="38px">
+                </div>
+
+                <address>
+                    <strong>Antoine Richard</strong><br>
+                    Etudiant DUT Informatique<br><br>
+                    <a href="mailto:#">first.last@example.com</a><br>
+                    <abbr title="Phone">P:</abbr> 01 23 45 67 89
+                </address>
+
+                <address>
+                    12 Rue de la sainte Tetess, Apt 3<br>
+                    Amiens, France 80000<br>
+
+                </address>
+
+
             </div>
             <div class="modal-footer">
             </div>
         </div>
     </div>
 </div>
-
-
-
+<!-- The Loader. Is shown when pjax happens -->
 
 <div class="loader-wrap hiding hide">
     <i class="fa fa-circle-o-notch fa-spin-fast"></i>
@@ -761,6 +602,6 @@
 <script src="../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
 
 <!-- page specific js -->
-<script src="../../../../public/js/survey_part2.js"></script>
+<script src="../../../../public/js/UserList.js"></script>
 </body>
 </html>
