@@ -25,9 +25,9 @@
 }
 @font-face {
   font-family: 'Open Sans';
-  font-style: italic;
-  font-weight: 300;
-  src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(fonts/google/open-sans-light-italic.woff) format("woff");
+font-style: italic;
+font-weight: 300;
+src: local("Open Sans Light Italic"), local("OpenSansLight-Italic"), url(fonts/google/open-sans-light-italic.woff) format("woff");
 }
 @font-face {
   font-family: 'Open Sans';
