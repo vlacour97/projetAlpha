@@ -1,7 +1,7 @@
 <?php
 
-$remote = "origin";
-$branch = "Valentin";
+require 'private/library/other/Deploy.php';
 
-exec('git pull');
-exec("git checkout {$remote}/{$branch}");
+if(!Deploy::run())
+    die('Erreur');
+
