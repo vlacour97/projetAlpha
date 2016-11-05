@@ -158,6 +158,11 @@ $(function(){
         $('#UsersModal').modal();
     });
 
+    $(".student").click(function(e){
+        e.preventDefault();
+        $('#StudentsModal').modal();
+    });
+
     $(".change").click(function(e){
         e.preventDefault();
         $('#ChangeModal').modal();
@@ -166,6 +171,19 @@ $(function(){
         e.preventDefault();
         $('#DeleteModal').modal();
     });
+
+    $(".AddStudent").click(function(e){
+        e.preventDefault();
+        $('#AddStudentModal').modal();
+    });
+
+    $(".ImportStudent").click(function(e){
+        e.preventDefault();
+        $('#ImportModal').modal();
+    });
+
+    
+    
 
 
 });
