@@ -486,48 +486,57 @@
             <li>YOU ARE HERE</li>
             <li class="active">Tables Basic</li>
         </ol>
-        <h1 class="page-title">Dynamic - <span class="fw-semi-bold">Tables</span></h1>
+        <h1 class="page-title">Gestion d'accès - <span class="fw-semi-bold">Utilisateurs</span></h1>
         <section class="widget">
             <header>
-                <h4>Table <span class="fw-semi-bold">Styles</span></h4>
+
             </header>
             <div class="widget-body">
-                <p>
-                    Column sorting, live search, pagination. Built with
-                    <a href="http://www.datatables.net/" target="_blank">jQuery DataTables</a>
-                </p>
+                <form class="col-md-12 text-center ">
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Tuteur Entreprise
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Tuteur IUT
+                    </label>
+                    <label class="checkbox-inline">
+                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Admin
+                    </label>
+                </form>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
                 <div class="mt">
-                    <table id="students-table" class="table table-striped table-hover">
+                    <table id="user-table" class="table table-striped table-hover">
                         <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Nom / Prénom</th>
-                            <th class="no-sort hidden-xs">Tel</th>
-                            <th class="no-sort">Adresse Mail</th>
-                            <th class="hidden-xs no-sort">Adresse</th>
-                            <th class="no-sort">Statut</th>
+                            <th>Nom / Prenom</th>
+                            <th class=" no-sort hidden-xs">Statut</th>
+                            <th class=" no-sort">Action</th>
+                            <th class=" no-sort"></th>
+                            <th class=" no-sort"></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>1</td>
-                            <td><span class="fw-semi-bold"><a class="User" href="#">Antoine Richard </a></span></td>
-                            <td class="hidden-xs"><span class="fw-semi-bold">01 23 45 67 89</span></td>
-                            <td> theguigui80@gmail.com</td>
-                            <td class="hidden-xs">12 Rue Général Tetess 80000 Amiens (FR)</td>
-                            <td>Etudiant DUT Informatique</td>
+                            <td><span class="fw-semi-bold"><a class="user" href="#"> Arnaud Clérentin </a></span></td>
+                            <td class="hidden-xs">Tuteur IUT</td>
+                            <td> <a class="contact" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contacter </a></td>
+                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
+                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
-                            <td><span class="fw-semi-bold"><a class="User" href="#">Arnaud Clérentin </a></span></td>
-                            <td class="hidden-xs"><span class="fw-semi-bold">01 23 45 67 89</span></td>
-                            <td> theguigui80@gmail.com</td>
-                            <td class="hidden-xs">12 Rue Général Tetess 80000 Amiens (FR)</td>
-                            <td>Chef de Département DUT Informatique</td>
+                            <td><span class="fw-semi-bold"><a class="user" href="#"> Arnaud Clérentin </a></span></td>
+                            <td class="hidden-xs">Tuteur IUT</td>
+                            <td> <a class="contact" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contacter </a></td>
+                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
+                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+
                         </tr>
-
-
                         </tbody>
                     </table>
                 </div>
@@ -536,22 +545,22 @@
     </main>
 </div>
 
-<!-- Modal Etudiants -->
-<div class="modal fade" id="OptionModal" tabindex="-1" role="dialog" aria-labelledby="StudentsModal">
+<!-- Modal Users -->
+<div class="modal fade" id="UsersModal" tabindex="-1" role="dialog" aria-labelledby="UsersModal">
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="StudentModalLabel">Informations et Options</h4>
+                <h4 class="modal-title" id="StudentModalLabel">Informations</h4>
             </div>
             <div class="modal-body text-center">
                 <div class="form-group text-center">
                     <img src="../../../../public/img/login/profile.png" alt="profile" class="img-circle" align="center" width="38px" height ="38px">
                 </div>
-
                 <address>
-                    <strong>Antoine Richard</strong><br>
-                    Etudiant DUT Informatique<br><br>
+                    <strong>Arnaud Clérentin</strong><br>
+                    Chef de Département Informatique<br>
+                    IUT Amiens<br><br>
                     <a href="mailto:#">first.last@example.com</a><br>
                     <abbr title="Phone">P:</abbr> 01 23 45 67 89
                 </address>
@@ -559,9 +568,23 @@
                 <address>
                     12 Rue de la sainte Tetess, Apt 3<br>
                     Amiens, France 80000<br>
-
                 </address>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
 
+<!-- Modal Change -->
+<div class="modal fade" id="ChangeModal" tabindex="-1" role="dialog" aria-labelledby="ChangeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="StudentModalLabel">Modifier</h4>
+            </div>
+            <div class="modal-body text-center">
 
             </div>
             <div class="modal-footer">
@@ -569,6 +592,30 @@
         </div>
     </div>
 </div>
+
+<!-- Modal Suppression -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="DeleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="StudentModalLabel">Suppression</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h3> <span class="fw-semi-bold">Voulez-vous vraiment supprimer ce compte utilisateur?</span> </h3>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+                <button type="button" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i>  Supprimer</button>
+                <button type="button" class="btn btn-default">Annuler</button>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+
 <!-- The Loader. Is shown when pjax happens -->
 
 <div class="loader-wrap hiding hide">
