@@ -16,6 +16,8 @@ use general\PDOQueries;
 class Answer extends \mainClass{
 
     static private $survey_path = "/private/parameters/surveys/";
+    static $survey_marker = "s";
+    static $survey_id_page = "answer";
 
     /**
      * Récupére les questions et les réponses d'un questionnaire (cf get_survey) et retourner cela sous forme de tableau
@@ -94,13 +96,12 @@ class Answer extends \mainClass{
         if(!is_array($answer) || !is_int($id_survey) || !is_int($id_student) || !is_bool($publish))
             throw new \Exception('Erreur sur le type de variable',1);
         foreach($answer as $key=>$content)
-            var_dump(PDOQueries::add_answer($id_student,$id_survey,$key,$content['response'],$content['comment']));
+            PDOQueries::add_answer($id_student,$id_survey,$key,$content['response'],$content['comment']);
         if($publish)
         {
             if(!self::survey_is_completed($answer,$id_survey))
                 throw new \Exception('Le questionnaire n\'est pas complet',2);
-            PDOQueries::update_answer_status($id_student,$publish);
-            mail::send_answer_email(PDOQueries::get_TI_ID_of_student($id_student));
+            return PDOQueries::update_answer_status($id_student,$publish) && mail::send_answer_email(PDOQueries::get_TI_ID_of_student($id_student)) && Notifications::complete_survey($id_student);
         }
 
         return true;
@@ -321,6 +322,7 @@ class Answer extends \mainClass{
      * @param int $id_student
      * @param null|string|\general\Date $date
      * @return bool
+     * @throws \Exception
      */
     static function set_deadline($id_student,$date = null){
         if(!is_null($date) && !is_string($date) && !is_a($date,'\general\Date'))
@@ -389,7 +391,7 @@ class Answer extends \mainClass{
     static function validate_survey($id_student){
         $response = PDOQueries::validate_survey($id_student);
         if($response)
-            mail::send_validate_answer_email(PDOQueries::get_TE_ID_of_student($id_student));
+            mail::send_validate_answer_email(PDOQueries::get_TE_ID_of_student($id_student)) && Notifications::validate_survey($id_student);
         return $response;
     }
 

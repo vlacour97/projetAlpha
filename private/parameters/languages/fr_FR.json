@@ -170,13 +170,43 @@
             },
             "other": "Autre"
         },
-        "pages": {
-            "home": {
-                "name": "Accueil",
-                "parts": {
-                    "header": {
-                        "title": "Test"
-                    }
+        "notifications" : {
+            "add_post" : {
+                "value" : "{name_user} a publié un article accessible sur votre Timeline",
+                "icon" : ""
+            },
+            "comment_post" : {
+                "value" :"{name_publisher} a commenté votre publication",
+                "icon" : ""
+            },
+            "like_post" : {
+                "value" : "{name_user} a aimé votre publication",
+                "icon" : ""
+            },
+            "wait_survey" : {
+                "value" : "Vous avez un questionnaire en attente",
+                "icon" : ""
+            },
+            "complete_survey" : {
+                "value" : "L'un de vos questionnaires a été complété",
+                "icon" : ""
+            },
+            "validate_survey" : {
+                "value" : "L'un de vos questionnaires a été validé",
+                "icon" : ""
+            },
+            "autorised_publication" : {
+                "value" : "Vous êtes autorisé à publier",
+                "icon" : ""
+            }
+        }
+    },
+    "pages": {
+        "home": {
+            "name": "Accueil",
+            "parts": {
+                "header": {
+                    "title": "Test"
                 }
             }
         }

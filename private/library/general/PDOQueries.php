@@ -822,6 +822,45 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Récupére l'identifiant du post d'un commentaire
+     * @param int $id_comment
+     * @return bool
+     */
+    static function get_post_id_by_comment($id_comment){
+        if(!is_int($id_comment))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_post_by_comment(:id_comment)');
+        $query->execute(array(':id_comment'=>$id_comment));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Récupére l'identifiant de l'auteur d'un commentaire
+     * @param int $id_comment
+     * @return bool
+     */
+    static function get_post_publisher_id_by_comment($id_comment){
+        if(!is_int($id_comment))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_post_publisher_id_by_comment(:id_comment)');
+        $query->execute(array(':id_comment'=>$id_comment));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
+     * Récupére l'identifiant de l'auteur d'un post
+     * @param int $id_post
+     * @return bool
+     */
+    static function get_publisher_id($id_post){
+        if(!is_int($id_post))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_publisher_id(:id_post)');
+        $query->execute(array(':id_post'=>$id_post));
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
      * Récupére l'identifiant du tuteur entreprise d'un étudiant
      * @param int $id_student
      * @return bool

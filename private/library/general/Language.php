@@ -50,6 +50,19 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les textes de Notifications
+     * @return mixed
+     */
+    static function get_notification_texts($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["notifications"];
+    }
+
+    /**
      * Récupére les textes d'une page
      * @return mixed
      */
