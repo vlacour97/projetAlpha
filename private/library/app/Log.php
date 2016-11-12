@@ -113,6 +113,14 @@ class Log extends \mainClass{
      * Récupére la langue de l'utilisateur
      * @return string
      */
+    static function get_type(){
+        return PDOQueries::get_User_type(self::get_id());
+    }
+
+    /**
+     * Récupére la langue de l'utilisateur
+     * @return string
+     */
     static function get_lang(){
         $lang = PDOQueries::get_User_language(self::get_id());
         if(is_null($lang) || $lang == "")

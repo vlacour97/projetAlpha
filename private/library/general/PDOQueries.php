@@ -193,7 +193,7 @@ class PDOQueries extends \mainClass{
      * @param string $deadline_date
      * @return bool
      */
-    static function add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone,$address,$zip_code,$city,$country,$birth_date,$information,$deadline_date){
+    static function add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone,$address,$zip_code,$city,$country,$information,$deadline_date,$birth_date = "0000-00-00"){
         if(!is_int($id_te) OR !is_int($id_ti) OR !is_string($name) OR !is_string($fname) OR !is_string($group) OR !is_string($email) OR !is_string($phone) OR !is_string($address) OR !is_string($zip_code) OR !is_string($city) OR !is_string($country) OR !is_string($birth_date) OR !is_string($information) OR !is_string($deadline_date))
             return false;
         return self::$PDO->prepare('CALL '.self::$prefix.'add_student(:id_te,:id_ti,:name,:fname,:group,:email,:phone,:address,:zip_code,:city,:country,:birth_date,:information,:deadline_date)')->execute(array(':id_te' => $id_te,':id_ti' => $id_ti,':name' => $name,':fname' => $fname,':group' => $group,':email' => $email,':phone' => $phone,':address' => $address,':zip_code' => $zip_code,':city' => $city,':country' => $country,':birth_date' => $birth_date,':information' => $information,':deadline_date' => $deadline_date));
@@ -215,10 +215,10 @@ class PDOQueries extends \mainClass{
      * @param bool $publication_entitled
      * @return bool
      */
-    static function add_user($name,$fname,$type,$email,$pwd,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled){
-        if(!is_string($name) OR !is_string($fname) OR !is_int($type) OR !is_string($email) OR !is_string($pwd) OR !is_string($phone) OR !is_string($address) OR !is_string($zip_code) OR !is_string($city) OR !is_string($country) OR !is_string($language) OR !is_bool($publication_entitled))
+    static function add_user($name,$fname,$type,$email,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled){
+        if(!is_string($name) OR !is_string($fname) OR !is_int($type) OR !is_string($email)   OR !is_string($phone) OR !is_string($address) OR !is_string($zip_code) OR !is_string($city) OR !is_string($country) OR !is_string($language) OR !is_bool($publication_entitled))
             return false;
-        return self::$PDO->prepare('CALL '.self::$prefix.'add_user(:name,:fname,:type,:email,:pwd,:phone,:address,:zip_code,:city,:country,:language,:publication_entitled)')->execute(array(':name' => $name,':fname' => $fname,':type' => $type,':email' => $email,':pwd' => $pwd,':phone' => $phone,':address' => $address,':zip_code' => $zip_code,':city' => $city,':country' => $country,':language' => $language,':publication_entitled' => $publication_entitled));
+        return self::$PDO->prepare('CALL '.self::$prefix.'add_user(:name,:fname,:type,:email,:phone,:address,:zip_code,:city,:country,:language,:publication_entitled)')->execute(array(':name' => $name,':fname' => $fname,':type' => $type,':email' => $email,':phone' => $phone,':address' => $address,':zip_code' => $zip_code,':city' => $city,':country' => $country,':language' => $language,':publication_entitled' => $publication_entitled));
     }
 
     /**
@@ -869,6 +869,19 @@ class PDOQueries extends \mainClass{
         if(!is_int($id_user))
             return false;
         $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_User_language(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll()[0][0];
+    }
+
+    /**
+     * Recupére la type d'un utilisateur
+     * @param int $id_user
+     * @return string
+     */
+    static function get_User_type($id_user){
+        if(!is_int($id_user))
+            return false;
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'get_User_type(:id_user)');
         $query->execute(array(':id_user'=>$id_user));
         return $query->fetchAll()[0][0];
     }

@@ -40,10 +40,13 @@ class Language extends \mainClass{
      * Récupére les textes de mail
      * @return mixed
      */
-    static function get_mail_text(){
-        if(is_null(self::$datas))
+    static function get_mail_text($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
             self::init();
-        return self::$datas["general"]["mail"];
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["mail"];
     }
 
     /**

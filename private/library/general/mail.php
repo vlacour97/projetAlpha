@@ -78,7 +78,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
@@ -129,7 +130,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
@@ -179,7 +181,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On récupére le gabarit du mail
@@ -238,7 +241,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $recipient_datas['language'] == "" && $recipient_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($recipient_datas['language']);
         $date_format = Language::get_date_text()['format'];
         $app_name = Config::getName();
 
@@ -293,7 +297,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
@@ -344,7 +349,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
@@ -396,7 +402,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
@@ -445,7 +452,8 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = Language::get_mail_text();
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation

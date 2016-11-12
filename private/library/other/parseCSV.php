@@ -801,6 +801,16 @@ class parseCSV {
         return $rows;
     }
 
+    public function get_datas(){
+        $datas = $this->data;
+        $response = array();
+        $response[] = explode(';',key($datas[0]));
+        foreach($datas as $content){
+            $response[] = explode(';',$content[key($content)]);
+        }
+        return $response;
+    }
+
     /**
      * Create CSV data from array
      *

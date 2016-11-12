@@ -10,7 +10,7 @@
 
 class mainClass {
 
-    static $lang;
+    static $lang = "fr_FR";
     static $form_date = "d MM yyyy {at} hh{h}mn";
 
     static function init(){
