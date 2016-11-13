@@ -624,6 +624,16 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Compte le nombre d'Administrateurs
+     * @return mixed
+     */
+    static function count_admin(){
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'count_admin()');
+        $query->execute(array());
+        return intval($query->fetchAll()[0][0]);
+    }
+
+    /**
      * Compte le nombre de messages supprimer
      * @param int $id_user
      * @return bool|int
@@ -785,7 +795,9 @@ class PDOQueries extends \mainClass{
     static function isTE($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'isTE(:id_user)')->execute(array(':id_user'=>$id_user));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'isTE(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**
@@ -796,7 +808,9 @@ class PDOQueries extends \mainClass{
     static function isTI($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'isTI(:id_user)')->execute(array(':id_user'=>$id_user));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'isTI(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**
@@ -1067,7 +1081,7 @@ class PDOQueries extends \mainClass{
     static function show_student($id_student){
         if(!is_int($id_student))
             return false;
-        return self::$PDO->query("SELECT ".self::$prefix."students.*,concat(u1.fname,' ',u1.name) AS name_TE,concat(u2.fname,' ',u2.name) AS name_TI from ".self::$prefix."students join ".self::$prefix."users u1 join ".self::$prefix."users u2 where ((".self::$prefix."students.ID_TE = u1.ID) and (".self::$prefix."students.ID_TI = u2.ID)) AND ".self::$prefix."students.ID=".$id_student)->fetchAll();
+        return self::$PDO->query("SELECT ".self::$prefix."students.*,concat(u1.fname,' ',u1.name) AS name_TE,concat(u2.fname,' ',u2.name) AS name_TI from ".self::$prefix."students join ".self::$prefix."users u1 join ".self::$prefix."users u2 where ((".self::$prefix."students.ID_TE = u1.ID) and (".self::$prefix."students.ID_TI = u2.ID)) AND ".self::$prefix."students.ID=".$id_student)->fetchAll()[0];
     }
 
     /**
@@ -1089,7 +1103,7 @@ class PDOQueries extends \mainClass{
     static function show_user($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query('SELECT *,CASE WHEN activation_date IS NULL THEN 0 ELSE 1 END as activated FROM '.self::$prefix.'users s1 LEFT JOIN '.self::$prefix.'show_last_stats_by_user s2 ON s1.ID = s2.ID_USER WHERE ID='.$id_user)->fetchAll()[0];
+        return self::$PDO->query('SELECT ID,fname,name,type,email,phone,address,zip_code,city,country,language,registration_date,activation_date,delete_date,last_login_date,publication_entitled,CASE WHEN activation_date IS NULL THEN 0 ELSE 1 END as activated FROM '.self::$prefix.'users s1 LEFT JOIN '.self::$prefix.'show_last_stats_by_user s2 ON s1.ID = s2.ID_USER WHERE ID='.$id_user)->fetchAll()[0];
     }
 
     /**
