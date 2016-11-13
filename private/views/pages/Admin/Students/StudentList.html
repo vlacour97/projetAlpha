@@ -536,71 +536,36 @@
 <!-- Modal AddStudent -->
 <div class="modal fade" id="AddStudentModal" tabindex="-1" role="dialog" aria-labelledby="AddStudentModal">
     <div class="modal-dialog" role="document">
-        <div class="modal-content">
+        <div class="modal-content display-inline-block">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title">Ajout Etudiant</h4>
+
             </div>
 
-            <div class="modal-body">
-                <div class="FormAddStudent">
-                <form>
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Etudiant </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Promotion</label>
-                            <select class="form-control">
-                                <option>AS 2017</option>
-                                <option>S4 2017</option>
-                                <option>LP 2017</option>
-                            </select>
-                    </div>
+            <div class="modal-body display-inline-block">
+                <div class="col-sm-12">
 
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Tuteur Entreprise </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
+                    <div class="col-sm-6 text-center">
+                        <a class="csvFile" href="#">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+                        </span>
+                        <h5> Importer un fichier CSV</h5>
+                    </a>
                     </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
-
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Tuteur IUT </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
-                </form>
-                    <div class="text-center">
-                        <button type="button" class="btn btn-primary">Valider</button>
+                    <div class="col-sm-6 text-center">
+                        <a class="addOne" href="#">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-pencil fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                        <h5> Ajouter un étudiant </h5>
+                            </a>
                     </div>
                 </div>
-            </div>
-            <div class="modal-footer">
+
+            <div class="modal-footer display-inline-block col-sm-12">
             </div>
         </div>
     </div>
