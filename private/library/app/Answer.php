@@ -129,15 +129,29 @@ class Answer extends \mainClass{
 
     /**
      * Récupére les données d'un questionnaire
-     * @param int $id
+     * @param null|int $id
+     * @param null|int $id_student
      * @return bool|mixed
+     * @throws \Exception
      */
-    static function get_survey($id = null){
+    static function get_survey($id = null,$id_student = null){
         if(is_null($id))
             $id = self::get_able_survey_id();
         if(!($json_content = file_get_contents(self::get_survey_path($id))))
             return false;
-        return json_decode($json_content);
+
+        if(is_int($id_student)){
+            //Récupération des données utilisateur
+            if(!($student = User::get_student($id_student)))
+                throw new \Exception('Erreur lors de la récupération des données',2);
+            $replace = array('{fname_student}','{name_student}');
+            $by = array($student->fname,$student->name);
+            $json_content = str_replace($replace,$by,$json_content);
+        }
+
+        $response = json_decode($json_content);
+
+        return $response;
     }
 
     /**
@@ -204,7 +218,7 @@ class Answer extends \mainClass{
 
     /**
      * Renvoi la date de création du questionnaire
-     * @param $survey
+     * @param int $id
      * @return mixed|string
      */
     static private function get_creation_date($id){
@@ -228,7 +242,7 @@ class Answer extends \mainClass{
 
     /**
      * Récupére le nom du questionnaire
-     * @param $survey
+     * @param int $id
      * @return mixed
      */
     static private function get_survey_name($id){
@@ -402,6 +416,21 @@ class Answer extends \mainClass{
      */
     static function is_validated($id_student){
         return PDOQueries::survey_is_validate($id_student);
+    }
+
+
+    /**
+     * Compte le nombre de questionnaires stockés
+     * @return int
+     * @throws \Exception
+     */
+    static function count_surveys(){
+        $files = scandir(ROOT.self::$survey_path);
+        $response = 0;
+        foreach($files as $file){
+            file::isJSON($file) && $response++;
+        }
+        return $response;
     }
 
 } 

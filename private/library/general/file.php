@@ -200,4 +200,26 @@ class file {
     }
 
 
+    /**
+     * Determine si un fichier est un JSON
+     * @param string $file
+     * @return bool
+     * @throws \Exception
+     */
+    static function isJSON($file){
+        if(is_string($file)){
+            $parts = explode('.',$file);
+            return $parts[1] == "json" || $parts[1] == "JSON";
+        }
+
+        if(is_array($file)){
+            $extension = self::file_infos($file)->extension;
+            return $extension;
+        }
+
+        throw new \Exception('Mauvais format de fichier',2);
+
+    }
+
+
 } 

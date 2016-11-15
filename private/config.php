@@ -37,7 +37,10 @@ require_once $_SERVER['DOCUMENT_ROOT'].'/private/functions/linker.php';
  */
 
 \mainClass::init();
-\general\PDOQueries::init();
+
+if(\app\Install::APP_is_installed())
+    \general\PDOQueries::init();
+//TODO redirection
 
 //TODO à retirer
 \app\Log::login('vlacour97@icloud.com','azerty');

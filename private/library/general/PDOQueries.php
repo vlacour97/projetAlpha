@@ -736,7 +736,9 @@ class PDOQueries extends \mainClass{
      * @return mixed
      */
     static function count_users(){
-        return self::$PDO->prepare('SELECT '.self::$prefix.'count_users()')->execute(array());
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'count_users()');
+        $query->execute(array());
+        return intval($query->fetchAll()[0][0]);
     }
 
     /**
