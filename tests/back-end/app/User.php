@@ -85,6 +85,13 @@ try{
 //var_dump(\app\User::change_password(7,'test'));
 //var_dump(\app\User::autorised_to_publish(7));
 
+try{
+    var_dump(\app\User::set_profile_photo($_FILES['csv'],9)->crop());
+}catch (Exception $e){
+    echo $e->getMessage().'<br>';
+}
+
+var_dump(\app\User::get_profile_photo(9));
 
 echo '</pre>';
 

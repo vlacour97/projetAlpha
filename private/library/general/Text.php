@@ -29,5 +29,10 @@ class Text {
         return substr( $str, 0, strrpos( $str,' ') ).$endStr;
     }
 
+    static function automatic_emo($string){
+        $replace = array(' :)',' ;)',' :(',' :/',' :$',' :p',' ;p',' :P',' ;P',' :D');
+        $by = array(' &#128522;',' &#128521;',' &#128532;',' &#128533;',' &#129297;',' &#128539;',' &#128540;',' &#128539;',' &#128540;',' &#128515;');
+        return str_replace($replace,$by,$string);
+    }
 
 } 

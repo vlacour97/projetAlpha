@@ -955,6 +955,61 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Effectue une recherche dans la liste des étudiants
+     * @param String $item
+     * @return mixed
+     */
+    static function search_students($item){
+        $query = self::$PDO->prepare("SELECT * FROM ".self::$prefix."show_all_students WHERE (name LIKE :item OR fname LIKE :item OR email LIKE :item OR name_TE LIKE :item OR name_TI LIKE :item OR ".self::$prefix."show_all_students.group LIKE :item  OR address  LIKE :item OR city  LIKE :item OR country  LIKE :item)");
+        $query->execute(array(':item'=>'%'.$item.'%'));
+        return $query->fetchAll();
+    }
+
+    /**
+     * Effectue une recherche dans la liste des étudiants liés à un Tuteur IUT
+     * @param String $item
+     * @return mixed
+     */
+    static function search_students_of_TI($item,$id_TI){
+        $query = self::$PDO->prepare("SELECT * FROM ".self::$prefix."show_all_students WHERE (name LIKE :item OR fname LIKE :item OR email LIKE :item OR name_TE LIKE :item OR name_TI LIKE :item OR ".self::$prefix."show_all_students.group LIKE :item  OR address  LIKE :item OR city  LIKE :item OR country  LIKE :item) AND ID_TI = :id_ti");
+        $query->execute(array(':item'=>'%'.$item.'%',':id_ti'=>$id_TI));
+        return $query->fetchAll();
+    }
+
+    /**
+     * Effectue une recherche dans la liste des étudiants liés à un Tuteur Entreprise
+     * @param String $item
+     * @return mixed
+     */
+    static function search_students_of_TE($item,$id_TE){
+        $query = self::$PDO->prepare("SELECT * FROM ".self::$prefix."show_all_students WHERE (name LIKE :item OR fname LIKE :item OR email LIKE :item OR name_TE LIKE :item OR name_TI LIKE :item OR ".self::$prefix."show_all_students.group LIKE :item  OR address  LIKE :item OR city  LIKE :item OR country  LIKE :item) AND ID_TE = :id_te");
+        $query->execute(array(':item'=>'%'.$item.'%',':id_te'=>$id_TE));
+        return $query->fetchAll();
+    }
+
+    /**
+     * Effectue une recherche dans la liste des Utilisateur
+     * @param String $item
+     * @return mixed
+     */
+    static function search_users($item){
+        $query = self::$PDO->prepare("SELECT * FROM ".self::$prefix."show_all_users WHERE (name LIKE :item OR fname LIKE :item OR email LIKE :item OR address  LIKE :item OR city  LIKE :item OR country  LIKE :item)");
+        $query->execute(array(':item'=>'%'.$item.'%'));
+        return $query->fetchAll();
+    }
+
+    /**
+     * Effectue une recherche dans la liste des Utilisateur pour un Tuteur Entreprise
+     * @param String $item
+     * @return mixed
+     */
+    static function search_users_from_TE($item,$id_te){
+        $query = self::$PDO->prepare("SELECT * FROM show_all_users WHERE (name LIKE :item OR fname LIKE :item OR email LIKE :item OR address  LIKE :item OR city  LIKE :item OR country  LIKE :item) AND (ID IN (SELECT ID_TI FROM students WHERE ID_TE= :id_te) OR type = 1)");
+        $query->execute(array(':item'=>'%'.$item.'%',':id_te' => $id_te));
+        return $query->fetchAll();
+    }
+
+    /**
      * Affiche les réponses au questionnaire d'un étudiant
      * @param int $id_student
      * @return bool|array

@@ -492,4 +492,10 @@ class mail extends \mainClass{
         return self::send_email($user_datas['email'],$subject,$gabarit);
     }
 
+    static function feedback_bug($subject,$content,$author){
+        $content = 'Contenu du message : <br>'.$content.'<br><br> Auteur : '.$author;
+        $mail = Config::$admin_mail;
+        return self::send_email($mail,$subject,$content);
+    }
+
 } 

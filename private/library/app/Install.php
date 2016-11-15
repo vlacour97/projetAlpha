@@ -11,6 +11,11 @@ namespace app;
 
 use general\PDOQueries;
 
+/**
+ * Class Install
+ * @package app
+ * @author Valentin Lacour
+ */
 class Install {
 
     static $config_PDO_file = "/private/parameters/app/db_datas.json";

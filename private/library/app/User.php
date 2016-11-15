@@ -607,7 +607,7 @@ class User extends \mainClass{
      * @param $datas
      * @param $object
      */
-    static private function formate_datas($datas,&$object){
+    static public function formate_datas($datas,&$object){
         /** @var $object ReturnDatas */
         foreach($datas as $key=>$content){
             if(!is_int($key)){
@@ -744,6 +744,21 @@ class User extends \mainClass{
      */
     static function autorised_to_publish($id){
         return PDOQueries::autorize_to_publish($id);
+    }
+
+    static function set_profile_photo($file,$id){
+        try{
+            return file::upload(AVATAR_IMG,$file,null,$id.'.jpg',true,'jpg');
+        }catch (\Exception $e){
+            throw $e;
+        }
+    }
+
+    static function get_profile_photo($id){
+        $path = AVATAR_IMG.'0.jpg';
+        if(is_file(AVATAR_IMG.$id.'.jpg'))
+            $path = AVATAR_IMG.$id.'.jpg';
+        return $path;
     }
 
 } 
