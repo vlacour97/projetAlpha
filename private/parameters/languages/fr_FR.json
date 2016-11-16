@@ -206,7 +206,11 @@
             "name": "Accueil",
             "parts": {
                 "header": {
-                    "title": "Test"
+                    "title": "Test",
+                    "h2" : "ddd"
+                },
+                "content" : {
+
                 }
             }
         }
