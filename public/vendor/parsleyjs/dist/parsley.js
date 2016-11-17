@@ -1871,15 +1871,15 @@ window.ParsleyConfig.i18n = window.ParsleyConfig.i18n || {};
 window.ParsleyConfig.i18n.en = $.extend(window.ParsleyConfig.i18n.en || {}, {
   defaultMessage: "This value seems to be invalid.",
   type: {
-    email:        "This value should be a valid email.",
-    url:          "This value should be a valid url.",
-    number:       "This value should be a valid number.",
-    integer:      "This value should be a valid integer.",
-    digits:       "This value should be digits.",
-    alphanum:     "This value should be alphanumeric."
+    email:        "Email invalide.",
+    url:          "URL invalide.",
+    number:       "Numbre invalide.",
+    integer:      "Entier invalide.",
+    digits:       "Digits invalides.",
+    alphanum:     "Chaine de caractére invalide."
   },
-  notblank:       "This value should not be blank.",
-  required:       "This value is required.",
+  notblank:       "Cette valeur ne doit pas être blanche.",
+  required:       "Cette valeur est requise.",
   pattern:        "This value seems to be invalid.",
   min:            "This value should be greater than or equal to %s.",
   max:            "This value should be lower than or equal to %s.",
