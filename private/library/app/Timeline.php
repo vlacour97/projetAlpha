@@ -9,8 +9,91 @@
 namespace app;
 
 
+use general\Date;
 use general\file;
 use general\PDOQueries;
+
+class ReturnDatas{
+    public $int = array();
+    public $date = array();
+    public $bool = array();
+    public $ban = array();
+}
+
+class CommentsDatas extends ReturnDatas{
+
+    public $ID;
+    public $ID_POST;
+    public $ID_USER;
+    public $content;
+
+    /**
+     * @var \general\Date
+     */
+    public $publication_date;
+    public $comment_name;
+    public $int = array('ID','ID_POST','ID_USER');
+    public $date = array('publication_date');
+    public $ban = array('deleted');
+}
+
+class LikesDatas extends ReturnDatas{
+    public $ID;
+    public $ID_POST;
+    public $ID_USER;
+    public $requested_date;
+    public $liker_name;
+    public $int = array('ID','ID_POST','ID_USER');
+    public $date = array('requested_date');
+
+}
+
+class PostAtttachmentDatas{
+
+    public $link;
+    public $description;
+
+    function __construct($link,$description)
+    {
+        $this->link = $link;
+        $this->description = $description;
+    }
+}
+class TimelineDatas{
+
+    public $id_post;
+    public $fname;
+    public $name;
+    public $id_user;
+    public $content;
+    public $publication_date;
+    public $post_attachments; //tableau d'objets
+    public $comments;
+    public $likes;
+
+    /* function __construct($id_post,$fname,$name,$id_user,$content,$publication_date)
+    {
+        $this->id_post = $id_post;
+        $this->fname = $fname;
+        $this->name = $name;
+        $this->id_user = $id_user;
+        $this->content = $content;
+        $this->publication_date = $publication_date;
+        $this->post_attachments = array();
+        $this->comments = array();
+        $this->likes = array();
+    }
+    */
+
+
+
+
+    function afficher(){
+        foreach($this as $key => $value) {
+            print "$key => $value\n";
+        }
+    }
+}
 
 class Timeline extends \mainClass{
 
@@ -20,21 +103,35 @@ class Timeline extends \mainClass{
     }
 
     //Niveau 2
-    static function add_post($id_user,$content,$post_attachment = array()){
+    /**
+     * Permet l'ajout d'un post en prenant en compte les piéces jointes
+     * @param $id_user
+     * @param $content
+     * @param null $post_attachment
+     * @param null $description
+     * @return bool
+     * @throws \Exception
+     */
+    static function add_post($id_user,$content,$post_attachment = null,$description = null){
 
         //ajout de poste
-        PDOQueries::add_post($id_user, $content);
+        if(!PDOQueries::add_post($id_user, $content))
+            throw new \Exception('Erreur lors de l\'ajout de la publication',2);
 
         //récup id
-        $id_post = 1;
+        $id_post = PDOQueries::get_max_post_id();
+
 
        //fonction savepost
 
 
-
-
-
-        //TODO Permet l'ajout d'un post en prenant en compte les piéces jointes
+            if((is_array($post_attachment) && self::save_post_attachments($id_post, $post_attachment, $description)) || is_null($post_attachment)){
+                try{
+                    return true;
+                }catch(\Exception $e){
+                    throw $e;
+                }
+            }
     }
 
     /**
@@ -87,9 +184,12 @@ class Timeline extends \mainClass{
     }
 
     //TODO mettre en private
-    static function save_post_attachments($id_post,$file,$description = ""){
+
+    static function save_post_attachments($id_post,$file,$description = null){
         //récupération du type
         $type = file::file_infos($file)->type;
+
+        is_null($description) && $description = "";
 
         if($type == "image"){
 
@@ -132,8 +232,34 @@ class Timeline extends \mainClass{
     }
 
     //Niveau 2
-    static private function get_post($id,$fname,$name,$content,$publication_date){
+    static private function get_post(){
+
+        //show_post_attachment                      format_datas
+        //getComments foreach show_comment          format_datas
+        //getLikes foreach show_likes               format_datas
         //TODO Mets en forme la présentation des valeurs de retour pour un post
+
     }
 
-} 
+    /**
+     * @param array $datas
+     * @param ReturnDatas $object
+     */
+    static public function format_datas($datas,&$object){
+
+        foreach ($datas as $key=>$content) {
+            if(is_string($key) && !in_array($key,$object->ban)){
+                if(in_array($key,$object->int))
+                    $object->$key=intval($content);
+                elseif(in_array($key,$object->date))
+                    $object->$key=new \general\Date($content);
+                elseif(in_array($key,$object->bool))
+                    $object->$key=boolval($content);
+                else
+                    $object->$key=$content;
+            }
+
+        }
+    }
+
+}

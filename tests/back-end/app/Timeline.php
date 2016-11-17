@@ -7,7 +7,7 @@
  */
 
 include_once '../../../private/config.php';
-try{
+/*try{
     if(\app\Timeline::save_post_attachments(6,$_FILES['remi']))
     echo 'ok';
 }
@@ -35,4 +35,17 @@ echo "ouiiiii";
     <input type="file" name="remi">
     <input type="submit">
 </form>
+*/
+
+echo "<pre>";
+\app\Timeline::init();
+//$comment = new \app\LikesDatas();
+$var=\general\PDOQueries::show_posts(6)[0];
+foreach($var as $key=>$content){
+    if(is_string($key))
+        echo 'public $'.$key.';<br>';
+
+}
+//\app\Timeline::format_datas($var,$comment);
+//var_dump($comment);
 
