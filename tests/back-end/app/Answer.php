@@ -10,7 +10,7 @@ include_once '../../../private/config.php';
 
 $survey = array(
     0 => array(
-        "questionLbl" => "Question 11",
+        "questionLbl" => "{fname_student} Question 11",
         1 => array(
             "lbl" => "Choix A",
             "nb_point" => 2
@@ -47,7 +47,7 @@ $answer = array(
     array('response' => 3, 'comment' => '')
 );
 
-\app\Answer::set_survey($survey,'Test1');
+//\app\Answer::set_survey($survey,'Test1');
 /*
 
 if(\app\Answer::survey_is_completed($answer,5))
@@ -55,8 +55,18 @@ if(\app\Answer::survey_is_completed($answer,5))
 else
     echo "unok";
 
-$response = \app\Answer::get_survey();
-
+*/
+/*
+try{
+    //var_dump($response = \app\Answer::get_survey(null,271));
+    $response = \app\Answer::get_survey(null,271);
+    foreach($response->questions as $key=>$content)
+        echo $content->questionLbl.'<br>';
+}catch (Exception $e){
+    echo $e->getMessage();
+}
+*/
+/*
 if(\app\Answer::set_answer($answer,5,11,true))
     echo "ok";
 else
@@ -70,7 +80,7 @@ else
 //var_dump(\app\Answer::set_deadline(11,new \general\Date('now')));
 //var_dump(\app\Answer::set_static_deadline(new \general\Date('now')));
 //var_dump(\app\Answer::can_complete_survey(11));
-var_dump(\app\Answer::validate_survey(11));
+//var_dump(\app\Answer::validate_survey(11));
 //var_dump(\app\Answer::is_validated(11));
 //var_dump(\app\Answer::set_able_survey_id(1));
 

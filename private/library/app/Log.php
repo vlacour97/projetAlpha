@@ -60,9 +60,9 @@ class Log extends \mainClass{
 
     /**
      * Permet l'inscription d'utilisateur par un utilisateur (partie 2)
-     * @param string $email
-     * @param int $type
-     * @param bool $publication_entitled
+     * @param int $id
+     * @param string $pwd
+     * @param string $pwd_verif
      * @param string $name
      * @param string $fname
      * @param string $phone
@@ -113,10 +113,21 @@ class Log extends \mainClass{
      * Récupére la langue de l'utilisateur
      * @return string
      */
+    static function get_type(){
+        return PDOQueries::get_User_type(self::get_id());
+    }
+
+    /**
+     * Récupére la langue de l'utilisateur
+     * @return string
+     */
     static function get_lang(){
-        $lang = crypt::encrypt(parent::$lang);
-        isset($_SESSION[self::$lang]) && !is_null($_SESSION[self::$lang]) && $lang = $_SESSION[self::$lang];
+        $lang = PDOQueries::get_User_language(self::get_id());
+        if(is_null($lang) || $lang == "")
+            $lang = parent::$lang;
+        $lang = crypt::encrypt($lang);
         isset($_COOKIE[self::$lang]) && !is_null($_COOKIE[self::$lang]) && $lang = $_COOKIE[self::$lang];
+        isset($_SESSION[self::$lang]) && !is_null($_SESSION[self::$lang]) && $lang = $_SESSION[self::$lang];
         return crypt::decrypt($lang);
     }
 

@@ -9,6 +9,8 @@
 namespace app;
 
 
+use general\Date;
+
 class Config {
 
     static $config_file_path = '/private/parameters/';
@@ -24,6 +26,7 @@ class Config {
     static $admin_mail;
     static $current_survey = null;
     static $deadline_date;
+    static $default_language = "fr_FR";
     static $check = false;
 
     /**
@@ -37,7 +40,7 @@ class Config {
      * @return bool
      */
     public static function create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date){
-        $now = new \general\Date('now');
+        $now = new Date('now');
         self::$name = $name;
         self::$description = $description;
         self::$keywords = $keywords;
@@ -63,6 +66,7 @@ class Config {
         self::$admin_mail = $datas['admin_mail'];
         self::$current_survey = $datas['current_survey'];
         self::$deadline_date = $datas['deadline_date'];
+        self::$default_language = $datas['default_language'];
         self::$check = true;
     }
 
@@ -82,6 +86,7 @@ class Config {
         $datas['admin_mail'] = self::$admin_mail;
         $datas['current_survey'] = self::$current_survey;
         $datas['deadline_date'] = self::$deadline_date;
+        $datas['default_language'] = self::$default_language;
         return boolval(file_put_contents(ROOT.self::$config_file_path.self::$config_file_name.'.json',json_encode($datas)));
     }
 
@@ -183,6 +188,16 @@ class Config {
         if(!self::$check)
             self::get_datas();
         return self::$version;
+    }
+
+    /**
+     * @return string
+     */
+    public static function getDefaultLanguage()
+    {
+        if(!self::$check)
+            self::get_datas();
+        return self::$default_language;
     }
 
     /**
@@ -302,6 +317,17 @@ class Config {
         if(!self::$check)
             self::get_datas();
         self::$version = $version;
+        return self::set_datas();
+    }
+
+    /**
+     * @param string $default_language
+     * @return bool
+     */
+    public static function setDefaultLanguage($default_language){
+        if(!self::$check)
+            self::get_datas();
+        self::$default_language = $default_language;
         return self::set_datas();
     }
 

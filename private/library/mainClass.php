@@ -10,12 +10,12 @@
 
 class mainClass {
 
-    static $lang = 'fr_FR';
+    static $lang = "fr_FR";
     static $form_date = "d MM yyyy {at} hh{h}mn";
 
-    static function init($lang){
+    static function init(){
         require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
-        self::$lang = $lang;
+        self::$lang = \app\Config::getDefaultLanguage();
     }
 
 } 

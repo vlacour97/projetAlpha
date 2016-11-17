@@ -22,7 +22,7 @@ try{
 //unset($_SESSION['id']);
 //var_dump(\app\Log::need_to_lockscreen());
 //var_dump(\app\Log::get_lang());
-//var_dump(\app\Log::set_lang('fr_FR'));
+var_dump(\app\Log::set_lang('en_EN'));
 //var_dump(\app\Log::update_status());
 //var_dump(\app\Log::get_OS());
 //var_dump(\app\Log::get_browser());

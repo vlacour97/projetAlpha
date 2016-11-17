@@ -8,7 +8,7 @@
 
 //Fonction de récupération et de conversion des paramètres
 function link_parameters($filename){
-    $json_url = $_SERVER['DOCUMENT_ROOT']."/private/parameters/{$filename}.json";
+    $json_url = ROOT."/private/parameters/{$filename}.json";
     if(!file_exists($json_url))
         return array();
     // Si le fichier n’existe pas on revois un tableau vide
