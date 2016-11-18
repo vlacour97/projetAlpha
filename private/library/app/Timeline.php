@@ -13,98 +13,156 @@ use general\Date;
 use general\file;
 use general\PDOQueries;
 
+/**
+ * Class ReturnDatas
+ * @package app
+ * @author Rémi Lemaire
+ */
 class ReturnDatas{
+    /** @var array  */
     public $int = array();
+    /** @var array */
     public $date = array();
+    /** @var array */
     public $bool = array();
+    /** @var array */
     public $ban = array();
 }
 
+/**
+ * Class CommentsDatas
+ * @package app
+ * Author: Rémi Lemaire
+ */
 class CommentsDatas extends ReturnDatas{
-
+    /** @var int */
     public $ID;
+    /** @var int */
     public $ID_POST;
+    /** @var int */
     public $ID_USER;
+    /** @var string */
     public $content;
 
-    /**
-     * @var \general\Date
-     */
+    /** @var \general\Date */
     public $publication_date;
+    /** @var  string */
     public $comment_name;
+    /** @var array  */
     public $int = array('ID','ID_POST','ID_USER');
+    /** @var array  */
     public $date = array('publication_date');
+    /** @var array  */
     public $ban = array('deleted');
+
 }
 
+/**
+ * Class LikesDatas
+ * @package app
+ * Author : Rémi Lemaire
+ */
 class LikesDatas extends ReturnDatas{
+    /** @var int */
     public $ID;
+    /** @var int */
     public $ID_POST;
+    /** @var int */
     public $ID_USER;
+    /** @var  \general\Date */
     public $requested_date;
+    /** @var  string */
     public $liker_name;
+    /** @var array  */
     public $int = array('ID','ID_POST','ID_USER');
+    /** @var array  */
     public $date = array('requested_date');
 
 }
 
-class PostAtttachmentDatas{
-
+/**
+ * Class PostAtttachmentDatas
+ * @package app
+ * Author : Rémi Lemaire
+ */
+class PostAtttachmentDatas extends ReturnDatas{
+    /** @var  int */
+    public $ID;
+    /** @var  int */
+    public $ID_POST;
+    /** @var  string */
     public $link;
+    /** @var  string */
     public $description;
+    /** @var  string */
+    public $type_file;
+    /** @var array  */
+    public $int = array('ID','ID_POST');
 
-    function __construct($link,$description)
-    {
-        $this->link = $link;
-        $this->description = $description;
-    }
 }
-class TimelineDatas{
 
-    public $id_post;
-    public $fname;
-    public $name;
-    public $id_user;
+/**
+ * Class TimelineDatas
+ * @package app
+ * Author : Rémi Lemaire
+ */
+class TimelineDatas extends ReturnDatas{
+    /** @var  int */
+    public $ID;
+    /** @var  int */
+    public $ID_USER;
+    /** @var  string */
     public $content;
+    /** @var  string */
+    public $deleted;
+    /** @var  \general\Date */
     public $publication_date;
-    public $post_attachments; //tableau d'objets
-    public $comments;
-    public $likes;
-
-    /* function __construct($id_post,$fname,$name,$id_user,$content,$publication_date)
-    {
-        $this->id_post = $id_post;
-        $this->fname = $fname;
-        $this->name = $name;
-        $this->id_user = $id_user;
-        $this->content = $content;
-        $this->publication_date = $publication_date;
-        $this->post_attachments = array();
-        $this->comments = array();
-        $this->likes = array();
-    }
-    */
+    /** @var  string */
+    public $post_name;
+    /** @var array  */
+    public $likes= array();
+    /** @var array  */
+    public $comments = array();
+    /** @var array  */
+    public $post_attachments = array();
+    /** @var array  */
+    public $int = array('ID','ID_USER');
+    /** @var array  */
+    public $date = array('publication_date');
+    /** @var array  */
+    public $ban = array('deleted');
 
 
 
-
-    function afficher(){
-        foreach($this as $key => $value) {
-            print "$key => $value\n";
-        }
-    }
 }
 
+/**
+ * Class Timeline
+ * @package app
+ * Author : Rémi Lemaire
+ */
 class Timeline extends \mainClass{
 
-    //Niveau 3
+    /** @var string  */
+    static $post_id_page = "timeline";
+
+
+    /**
+     * Récupère toutes les publications et les renvoit sous la forme d'un tableau avec des données formattées (cf show_post)
+     * @return array
+     */
     static function get_all_posts(){
-        //TODO Récupére toutes les publications et les renvois sous la forme d'un tableau avec des données formattés (cf show_post)
+        $datas = PDOQueries::show_all_posts();
+        $posts = array();
+        foreach($datas as $content){
+            $posts[]= self::get_post($content);
+        }
+        return $posts;
+
     }
 
-    //Niveau 2
     /**
-     * Permet l'ajout d'un post en prenant en compte les piéces jointes
+     * Permet l'ajout d'un post en prenant en compte les pièces jointes
      * @param $id_user
      * @param $content
      * @param null $post_attachment
@@ -122,16 +180,16 @@ class Timeline extends \mainClass{
         $id_post = PDOQueries::get_max_post_id();
 
 
-       //fonction savepost
+        //fonction savepost
 
 
-            if((is_array($post_attachment) && self::save_post_attachments($id_post, $post_attachment, $description)) || is_null($post_attachment)){
-                try{
-                    return true;
-                }catch(\Exception $e){
-                    throw $e;
-                }
+        if((is_array($post_attachment) && self::save_post_attachments($id_post, $post_attachment, $description)) || is_null($post_attachment)){
+            try{
+                return true;
+            }catch(\Exception $e){
+                throw $e;
             }
+        }
     }
 
     /**
@@ -183,39 +241,58 @@ class Timeline extends \mainClass{
         return PDOQueries::unlike_post($id_post,$id_user);
     }
 
-    //TODO mettre en private
-
+    /**
+     * permet la sauvegarde d'upload de pièce jointe
+     * @param $id_post
+     * @param $file
+     * @param null $description
+     * @return bool
+     * @throws \Exception
+     */
     static function save_post_attachments($id_post,$file,$description = null){
         //récupération du type
         $type = file::file_infos($file)->type;
+        //Récupération de l'identifiant de la future piéce jointe sur la BDD
+        $id_post_attachment = PDOQueries::get_maxID_post_attachment() + 1;
 
         is_null($description) && $description = "";
 
         if($type == "image"){
-
+            //Si c'est une image, on upload l'image
+            $filename = $id_post_attachment.'.jpg';
             try{
-                file::upload(POST_CONTENT,$file,1024*1024*10,$id_post.'.jpg');
+                file::upload(POST_CONTENT,$file,1024*1024*10,$filename);
             }catch(\Exception $e){
                 throw $e;
             }
 
-            $link = POST_CONTENT.'/'.$id_post.'.jpg';
+            $link = POST_CONTENT.$filename;
         }else{
+            //Sinon, on upload le contenu et on le mets dans un fichier zip
             $type = 'other';
+
+            //Génération de parametres
+            $filename_before_zip = $id_post_attachment.'.'.file::file_infos($file)->extension;
+            $filename = file::file_infos($file)->name;
+            $path_file = POST_CONTENT.$filename_before_zip;
+            $link = POST_CONTENT.$id_post_attachment.'.zip';
+
+            //Upload d'un fichier temporaire
             try{
-                file::upload(POST_CONTENT,$file,1024*1024*10);
+                file::upload(POST_CONTENT,$file,1024*1024*10,$filename_before_zip);
             }catch(\Exception $e){
                 throw $e;
             }
-            $path_file = POST_CONTENT.'/'.$file['name'];
-            $link = POST_CONTENT.'/'.$id_post.'.zip';
+
+            //Zippage du fichier
             try{
-                file::zip_file($path_file,$link);
+                file::zip_file($path_file,$link,$filename);
             }
             catch(\Exception $e){
                 throw $e;
             }
 
+            //Suppression du fichier temporaire
             file::delete($path_file);
         }
 
@@ -223,25 +300,78 @@ class Timeline extends \mainClass{
     }
 
     /**
-     *  Récupere les pieces jointes sur la base et renvoi un tableau avec ses informations (chemin d'accés, infos BD)
+     *  Récupere les pieces jointes sur la base et renvoie un tableau avec ses informations (chemin d'accés, infos BD)
      * @param $id_post
      * @return array|bool
      */
-    static private function get_post_attachment($id_post){
-        return PDOQueries::show_post_attachment($id_post);
-    }
+    static private function get_post_attachments($id_post_attachment){
+        $datas = PDOQueries::show_post_attachment($id_post_attachment);
+        $attachments = array();
+        foreach($datas as $key=>$lines){
+            $tmp = new PostAtttachmentDatas();
+            self::format_datas($lines,$tmp);
+            $attachments[]= $tmp;
+        }
 
-    //Niveau 2
-    static private function get_post(){
-
-        //show_post_attachment                      format_datas
-        //getComments foreach show_comment          format_datas
-        //getLikes foreach show_likes               format_datas
-        //TODO Mets en forme la présentation des valeurs de retour pour un post
-
+        return $attachments;
     }
 
     /**
+     * Met en forme la présentation des valeurs de retour pour un post
+     * @param array $postDatas
+     * @return TimelineDatas
+     */
+    static private function get_post($postDatas=array()){
+        $post= new TimelineDatas();
+        self::format_datas($postDatas,$post);
+
+        //show_post_attachment
+        $post->post_attachments =self::get_post_attachments($post->ID);
+
+        //getComments
+        $post->comments=self::get_comments($post->ID);
+
+        //getLikes
+        $post->likes=self::get_likes($post->ID);
+
+        return $post;
+    }
+
+    /**
+     * Met en forme la présentation des valeurs de retour pour un commentaire
+     * @param $id_post_comments
+     * @return array
+     */
+    static private function get_comments($id_post_comments)
+    {
+        $datas = PDOQueries::show_comment($id_post_comments);
+        $comments = array();
+        foreach ($datas as $key=>$lines) {
+            $tmp = new CommentsDatas();
+            self::format_datas($lines,$tmp);
+            $comments[] = $tmp;
+        }
+        return $comments;
+    }
+
+    /**
+     * Met en forme la présentation des valeurs de retour pour un like
+     * @param $id_post_likes
+     * @return array
+     */
+    static private function get_likes($id_post_likes){
+        $datas = PDOQueries::show_likes($id_post_likes);
+        $likes = array();
+        foreach ($datas as $key=>$lines){
+            $tmp = new LikesDatas();
+            self::format_datas($lines,$tmp);
+            $likes[] = $tmp;
+        }
+        return $likes;
+    }
+
+    /**
+     * formattage de données
      * @param array $datas
      * @param ReturnDatas $object
      */
