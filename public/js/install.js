@@ -48,7 +48,7 @@ $(function(){
             },
             //diable tab clicking
             onTabClick: function($activeTab, $navigation, currentIndex, clickedIndex){
-                return $navigation.find('li:eq(' + clickedIndex + ')').is('.done');
+                return false;
             }
         });
     }
