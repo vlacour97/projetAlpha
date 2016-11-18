@@ -486,12 +486,10 @@
             <li>YOU ARE HERE</li>
             <li class="active">Tables Basic</li>
         </ol>
+        <button class="add_user_and_student btn btn-default pull-right"><i class="fa fa-plus"></i></button>
         <h1 class="page-title">Gestion d'accès - <span class="fw-semi-bold">Etudiants</span></h1>
-        <section class="widget">
+        <section class="widget ">
             <header>
-                <div class="col-md-12 text-left">
-                    <a class="AddStudent col-md-2 display-inline-block" href="#"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i> </a>
-                </div>
                 <div class="col-md-12">
                     &nbsp
                 </div>
@@ -504,26 +502,26 @@
                         <tr>
                             <th>Id</th>
                             <th>Nom / Prenom</th>
-                            <th class=" no-sort hidden-xs">Promo</th>
-                            <th class=" no-sort">Action</th>
-                            <th class=" no-sort"></th>
+                            <th class="hidden-xs">Tuteur IUT</th>
+                            <th class="hidden-xs">Tuteur Entreprise</th>
+                            <th class="no-sort text-center">Actions</th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>1</td>
                             <td><span class="fw-semi-bold"><a class="student" href="#"> Valentin Lacour </a></span></td>
-                            <td class="hidden-xs">S4 2017</td>
-                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="hidden-xs">Paul Bigourd</td>
+                            <td class="hidden-xs">Rémi Lemaire</td>
+                            <td class="text-center"> <a class="change" data-id="1" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-wrench"></i></a>&nbsp;&nbsp;<a class="delete" data-id="1" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
                             <td><span class="fw-semi-bold"><a class="student" href="#"> Rémi Lemaire </a></span></td>
-                            <td class="hidden-xs">AS 2017</td>
-                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="hidden-xs">Antoine Richard</td>
+                            <td class="hidden-xs">Nicolas Rocroy</td>
+                            <td class="text-center"> <a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-wrench" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -533,45 +531,88 @@
     </main>
 </div>
 
-<!-- Modal AddStudent -->
-<div class="modal fade" id="AddStudentModal" tabindex="-1" role="dialog" aria-labelledby="AddStudentModal">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content display-inline-block">
+
+<div class="modal fade bs-example-modal-lg" id="AddStudentModal" tabindex="-1" role="dialog" aria-labelledby="AddStudentModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-
+                <h4 class="modal-title">Modifier</h4>
             </div>
-
-            <div class="modal-body display-inline-block">
-                <div class="col-sm-12">
-
-                    <div class="col-sm-6 text-center">
-                        <a class="csvFile" href="#">
+            <div class="modal-body text-center">
+                <div class="widget col-md-12">
+            <div id="wizard" class="form-wizard">
+            <ul class="nav-justified mb-sm">
+                <li><a href="#step1" data-toggle="tab">
+                    <small>1.</small>
+                    Méthode d'ajout</a></li>
+                <li><a href="#step2" data-toggle="tab">
+                    <small>2.</small>
+                    Ajout des données</a></li>
+                <li><a href="#step3" data-toggle="tab">
+                    <small>3.</small>
+                    Finalisation</a></li>
+            </ul>
+            <div id="bar" class="progress progress-xs">
+                <div class="progress-bar progress-bar-gray-light"></div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane bg-gray-lighter" id="step1">
+                    <h3>Méthode d'Ajout :</h3>
+                    <hr><hr>
+                    <div class="col-md-6">
+                        <a id="addByCSV">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
                         </span>
-                        <h5> Importer un fichier CSV</h5>
-                    </a>
+                            <h5> Importer un fichier CSV</h5>
+                        </a>
                     </div>
-                    <div class="col-sm-6 text-center">
-                        <a class="addOne" href="#">
+                    <div class="col-md-6">
+                        <a id="addByHand">
                         <span class="fa-stack fa-2x">
                             <i class="fa fa-circle fa-stack-2x"></i>
                             <i class="fa fa-pencil fa-stack-1x fa-inverse" aria-hidden="true"></i>
                         </span>
-                        <h5> Ajouter un étudiant </h5>
-                            </a>
+                            <h5> Ajouter un étudiant </h5>
+                        </a>
                     </div>
+                    &nbsp;
                 </div>
+                <div class="tab-pane bg-gray-lighter" id="step2">
 
-            <div class="modal-footer display-inline-block col-sm-12">
+                </div>
+                <div class="tab-pane bg-gray-lighter" id="step3">
+                    <h2>Finalisation :</h2>
+
+                    <p>L'Étudiant à été ajouté avec succés !</p>
+                </div>
+                <ul class="pager wizard">
+                    <li class="previous">
+                        <button class="btn btn-default btn-rounded pull-left">
+                            <i class="fa fa-caret-left"></i> &nbsp; Précédent
+                        </button>
+                    </li>
+                    <li class="next">
+                        <button class="btn btn-primary btn-rounded pull-right" disabled>
+                            Suivant &nbsp; <i class="fa fa-caret-right"></i></button>
+                    </li>
+                    <li class="finish" style="display: none">
+                        <button class="btn btn-success btn-rounded pull-right" >
+                            Terminer &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="modal-footer">
             </div>
         </div>
     </div>
 </div>
-
-
 
 <!-- Modal Students -->
 <div class="modal fade" id="StudentsModal" tabindex="-1" role="dialog" aria-labelledby="StudentsModal">
@@ -613,64 +654,103 @@
                 <h4 class="modal-title">Modifier</h4>
             </div>
             <div class="modal-body text-center">
-                <form>
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Etudiant </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Promotion</label>
-                        <select class="form-control">
-                            <option>AS 2017</option>
-                            <option>S4 2017</option>
-                            <option>LP 2017</option>
-                        </select>
-                    </div>
-
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Tuteur Entreprise </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
-
-                    <h4 class="text-center" > <span class="fw-semi-bold"> Tuteur IUT </span></h4>
-                    <div class="form-group">
-                        <label  class="control-label">Nom</label>
-                        <input  class="form-control"  placeholder="Nom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Prenom</label>
-                        <input class="form-control"  placeholder="Prenom">
-                    </div>
-                    <div class="form-group">
-                        <label class="control-label">Mail</label>
-                        <input class="form-control"  placeholder="Mail">
-                    </div>
+                <form action='' method="POST">
+                    <fieldset>
+                        <div class="form-group col-md-6">
+                            <!-- Nom -->
+                            <label for="change_student_name">Nom</label>
+                            <input type="text" id="change_student_name" name="change_student_name" value="Bigourd" placeholder="" class="form-control text-center" required="required">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!-- Prénom -->
+                            <label for="change_student_fname">Prénom</label>
+                            <input type="text" id="change_student_fname" name="change_student_fname" value="Paul" placeholder="" class="form-control text-center" required="required">
+                        </div>
+                        <div class="form-group">
+                            <!-- Email -->
+                            <label for="change_student_email">Email</label>
+                            <input type="text" id="change_student_email" name="change_student_email" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group">
+                            <!-- TE -->
+                            <label for="change_student_te">Tuteur Entreprise</label>
+                            <select id="change_student_te" data-placeholder="Tuteur Entreprise" class="select2 form-control" tabindex="-1" name="change_student_te">
+                                <option value="">Jean-Baptiste Calandreau</option>
+                                <option value="">Paul Bigourd</option>
+                                <option value="">Rémi Lemaire</option>
+                                <option value="">Antoine Richard</option>
+                                <option value="">Jean-Baptiste Calandreau</option>
+                                <option value="">Nicolas Rocroy</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <!-- TI -->
+                            <label for="change_student_ti">Tuteur IUT</label>
+                            <select id="change_student_ti" data-placeholder="Tuteur IUT" class="select2 form-control" tabindex="-1" name="change_student_ti">
+                                <option value="">Antoine Richard</option>
+                                <option value="">Paul Bigourd</option>
+                                <option value="">Rémi Lemaire</option>
+                                <option value="">Antoine Richard</option>
+                                <option value="">Jean-Baptiste Calandreau</option>
+                                <option value="">Nicolas Rocroy</option>
+                            </select>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!-- Groupe -->
+                            <label for="change_student_group">Groupe</label>
+                            <input type="text" id="change_student_group" name="change_student_group" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!-- Date de Naissance -->
+                            <label for="change_student_birthdate">Date de Naissance</label>
+                            <input type="text" id="change_student_birthdate" name="change_student_birthdate" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group">
+                            <!-- Téléphone -->
+                            <label for="change_student_phone">Téléphone</label>
+                            <input type="tel" id="change_student_phone" name="change_student_phone" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group">
+                            <!-- Adresse -->
+                            <label for="change_student_addresse">Adresse</label>
+                            <input type="tel" id="change_student_addresse" name="change_student_addresse" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- Code Postal -->
+                            <label for="change_student_zip_code">Code Postal</label>
+                            <input type="tel" id="change_student_zip_code" name="change_student_zip_code" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group col-md-8">
+                            <!-- Ville -->
+                            <label for="change_student_city">Ville</label>
+                            <input type="tel" id="change_student_city" name="change_student_city" placeholder="" class="form-control text-center">
+                        </div>
+                        <div class="form-group">
+                            <!-- Pays -->
+                            <label for="change_student_country">Pays</label>
+                            <select id="change_student_country" data-placeholder="Pays" class="select2 form-control" tabindex="-1" name="change_student_country">
+                                <option value=""></option>
+                                <option>Atlanta</option>
+                                <option selected>France</option>
+                                <option>Dallas</option>
+                                <option>Denver</option>
+                                <option>Fremont, CA</option>
+                                <option>Los Angeles</option>
+                                <option>Miami</option>
+                                <option>Newark, NJ</option>
+                                <option>Phoenix</option>
+                                <option>Seattle</option>
+                                <option>Washington, DC</option>
+                            </select>
+                        </div>
+                    </fieldset>
                 </form>
                 <div class="text-center">
-                    <button type="button" class="btn btn-primary">Valider</button>
+                    <button type="button" class="btn btn-primary" id="change-submit">Modifier</button>
                 </div>
             </div>
-            </div>
-            <div class="modal-footer">
-            </div>
+        </div>
+        <div class="modal-footer">
         </div>
     </div>
 </div>
@@ -688,8 +768,8 @@
                 <div class="col-md-12">
                     &nbsp
                 </div>
-                <button type="button" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i>  Supprimer</button>
-                <button type="button" class="btn btn-default">Annuler</button>
+                <button type="button" class="btn btn-danger" id="deleteLine"><i class="fa fa-ban" aria-hidden="true"></i>  Supprimer</button>
+                <button type="button" class="btn btn-default" onclick="$('#DeleteModal').modal('hide')">Annuler</button>
             </div>
             <div class="modal-footer">
             </div>
@@ -733,7 +813,118 @@
 <script src="../../../../../public/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="../../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
 
+<script src="../../../../../public/vendor/parsleyjs/dist/parsley.min.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
+<script src="../../../../../public/vendor/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="../../../../../public/vendor/select2/select2.js"></script>
+<script src="../../../../../public/vendor/moment/min/moment.min.js"></script>
+<script src="../../../../../public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../../../../public/vendor/jasny-bootstrap/js/inputmask.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
+<script src="../../../../../public/vendor/bootstrap-application-wizard/src/bootstrap-wizard.js"></script>
+
 <!-- page specific js -->
 <script src="../../../../../public/js/UserList.js"></script>
+
+<script type="text/html" id="CSVForm">
+
+</script>
+
+<script type="text/html" id="HandForm">
+    <form action='' method="POST">
+        <fieldset>
+            <div class="form-group col-md-6">
+                <!-- Nom -->
+                <label for="add_student_name">Nom</label>
+                <input type="text" id="add_student_name" name="add_student_name" placeholder="" class="form-control text-center" required="required">
+            </div>
+            <div class="form-group col-md-6">
+                <!-- Prénom -->
+                <label for="add_student_fname">Prénom</label>
+                <input type="text" id="add_student_fname" name="add_student_fname" placeholder="" class="form-control text-center" required="required">
+            </div>
+            <div class="form-group">
+                <!-- Email -->
+                <label for="add_student_email">Email</label>
+                <input type="text" id="add_student_email" name="add_student_email" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group">
+                <!-- TE -->
+                <label for="add_student_te">Tuteur Entreprise</label>
+                <select id="add_student_te" data-placeholder="Tuteur Entreprise" class="select2 form-control" tabindex="-1" name="add_student_te">
+                    <option value=""></option>
+                    <option value="">Paul Bigourd</option>
+                    <option value="">Rémi Lemaire</option>
+                    <option value="">Antoine Richard</option>
+                    <option value="">Jean-Baptiste Calandreau</option>
+                    <option value="">Nicolas Rocroy</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <!-- TI -->
+                <label for="add_student_ti">Tuteur IUT</label>
+                <select id="add_student_ti" data-placeholder="Tuteur IUT" class="select2 form-control" tabindex="-1" name="add_student_ti">
+                    <option value=""></option>
+                    <option value="">Paul Bigourd</option>
+                    <option value="">Rémi Lemaire</option>
+                    <option value="">Antoine Richard</option>
+                    <option value="">Jean-Baptiste Calandreau</option>
+                    <option value="">Nicolas Rocroy</option>
+                </select>
+            </div>
+            <div class="form-group col-md-6">
+                <!-- Groupe -->
+                <label for="add_student_group">Groupe</label>
+                <input type="text" id="add_student_group" name="add_student_group" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group col-md-6">
+                <!-- Date de Naissance -->
+                <label for="add_student_birthdate">Date de Naissance</label>
+                <input type="text" id="add_student_birthdate" name="add_student_birthdate" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group">
+                <!-- Téléphone -->
+                <label for="add_student_phone">Téléphone</label>
+                <input type="tel" id="add_student_phone" name="add_student_phone" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group">
+                <!-- Adresse -->
+                <label for="add_student_addresse">Adresse</label>
+                <input type="tel" id="add_student_addresse" name="add_student_addresse" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group col-md-4">
+                <!-- Code Postal -->
+                <label for="add_student_zip_code">Code Postal</label>
+                <input type="tel" id="add_student_zip_code" name="add_student_zip_code" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group col-md-8">
+                <!-- Ville -->
+                <label for="add_student_city">Ville</label>
+                <input type="tel" id="add_student_city" name="add_student_city" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group">
+                <!-- Pays -->
+                <label for="add_student_country">Pays</label>
+                <select id="add_student_country" data-placeholder="Pays" class="select2 form-control" tabindex="-1" name="add_student_country">
+                    <option value=""></option>
+                    <option>Atlanta</option>
+                    <option selected>France</option>
+                    <option>Dallas</option>
+                    <option>Denver</option>
+                    <option>Fremont, CA</option>
+                    <option>Los Angeles</option>
+                    <option>Miami</option>
+                    <option>Newark, NJ</option>
+                    <option>Phoenix</option>
+                    <option>Seattle</option>
+                    <option>Washington, DC</option>
+                </select>
+            </div>
+        </fieldset>
+        <span class="help-block text-left">* Ces Informations pourront être modifié ultérieurement</span>
+    </form>
+</script>
+
 </body>
 </html>
