@@ -40,6 +40,9 @@ $(function(){
         $('#message_file_input').css('display','none');
         $('#add_file_to_message').css('display','block');
     }
+    $(".select2").each(function(){
+        $(this).select2($(this).data());
+    });
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
