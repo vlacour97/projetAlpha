@@ -9,6 +9,8 @@
 namespace general;
 
 
+use app\Log;
+
 class Date extends \mainClass
 {
     private $datetime;
@@ -24,10 +26,9 @@ class Date extends \mainClass
      * @param string $date Date à instancier
      * @param array $lang Les textes de langues
      */
-    function __construct($date)
+    function __construct($date,$lang = null)
     {
-        parent::init();
-        $lang_array = link_parameters('languages/'.self::$lang)["general"]["date"]; //création d'un tableau contenant les chaînes de caractères
+        $lang_array = Language::get_date_text($lang); //création d'un tableau contenant les chaînes de caractères
         //création de variables inclues dans le tableau
         $this->week = $lang_array['week'];
         $this->cutWeek = $lang_array['cut_week'];
@@ -184,13 +185,11 @@ class Date extends \mainClass
      * @param array $lang Les textes de langues
      * @return string La durée en toutes lettres
      */
-    static function DateInterval_Format($interval,$model = "%y {y} %m {m} %d {d} %h {h} %i {min} %s {s}"){
+    static function DateInterval_Format($interval,$model = "%y {y} %m {m} %d {d} %h {h} %i {min} %s {s}",$lang=null){
 
         require_once $_SERVER['DOCUMENT_ROOT'].'/private/config.php';
 
-        parent::init();
-
-        $lang_array = link_parameters('languages/'.self::$lang)['general']['date'];
+        $lang_array = Language::get_date_text($lang);
         $text = $lang_array['connector'];
 
         if(strpos($model,'{y}') !== false && $interval->y != 0)

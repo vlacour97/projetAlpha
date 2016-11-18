@@ -8,6 +8,46 @@
 
 namespace general;
 
+/**
+ * Class uploaded_img
+ * @package general
+ * @author Valentin Lacour
+ */
+class uploaded_img{
+
+    private $url;
+
+    function __construct($url)
+    {
+        $this->url = $url;
+    }
+
+    /**
+     * Recadre une image
+     * @return bool
+     * @throws \other\RuntimeException
+     */
+    public function crop(){
+        $im = new \other\ImageManipulator($this->url);
+        $centreX = round($im->getWidth() / 2);
+        $centreY = round($im->getHeight() / 2);
+
+        $x1 = $centreX - 300;
+        $y1 = $centreY - 300;
+
+        $x2 = $centreX + 300;
+        $y2 = $centreY + 300;
+
+        if($im->getWidth() < 600 || $im->getHeight() < 600)
+            $im->resample(600,600);
+
+        $im->crop($x1, $y1, $x2, $y2);
+        $im->save($this->url);
+
+        return true;
+    }
+
+}
 
 class file {
 
@@ -20,13 +60,17 @@ class file {
      * @param bool $img_needed Si on doit uploader une image
      * @param null|string $extension L'extension que devra avoir le fichier à la fin
      * @param null|string|array $needed_extension Les extensions demandés
-     * @return bool
+     * @return uploaded_img
      * @throws \Exception
      */
     static function upload($path,$file,$size_max = null,$name = null,$img_needed = false,$extension = null,$needed_extension = null){
 
-        //Si le chemin et le fichier sont invalides on sort du programme
-        if(!is_dir($path) || !is_array($file))
+        if(!is_dir($path))
+            if(!mkdir($path))
+                throw new \Exception('Erreur lors de l\'upload',1);
+
+        //Si le fichier est invalide on sort du programme
+        if(!is_array($file))
             throw new \Exception('Les données entrées ne sont pas corrects',0);
 
         //Si le fichier est vide on sort du programme
@@ -77,7 +121,7 @@ class file {
             }
 
         //On retourne la reponse
-        return true;
+        return new uploaded_img($file_path);
     }
 
     /**
@@ -160,7 +204,7 @@ class file {
      * @return bool
      * @throws \Exception
      */
-    static function zip_file($files_path,$zip_path){
+    static function zip_file($files_path,$zip_path,$file_name = "file"){
 
         if(!is_string($zip_path))
             throw new \Exception('Mauvais format de fichier',1);
@@ -172,14 +216,14 @@ class file {
 
         if(is_array($files_path))
         {
-            foreach($files_path as $content)
-                $zip->addFile($content);
+            foreach($files_path as $key=>$content)
+                $zip->addFile($content,$file_name.$key.'.'.self::file_infos($files_path)->extension);
             return true;
         }
 
-        if(is_file($files_path))
+        if(is_string($files_path))
         {
-            $zip->addFile($files_path);
+            $zip->addFile($files_path,$file_name.'.'.self::file_infos($files_path)->extension);
             return true;
         }
 
@@ -197,6 +241,28 @@ class file {
 
         //Retourne la reponse
         return $files_infos->type == "image";
+    }
+
+
+    /**
+     * Determine si un fichier est un JSON
+     * @param string $file
+     * @return bool
+     * @throws \Exception
+     */
+    static function isJSON($file){
+        if(is_string($file)){
+            $parts = explode('.',$file);
+            return $parts[1] == "json" || $parts[1] == "JSON";
+        }
+
+        if(is_array($file)){
+            $extension = self::file_infos($file)->extension;
+            return $extension;
+        }
+
+        throw new \Exception('Mauvais format de fichier',2);
+
     }
 
 

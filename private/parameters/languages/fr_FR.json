@@ -1,125 +1,218 @@
 {
-    "general" :
-    {
-        "date" :
-        {
-            "week" : ["Lundi","Mardi","Mercredi","Jeudi","Vendredi","Samedi","Dimanche"],
-            "cut_week" : ["Lun.","Mar.","Mer.","Jeu.","Vend.","Sam.","Dim."],
-            "month" : ["Janvier","Février","Mars","Avril","Mai","Juin","Juillet","Aout","Septembre","Octobre","Novembre","Decembre"],
-            "cut_month" : ["Jan.","Fév.","Mars","Avr.","Mai","Juin","Juil.","Aout","Sept.","Oct.","Nov.","Dec."],
-            "connector" : {
-                "at" : "à",
-                "y_s"  : "an",
-                "m_s"  : "mois",
-                "d_s"  : "jour",
-                "h_s"  : "heure",
+    "general" : {
+        "date": {
+            "week": [
+                "Lundi",
+                "Mardi",
+                "Mercredi",
+                "Jeudi",
+                "Vendredi",
+                "Samedi",
+                "Dimanche"
+            ],
+            "cut_week": [
+                "Lun.",
+                "Mar.",
+                "Mer.",
+                "Jeu.",
+                "Vend.",
+                "Sam.",
+                "Dim."
+            ],
+            "month": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Aout",
+                "Septembre",
+                "Octobre",
+                "Novembre",
+                "Decembre"
+            ],
+            "cut_month": [
+                "Jan.",
+                "Fév.",
+                "Mars",
+                "Avr.",
+                "Mai",
+                "Juin",
+                "Juil.",
+                "Aout",
+                "Sept.",
+                "Oct.",
+                "Nov.",
+                "Dec."
+            ],
+            "connector": {
+                "at": "à",
+                "y_s": "an",
+                "m_s": "mois",
+                "d_s": "jour",
+                "h_s": "heure",
                 "min_s": "minute",
-                "s_s"  : "seconde",
-                "y_p"  : "an",
-                "m_p"  : "mois",
-                "d_p"  : "jours",
-                "h_p"  : "heures",
+                "s_s": "seconde",
+                "y_p": "an",
+                "m_p": "mois",
+                "d_p": "jours",
+                "h_p": "heures",
                 "min_p": "minutes",
-                "s_p"  : "secondes",
-                "h"    : "h",
-                "min"  : "min",
-                "s"    : "sec"
+                "s_p": "secondes",
+                "h": "h",
+                "min": "min",
+                "s": "sec"
             },
-            "format" :
-                {
-                    "short_form_date" : "dd/mm/yyyy",
-                    "long_form_date" : "d MM yyyy",
-                    "long_cut_date" : "d M yyyy",
-                    "short_time_form" : "hh{h}mm",
-                    "long_time_form" : "hh:mm:ss",
-                    "the" : "le",
-                    "at" : "à"
-                }
+            "format": {
+                "short_form_date": "dd/mm/yyyy",
+                "long_form_date": "d MM yyyy",
+                "long_cut_date": "d M yyyy",
+                "short_time_form": "hh{h}mm",
+                "long_time_form": "hh:mm:ss",
+                "the": "le",
+                "at": "à"
+            }
         },
-        "mail" :
-        {
-            "general" :
-            {
-                "part1" : {
-                    "title" : "Simplicité",
-                    "content" : "Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles."
+        "mail": {
+            "general": {
+                "part1": {
+                    "title": "Simplicité",
+                    "content": "Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles."
                 },
-                "part2" : {
-                    "title" : "Efficacité",
-                    "content" : "Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages."
+                "part2": {
+                    "title": "Efficacité",
+                    "content": "Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages."
                 },
-                "part3" : {
-                    "title" : "Ergonomie",
-                    "content" : "Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise."
+                "part3": {
+                    "title": "Ergonomie",
+                    "content": "Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise."
                 }
             },
-            "activation" :
-            {
-                "subject" : "Demande d'activation de votre compte",
-                "title" : "Votre compte est prêt !",
-                "content" : "Votre compte utilisateur est créé ! Vous pourrez commencer à l'utiliser dans quelques instants mais d'abord, veuillez confirmer votre inscription et compléter vos informations personnelles en cliquant sur le lien ci-dessous.",
-                "button_text" : "Confirmation d'inscription"
+            "activation": {
+                "subject": "Demande d'activation de votre compte",
+                "title": "Votre compte est prêt !",
+                "content": "Votre compte utilisateur est créé ! Vous pourrez commencer à l'utiliser dans quelques instants mais d'abord, veuillez confirmer votre inscription et compléter vos informations personnelles en cliquant sur le lien ci-dessous.",
+                "button_text": "Confirmation d'inscription"
             },
-            "confirmation" :
-            {
-                "subject" : "Confirmation d'activation de votre compte",
-                "title" : "Création de compte validée !",
-                "content" : "Félicitation! La création de votre compte est confirmée, vous pouvez maintenant vous connecter !",
-                "button_text" : "Connectez-vous"
+            "confirmation": {
+                "subject": "Confirmation d'activation de votre compte",
+                "title": "Création de compte validée !",
+                "content": "Félicitation! La création de votre compte est confirmée, vous pouvez maintenant vous connecter !",
+                "button_text": "Connectez-vous"
             },
-            "delete" :
-            {
-                "subject" : "Désactivation de votre compte",
-                "title" : "Votre compte a été supprimé",
-                "content" : "Votre compte gestion-stage.eu a été supprimé. Pour plus d'informations, contactez l'administrateur."
+            "delete": {
+                "subject": "Désactivation de votre compte",
+                "title": "Votre compte a été supprimé",
+                "content": "Votre compte gestion-stage.eu a été supprimé. Pour plus d'informations, contactez l'administrateur."
             },
-            "message" :
-            {
-                "subject" : "Vous avez reçu un message de {user_name}",
-                "title" : "Vous avez reçu un message !",
-                "button_text" : "Répondre à {user_name}"
+            "message": {
+                "subject": "Vous avez reçu un message de {user_name}",
+                "title": "Vous avez reçu un message !",
+                "button_text": "Répondre à {user_name}"
             },
-            "question" :
-            {
-                "subject" : "Un questionnaire demande votre attention",
-                "title" : "Un questionnaire demande votre attention",
-                "content" : "De nouveaux questionnaires sont disponnibles, vous pouvez y répondre à partir de maintenant.",
-                "button_text" : "Répondre au questionnaire"
+            "question": {
+                "subject": "Un questionnaire demande votre attention",
+                "title": "Un questionnaire demande votre attention",
+                "content": "De nouveaux questionnaires sont disponnibles, vous pouvez y accéder à partir de maintenant.",
+                "button_text": "Répondre au questionnaire"
             },
-            "reactivation" :
-            {
-                "subject" : "Votre compte à été remis en service !",
-                "title" : "Votre compte à été remis en service !",
-                "content" : "Félicitation! Vous pouvez à nouveau vous connecter à votre compte {app_html_link} !",
-                "button_text" : "Connectez-vous"
+            "reactivation": {
+                "subject": "Votre compte à été remis en service !",
+                "title": "Votre compte à été remis en service !",
+                "content": "Félicitation! Vous pouvez à nouveau vous connecter à votre compte {app_html_link} !",
+                "button_text": "Connectez-vous"
             },
-            "reponse_question" :
-            {
-                "subject" : "Questionnaire validé !",
-                "title" : "Votre questionnaire a été validé !",
-                "content" : "Un de vos questionnaires a été validé par le tuteur école."
+            "reponse_question": {
+                "subject": "Questionnaire validé !",
+                "title": "Votre questionnaire a été validé !",
+                "content": "Un de vos questionnaires a été validé par le tuteur école."
             },
-            "forgotten_password" :
-            {
-                "subject" : "Mot de passe oublié ?",
-                "title" : "Changement de votre mot de passe",
-                "content" : "Vous avez oublié votre mots de passe et avez une demande pour le changer. Tout ce passe en cliquant sur ce bouton !",
-                "button_text" : "Changer de mot de passe"
+            "forgotten_password": {
+                "subject": "Mot de passe oublié ?",
+                "title": "Changement de votre mot de passe",
+                "content": "Vous avez oublié votre mots de passe et avez une demande pour le changer. Tout ce passe en cliquant sur ce bouton !",
+                "button_text": "Changer de mot de passe"
             }
 
+        },
+        "csv_attribute": {
+            "student": {
+                "name": "Etudiant",
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "group": "Groupe",
+                    "phone": "Téléphone"
+                }
+            },
+            "ti": {
+                "name": "Tuteur IUT",
+                "type": 3,
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "phone": "Téléphone"
+                }
+            },
+            "te": {
+                "name": "Tuteur Entreprise",
+                "type": 2,
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "phone": "Téléphone"
+                }
+            },
+            "other": "Autre"
+        },
+        "notifications" : {
+            "add_post" : {
+                "value" : "{name_user} a publié un article accessible sur votre Timeline",
+                "icon" : ""
+            },
+            "comment_post" : {
+                "value" :"{name_publisher} a commenté votre publication",
+                "icon" : ""
+            },
+            "like_post" : {
+                "value" : "{name_user} a aimé votre publication",
+                "icon" : ""
+            },
+            "wait_survey" : {
+                "value" : "Vous avez un questionnaire en attente",
+                "icon" : ""
+            },
+            "complete_survey" : {
+                "value" : "L'un de vos questionnaires a été complété",
+                "icon" : ""
+            },
+            "validate_survey" : {
+                "value" : "L'un de vos questionnaires a été validé",
+                "icon" : ""
+            },
+            "autorised_publication" : {
+                "value" : "Vous êtes autorisé à publier",
+                "icon" : ""
+            }
+        }
+    },
+    "pages": {
+        "home": {
+            "name": "Accueil",
+            "parts": {
+                "header": {
+                    "title": "Test",
+                    "h2" : "ddd"
+                },
+                "content" : {
+
+                }
+            }
         }
     }
-    ,
-    "pages" :
-        {
-            "home" :
-                {
-                    "name" : "Accueil",
-                    "parts" :
-                        {
-
-                        }
-                }
-        }
-
 }

@@ -9,6 +9,8 @@
 namespace general;
 
 
+use app\Config;
+
 class mail extends \mainClass{
 
     private static  $gabarit_path = "/private/views/mails/";
@@ -17,6 +19,8 @@ class mail extends \mainClass{
     private static  $message_page= ""; //TODO Completer le chemin
     private static  $answer_page= ""; //TODO Completer le chemin
     private static  $forgotten_password_page= ""; //TODO Completer le chemin
+    private static  $get_id = "id";
+    private static  $get_id_message = "id_message";
 
     /**
      * Permet l'envoi de mail
@@ -27,7 +31,6 @@ class mail extends \mainClass{
      * @throws \Exception
      */
     static function send_email($mail,$sujet,$message){
-        parent::init();
 
         //Récupération des données sur l'expéditeur
         $dest_infos = link_parameters('app_config');
@@ -75,11 +78,12 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
-        $link = "http://".$_SERVER["HTTP_HOST"].self::$activation_page."?id=".crypt::encrypt($id);
+        $link = "http://".$_SERVER["HTTP_HOST"].self::$activation_page."?".self::$get_id."=".crypt::encrypt($id_user);
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('activateAccount');
@@ -126,8 +130,9 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
         $link = "http://".$_SERVER["HTTP_HOST"];
@@ -176,8 +181,9 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('deleteAccount');
@@ -235,13 +241,13 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $all_texts = link_parameters('languages/'.$recipient_datas['language'])['general'];
-        $texts = $all_texts['mail'];
-        $date_format = $all_texts['date']['format'];
-        $app_name = link_parameters('app_config')['name'];
+        $recipient_datas['language'] == "" && $recipient_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($recipient_datas['language']);
+        $date_format = Language::get_date_text()['format'];
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
-        $link = "http://".$_SERVER["HTTP_HOST"].self::$message_page.'?id_message='.crypt::encrypt($id_message);
+        $link = "http://".$_SERVER["HTTP_HOST"].self::$message_page."?".self::$get_id_message."=".crypt::encrypt($id_message);
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('msg');
@@ -291,8 +297,9 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
         $link = "http://".$_SERVER["HTTP_HOST"].self::$answer_page;
@@ -342,8 +349,9 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
         $link = "http://".$_SERVER["HTTP_HOST"];
@@ -394,8 +402,9 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
         $link = "http://".$_SERVER["HTTP_HOST"];
@@ -443,11 +452,12 @@ class mail extends \mainClass{
             throw new \Exception('Erreur lors de la récupération des informations utilisateur',2);
 
         //On récupére les contenus à utiliser
-        $texts = link_parameters('languages/'.$user_datas['language'])['general']['mail'];
-        $app_name = link_parameters('app_config')['name'];
+        $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+        $texts = Language::get_mail_text($user_datas['language']);
+        $app_name = Config::getName();
 
         //On génére un lien pour l'activation
-        $link = "http://".$_SERVER["HTTP_HOST"].self::$forgotten_password_page.'?id='.crypt::encrypt($id_user);
+        $link = "http://".$_SERVER["HTTP_HOST"].self::$forgotten_password_page."?".self::$get_id."=".crypt::encrypt($id_user);
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('forgottenPassword');
@@ -482,5 +492,10 @@ class mail extends \mainClass{
         return self::send_email($user_datas['email'],$subject,$gabarit);
     }
 
+    static function feedback_bug($subject,$content,$author){
+        $content = 'Contenu du message : <br>'.$content.'<br><br> Auteur : '.$author;
+        $mail = Config::$admin_mail;
+        return self::send_email($mail,$subject,$content);
+    }
 
 } 
