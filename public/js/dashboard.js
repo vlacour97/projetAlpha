@@ -34,10 +34,24 @@ function initLineStats(){
     });
 }
 
-function initDonutStats(){
-    $('#DonutStats').css({height: 180});
+function initDonutStatsAdmin(){
+    $('#DonutStatsAdmin').css({height: 180});
     Morris.Donut({
-        element: 'DonutStats',
+        element: 'DonutStatsAdmin',
+        data: [
+            {label: "Questionnaires Vides", value: 20},
+            {label: "Questionnaires Remplis", value: 12},
+            {label: "Questionnaires Validés", value: 30}
+        ],
+        colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
+    });
+
+}
+
+function initDonutStatsTE(){
+    $('#DonutStatsTE').css({height: 180});
+    Morris.Donut({
+        element: 'DonutStatsTE',
         data: [
             {label: "Questionnaires Vides", value: 20},
             {label: "Questionnaires Remplis", value: 12},
@@ -119,8 +133,13 @@ function PageLoad(){
             }
         }
     });
-    initLineStats();
-    initDonutStats();
+    if(page == 'admin')
+    {
+        initLineStats();
+        initDonutStatsAdmin();
+    }
+    if(page == 'TE' || page == 'TI')
+        initDonutStatsTE();
     initAnimations();
     initWeather();
 }
