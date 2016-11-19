@@ -126,7 +126,7 @@ class Install {
      */
     static function Config_install($name,$description,$keywords,$author,$admin_mail,$deadline_date,$weather_API_Key){
         try{
-            Config::create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date);
+            Config::create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date,$weather_API_Key);
         }catch (\Exception $e){
             throw $e;
         }
