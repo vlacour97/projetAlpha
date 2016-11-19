@@ -488,8 +488,8 @@
         </ol>
 
 
-            <div class="col-md-11"> <h1 class="page-title"><span class="fw-semi-bold">Edition de Questionnaire</span></h1></div>
-            <div class="cl-md-1 mb-n"><button type="button" class="HelpButton  btn btn-info">Info</button></div>
+        <div class="col-md-11"> <h1 class="page-title"><span class="fw-semi-bold">Edition de Questionnaire</span></h1></div>
+        <div class="cl-md-1 mb-n"><button type="button" class="HelpButton  btn btn-info">Info</button></div>
 
 
         <section class="row bg-white">
@@ -507,93 +507,253 @@
                 </tr>
 
                 <tr>
+
                     <td class="text-center"> <h4 class="fw-semi-bold mt-n">1-</h4> </td>
                     <td class="text-center">
-                        <form>
-                            <h4 class="mt-n mb-n"> <span class="fw-semi-bold> "Question </span> </h4>
-                            <input type="text" class="form-control" placeholder="Question">
-                        </form>
-                        <form class="form-inline">
-                            <h4 class="mt-n"> <span class="fw-semi-bold"> Réponses </span></h4>
-                            <table class="table">
-                                <tbody>
-                                    <div class="form-group">
-                                    <tr>
-                                        <td><h5><span class="fw-semi-bold">1- </span> </h5> </td>
-                                        <td>
+                        <div class="panel-group mt-xs" id="accordion">
+                            <div class="panel panel-default">
+                                <div class="panel-heading collapsed">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
+                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                    </h4>
+                                </div>
+                                <div id="collapse1" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form>
                                             <input type="text" class="form-control" placeholder="Question">
-                                        </td>
-                                        <td>
-                                            <input type="number" class="form-control" placeholder="Valeur Question">
-                                        </td>
-                                        <td>
-                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                        </td>
-                                    </tr>
-                                        <tr>
-                                            <td><h5><span class="fw-semi-bold">2- </span> </h5> </td>
-                                            <td>
-                                                <input type="text" class="form-control" placeholder="Question">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" placeholder="Valeur Question">
-                                            </td>
-                                            <td>
-                                                <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                            </td>
-                                        </tr>
-                                        <tr>
-                                            <td><h5><span class="fw-semi-bold">3- </span> </h5> </td>
-                                            <td>
-                                                <input type="text" class="form-control" placeholder="Question">
-                                            </td>
-                                            <td>
-                                                <input type="number" class="form-control" placeholder="Valeur Question">
-                                            </td>
-                                            <td>
-                                                <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                            </td>
-                                        </tr>
+                                            <table class="table">
+                                                <tbody>
+                                                <div class="form-group">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="col-md-8">
+                                                            <h4 class="mt-n"> <span class="fw-semi-bold"> Réponses </span></h4>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">1- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">2- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">3- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td><button type="button" class="closeComment btn btn-link"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter une réponse</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </div>
+                                                </tbody>
+                                            </table>
+                                        </form>
                                     </div>
-                                </tbody>
-                            </table>
-                        </form>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </td>
                     <td></td>
                 </tr>
 
                 <tr>
+
                     <td class="text-center"> <h4 class="fw-semi-bold mt-n">1-</h4> </td>
                     <td class="text-center">
-                        <form>
-                            <h4 class="mt-n">Question</h4>
-                            <input type="text" class="form-control" placeholder="Question">
-                        </form>
-                        <form class="form-inline">
-                            <h4 class="mt-n"> Réponses</h4>
-                            <table class="table">
-                                <tbody>
-                                <div class="form-group">
-                                    <tr>
-                                        <td class="col-md-1"><h5><span class="fw-semi-bold">1- </span> </h5> </td>
-                                        <td class="col-md-9">
-                                            <input type="text" class="form-control" placeholder="Question">
-                                        </td>
-                                        <td class="col-md-1">
-                                            <input type="number" class="form-control" placeholder="Valeur Question">
-                                        </td>
-                                        <td class="col-md-1">
-                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                        </td>
-                                    </tr>
+                        <div class="panel-group mt-xs" id="accordion2">
+                            <div class="panel panel-default">
+                                <div class="panel-heading collapsed">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
+                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                    </h4>
                                 </div>
-                                </tbody>
-                            </table>
-                        </form>
+                                <div id="collapse2" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form>
+                                            <input type="text" class="form-control" placeholder="Question">
+                                            <table class="table">
+                                                <tbody>
+                                                <div class="form-group">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="col-md-8">
+                                                            <h4 class="mt-n"> <span class="fw-semi-bold"> Réponses </span></h4>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">1- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">2- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">3- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td><button type="button" class="closeComment btn btn-link"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter une réponse</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </div>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
                     </td>
                     <td></td>
                 </tr>
 
+                <tr>
+
+                    <td class="text-center"> <h4 class="fw-semi-bold mt-n">1-</h4> </td>
+                    <td class="text-center">
+                        <div class="panel-group mt-xs" id="accordion3">
+                            <div class="panel panel-default">
+                                <div class="panel-heading collapsed">
+                                    <h4 class="panel-title">
+                                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse3">
+                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                    </h4>
+                                </div>
+                                <div id="collapse3" class="panel-collapse collapse in">
+                                    <div class="panel-body">
+                                        <form>
+                                            <input type="text" class="form-control" placeholder="Question">
+                                            <table class="table">
+                                                <tbody>
+                                                <div class="form-group">
+                                                    <tr>
+                                                        <td></td>
+                                                        <td class="col-md-8">
+                                                            <h4 class="mt-n"> <span class="fw-semi-bold"> Réponses </span></h4>
+                                                        </td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">1- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">2- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td class="col-md-1"><h5><span class="fw-semi-bold">3- </span> </h5> </td>
+                                                        <td class="col-md-8">
+                                                            <input type="text" class="form-control" placeholder="Question">
+                                                        </td>
+                                                        <td class="2">
+                                                            <input type="number" class="form-control" placeholder="Valeur">
+                                                        </td>
+                                                        <td class="col-md-1">
+                                                            <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td></td>
+                                                        <td><button type="button" class="closeComment btn btn-link"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter une réponse</button></td>
+                                                        <td></td>
+                                                        <td></td>
+                                                    </tr>
+                                                </div>
+                                                </tbody>
+                                            </table>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </td>
+                    <td></td>
+                </tr>
 
                 <tr>
                     <td></td>
@@ -607,7 +767,7 @@
                     <td></td>
                     <td>
                         <div class="col-md-12 text-center mt-n mb-lg">
-                            <button type="button" class="btn btn-info">Enregistrer</button>
+                            <button type="button" class="SaveButton btn btn-info">Enregistrer</button>
                         </div>
                     </td>
                     <td></td>
