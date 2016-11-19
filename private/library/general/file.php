@@ -65,8 +65,12 @@ class file {
      */
     static function upload($path,$file,$size_max = null,$name = null,$img_needed = false,$extension = null,$needed_extension = null){
 
-        //Si le chemin et le fichier sont invalides on sort du programme
-        if(!is_dir($path) || !is_array($file))
+        if(!is_dir($path))
+            if(!mkdir($path))
+                throw new \Exception('Erreur lors de l\'upload',1);
+
+        //Si le fichier est invalide on sort du programme
+        if(!is_array($file))
             throw new \Exception('Les données entrées ne sont pas corrects',0);
 
         //Si le fichier est vide on sort du programme
@@ -200,7 +204,7 @@ class file {
      * @return bool
      * @throws \Exception
      */
-    static function zip_file($files_path,$zip_path){
+    static function zip_file($files_path,$zip_path,$file_name = "file"){
 
         if(!is_string($zip_path))
             throw new \Exception('Mauvais format de fichier',1);
@@ -212,14 +216,14 @@ class file {
 
         if(is_array($files_path))
         {
-            foreach($files_path as $content)
-                $zip->addFile($content);
+            foreach($files_path as $key=>$content)
+                $zip->addFile($content,$file_name.$key.'.'.self::file_infos($files_path)->extension);
             return true;
         }
 
         if(is_string($files_path))
         {
-            $zip->addFile($files_path);
+            $zip->addFile($files_path,$file_name.'.'.self::file_infos($files_path)->extension);
             return true;
         }
 

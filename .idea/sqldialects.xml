@@ -1,3 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
+<project version="4">
+  <component name="SqlDialectMappings">
+    <file url="file://$PROJECT_DIR$/projetIUT_dump.sql" dialect="MySQL" />
+  </component>
+</project>
+=======
 <project version="4" />
 
+>>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
