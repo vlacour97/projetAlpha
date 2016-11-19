@@ -146,9 +146,11 @@ class Install {
      * @param string $language
      * @throws \Exception
      */
-    static function Admin_install($email,$name,$fname,$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$language = ""){
+    static function Admin_install($email,$name,$fname,$pwd,$pwdTest,$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$language = ""){
         try{
-            User::registration_by_admin($email,1,true,$name,$fname,$phone,$address,$zip_code,$city,$country,$language);
+            User::registration_by_admin($email,1,true,$name,$fname,$phone,$address,$zip_code,$city,$country,$language,false);
+            $id_user = PDOQueries::get_UserID_with_email($email);
+            Log::registration_by_user($id_user,$pwd,$pwdTest,$fname,$name,$phone,$address,$zip_code,$city,$country,$language);
         }catch (\Exception $e){
             throw $e;
         }

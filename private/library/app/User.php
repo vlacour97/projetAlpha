@@ -282,10 +282,11 @@ class User extends \mainClass{
      * @param string $city
      * @param string $country
      * @param string $language
+     * @param bool $send_mail
      * @return bool
      * @throws \Exception
      */
-    static function registration_by_admin($email,$type,$publication_entitled = false,$name = "",$fname = "",$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$language = ""){
+    static function registration_by_admin($email,$type,$publication_entitled = false,$name = "",$fname = "",$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$language = "",$send_mail = true){
         is_null($name) && $name = "";
         is_null($fname) && $fname = "";
         is_null($phone) && $phone = "";
@@ -296,7 +297,7 @@ class User extends \mainClass{
             throw new \Exception('Adresse mail déjà utilisé',2);
         if(!($type>0 && $type<4))
             throw new \Exception('Type d\'utilisateur invalide',2);
-        return PDOQueries::add_user($name,$fname,$type,$email,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled) && mail::send_activation_email(PDOQueries::get_UserID_with_email($email));
+        return PDOQueries::add_user($name,$fname,$type,$email,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled) && (($send_mail && mail::send_activation_email(PDOQueries::get_UserID_with_email($email))) || !$send_mail);
     }
 
     /**
