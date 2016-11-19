@@ -16,18 +16,19 @@ class Config {
     static $config_file_path = '/private/parameters/';
     static $config_file_name = 'app_config';
 
-    static $name;
-    static $description;
-    static $keywords;
-    static $author;
-    static $copyright = "Gestion Stage&copy;";
-    static $version = "1.0";
-    static $last_update;
-    static $admin_mail;
-    static $current_survey = null;
-    static $deadline_date;
-    static $default_language = "fr_FR";
-    static $check = false;
+    static private $name;
+    static private $description;
+    static private $keywords;
+    static private $author;
+    static private $copyright = "Gestion Stage&copy;";
+    static private $version = "1.0";
+    static private $last_update;
+    static private $admin_mail;
+    static private $current_survey = null;
+    static private $deadline_date;
+    static private $default_language = "fr_FR";
+    static private $weather_API_key;
+    static private $check = false;
 
     /**
      * Crée un fichier de configuration
@@ -39,7 +40,7 @@ class Config {
      * @param $deadline_date
      * @return bool
      */
-    public static function create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date){
+    public static function create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date,$weather_API_key){
         $now = new Date('now');
         self::$name = $name;
         self::$description = $description;
@@ -48,6 +49,7 @@ class Config {
         self::$last_update = $now->format('yyyy-mm-dd');
         self::$admin_mail = $admin_mail;
         self::$deadline_date = $deadline_date;
+        self::$weather_API_key = $weather_API_key;
         return self::set_datas();
     }
 
@@ -67,6 +69,7 @@ class Config {
         self::$current_survey = $datas['current_survey'];
         self::$deadline_date = $datas['deadline_date'];
         self::$default_language = $datas['default_language'];
+        self::$weather_API_key = $datas['weather_API_key'];
         self::$check = true;
     }
 
@@ -87,6 +90,7 @@ class Config {
         $datas['current_survey'] = self::$current_survey;
         $datas['deadline_date'] = self::$deadline_date;
         $datas['default_language'] = self::$default_language;
+        $datas['weather_API_key'] = self::$weather_API_key;
         return boolval(file_put_contents(ROOT.self::$config_file_path.self::$config_file_name.'.json',json_encode($datas)));
     }
 
@@ -198,6 +202,16 @@ class Config {
         if(!self::$check)
             self::get_datas();
         return self::$default_language;
+    }
+
+    /**
+     * @return mixed
+     */
+    public static function getWeatherAPIKey()
+    {
+        if(!self::$check)
+            self::get_datas();
+        return self::$weather_API_key;
     }
 
     /**
@@ -331,6 +345,17 @@ class Config {
         return self::set_datas();
     }
 
+    /**
+     * @param mixed $weather_API_key
+     * @return bool
+     */
+    public static function setWeatherAPIKey($weather_API_key)
+    {
+        if(!self::$check)
+            self::get_datas();
+        self::$weather_API_key = $weather_API_key;
+        return self::set_datas();
+    }
 
 
 } 

@@ -124,7 +124,7 @@ class Install {
      * @param string $deadline_date
      * @throws \Exception
      */
-    static function Config_install($name,$description,$keywords,$author,$admin_mail,$deadline_date){
+    static function Config_install($name,$description,$keywords,$author,$admin_mail,$deadline_date,$weather_API_Key){
         try{
             Config::create_config_file($name,$description,$keywords,$author,$admin_mail,$deadline_date);
         }catch (\Exception $e){

@@ -83,6 +83,16 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les textes de météo
+     * @return mixed
+     */
+    static function get_weather_texts(){
+        if(is_null(self::$datas))
+            self::init();
+        return self::$datas["general"]["weather"];
+    }
+
+    /**
      * Traduit un gabarit
      * @param string $short_path
      * @return string

@@ -35,7 +35,13 @@ class Date extends \mainClass
         $this->month = $lang_array['month'];
         $this->cutMonth = $lang_array['cut_month'];
         $this->connector = $lang_array['connector'];
-        $this->datetime = new \DateTime($date);
+        if(is_int($date))
+        {
+            $this->datetime = new \DateTime('now');
+            $this->datetime->setTimestamp($date);
+        }else{
+            $this->datetime = new \DateTime($date);
+        }
 
     }
 

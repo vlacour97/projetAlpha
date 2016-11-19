@@ -199,6 +199,17 @@
                 "value" : "Vous êtes autorisé à publier",
                 "icon" : ""
             }
+        },
+        "weather" : {
+            "clearSky" : "Ciel Clair",
+            "fewClouds" : "Quelques nuages",
+            "scatteredCloud" : "Nuages Dispersés",
+            "brokenClouds" : "Nuageux",
+            "showerRain" : "Pluie Dense",
+            "rain" : "Pluie",
+            "thunderstorm" : "Orage",
+            "snow" : "Neige",
+            "mist" : "Brouillard"
         }
     },
     "pages": {

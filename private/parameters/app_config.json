@@ -9,5 +9,6 @@
     "admin_mail" : "vlacour97@icloud.com",
     "current_survey" : 1,
     "deadline_date" : "2016-11-01",
-    "default_language" : "fr_FR"
+    "default_language" : "fr_FR",
+    "weather_API_key" : "62abf3b0db7b6a9c07a026cec839d44f"
 }
