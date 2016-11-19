@@ -8,7 +8,7 @@
 
 namespace app;
 
-
+use app\ReturnDatas;
 use general\Date;
 use general\file;
 use general\PDOQueries;
@@ -35,9 +35,9 @@ class CommentsDatas extends ReturnDatas{
     /** @var array  */
     public $int = array('ID','ID_POST','ID_USER');
     /** @var array  */
-    public $date = array('publication_date');
+    public $dates = array('publication_date');
     /** @var array  */
-    public $ban = array('deleted');
+    public $useless_attr = array('deleted');
 
 }
 
@@ -60,7 +60,7 @@ class LikesDatas extends ReturnDatas{
     /** @var array  */
     public $int = array('ID','ID_POST','ID_USER');
     /** @var array  */
-    public $date = array('requested_date');
+    public $dates = array('requested_date');
 
 }
 
@@ -112,9 +112,9 @@ class TimelineDatas extends ReturnDatas{
     /** @var array  */
     public $int = array('ID','ID_USER');
     /** @var array  */
-    public $date = array('publication_date');
+    public $dates = array('publication_date');
     /** @var array  */
-    public $ban = array('deleted');
+    public $useless_attr = array('deleted');
 
 
 
@@ -293,7 +293,7 @@ class Timeline extends \mainClass{
         $attachments = array();
         foreach($datas as $key=>$lines){
             $tmp = new PostAtttachmentDatas();
-            self::format_datas($lines,$tmp);
+            ReturnDatas::format_datas($lines,$tmp);
             $attachments[]= $tmp;
         }
 
@@ -307,7 +307,7 @@ class Timeline extends \mainClass{
      */
     static private function get_post($postDatas=array()){
         $post= new TimelineDatas();
-        self::format_datas($postDatas,$post);
+        ReturnDatas::format_datas($postDatas,$post);
 
         //show_post_attachment
         $post->post_attachments =self::get_post_attachments($post->ID);
@@ -332,7 +332,7 @@ class Timeline extends \mainClass{
         $comments = array();
         foreach ($datas as $key=>$lines) {
             $tmp = new CommentsDatas();
-            self::format_datas($lines,$tmp);
+            ReturnDatas::format_datas($lines,$tmp);
             $comments[] = $tmp;
         }
         return $comments;
@@ -348,32 +348,10 @@ class Timeline extends \mainClass{
         $likes = array();
         foreach ($datas as $key=>$lines){
             $tmp = new LikesDatas();
-            self::format_datas($lines,$tmp);
+            ReturnDatas::format_datas($lines,$tmp);
             $likes[] = $tmp;
         }
         return $likes;
-    }
-
-    /**
-     * formattage de données
-     * @param array $datas
-     * @param ReturnDatas $object
-     */
-    static public function format_datas($datas,&$object){
-
-        foreach ($datas as $key=>$content) {
-            if(is_string($key) && !in_array($key,$object->ban)){
-                if(in_array($key,$object->int))
-                    $object->$key=intval($content);
-                elseif(in_array($key,$object->date))
-                    $object->$key=new \general\Date($content);
-                elseif(in_array($key,$object->bool))
-                    $object->$key=boolval($content);
-                else
-                    $object->$key=$content;
-            }
-
-        }
     }
 
 }

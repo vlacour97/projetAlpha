@@ -724,6 +724,28 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Compte le nombre de connexions
+     * @return int
+     */
+    static function count_stats(){
+        $datas = self::$PDO->prepare('SELECT '.self::$prefix.'count_stats()');
+        $datas->execute(array());
+        return intval($datas->fetchAll()[0][0]);
+    }
+
+    /**
+     * Compte le nombre de connexions
+     * @return bool|int
+     */
+    static function count_stats_by_day($nb_day){
+        if(!is_int($nb_day))
+            return false;
+        $datas = self::$PDO->prepare('SELECT COUNT(ID) as count_id, DATE(viewing_date) FROM stats WHERE '.self::$prefix.'viewing_date BETWEEN DATE_SUB(NOW(), INTERVAL :nbDay DAY) AND NOW() GROUP BY DAY(viewing_date)');
+        $datas->execute(array(':nbDay' => $nb_day));
+        return $datas->fetchAll();
+    }
+
+    /**
      * Compte le nombre d'étudiants
      * @return bool|int
      */

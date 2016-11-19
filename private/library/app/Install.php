@@ -122,6 +122,7 @@ class Install {
      * @param string $author
      * @param string $admin_mail
      * @param string $deadline_date
+     * @param string $weather_API_Key
      * @throws \Exception
      */
     static function Config_install($name,$description,$keywords,$author,$admin_mail,$deadline_date,$weather_API_Key){

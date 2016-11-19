@@ -465,7 +465,7 @@ class User extends \mainClass{
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new UserDatas());
+            ReturnDatas::format_datas($content,$response[] = new UserDatas());
         }
 
         return $response;
@@ -481,7 +481,7 @@ class User extends \mainClass{
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new UserDatas());
+            ReturnDatas::format_datas($content,$response[] = new UserDatas());
         }
 
         return $response;
@@ -497,7 +497,7 @@ class User extends \mainClass{
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new UserDatas());
+            ReturnDatas::format_datas($content,$response[] = new UserDatas());
         }
 
         return $response;
@@ -513,7 +513,7 @@ class User extends \mainClass{
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new UserDatas());
+            ReturnDatas::format_datas($content,$response[] = new UserDatas());
         }
 
         return $response;
@@ -529,7 +529,7 @@ class User extends \mainClass{
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new StudentDatas());
+            ReturnDatas::format_datas($content,$response[] = new StudentDatas());
         }
 
         return $response;
@@ -541,11 +541,11 @@ class User extends \mainClass{
      * @throws \Exception
      */
     static function get_deleted_students(){
-        PDOQueries::show_deleted_students();
+        $datas = PDOQueries::show_deleted_students();
         $response = array();
         foreach($datas as $content)
         {
-            self::formate_datas($content,$response[] = new StudentDatas());
+            ReturnDatas::format_datas($content,$response[] = new StudentDatas());
         }
 
         return $response;
@@ -561,7 +561,7 @@ class User extends \mainClass{
         if(!($datas = PDOQueries::show_user($id)))
             throw new \Exception('Erreur lors de la récupération des données',2);
         $users = new UserDatas();
-        self::formate_datas($datas,$users);
+        ReturnDatas::format_datas($datas,$users);
         return $users;
     }
 
@@ -575,37 +575,13 @@ class User extends \mainClass{
         if(!($datas = PDOQueries::show_student($id)))
             throw new \Exception('Erreur lors de la récupération des données',2);
         $student = new StudentDatas();
-        self::formate_datas($datas,$student);
+        ReturnDatas::format_datas($datas,$student);
         return $student;
-    }
-
-    /**
-     * Formate les données des étudiants et des utilisateurs
-     * @param $datas
-     * @param $object
-     */
-    static public function formate_datas($datas,&$object){
-        /** @var $object ReturnDatas */
-        foreach($datas as $key=>$content){
-            if(!is_int($key)){
-                if(in_array($key,$object->dates) && $content != '0000-00-00 00:00:00' && $content != '0000-00-00' && $content != null)
-                    $object->$key = new Date($content);
-                elseif(in_array($key,$object->int))
-                    $object->$key = intval($content);
-                elseif(in_array($key,$object->bool))
-                    $object->$key = boolval($content);
-                elseif(is_null($content))
-                    $object->$key = "";
-                else
-                    $object->$key = $content;
-            }
-        }
     }
 
     /**
      * Permet la modification d'un utilisateur
      * @param int $id
-     * @param string $pwd
      * @param null string $name
      * @param null string $fname
      * @param null int $type
