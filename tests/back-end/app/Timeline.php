@@ -6,8 +6,11 @@
  * Time: 15:18
  */
 
-include_once '../../../private/config.php'cf;
+include_once '../../../private/config.php';
 
+echo '<pre>';
+
+/*
 try{
     if(\app\Timeline::save_post_attachments(6,$_FILES['remi']))
     echo 'piece jointe sauvegardee<br>';
@@ -25,7 +28,7 @@ echo 'commentaire ajoute<br>';
 /*if(\app\Timeline::delete_comment(45))
 echo 'commentaire supprime<br>';
 */
-
+/*
 if(\app\Timeline::like(6,52));
     echo 'like ajoute<br>';
 
@@ -60,6 +63,8 @@ $var = \app\Timeline::get_all_posts();
 var_dump($var);
 */
 
+
+var_dump(\app\Timeline::get_all_posts());
 
 
 

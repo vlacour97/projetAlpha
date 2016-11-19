@@ -14,22 +14,6 @@ use general\file;
 use general\PDOQueries;
 
 /**
- * Class ReturnDatas
- * @package app
- * @author Rémi Lemaire
- */
-class ReturnDatas{
-    /** @var array  */
-    public $int = array();
-    /** @var array */
-    public $date = array();
-    /** @var array */
-    public $bool = array();
-    /** @var array */
-    public $ban = array();
-}
-
-/**
  * Class CommentsDatas
  * @package app
  * Author: Rémi Lemaire
@@ -163,10 +147,10 @@ class Timeline extends \mainClass{
 
     /**
      * Permet l'ajout d'un post en prenant en compte les pièces jointes
-     * @param $id_user
-     * @param $content
-     * @param null $post_attachment
-     * @param null $description
+     * @param int $id_user
+     * @param string $content
+     * @param null|array $post_attachment
+     * @param null|string $description
      * @return bool
      * @throws \Exception
      */
@@ -203,9 +187,9 @@ class Timeline extends \mainClass{
 
     /**
      * Permet l'ajout d'un commentaire
-     * @param $id_post
-     * @param $id_user
-     * @param $content
+     * @param int $id_post
+     * @param int $id_user
+     * @param string $content
      * @return bool
      */
     static function add_comment($id_post,$id_user,$content){
@@ -214,7 +198,7 @@ class Timeline extends \mainClass{
 
     /**
      * supprime un commentaire
-     * @param $id_comment
+     * @param int $id_comment
      * @return bool
      */
     static function delete_comment($id_comment){
@@ -223,8 +207,8 @@ class Timeline extends \mainClass{
 
     /**
      * ajoute un like
-     * @param $id_post
-     * @param $id_user
+     * @param int $id_post
+     * @param int $id_user
      * @return bool
      */
     static function like($id_post,$id_user){
@@ -233,8 +217,8 @@ class Timeline extends \mainClass{
 
     /**
      * Permet la suppression d'un like
-     * @param $id_post
-     * @param $id_user
+     * @param int $id_post
+     * @param int $id_user
      * @return bool
      */
     static function unlike($id_post,$id_user){
@@ -243,8 +227,8 @@ class Timeline extends \mainClass{
 
     /**
      * permet la sauvegarde d'upload de pièce jointe
-     * @param $id_post
-     * @param $file
+     * @param int $id_post
+     * @param array $file
      * @param null $description
      * @return bool
      * @throws \Exception
@@ -301,7 +285,7 @@ class Timeline extends \mainClass{
 
     /**
      *  Récupere les pieces jointes sur la base et renvoie un tableau avec ses informations (chemin d'accés, infos BD)
-     * @param $id_post
+     * @param int $id_post_attachment
      * @return array|bool
      */
     static private function get_post_attachments($id_post_attachment){
@@ -339,7 +323,7 @@ class Timeline extends \mainClass{
 
     /**
      * Met en forme la présentation des valeurs de retour pour un commentaire
-     * @param $id_post_comments
+     * @param int $id_post_comments
      * @return array
      */
     static private function get_comments($id_post_comments)
@@ -356,7 +340,7 @@ class Timeline extends \mainClass{
 
     /**
      * Met en forme la présentation des valeurs de retour pour un like
-     * @param $id_post_likes
+     * @param int $id_post_likes
      * @return array
      */
     static private function get_likes($id_post_likes){
