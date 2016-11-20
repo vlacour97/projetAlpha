@@ -201,6 +201,7 @@ class file {
      * Permet d'enregistrer des fichiers dans un fichier zip
      * @param array|string $files_path
      * @param string $zip_path
+     * @param string $file_name
      * @return bool
      * @throws \Exception
      */

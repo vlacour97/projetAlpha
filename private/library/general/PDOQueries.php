@@ -11,6 +11,9 @@ namespace general;
 
 class PDOQueries extends \mainClass{
 
+    /**
+     * @var \PDO
+     */
     private static $PDO;
     private static $prefix;
 
@@ -344,6 +347,17 @@ class PDOQueries extends \mainClass{
         if(!is_int($id_notification))
             return false;
         return self::$PDO->prepare('CALL '.self::$prefix.'delete_notification(:id_notification)')->execute(array(':id_notification'=>$id_notification));
+    }
+
+    /**
+     * Supprime une piece jointe de publication
+     * @param int $id_message_attachment
+     * @return bool
+     */
+    static function delete_message_attachments($id_message_attachment){
+        if(!is_int($id_message_attachment))
+            return false;
+        return self::$PDO->prepare('CALL '.self::$prefix.'delete_message_attachment(:id_message_attachment)')->execute(array(':id_message_attachment'=>$id_message_attachment));
     }
 
     /**
@@ -894,6 +908,15 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Récupere le plus grand id de message
+     * @return int|bool
+     */
+    static function get_max_message_id(){
+        $datas = self::$PDO->query('SELECT max(ID) as maxID FROM messages')->fetchAll()[0];
+        return intval($datas['maxID']);
+    }
+
+    /**
      * Récupere le plus grand id de piece jointe de post
      * @return int|bool
      */
@@ -1030,6 +1053,18 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Affiche un message privé
+     * @return bool|array
+     */
+    static function search_messages($item){
+        if(!is_string($item))
+            return false;
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where t1.id_recipient = t2.ID AND t1.id_sender = t3.ID  and (t1.object LIKE :item OR t1.content LIKE :item OR concat(t2.fname,' ',t2.name) LIKE :item OR concat(t3.fname,' ',t3.name) LIKE :item)");
+        $query->execute(array(':item' => '%'.$item.'%'));
+        return $query->fetchAll();
+    }
+
+    /**
      * Recherches des publication
      * @return bool|array
      */
@@ -1137,7 +1172,9 @@ class PDOQueries extends \mainClass{
     static function show_deleted_message($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where (id_sender=".$id_user." OR id_recipient = ".$id_user.") and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and deleted IS NOT NULL")->fetchAll();
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where (id_sender= :id_user OR id_recipient = :id_user) and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and (deleted IS NOT NULL AND deleted = 1)");
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll();
     }
 
     /**
@@ -1149,6 +1186,19 @@ class PDOQueries extends \mainClass{
         if(!is_int($id_post))
             return false;
         return self::$PDO->query("SELECT t1.*,concat(t2.fname,' ',t2.name) as liker_name FROM ".self::$prefix."liked_post t1,".self::$prefix."users t2 WHERE t1.ID_USER=t2.ID AND ID_POST=".$id_post)->fetchAll();
+    }
+
+    /**
+     * Affiche les messages recu d'un utilisateur
+     * @param int $id_user
+     * @return bool|array
+     */
+    static function show_new_messages($id_user){
+        if(!is_int($id_user))
+            return false;
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where id_recipient = :id_user and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and viewed IS NULL and (deleted IS NULL OR deleted = 0)");
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll();
     }
 
     /**
@@ -1170,7 +1220,9 @@ class PDOQueries extends \mainClass{
     static function show_message($id_message){
         if(!is_int($id_message))
             return false;
-        return self::$PDO->query("SELECT * from ".self::$prefix."messages where ID=".$id_message)->fetchAll()[0];
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where t1.id_recipient = t2.ID AND t1.id_sender = t3.ID  and t1.ID= :id_message");
+        $query->execute(array(':id_message'=>$id_message));
+        return $query->fetchAll()[0];
     }
 
     /**
@@ -1214,7 +1266,9 @@ class PDOQueries extends \mainClass{
     static function show_received_message($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where id_recipient = ".$id_user." and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and deleted IS NOT NULL".$id_user)->fetchAll();
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where id_recipient = :id_user and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and (deleted IS NULL OR deleted=0)");
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll();
     }
 
     /**
@@ -1225,7 +1279,9 @@ class PDOQueries extends \mainClass{
     static function show_sended_message($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where id_sender=".$id_user." and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and deleted IS NOT NULL".$id_user)->fetchAll();
+        $query = self::$PDO->prepare("SELECT t1.*,concat(t2.fname,' ',t2.name) as recipient_name,concat(t3.fname,' ',t3.name) as sender_name from ".self::$prefix."messages t1,".self::$prefix."users t2, ".self::$prefix."users t3 where id_sender=".$id_user." and t1.id_recipient = t2.ID AND t1.id_sender = t3.ID and (deleted IS NULL OR deleted = 0)");
+        $query->execute(array(':id_user'=>$id_user));
+        return $query->fetchAll();
     }
 
     /**

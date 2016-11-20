@@ -322,9 +322,9 @@ CREATE  PROCEDURE `{prefix}add_comment` (IN `param_id_post` INT, IN `param_id_us
     VALUES(param_id_post, param_id_user, param_content, NOW());
 
 DROP PROCEDURE IF EXISTS `{prefix}add_message_attachment`;
-CREATE  PROCEDURE `{prefix}add_message_attachment` (IN `param_id_message` INT, IN `param_link` INT, IN `param_description` INT, IN `param_type_file` INT)  BEGIN
+CREATE PROCEDURE `{prefix}add_message_attachment`(IN `param_id_message` INT, IN `param_link` TEXT, IN `param_description` TEXT, IN `param_type_file` TEXT ) BEGIN
 INSERT INTO {prefix}message_attachments(ID_message, link, description, type_file)
-  VALUES (param_id_message,param_link,param_description,param_type_file);
+    VALUES(param_id_message, param_link, param_description, param_type_file);
 END;
 
 DROP PROCEDURE IF EXISTS `{prefix}add_notification`;
@@ -645,7 +645,14 @@ BEGIN
 DROP FUNCTION IF EXISTS `{prefix}get_maxID_message_attachment`;
 CREATE  FUNCTION `{prefix}get_maxID_message_attachment` () RETURNS INT(11) NO SQL
 BEGIN
-    RETURN (SELECT max(ID) FROM {prefix}posts_attachments);
+    RETURN (SELECT max(ID) FROM {prefix}message_attachments);
+  END;
+
+DROP FUNCTION IF EXISTS `{prefix}get_maxID_message`;
+CREATE FUNCTION `{prefix}get_maxID_message`() RETURNS int(11)
+    NO SQL
+BEGIN
+    RETURN (SELECT max(ID) as maxID FROM {prefix}messages);
   END;
 
 DROP FUNCTION IF EXISTS `{prefix}get_maxID_post_attachment`;

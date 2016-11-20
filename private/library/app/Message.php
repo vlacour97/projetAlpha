@@ -17,43 +17,36 @@ use general\PDOQueries;
  * @author Paul Bigourd
  */
 class MessageException extends \Exception{
-    private $items = array();
 
-    public function __construct($message, $code, $items = array())
-    {
-        parent::__construct($message, $code);
-        $this->$items;
+    /**
+     * @var array
+     */
+    public $items;
+
+    /**
+     * @param null $message
+     * @param int $code
+     * @param array $items
+     * @param \Exception $previous
+     */
+    public function __construct($message = null, $code = 0, $items = array(),\Exception $previous = null){
+        parent::__construct($message,$code,$previous);
+        $this->items = $items;
     }
 
+    /**
+     * @return array
+     */
     public function getItems(){
         return $this->items;
     }
 }
 
 /**
- * Class ReturnDatas
+ * Class MessageAttachmentDatas
  * @package app
  * @author Paul Bigourd
  */
-class ReturnDatas{
-    /**
-     * @var array
-     */
-    public $int = array();
-    /**
-     * @var array
-     */
-    public $date = array();
-    /**
-     * @var array
-     */
-    public $bool = array();
-    /**
-     * @var array
-     */
-    public $ban = array();
-}
-
 class MessageAttachmentDatas extends  ReturnDatas{
     /**
      * @var int
@@ -119,6 +112,14 @@ class MessageDatas extends ReturnDatas{
      */
     public $send_date;
     /**
+     * @var string
+     */
+    public $recipient_name;
+    /**
+     * @var string
+     */
+    public $sender_name;
+    /**
      * @var array
      */
     public $message_attachement = array();
@@ -129,7 +130,7 @@ class MessageDatas extends ReturnDatas{
     /**
      * @var array
      */
-    public $date = array('send_date');
+    public $dates = array('send_date');
     /**
      * @var array
      */
@@ -137,14 +138,19 @@ class MessageDatas extends ReturnDatas{
     /**
      * @var array
      */
-    public $ban = array('deleted');
+    public $useless_attr = array('deleted');
 }
 
+/**
+ * Class Message
+ * @package app
+ * @author Paul Bigourd
+ */
 class Message extends \mainClass
 {
     /**
      * Affiche tous les messages reçus
-     * @param $id_user
+     * @param int $id_user
      * @return array
      */
     static function get_all_messages($id_user)
@@ -153,16 +159,16 @@ class Message extends \mainClass
         $messages = array();
         foreach($datas as $content){
             $tmp = new MessageDatas();
-            self::_format_datas($content,$tmp);
+            ReturnDatas::format_datas($content,$tmp);
+            $tmp->message_attachement = self::get_message_attachments($tmp->ID);
             $messages[]=$tmp;
-
         }
         return $messages;
     }
 
     /**
      * Affiche tous les messages non lus
-     * @param $id_user
+     * @param int $id_user
      * @return array
      */
     static function get_new_messages($id_user)
@@ -171,13 +177,13 @@ class Message extends \mainClass
         $messages = array();
         foreach($datas as $content){
             $tmp = new MessageDatas();
-            self::_format_datas($content,$tmp);
+            ReturnDatas::format_datas($content,$tmp);
+            $tmp->message_attachement = self::get_message_attachments($tmp->ID);
             $messages[]=$tmp;
 
         }
         return $messages;
     }
-
 
     /**
      * Affiche un message envoyé
@@ -190,7 +196,8 @@ class Message extends \mainClass
         $messages = array();
         foreach($datas as $content){
             $tmp = new MessageDatas();
-            self::_format_datas($content,$tmp);
+            ReturnDatas::format_datas($content,$tmp);
+            $tmp->message_attachement = self::get_message_attachments($tmp->ID);
             $messages[]=$tmp;
 
         }
@@ -199,7 +206,7 @@ class Message extends \mainClass
 
     /**
      * Affiche les messages supprimés
-     * @param $id_user
+     * @param int $id_user
      * @return array
      */
     static function get_deleted_messages($id_user)
@@ -208,17 +215,34 @@ class Message extends \mainClass
         $messages = array();
         foreach($datas as $content){
             $tmp = new MessageDatas();
-            self::_format_datas($content,$tmp);
+            ReturnDatas::format_datas($content,$tmp);
+            $tmp->message_attachement = self::get_message_attachments($tmp->ID);
             $messages[]=$tmp;
 
         }
         return $messages;
     }
 
+    /**
+     * @param int $id_user
+     * @param int $id_dest
+     * @param string $objet
+     * @param string $content
+     * @param array $attachment_files
+     * @param array $attachment_descriptions
+     * @param null|int $reply
+     * @return bool
+     * @throws MessageException
+     * @throws \Exception
+     */
     static function send_message($id_user,$id_dest,$objet,$content,$attachment_files = array(),$attachment_descriptions = array(),$reply = null)
     {
+        if(!is_null($reply) && is_null(PDOQueries::show_message($reply)))
+            throw new \Exception('Impossible de repondre à ce message',2);
+
         if(is_null($reply) && !self::can_send_message($id_user,$id_dest))
             throw new \Exception('Vous n\'avez pas le droit d\'envoyer ce message !',2);
+
         if(!PDOQueries::publish_message($id_user,$id_dest,$objet,$content,$reply))
             throw new \Exception('Erreur lors l\'envoi de votre message',2);
 
@@ -244,13 +268,13 @@ class Message extends \mainClass
     /**
      * Affiche un message privé
      * @param int $id_message
-     * @return bool|array
+     * @return array
      */
     static function get_message($id_message)
     {
         $datas = PDOQueries::show_message($id_message);
         $message = new MessageDatas();
-        self::_format_datas($datas,$message);
+        ReturnDatas::format_datas($datas,$message);
         $message->message_attachement = self::get_message_attachments($id_message);
         return $message;
     }
@@ -265,7 +289,6 @@ class Message extends \mainClass
         return PDOQueries::delete_message($id_message);
     }
 
-//-----------------------------------------------------------------------------------------------------------------
     /**
      * Recupére le pieces jointes
      * @param int $id_message
@@ -278,34 +301,33 @@ class Message extends \mainClass
         foreach($datas as $key=>$message_attachment)
         {
             $tmp = new MessageAttachmentDatas();
-            self::_format_datas($message_attachment,$tmp);
+            ReturnDatas::format_datas($message_attachment,$tmp);
             $response[] = $tmp;
         }
         return $response;
     }
 
     /**
-     *
-     * @param $id_message
-     * @param $file
-     * @param null $description
+     * Permet l'enregistrement des piéces jointes
+     * @param int $id_message
+     * @param array $file
+     * @param null|string $description
      * @return bool
      * @throws \Exception
      */
-    static function save_message_attachment($id_message,$file,$description = null){
+    static  function save_message_attachment($id_message,$file,$description = null){
         $type = file::file_infos($file)->type;
-        $id_message_attachments = PDOQueries::get_max_message_attachment_id()+1;
-        echo 'ok';
-        //ptite ligne chelou la famille un ptit coup
-        echo $type;
+        $id_message_attachments = PDOQueries::get_maxID_message_attachment()+1;
+        $repo_path = ROOT.MESSAGE_ATTACHMENT_PATH;
+
         if($type=="image"){
             $filename = $id_message_attachments.'.jpg';
-            $link = MESSAGE_CONTENT.$filename;
-            echo 'ok';
+            $link = MESSAGE_ATTACHMENT_PATH.$filename;
+
             if(!PDOQueries::add_message_attachment($id_message,$link,$description,$type))
                 throw new \Exception('Erreur lors de l\'enregistrement',2);
             try{
-                file::upload(MESSAGE_CONTENT,$file,1024*1024*10,$filename);
+                file::upload($repo_path,$file,1024*1024*10,$filename);
             }catch(\Exception $e){
                 PDOQueries::delete_message_attachments($id_message_attachments);
                 throw $e;
@@ -315,16 +337,24 @@ class Message extends \mainClass
 
             $filename_before_zip = $id_message_attachments.'.'.file::file_infos($file)->extension;
             $filename = file::file_infos($file)->name;
-            $path_file = MESSAGE_CONTENT.$filename_before_zip;
-            $link = MESSAGE_CONTENT.$id_message_attachments.'.zip';
+            $path_file = $repo_path.$filename_before_zip;
+            $link = MESSAGE_ATTACHMENT_PATH.$id_message_attachments.'.zip';
 
             if(!PDOQueries::add_message_attachment($id_message,$link,$description,$type))
                 throw new \Exception('Erreur lors de l\'enregistrement',2);
 
+            //Upload d'un fichier temporaire
             try{
-                file::zip_file($path_file,$link,$filename);
-            }catch (\Exception $e){
-                PDOQueries::delete_message_attachments($id_message_attachments);
+                file::upload($repo_path,$file,1024*1024*10,$filename_before_zip);
+            }catch(\Exception $e){
+                throw $e;
+            }
+
+            //Zippage du fichier
+            try{
+                file::zip_file($path_file,ROOT.$link,$filename);
+            }
+            catch(\Exception $e){
                 throw $e;
             }
 
@@ -337,7 +367,7 @@ class Message extends \mainClass
 
     /**
      * Supprime toutes les pièces jointes d'un message
-     * @param $id_message
+     * @param int $id_message
      * @return bool
      * @throws \Exception
      */
@@ -348,7 +378,7 @@ class Message extends \mainClass
             /** @var $message_attachment MessageAttachmentDatas */
             if(!PDOQueries::delete_message_attachments($message_attachment->ID))
                 $exceptions[] = new \Exception('Erreur lors de la suppression de la pièce jointe sur la base de donnée : N°'.$message_attachment->ID,2);
-            if(!file::delete($message_attachment->link))
+            if(!file::delete(ROOT.$message_attachment->link))
                 $exceptions[] = new \Exception('Erreur lors de la suppression de la pièce jointe : N°'.$message_attachment->ID,2);
         }
         if(count($exceptions)!=0)
@@ -358,40 +388,24 @@ class Message extends \mainClass
 
     /**
      * Determine si un expediteur peut envoyer un message a un destinataire
-     * @param $id_user
-     * @param $id_dest
+     * @param int $id_sender
+     * @param int $id_dest
      * @return bool
      */
-
-    static private function can_send_message($id_user,$id_dest){
-        if(PDOQueries::isTE($id_user) && (PDOQueries::isTI($id_dest) || PDOQueries::isTE($id_dest)))
+    static private function can_send_message($id_sender,$id_dest){
+        $isTE = PDOQueries::isTE($id_sender);
+        if($isTE && (PDOQueries::isTI($id_dest) || PDOQueries::isTE($id_dest)))
             return false;
-        return true;
-                //TODO faire en sorte qu'un tuteur entreprise puisse envoyer un message à un tuteur IUT dans le cas ou ils ont un liens
-    }
-
-
-
-
-
-    /**
-     * Formate les données pour les messages
-     * @param array $datas
-     * @param ReturnDatas $object
-     */
-    static protected function _format_datas($datas,&$object){
-        foreach($datas as $key=>$content){
-            if(is_string($key) && !in_array($key,$object->ban)) {
-                if(in_array($key,$object->int))
-                    $object->$key = intval($content);
-                elseif(in_array($key,$object->date))
-                    $object->$key = new \general\Date($content);
-                elseif(in_array($key,$object->bool))
-                    $object->$key = boolval($content);
-                else
-                    $object->$key = $content;
+        if($isTE){
+            $students = User::get_all_students();
+            foreach($students as $student){
+                /** @var $student \app\StudentDatas */
+                if($student->ID_TE == $id_sender && $student->ID_TI == $id_dest)
+                    return true;
             }
+            return false;
         }
+        return true;
     }
 
 } 
