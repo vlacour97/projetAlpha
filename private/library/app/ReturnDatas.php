@@ -18,23 +18,23 @@ Class ReturnDatas{
     /**
      * @var array
      */
-    public $int = [];
+    protected $int = [];
     /**
      * @var array
      */
-    public $dates = [];
+    protected $dates = [];
     /**
      * @var array
      */
-    public $bool = [];
+    protected $bool = [];
     /**
      * @var array
      */
-    public $useless_attr = [];
+    protected $useless_attr = [];
     /**
      * @var array
      */
-    public $useless_add_attr = [];
+    protected  $useless_add_attr = [];
 
     /**
      * Formattage de données
@@ -52,6 +52,31 @@ Class ReturnDatas{
                     $object->$key=boolval($content);
                 else
                     $object->$key=$content;
+            }
+        }
+    }
+
+    /**
+     * Formate les données pour l'édition
+     * @param array $datas
+     * @param array $args
+     * @param ReturnDatas $object
+     */
+    static function formate_datas_for_edit($datas,$args,&$object){
+        /** @var $object ReturnDatas */
+        $iterator = 0;
+        foreach($object as $key=>$content)
+        {
+            if(!in_array($key,$object->useless_add_attr) && !is_array($content))
+            {
+                if(!isset($args[$iterator]) || is_null($args[$iterator]))
+                    if(is_a($datas->$key,'general\Date'))
+                        $object->$key = $datas->$key->format();
+                    else
+                        $object->$key = $datas->$key;
+                else
+                    $object->$key = $args[$iterator];
+                $iterator++;
             }
         }
     }

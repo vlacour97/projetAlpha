@@ -127,19 +127,19 @@ Class StudentDatas extends ReturnDatas{
     /**
      * @var array
      */
-    public $dates = ['birth_date','creation_date','delete_date','deadline_date'];
+    protected $dates = ['birth_date','creation_date','delete_date','deadline_date'];
     /**
      * @var array
      */
-    public $int = ['ID','ID_TE','ID_TI'];
+    protected $int = ['ID','ID_TE','ID_TI'];
     /**
      * @var array
      */
-    public $bool = ['answered','answers_is_valided'];
+    protected $bool = ['answered','answers_is_valided'];
     /**
      * @var array
      */
-    public $useless_add_attr = ['creation_date','delete_date','answered','answers_is_valided','name_TE','name_TI'];
+    protected $useless_add_attr = ['creation_date','delete_date','answered','answers_is_valided','name_TE','name_TI'];
 }
 
 /**
@@ -247,19 +247,19 @@ Class UserDatas extends ReturnDatas{
     /**
      * @var array
      */
-    public $int = ['ID','type','ID_USER'];
+    protected $int = ['ID','type','ID_USER'];
     /**
      * @var array
      */
-    public $dates = ['registration_date','activation_date','delete_date','last_login_date','viewing_date'];
+    protected $dates = ['registration_date','activation_date','delete_date','last_login_date','viewing_date'];
     /**
      * @var array
      */
-    public $bool = ['publication_entitled','activated'];
+    protected $bool = ['publication_entitled','activated'];
     /**
      * @var array
      */
-    public $useless_add_attr = ['registration_date','activation_date','delete_date','last_login_date','viewing_date','ID_USER','last_ip_viewer','country_viewer','platform_viewer','os_viewer','browser_viewer','activated'];
+    protected $useless_add_attr = ['registration_date','activation_date','delete_date','last_login_date','viewing_date','ID_USER','last_ip_viewer','country_viewer','platform_viewer','os_viewer','browser_viewer','activated'];
 }
 
 /**
@@ -600,7 +600,7 @@ class User extends \mainClass{
         $args = func_get_args();
         $user = new UserDatas();
         $datas = self::get_user($id);
-        self::formate_datas_for_edit($datas,$args,$user);
+        ReturnDatas::formate_datas_for_edit($datas,$args,$user);
         return PDOQueries::edit_user($user->ID,$user->name,$user->fname,$user->email,$user->phone,$user->address,$user->zip_code,$user->city,$user->country,$user->language);
     }
 
@@ -630,33 +630,8 @@ class User extends \mainClass{
         $args = func_get_args();
         $student = new StudentDatas();
         $datas = self::get_student($id);
-        self::formate_datas_for_edit($datas,$args,$student);
+        ReturnDatas::formate_datas_for_edit($datas,$args,$student);
         return PDOQueries::edit_student($student->ID,$student->ID_TE,$student->ID_TI,$student->name,$student->fname,$student->group,$student->email,$student->phone,$student->address,$student->zip_code,$student->city,$student->country,$student->birth_date,$student->informations,$student->deadline_date);
-    }
-
-    /**
-     * Formate les données pour l'édition
-     * @param array $datas
-     * @param array $args
-     * @param ReturnDatas $object
-     */
-    static private function formate_datas_for_edit($datas,$args,&$object){
-        /** @var $object ReturnDatas */
-        $iterator = 0;
-        foreach($object as $key=>$content)
-        {
-            if(!in_array($key,$object->useless_add_attr) && !is_array($content))
-            {
-                if(!isset($args[$iterator]) || is_null($args[$iterator]))
-                    if(is_a($datas->$key,'general\Date'))
-                        $object->$key = $datas->$key->format();
-                    else
-                        $object->$key = $datas->$key;
-                else
-                    $object->$key = $args[$iterator];
-                $iterator++;
-            }
-        }
     }
 
     /**
@@ -699,6 +674,12 @@ class User extends \mainClass{
         return PDOQueries::autorize_to_publish($id);
     }
 
+    /**
+     * Permet l'ajout d'une photo de profil
+     * @param array $file
+     * @param int $id
+     * @throws \Exception
+     */
     static function set_profile_photo($file,$id){
         try{
             return file::upload(AVATAR_IMG,$file,null,$id.'.jpg',true,'jpg');
@@ -707,6 +688,11 @@ class User extends \mainClass{
         }
     }
 
+    /**
+     * Récupére le lien d'une photo de profil
+     * @param int $id
+     * @return string
+     */
     static function get_profile_photo($id){
         $path = AVATAR_IMG.'0.jpg';
         if(is_file(AVATAR_IMG.$id.'.jpg'))

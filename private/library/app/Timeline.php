@@ -33,11 +33,11 @@ class CommentsDatas extends ReturnDatas{
     /** @var  string */
     public $comment_name;
     /** @var array  */
-    public $int = array('ID','ID_POST','ID_USER');
+    protected $int = array('ID','ID_POST','ID_USER');
     /** @var array  */
-    public $dates = array('publication_date');
+    protected $dates = array('publication_date');
     /** @var array  */
-    public $useless_attr = array('deleted');
+    protected $useless_attr = array('deleted');
 
 }
 
@@ -58,9 +58,9 @@ class LikesDatas extends ReturnDatas{
     /** @var  string */
     public $liker_name;
     /** @var array  */
-    public $int = array('ID','ID_POST','ID_USER');
+    protected $int = array('ID','ID_POST','ID_USER');
     /** @var array  */
-    public $dates = array('requested_date');
+    protected $dates = array('requested_date');
 
 }
 
@@ -81,7 +81,7 @@ class PostAtttachmentDatas extends ReturnDatas{
     /** @var  string */
     public $type_file;
     /** @var array  */
-    public $int = array('ID','ID_POST');
+    protected $int = array('ID','ID_POST');
 
 }
 
@@ -110,11 +110,11 @@ class TimelineDatas extends ReturnDatas{
     /** @var array  */
     public $post_attachments = array();
     /** @var array  */
-    public $int = array('ID','ID_USER');
+    protected $int = array('ID','ID_USER');
     /** @var array  */
-    public $dates = array('publication_date');
+    protected $dates = array('publication_date');
     /** @var array  */
-    public $useless_attr = array('deleted');
+    protected $useless_attr = array('deleted');
 
 
 

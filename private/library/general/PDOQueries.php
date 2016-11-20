@@ -734,15 +734,48 @@ class PDOQueries extends \mainClass{
     }
 
     /**
-     * Compte le nombre de connexions
-     * @return bool|int
+     * Compte le nombre de connexions par jour
+     * @return bool|array
      */
     static function count_stats_by_day($nb_day){
         if(!is_int($nb_day))
             return false;
-        $datas = self::$PDO->prepare('SELECT COUNT(ID) as count_id, DATE(viewing_date) FROM stats WHERE '.self::$prefix.'viewing_date BETWEEN DATE_SUB(NOW(), INTERVAL :nbDay DAY) AND NOW() GROUP BY DAY(viewing_date)');
+        $datas = self::$PDO->prepare('SELECT COUNT(ID) as nbConnections, DATE(viewing_date) as day FROM '.self::$prefix.'stats WHERE viewing_date BETWEEN DATE_SUB(NOW(), INTERVAL :nbDay DAY) AND NOW() GROUP BY DAY(viewing_date) ORDER BY viewing_date DESC');
         $datas->execute(array(':nbDay' => $nb_day));
         return $datas->fetchAll();
+    }
+
+    /**
+     * Compte le nombre de connexions par pays
+     * @return bool|array
+     */
+    static function count_stats_by_country(){
+        $datas = self::$PDO->prepare('SELECT COUNT(ID) as nbConnections, country_viewer as country FROM '.self::$prefix.'stats WHERE country_viewer != "" GROUP BY country_viewer');
+        $datas->execute(array());
+        return $datas->fetchAll();
+    }
+
+    /**
+     * Compte le nombre de connexions par pays
+     * @return bool|array
+     */
+    static function count_responses_for_admin(){
+        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided) as count_valided');
+        $datas->execute(array());
+        return $datas->fetchAll()[0];
+    }
+
+    /**
+     * Compte le nombre de connexions par pays
+     * @param int $id_user
+     * @return bool|array
+     */
+    static function count_responses_for_users($id_user){
+        if(!is_int($id_user))
+            return false;
+        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0 and (ID_TI = :id_user OR ID_TE = :id_user)) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0 and (ID_TI = :id_user OR ID_TE = :id_user)) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided and (ID_TI = :id_user OR ID_TE = :id_user)) as count_valided');
+        $datas->execute(array(':id_user' => $id_user));
+        return $datas->fetchAll()[0];
     }
 
     /**
