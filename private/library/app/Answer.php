@@ -8,8 +8,10 @@
 
 namespace app;
 
+use general\crypt;
 use general\Date;
 use general\file;
+use general\Language;
 use general\mail;
 use general\PDOQueries;
 
@@ -431,6 +433,104 @@ class Answer extends \mainClass{
             file::isJSON($file) && $response++;
         }
         return $response;
+    }
+
+    /**
+     * Génére un questionnaire en PDF
+     * @param int $id_student
+     * @throws \Exception
+     * @throws \HTML2PDF_exception
+     */
+    static function generateSurveyPDF($id_student){
+        $survey_datas = self::get_answers($id_student);
+        $student_datas = User::get_student($id_student);
+        $gabarit = Language::translate_gabarit('pdf/SurveyList');
+
+        //Student Infos
+        $link = HOST.'index.php?'.Navigation::$navigation_marker.'='.self::$survey_id_page.'&'.self::$survey_marker.'='.crypt::encrypt($id_student);
+        $replace = ['{student_fname}','{student_name}','{student_group}','{student_address}','{student_email}','{student_phone}','{student_TE}','{student_TI}','{survey_link}'];
+        $by = [$student_datas->fname,$student_datas->name,$student_datas->group,$student_datas->address,$student_datas->email,$student_datas->phone,$student_datas->name_TE,$student_datas->name_TI,$link];
+        $gabarit = str_replace($replace,$by,$gabarit);
+
+        //Survey
+        $survey_content = '';
+        /** @var $survey_datas \StdClass */
+        foreach($survey_datas->questions as $key=>$content){
+            $nb_point = 0;
+            $survey_content .= '<tr>
+            <td class="text-center"><h4 class="fw-semi-bold mt-n">'.($key+1).'-</h4></td>
+            <td class="text-center"><h3>';
+            $survey_content .= $content->questionLbl;
+            $survey_content .=  '</h3><p class="text-center">';
+            foreach($content as $question){
+                if(is_a($question,'StdClass')){
+                    if($question->choice)
+                        $survey_content .= '&nbsp;<b>'.$question->lbl.'</b>&nbsp;&bull;';
+                    else
+                        $survey_content .= '&nbsp;'.$question->lbl.'&nbsp;&bull;';
+                    $nb_point += $question->nb_point;
+                }
+            }
+            $survey_content = substr($survey_content,0,-6);
+            $survey_content .= '</p>';
+            if(utf8_encode($content->comments) != "")
+                $survey_content .= '<br>- '.$content->comments.' -';
+            $survey_content .= '</td><td class="vMiddle text-center"><b class="mark">';
+            $survey_content .= $content->nb_points;
+            $survey_content .= '</b>/';
+            $survey_content .= $nb_point;
+            $survey_content .= '</td></tr>';
+        }
+        $gabarit = str_replace('{survey_datas}',$survey_content,$gabarit);
+        $gabarit = str_replace('{total_mark}',round($survey_datas->avg * 20),$gabarit);
+
+        //Génération
+        include ROOT."/private/library/other/html2pdf.php";
+        $html2pdf = new \HTML2PDF('P', 'A4', 'fr');
+        $html2pdf->pdf->SetDisplayMode('fullpage');
+        $html2pdf->writeHTML($gabarit);
+        $html2pdf->Output('SurveyList.pdf');
+    }
+
+    /**
+     * Génére la liste des étudiant en PDF
+     * @param string $title
+     * @throws \Exception
+     * @throws \HTML2PDF_exception
+     */
+    static function generateStudentListPDF($title){
+        $datas = User::get_all_students();
+        $gabarit = Language::translate_gabarit('pdf/StudentList');
+
+        //Title
+        $gabarit = str_replace('{title}',$title,$gabarit);
+
+        //StudentList
+        $studentList = "";
+        foreach($datas as $student){
+            /** @var $student \app\StudentDatas */
+            $studentList .= '<tr><td>';
+            $studentList .= sprintf('%04d',$student->ID);
+            $studentList .= '</td><td>';
+            $studentList .= $student->fname.' '.$student->name;
+            $studentList .= '</td><td>';
+            $studentList .= $student->name_TE;
+            $studentList .= '</td><td>';
+            $studentList .= $student->name_TI;
+            $studentList .= '</td><td>';
+            $studentList .= $student->group;
+            $studentList .= '</td><td class="text-center bold">';
+            $studentList .= round(self::get_answers($student->ID)->avg * 20);
+            $studentList .= '</td></tr>';
+        }
+        $gabarit = str_replace('{student_datas}',$studentList,$gabarit);
+
+        //Génération
+        include ROOT."/private/library/other/html2pdf.php";
+        $html2pdf = new \HTML2PDF('P', 'A4', 'fr');
+        $html2pdf->pdf->SetDisplayMode('fullpage');
+        $html2pdf->writeHTML($gabarit);
+        $html2pdf->Output('StudentList.pdf');
     }
 
 } 

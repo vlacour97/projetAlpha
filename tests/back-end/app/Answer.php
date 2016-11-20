@@ -87,5 +87,8 @@ else
 
 //var_dump($response);
 
+//var_dump(\app\Answer::generateSurveyPDF(268));
+var_dump(\app\Answer::generateStudentListPDF('Liste des étudiants'));
+
 
 

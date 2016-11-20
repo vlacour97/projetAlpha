@@ -73,6 +73,16 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les textes d'une page
+     * @return mixed
+     */
+    static function get_pdf_text($page_name){
+        if(is_null(self::$datas))
+            self::init();
+        return self::$datas["general"]["PDF"][$page_name];
+    }
+
+    /**
      * Récupére les textes d'un composant
      * @return mixed
      */
@@ -114,6 +124,9 @@ class Language extends \mainClass{
                 break;
             case 'components':
                 $language_texts = self::get_component_text($part2);
+                break;
+            case 'pdf':
+                $language_texts = self::get_pdf_text($part2);
                 break;
         }
         //Modification des marqueurs s'il y a lieu

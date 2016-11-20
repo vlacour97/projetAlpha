@@ -46,7 +46,7 @@
     <qrcode value="<?php echo $msg; ?>" style="width: 40mm; background-color: #CCFFFF; color: #003333"></qrcode>
     <br>
     <h3>Message sans border</h3>
-    <qrcode value="<?php echo $msg; ?>" style="border: none; width: 40mm;"></qrcode>
+    <qrcode value="<?php echo $msg; ?>" c="L" style="border: none; width: 40mm;"></qrcode>
     <br>
 </page>
 <?php

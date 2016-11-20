@@ -14,7 +14,7 @@ session_start();
 
 //Paths
 define('ROOT',$_SERVER['DOCUMENT_ROOT']);
-define('HOST',$_SERVER['HTTP_HOST']);
+define('HOST','http://'.$_SERVER['HTTP_HOST']);
 define('TEMP_PATH',$_SERVER['DOCUMENT_ROOT'].'/private/datas/temp/');
 define('AVATAR_IMG',$_SERVER['DOCUMENT_ROOT'].'/private/datas/users/');
 define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');

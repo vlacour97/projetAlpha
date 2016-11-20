@@ -210,6 +210,26 @@
             "thunderstorm" : "Orage",
             "snow" : "Neige",
             "mist" : "Brouillard"
+        },
+        "PDF" : {
+            "StudentList" : {
+                "ID" : "ID",
+                "student_name" : "Nom Etudiant",
+                "TI_name" : "Nom Tuteur Entreprise",
+                "TE_name" : "Nom Tuteur IUT",
+                "group" : "Groupe",
+                "mark" : "Note"
+            },
+            "SurveyList" : {
+                "address_lbl" : "Adresse",
+                "email_lbl" : "Email",
+                "phone_lbl" : "Téléphone",
+                "TE_lbl" : "Tuteur Entreprise",
+                "TI_lbl" : "Tuteur IUT",
+                "answer_lbl" : "Numéro Question",
+                "mark_lbl" : "Note",
+                "total_lbl" : "Total"
+            }
         }
     },
     "pages": {
