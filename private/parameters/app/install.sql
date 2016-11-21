@@ -415,6 +415,9 @@ CREATE  PROCEDURE `{prefix}delete_group_message` (IN `param_id_sender` INT, IN `
 DROP PROCEDURE IF EXISTS `{prefix}delete_message`;
 CREATE  PROCEDURE `{prefix}delete_message` (IN `param_id_message` INT)  UPDATE {prefix}messages SET deleted = 1 WHERE ID=param_id_message;
 
+DROP PROCEDURE IF EXISTS `{prefix}delete_message_attachment`;
+CREATE PROCEDURE `{prefix}delete_message_attachment`(IN `param_id` INT) DELETE FROM {prefix}message_attachments WHERE ID=param_id;
+
 DROP PROCEDURE IF EXISTS `{prefix}delete_notification`;
 CREATE  PROCEDURE `{prefix}delete_notification` (IN `param_id_notification` INT)  UPDATE {prefix}notifications SET
   deleted = 1
@@ -622,6 +625,12 @@ DROP FUNCTION IF EXISTS `{prefix}count_sended_messages`;
 CREATE  FUNCTION `{prefix}count_sended_messages` (`id_user` INT) RETURNS INT(11) NO SQL
 BEGIN
     RETURN (SELECT count(ID) from {prefix}messages where id_sender=id_user and deleted = 0);
+  END;
+
+DROP FUNCTION IF EXISTS `{prefix}count_stats`;
+CREATE FUNCTION `{prefix}count_stats`() RETURNS int(11)
+BEGIN
+    RETURN (SELECT count(ID) from {prefix}stats);
   END;
 
 DROP FUNCTION IF EXISTS `{prefix}count_students`;
