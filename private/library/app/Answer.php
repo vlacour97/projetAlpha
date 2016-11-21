@@ -468,7 +468,8 @@ class Answer extends \mainClass{
                         $survey_content .= '&nbsp;<b>'.$question->lbl.'</b>&nbsp;&bull;';
                     else
                         $survey_content .= '&nbsp;'.$question->lbl.'&nbsp;&bull;';
-                    $nb_point += $question->nb_point;
+                    if($nb_point < $question->nb_point)
+                        $nb_point = $question->nb_point;
                 }
             }
             $survey_content = substr($survey_content,0,-6);
