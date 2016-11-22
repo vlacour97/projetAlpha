@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name" : "Administrateur",
+        "rights" : ["home"]
+    },
+    {
+        "id" : 2,
+        "name" : "Tuteur Entreprise",
+        "rights" : ["home","nav/page1","other"]
+    },
+    {
+        "id" : 3,
+        "name" : "Tuteur IUT",
+        "rights" : ["home"]
+    }
+]

@@ -1,0 +1,48 @@
+[
+    {
+        "id" : "win",
+        "name" : "Windows",
+        "regex" : "/windows|win32/i"
+    },
+    {
+        "id" : "mac",
+        "name" : "Mac",
+        "regex" : "/macintosh|mac os x/i"
+    },
+    {
+        "id" : "lin",
+        "name" : "Linux",
+        "regex" : "/linux/i"
+    },
+    {
+        "id" : "ubu",
+        "name" : "Ubuntu",
+        "regex" : "/ubuntu/i"
+    },
+    {
+        "id" : "apd",
+        "name" : "Apple Device",
+        "regex" : "/iphone|ipod/i"
+    },
+    {
+        "id" : "ipa",
+        "name" : "iPad",
+        "regex" : "/ipad/i"
+    },
+    {
+        "id" : "and",
+        "name" : "Android",
+        "regex" : "/android/i"
+    },
+    {
+        "id" : "bbe",
+        "name" : "BlackBerry",
+        "regex" : "/blackberry/i"
+    },
+    {
+        "id" : "mob",
+        "name" : "Mobile",
+        "regex" : "/webos/i"
+    }
+
+]
