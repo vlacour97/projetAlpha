@@ -1,0 +1,23 @@
+table.border-survey tr td{
+    border-top: 0;
+}
+
+table.border-survey tr td:last-child{
+    border-left: 1px solid #dddddd;
+}
+
+table.border-survey tr td table tr td:last-child{
+    border-top: 0;
+    border-left : 0;
+}
+
+
+
+table.unbordered-first-line tr:first-child td{
+    border-top: 0;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}

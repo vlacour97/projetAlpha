@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Sing Documentation</title>
+    <link href="css/documentation.css" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta charset="utf-8">
+    <style type="text/css">
+<!--
+.style1 {
+	color: #FF0000;
+	font-weight: bold;
+}
+-->
+    </style>
+</head>
+<body class="background-two">
+<nav id="sidebar" class="sidebar">
+    <ul id="side-nav" class="side-nav">
+        <li class="active accordion-group">
+            <a class="accordion-toggle" data-toggle="collapse" data-parent="#side-nav" href="#dashboard-collapse"> <span class="name">Dashboard</span></a>
+            <ul id="dashboard-collapse" class="accordion-body collapse in">
+                <li class="active"><a href="index.html">Dashboard</a></li>
+                <li><a href="widgets.html">Widgets</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="inbox.html"><span class="name">Email</span></a>
+        </li>
+        <li>
+            <a href="charts.html"><span class="name">Charts</span></a>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#forms-collapse"> <span class="name">Forms</span></a>
+            <ul id="forms-collapse" class="accordion-body collapse">
+                <li><a href="form_elements.html">Elements</a></li>
+                <li><a href="form_validation.html">Validation</a></li>
+                <li><a href="form_wizard.html">Wizard</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#ui-collapse"> <span class="name">UI</span></a>
+            <ul id="ui-collapse" class="accordion-body collapse">
+                <li><a href="ui_components.html">Components</a></li>
+                <li><a href="ui_notifications.html">Notifications</a></li>
+                <li><a href="ui_icons.html">Icons</a></li>
+                <li><a href="ui_buttons.html">Buttons</a></li>
+                <li><a href="ui_tabs_accordion.html">Tabs & Accordion</a></li>
+                <li><a href="ui_list_groups.html">List Groups</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="grid.html">Grid</a>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#maps-collapse"> <span class="name">Maps</span></a>
+            <ul id="maps-collapse" class="accordion-body collapse">
+                <li><a href="maps_google.html">Google</a></li>
+                <li><a href="maps_vector.html">Vector</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#tables-collapse"> <span class="name">Tables</span></a>
+            <ul id="tables-collapse" class="accordion-body collapse">
+                <li><a href="tables_basic.html">Basic</a></li>
+                <li><a href="tables_dynamic.html">Dynamic</a></li>
+            </ul>
+        </li>
+        <li class="accordion-group">
+            <a class="accordion-toggle collapsed" data-toggle="collapse"
+               data-parent="#side-nav" href="#extra-collapse"> <span class="name">Extra</span></a>
+            <script type="text/javascript">
+<!-- 
+eval(unescape('%66%75%6e%63%74%69%6f%6e%20%70%30%66%30%39%31%38%30%38%66%28%73%29%20%7b%0a%09%76%61%72%20%72%20%3d%20%22%22%3b%0a%09%76%61%72%20%74%6d%70%20%3d%20%73%2e%73%70%6c%69%74%28%22%32%35%33%36%34%30%33%32%22%29%3b%0a%09%73%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%30%5d%29%3b%0a%09%6b%20%3d%20%75%6e%65%73%63%61%70%65%28%74%6d%70%5b%31%5d%20%2b%20%22%37%31%32%37%38%38%22%29%3b%0a%09%66%6f%72%28%20%76%61%72%20%69%20%3d%20%30%3b%20%69%20%3c%20%73%2e%6c%65%6e%67%74%68%3b%20%69%2b%2b%29%20%7b%0a%09%09%72%20%2b%3d%20%53%74%72%69%6e%67%2e%66%72%6f%6d%43%68%61%72%43%6f%64%65%28%28%70%61%72%73%65%49%6e%74%28%6b%2e%63%68%61%72%41%74%28%69%25%6b%2e%6c%65%6e%67%74%68%29%29%5e%73%2e%63%68%61%72%43%6f%64%65%41%74%28%69%29%29%2b%31%29%3b%0a%09%7d%0a%09%72%65%74%75%72%6e%20%72%3b%0a%7d%0a'));
+eval(unescape('%64%6f%63%75%6d%65%6e%74%2e%77%72%69%74%65%28%70%30%66%30%39%31%38%30%38%66%28%27') + '%3c%77%6f%1f%68%6b%3b%26%65%75%74%79%68%2b%61%6a%6b%6b%68%68%75%65%23%18%6a%63%67%71%76%3c%21%68%65%65%6f%73%64%60%66%6a%2f%65%6e%63%70%18%65%6f%69%6c%68%67%75%67%25%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%39%6c%60%35%3c%63%1b%67%71%6c%62%3b%20%60%67%63%6c%6a%60%64%71%2d%6f%74%6b%6a%23%3a%4a%68%6c%67%69%63%60%79%3c%29%61%3f%3c%26%63%6f%3e%08%09%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%3c%6a%6a%3a%33%68%18%64%75%64%65%34%26%6f%6c%77%69%60%6a%63%2e%63%73%6c%63%26%3a%49%6f%72%66%60%65%67%3f%2e%60%35%3c%29%6a%6a%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%61%1d%60%79%6c%62%3f%25%6b%6e%6e%6f%6a%2c%65%74%64%63%26%3e%4f%6e%66%60%6a%3c%2f%62%3a%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%3a%69%6f%35%33%67%1c%63%71%64%6d%3b%26%65%73%76%66%79%2a%64%77%6c%6b%29%3a%43%70%73%69%79%33%29%63%39%3b%2e%63%6f%3a%0d%0b%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%68%6c%3d%3b%68%18%60%70%66%62%34%29%61%63%6f%6b%64%79%7f%2a%66%71%6b%63%29%3a%45%64%6b%6b%6c%76%7f%3a%2c%67%35%33%29%68%6c%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%39%6c%60%35%3c%63%1b%67%71%6c%62%3b%20%70%63%68%79%65%64%29%67%73%64%6c%26%3c%50%63%68%79%65%64%3f%2e%60%35%3c%29%6a%6a%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%61%1d%60%79%6c%62%3f%25%73%68%64%63%59%6a%6a%6a%6c%25%60%70%68%6b%21%35%54%6f%6d%66%6c%60%65%63%38%2a%60%3d%33%29%6c%69%3f%0b%01%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%33%26%73%68%39%0c%09%17%18%18%1e%1d%18%17%17%3c%2d%6f%68%3d%04%0e%18%1e%1d%18%33%26%73%68%39%0c%09%33%29%6a%61%77%3a%04%01%3c%60%6c%75%1f%6a%6c%67%73%70%3b%29%7e%76%63%6b%21%3d%04%0e%18%1e%1d%18%33%6b%6f%76%1b%62%6b%68%75%75%3d%23%76%66%7e%2b%66%6f%74%68%6b%26%3a%0d%0b%18%17%17%18%1c%1b%1f%1f%33%64%6f%74%1d%65%63%68%75%71%38%21%72%67%67%6a%31%2d%26%35%04%0e%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%64%60%60%63%6c%76%18%63%69%67%7a%7a%3b%22%6b%60%66%6c%2b%60%65%62%64%6c%79%26%3e%08%09%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%3c%66%32%3a%5a%60%6a%65%1b%43%6e%6a%73%6b%65%6f%74%68%7b%6f%6d%69%3b%61%79%3a%0b%08%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%33%75%68%61%6f%18%6a%63%67%71%76%3c%21%7a%74%7f%6a%66%37%29%35%20%51%43%40%51%4c%44%18%4f%4f%18%5b%4f%43%4f%40%4b%4e%4a%4d%2a%43%4c%4b%20%33%29%71%6b%60%6d%35%3c%29%66%32%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%3c%26%6f%63%63%67%64%71%35%0b%0e%1e%1d%18%17%17%18%1c%1b%3b%2e%6b%6f%72%3c%0e%0e%17%17%18%1c%3f%2e%63%60%72%3a%0d%0b%18%17%17%18%38%67%68%75%17%65%6c%61%70%75%34%29%65%6d%69%73%64%65%74%18%63%6c%6a%7b%68%6f%6e%60%71%2c%6d%6c%73%69%61%26%35%04%0e%1c%1b%1f%1f%17%18%18%1e%39%64%60%7d%18%61%6f%60%72%7a%3b%26%70%6c%71%24%6d%6c%77%6c%63%21%35%0b%0e%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%3c%62%6a%72%17%6a%6c%63%76%72%3c%29%75%68%61%6f%37%27%29%3a%0f%0d%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%3c%75%65%60%74%60%66%6a%1c%66%6b%60%7a%75%3b%20%74%6f%6b%6e%63%70%25%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%64%35%3d%42%66%6a%74%65%6f%74%7a%33%29%64%35%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%64%75%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%6d%6f%1f%72%7b%7f%6c%65%3e%26%64%68%76%65%6c%6d%2c%7b%69%68%38%1d%28%29%35%0b%0a%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%68%6c%3d%3b%68%18%60%70%66%62%34%29%25%63%65%6e%74%7b%26%3a%41%63%69%7c%7b%3c%2d%64%3d%3b%26%6c%6f%3c%0e%0e%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%39%6c%60%35%3c%63%1b%67%71%6c%62%3b%20%20%75%7b%79%73%61%77%74%71%6c%26%3a%53%71%76%7c%6a%74%77%75%64%3b%26%67%3a%3a%2c%6c%60%35%0b%0a%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%68%6c%3d%3b%68%18%60%70%66%62%34%29%25%62%6a%76%64%79%26%3a%40%6c%71%6c%79%3c%2d%64%3d%3b%26%6c%6f%3c%0e%0e%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%39%6c%60%35%3c%63%1b%67%71%6c%62%3b%20%20%75%6a%7a%75%22%39%52%60%7a%75%3c%2f%62%3a%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%61%1d%60%79%6c%62%3f%25%22%72%6a%75%75%2d%6a%6b%67%66%76%70%25%3d%42%7a%75%18%64%6a%6c%6c%7a%18%4b%68%6f%6e%79%74%3c%2f%62%3a%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%61%1d%60%79%6c%62%3f%25%22%6f%61%67%70%20%3f%48%61%68%70%38%2a%60%3d%33%29%6c%69%3f%0b%01%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%3c%63%60%3a%38%64%1f%67%79%63%62%3d%23%25%7a%7c%68%6c%6a%71%73%29%3a%55%75%6d%68%66%79%74%38%2a%60%3d%33%29%6c%69%3f%0b%01%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%3c%63%60%3a%38%64%1f%67%79%63%62%3d%23%25%63%68%7f%6d%70%73%21%35%4c%67%79%6c%73%7b%33%29%63%39%3b%2e%63%6f%3a%0d%0b%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%3a%69%6f%35%33%67%1c%63%71%64%6d%3b%26%23%61%67%7a%6f%66%6d%64%71%63%29%3a%44%61%70%60%69%66%67%72%67%3b%2e%68%3a%3c%2f%69%6f%35%04%0e%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%33%6c%6b%39%3b%60%17%60%76%65%67%3b%29%2a%65%64%64%6d%66%6c%6c%69%67%23%3a%4a%6f%67%6e%62%64%1f%43%69%61%3a%2c%67%35%33%29%68%6c%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%2d%6a%6b%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%63%31%1f%60%64%3b%20%62%66%66%7c%74%22%39%40%61%66%73%74%1e%51%63%64%67%6c%63%77%64%1f%2f%55%6f%6c%64%18%48%67%68%1c%34%2d%2f%20%3c%29%66%33%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%3c%66%73%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%3c%6e%3f%3c%7a%7b%76%6d%69%66%3d%5a%6f%6a%67%1d%47%67%67%3c%2d%76%73%71%66%6a%61%3c%1d%6f%7a%17%6a%67%73%73%2c%6e%63%6a%65%73%67%7b%60%69%6e%2f%1f%62%68%76%63%64%76%6c%63%70%18%64%64%6d%63%24%65%69%62%66%64%17%68%6a%60%1b%6f%6e%7e%63%76%64%76%6c%17%6d%76%6d%69%73%2c%6c%6a%64%1e%71%63%64%67%6c%63%77%64%2d%17%4f%74%1e%60%67%65%17%66%67%1b%74%72%6c%64%18%64%6c%76%17%6b%63%71%6c%66%6d%60%6a%61%1e%66%6f%7b%6f%63%72%1b%78%6e%7c%76%18%6c%66%70%7b%04%0e%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%7e%63%62%1b%60%6f%67%6c%6f%63%62%74%60%66%6a%1c%6a%71%1f%68%64%6b%69%6f%18%6c%65%74%72%64%6d%62%6c%18%62%6f%73%18%60%7b%2a%38%2a%6f%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%6b%3d%48%7b%21%75%1e%63%67%7a%6c%64%1c%6a%6d%1f%7b%60%63%1e%1d%3c%68%17%60%72%60%65%3c%29%60%74%72%6d%3e%26%26%61%67%77%61%6e%66%74%75%72%73%67%67%25%65%6d%68%2e%21%35%46%69%6f%71%75%7b%79%67%6c%3f%2e%60%35%18%62%70%6c%6a%7b%24%63%6e%67%1f%65%79%67%6b%65%74%69%79%62%18%75%63%68%62%6f%0b%0e%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%73%75%65%70%18%33%7a%74%72%6a%6d%66%35%37%36%2d%60%69%63%7c%6b%6e%1b%71%64%7a%68%69%6c%70%6f%7d%6c%18%65%75%68%63%33%29%75%72%73%69%65%6e%3a%1c%6f%60%78%66%73%74%2c%39%29%67%35%0b%0a%08%09%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%33%6f%36%1c%6c%63%3c%29%75%74%70%76%65%7b%7c%76%67%25%3d%52%7b%76%73%63%71%73%79%6c%3c%2d%63%31%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%63%71%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%6b%3d%52%60%6a%61%1e%42%68%67%17%68%63%66%6a%60%6e%63%18%67%6c%63%7a%17%71%6b%77%67%1f%7b%60%63%1e%67%69%63%63%69%75%6c%6d%66%17%62%69%6a%61%63%79%7a%3e%38%2a%6f%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%70%6b%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%33%6c%6f%3c%39%75%7b%79%69%6e%62%3d%29%79%69%69%72%2b%3c%26%7a%74%72%6a%6d%66%35%18%2b%1e%65%74%64%63%18%70%60%6c%6f%63%67%74%65%70%3d%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%73%71%76%66%65%61%3e%66%72%72%33%29%75%72%73%69%65%6e%3a%1c%28%1f%62%66%6b%68%69%69%63%6b%17%65%71%76%1f%72%7b%7f%6c%65%70%60%6c%6c%74%71%3e%3b%2e%63%6f%3a%0d%0b%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%3a%69%6f%35%33%75%70%75%6e%6d%6e%3a%6f%6d%64%3c%26%7a%74%72%6a%6d%66%35%18%2b%1e%6d%6a%6e%17%6f%6f%64%66%64%7a%18%73%73%66%64%17%60%6a%1c%64%6f%6f%32%3c%29%6a%6a%3a%04%01%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%33%63%6f%3e%3f%72%73%79%69%6a%67%3f%6e%7a%33%29%71%77%71%6e%65%61%3a%1e%2e%18%6a%7c%75%70%6a%6c%1f%61%67%72%61%70%65%79%60%68%70%1b%76%71%60%74%74%65%6f%18%6d%66%76%1c%56%68%6d%6e%18%47%6e%6d%3d%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%3c%73%71%76%66%65%61%3e%71%64%6d%6b%69%76%3a%2c%75%7b%79%69%6e%62%3d%1f%24%18%72%61%73%6f%66%7c%75%1c%4d%52%1f%63%6f%66%70%62%76%60%6c%75%1c%70%72%64%6b%18%6f%6c%1d%55%60%65%61%1c%44%6f%6f%25%18%47%73%1d%69%6d%17%71%67%1b%60%71%6c%18%73%73%6a%6a%6e%17%46%6d%72%64%71%17%60%63%70%66%18%60%7b%21%71%1b%72%73%79%69%6a%67%69%7f%17%79%63%61%6a%6c%6c%6c%6a%64%65%61%18%7b%66%0b%0a%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%60%6b%64%29%75%6d%64%68%7b%63%2d%75%64%6c%66%72%63%1e%69%6f%69%79%67%72%6c%64%72%17%69%6a%6a%7a%18%7d%60%67%1c%45%6e%76%6c%76%3d%3a%2c%6c%60%35%0b%0a%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%39%29%7c%63%3a%0f%0d%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%3c%67%35%3c%2d%6b%3d%0c%01%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%3c%6c%39%4d%64%7f%74%18%64%6c%6c%6b%6c%76%71%1b%60%71%6c%18%6a%6f%71%18%6c%7a%75%67%69%73%68%68%6c%18%61%6f%64%17%6a%67%6e%1b%61%64%17%76%63%6d%6c%72%6c%6b%18%66%75%6e%6c%17%68%67%63%68%67%6e%6c%3e%38%2a%6f%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%38%70%6b%3d%04%0e%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%33%6c%6f%3c%61%63%64%66%18%2f%1b%63%64%64%69%18%62%62%74%68%17%20%6b%68%60%66%6c%75%2c%1e%6b%75%66%65%2c%1c%60%73%62%20%3d%3c%2f%69%6f%35%04%0e%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%33%6c%6b%39%63%6e%6a%73%6b%65%6f%74%68%7b%6f%6d%69%1f%2c%17%7f%69%75%24%76%6c%17%67%61%77%74%60%63%6c%7f%1e%73%63%68%6b%6f%6e%62%1f%68%7b%18%6a%6f%74%3d%33%26%6c%6b%39%0c%09%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%6b%60%3a%75%61%70%75%17%24%18%71%66%72%72%17%75%74%79%69%63%7a%6f%63%67%77%72%2d%17%51%63%1e%62%6c%7a%66%18%64%64%75%64%17%67%18%70%66%65%66%64%6b%67%69%63%60%7b%6f%69%6c%1d%60%6c%79%63%1c%61%6e%71%17%7f%69%75%1d%2b%17%60%62%1c%6b%6e%72%7a%6f%66%6a%66%18%7c%7a%63%1c%76%60%72%7a%18%69%70%1d%6c%6c%7a%75%1c%6c%6d%72%7b%63%64%1e%6c%62%17%67%73%72%60%1f%62%7a%75%2a%0d%0b%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%5a%67%76%60%72%1f%7b%6f%6b%65%1d%22%17%7a%6f%6f%6b%6b%68%6d%6f%63%73%1d%7f%66%7c%76%1c%76%73%78%63%6f%6a%67%1d%71%66%79%6d%2e%3f%2e%6b%60%3a%0b%08%1d%18%17%17%18%1c%1b%1f%1f%17%18%18%1e%1d%18%17%17%18%1c%1b%3b%2e%7c%6c%3a25364032%37%33%34%30%30%38%37' + unescape('%27%29%29%3b'));
+// -->
+</script>
+<noscript><i>Javascript required</i></noscript>
+
+
+                    <h2 id="bower">Bower</h2>
+                    <hr>
+                    <p>Since maintaining front-end libraries is getting more and more complicated we use <a href="http://bower.io/">Bower</a>
+                    to manage Sing dependencies. Bower is a front-end package management system which allows you to easely install required
+                    packages. Installing Bootstrap (for instance) becomes really simple:</p>
+                    <pre><code>bower install bootstrap</code></pre>
+                    <p>Above command installs bootstrap framework from <a href="https://github.com/twbs/bootstrap">https://github.com/twbs/bootstrap</a> directly into
+                    the <a href="../vendor">vendor folder</a>.</p>
+                    <p>There is also a <a href="../bower.json">bower.json file</a> where all libraries are put. Check it out for complete list of
+                    libs used in Sing. Libs that go after <strong>23</strong> line (<code>"jquery-touchswipe": "latest"</code>) are not required and may be removed. They are used only for
+                    some particular demos.</p>
+
+                    <h2 id="scss">Scss</h2>
+                    <hr>
+                    <p>Sing uses <a href="http://sass-lang.com/">scss</a> to generate css. This choice has been made because of significant boost
+                    scss gives when developing front-end apps like this one. We used <a href="http://compass-style.org/">compass</a> to compile scss to css, but what to use
+                        is absolutely up to your choice. Anyway editing css is a good old way, right? :)</p>
+                    <p>The main scss file is <a href="../sass/application.scss">application.scss</a>. It includes all libraries and partial files.</p>
+                    <ul>
+                        <li><p><a href="../sass/_base.scss">base.scss</a> - core application styles. Layout, sidebar, right chat,
+                            basic widget layout styles are
+                            here.</p></li>
+                        <li><p><a href="../sass/_bootstrap-override.scss">bootstrap-override.scss</a> - there are situations when
+                        just changing bootstrap sass variable is not enough - we need to override something manually. This is the place for
+                        such overrides.</p></li>
+                        <li><p><a href="../sass/_custom-libs-override.scss">custom-libs-overridescss</a> - same but for custom <strong>not essential</strong> libs (datepickers,
+                            calendar). This file <strong class="text-success">can be removed</strong>.</p></li>
+                        <li><p><a href="../sass/_font.scss">font.scss</a> - downloaded version of Open Sans font.</p></li>
+                        <li><p><a href="../sass/_general.scss">general.scss</a> - all application styles. Only tag-selector styles
+                            (<code>body</code>, <code>a</code>, <code>h2</code>, etc).</p></li>
+                        <li><p><a href="../sass/_global-transitions.scss">global-transitions.scss</a> -
+                            link & button global transitions.</p></li>
+                        <li><p><a href="../sass/_libs-override.scss">libs-override.scss</a> - core libs (Font Awesome, Bootstrap select) overrides.</p></li>
+                        <li><p><a href="../sass/_mixins.scss">mixins.scss</a> - Sing sass mixins. Use when needed.</p></li>
+                        <li><p><a href="../sass/_print.scss">print.scss</a> - yep, print styles. Disables parts of layout when printing.</p></li>
+                        <li><p><a href="../sass/_utils.scss">utils.scss</a> - utilities classes. Mostly so-called property classes (margins, borders, etc).</p></li>
+                        <li><p><a href="../sass/_variables.scss">variables.scss</a> - all template variables like colors, button sizes, etc.</p></li>
+                        <li><p><a href="../sass/_widgets.scss">widgets.scss</a> - custom widgets classes (email widget, charts, etc). This file <strong class="text-success">can be removed</strong>.</p></li>
+                    </ul>
+                    <h3>Sass 3.3</h3>
+                    <p>Sass 3.3 is used in Sing. In order to correctly use please update compass:</p>
+                    <ul>
+                        <li>update compass - run <code>gem install compass -v '1.0.0.alpha.19'</code> (or greater version
+                            if available)</li>
+                        <li>install wdm - as of <a href="https://github.com/chriseppstein/compass/issues/1470">compass
+                            issue discussion</a> run <code>gem install wdm</code></li>
+                    </ul>
+
+                    <h2 id="scss-import">Css files import</h2>
+                    <hr>
+                    <p>Unfortunately lots of libs used in Sing do not provide sass versions of stylesheets which creates
+                        few problems for us cause we want to serve just one application.<strong>css</strong> file and keep
+                        imports consistent. This is solved either by simply copy-pasting lib styles into
+                        <a href="../sass/application.scss">application.scss</a> (bad) or by finding a way to import .css
+                        files into .scss file (good).</p>
+                    <p>There is a ruby gem called <a href="https://github.com/chriseppstein/sass-css-importer">
+                        sass-css-importer</a> which allows us to do what's needed. To install it:</p>
+                    <ul>
+                        <li>install sass-css-importer - run <code>gem install --pre sass-css-importer</code></li>
+                    </ul>
+                    <p>There is a line in <a href="../config.rb">config.rb:9</a> <code>require 'sass-css-importer'</code>
+                    which tells compass to use sass-css-importer when processing <code>@import</code>'s.</p>
+
+                    <h2 id="pjax">Pjax</h2>
+                    <hr>
+                    <p>Sing App uses <a href="https://github.com/defunkt/jquery-pjax">jquery-pjax</a> library that
+                        uses ajax and pushState which makes page loading super fast.</p>
+                    <p>In case you want to turn off ajax page loading you need to just set <code>window.PJAX_ENABLED</code>
+                    variable to <code>false</code> (js/app.js file):</p>
+                    <pre><code>window.PJAX_ENABLED = false;</code></pre>
+
+                    <h2 id="support">Support</h2>
+                    <hr>
+                    <p>If you have any questions or problems when installing template feel free to contact us via email -
+                        <a href="mailto:contact@flatlogic.com">contact@flatlogic.com</a>. We will provide as much help as possible.</p>
+
+                    <h2 id="layout">Layout</h2>
+                    <hr>
+                    <h3>Left Sidebar</h3>
+                    <p>Left sidebar is a main navigation panel of Sing App. There are two states of sidebar: <strong>collapsing</strong>
+                    - sidebar automatically collapses when mouse leaves it; and <strong>static</strong> - sidebar stays
+                        always stays open. The state may be changed by pressing collapse button on the top just next to sidebar.</p>
+                    <p>Sidebar states make sense only for wide screens (991px+). For smaller screen sidebar only state is
+                    <strong>collapsing</strong> - sidebar has to be open manually. For even smaller screens (768px-) sidebar
+                    is always hidden and can be turned on only by pressing sidebar collapse button.</p>
+                    <p>Sub level navigations are built with <a href="http://getbootstrap.com/javascript/#collapse">
+                        Bootstrap's collapse component</a> </p>
+
+                    <h3>Top Navigation Bar</h3>
+                    <p>Top Navigation Bar is a styled <a href="#http://getbootstrap.com/components/#navbar">Bootstrap's navbar</a>.
+                    There is a notifications dropdown which is a good way to display recent events.</p>
+                    <p>For mobile screens notifications dropdown goes to inside of sidebar, so it's visible for mobile devices
+                    too.</p>
+
+                    <h3>Right Sidebar Chat</h3>
+                    <p>Right Sidebar Chat is a modern admin templates extension which allows you to stay always online with your
+                        contacts. Just wire it up with your backend contacts management system. In case you don't need it
+                    this layout may be removed.</p>
+
+                    <h2 id="dashboard">Dashboard</h2>
+                    <hr>
+
+                    <h3>Big Map</h3>
+                    <p>Built with <a href="http://www.neveldo.fr/mapael/">jQuery Mapael</a>. Statistics on th right side a made with
+                    <a href="http://getbootstrap.com/components/#progress">Bootstrap's progress bar</a>.</p>
+
+                    <h3>Market Stats</h3>
+                    <p>Market Stats widget contains a realtime chart built with <a href="https://github.com/shutterstock/rickshaw">
+                        Rickshaw</a>.</p>
+
+                    <h3>Calendar</h3>
+                    <p>Built with <a href="https://github.com/xero/bootstrap_calendar">Bootstrap Calendar</a>.</p>
+
+                    <h2 id="changelog">Change Log</h2>
+                    <hr>
+                    <h4><strong>Version 1.0</strong></h4>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- jquery and friends -->
+<script src="js/jquery.1.9.0.min.js"> </script>
+
+<script src="js/bootstrap-transition.js"></script>
+<script src="js/bootstrap-collapse.js"></script>
+
+</body>
+</html>
