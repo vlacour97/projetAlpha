@@ -486,11 +486,9 @@
             <li>YOU ARE HERE</li>
             <li class="active">Tables Basic</li>
         </ol>
+        <div class="pull-right"><button type="button" class="btn btn-default">Accéder à la liste des étudiants</button>&nbsp;<button class="btn btn-default"><i class="fa fa-file-pdf-o"></i> Générer une liste PDF</button></div>
         <h1 class="page-title">Resultats <span class="fw-semi-bold">Etudiants</span></h1>
         <section class="widget">
-            <header>
-                <button type="button" class="btn btn-link">Accéder à la liste des étudiants</button>
-            </header>
             <div class="widget-body">
                 <div class="mt">
                     <table id="students-table" class="table table-striped table-hover">
@@ -499,7 +497,7 @@
                             <th>Id</th>
                             <th>Nom</th>
                             <th>Prenom</th>
-                            <th class="hidden-xs">Promo</th>
+                            <th class="hidden-xs">Groupe</th>
                             <th>Note</th>
 
                         </tr>
@@ -509,28 +507,28 @@
                             <td>1</td>
                             <td>Lemaire</td>
                             <td>Rémi</td>
-                            <td class="hidden-xs">2016-2017</td>
+                            <td class="hidden-xs">A</td>
                             <td> 16.3 </td>
                         </tr>
                         <tr>
                             <td>2</td>
                             <td>Calandreau</td>
                             <td>Jean-Baptiste</td>
-                            <td class="hidden-xs">2016-2017</td>
+                            <td class="hidden-xs">B</td>
                             <td> 16.3 </td>
                         </tr>
                         <tr>
                             <td>3</td>
                             <td>Rocroy</td>
                             <td>Nicolas</td>
-                            <td class="hidden-xs">2016-2017</td>
+                            <td class="hidden-xs">A</td>
                             <td> 16.3 </td>
                         </tr>
                         <tr>
                             <td>4</td>
                             <td>Lacour</td>
                             <td>Valentin</td>
-                            <td class="hidden-xs">2016-2017</td>
+                            <td class="hidden-xs">D</td>
                             <td> 16.3 </td>
                         </tr>
 
@@ -575,6 +573,7 @@
 <script src="../../../../../public/vendor/backgrid-paginator/backgrid-paginator.js"></script>
 <script src="../../../../../public/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="../../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+
 
 <!-- page specific js -->
 <script src="../../../../../public/js/survey_part1.js"></script>

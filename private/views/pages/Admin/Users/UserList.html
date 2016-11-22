@@ -493,48 +493,55 @@
             </header>
             <div class="widget-body">
                 <form class="col-md-12 text-center ">
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox1" value="option1"> Tuteur Entreprise
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox2" value="option2"> Tuteur IUT
-                    </label>
-                    <label class="checkbox-inline">
-                        <input type="checkbox" id="inlineCheckbox3" value="option3"> Admin
-                    </label>
+                    <div class="checkbox display-inline-block">
+                        <input id="inlineCheckbox1" type="checkbox" checked>
+                        <label for="inlineCheckbox1">
+                            Tuteur Entreprise
+                        </label>
+                    </div>
+                    <div class="checkbox display-inline-block">
+                        <input id="inlineCheckbox2" type="checkbox" checked>
+                        <label for="inlineCheckbox2">
+                            Tuteur IUT
+                        </label>
+                    </div>
+                    <div class="checkbox display-inline-block">
+                        <input id="inlineCheckbox3" type="checkbox" checked>
+                        <label for="inlineCheckbox3">
+                            Administrateur
+                        </label>
+                    </div>
                 </form>
                 <div class="col-md-12">
                     &nbsp
                 </div>
                 <div class="mt">
+                    <button class="btn btn-default center-block">Supprimer</button>
                     <table id="user-table" class="table table-striped table-hover">
                         <thead>
                         <tr>
                             <th>Id</th>
+                            <th class="hidden-xs no-sort"></th>
                             <th>Nom / Prenom</th>
                             <th class=" no-sort hidden-xs">Statut</th>
                             <th class=" no-sort">Action</th>
-                            <th class=" no-sort"></th>
-                            <th class=" no-sort"></th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>1</td>
+                            <td class="hidden-xs"><div class="checkbox"><input type="checkbox" id="inlineCheckbox4"><label for="inlineCheckbox4"></label></div> </td>
                             <td><span class="fw-semi-bold"><a class="user" href="#"> Arnaud Clérentin </a></span></td>
                             <td class="hidden-xs">Tuteur IUT</td>
-                            <td> <a class="contact" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contacter </a></td>
-                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="text-center"><a class="view" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Contacter"><i class="fa fa-envelope" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-wrench" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
 
                         <tr>
                             <td>2</td>
+                            <td class="hidden-xs"><div class="checkbox"><input type="checkbox" id="inlineCheckbox5"><label for="inlineCheckbox5"></label></div> </td>
                             <td><span class="fw-semi-bold"><a class="user" href="#"> Arnaud Clérentin </a></span></td>
                             <td class="hidden-xs">Tuteur IUT</td>
-                            <td> <a class="contact" href="#"><i class="fa fa-envelope" aria-hidden="true"></i> Contacter </a></td>
-                            <td> <a class="change" href="#"><i class="fa fa-wrench" aria-hidden="true"></i> Modifier </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="text-center"><a class="view" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Contacter"><i class="fa fa-envelope" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-wrench" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
 
                         </tr>
                         </tbody>
@@ -569,6 +576,89 @@
                     12 Rue de la sainte Tetess, Apt 3<br>
                     Amiens, France 80000<br>
                 </address>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Add -->
+<div class="modal fade bs-example-modal-lg" id="AddStudentModal" tabindex="-1" role="dialog" aria-labelledby="AddStudentModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">Modifier</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div class="widget col-md-12">
+            <div id="wizard" class="form-wizard">
+            <ul class="nav-justified mb-sm">
+                <li><a href="#step1" data-toggle="tab">
+                    <small>1.</small>
+                    Méthode d'ajout</a></li>
+                <li><a href="#step2" data-toggle="tab">
+                    <small>2.</small>
+                    Ajout des données</a></li>
+                <li><a href="#step3" data-toggle="tab">
+                    <small>3.</small>
+                    Finalisation</a></li>
+            </ul>
+            <div id="bar" class="progress progress-xs">
+                <div class="progress-bar progress-bar-gray-light"></div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane bg-gray-lighter" id="step1">
+                    <h3>Méthode d'Ajout :</h3>
+                    <hr><hr>
+                    <div class="col-md-6">
+                        <a id="addByCSV">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+                        </span>
+                            <h5> Importer un fichier CSV</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a id="addByHand">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-pencil fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                            <h5> Ajouter un étudiant </h5>
+                        </a>
+                    </div>
+                    &nbsp;
+                </div>
+                <div class="tab-pane bg-gray-lighter" id="step2">
+
+                </div>
+                <div class="tab-pane bg-gray-lighter" id="step3">
+                    <h2>Finalisation :</h2>
+
+                    <p>L'Étudiant à été ajouté avec succés !</p>
+                </div>
+                <ul class="pager wizard">
+                    <li class="previous">
+                        <button class="btn btn-default btn-rounded pull-left">
+                            <i class="fa fa-caret-left"></i> &nbsp; Précédent
+                        </button>
+                    </li>
+                    <li class="next">
+                        <button class="btn btn-primary btn-rounded pull-right" disabled>
+                            Suivant &nbsp; <i class="fa fa-caret-right"></i></button>
+                    </li>
+                    <li class="finish" style="display: none">
+                        <button class="btn btn-success btn-rounded pull-right" >
+                            Terminer &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            </div>
             </div>
             <div class="modal-footer">
             </div>
@@ -648,7 +738,20 @@
 <script src="../../../../../public/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="../../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
 
+<script src="../../../../../public/vendor/parsleyjs/dist/parsley.min.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
+<script src="../../../../../public/vendor/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
+<script src="../../../../../public/vendor/select2/select2.js"></script>
+<script src="../../../../../public/vendor/moment/min/moment.min.js"></script>
+<script src="../../../../../public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+<script src="../../../../../public/vendor/jasny-bootstrap/js/inputmask.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
+<script src="../../../../../public/vendor/bootstrap-application-wizard/src/bootstrap-wizard.js"></script>
+
 <!-- page specific js -->
 <script src="../../../../../public/js/UserList.js"></script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip();
+</script>
 </body>
 </html>

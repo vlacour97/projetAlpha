@@ -168,6 +168,12 @@ $(function(){
         $('#StudentsModal').modal();
     });
 
+    $(".view").click(function(e){
+        e.preventDefault();
+        currentLineId = $(this).data('id');
+        $('#UsersModal').modal();
+    });
+
     $(".change").click(function(e){
         e.preventDefault();
         currentLineId = $(this).data('id');
@@ -257,8 +263,6 @@ $(function(){
         $("a.delete[data-id="+currentLineId+"]").parent().parent().addClass('selected');
         table.row('.selected').remove().draw( false );
     });
-
-    $('[data-toggle="tooltip"]').tooltip();
 
     $('#change-submit').click(function() {
         $('#ChangeModal').modal('hide');

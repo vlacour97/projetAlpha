@@ -3,6 +3,7 @@
 <head>
     <title>Sing - Tables Dynamic</title>
     <link href="../../../../../public/css/application.min.css" rel="stylesheet">
+    <link href="../../../../../public/css/main.css" rel="stylesheet">
     <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
     <!--[if IE 9]>
     <link href="../../../../../public/css/application-ie9-part2.css" rel="stylesheet">
@@ -496,9 +497,9 @@
                 <div class="col-md-offset-1 col-md-6 mt-xlg">
                     <h2> Rémi <span class="fw-semi-bold">Lemaire</span></h2>
                 </div>
-                <div class="col-md-5">
+                <div class="col-md-4 mt-lg">
                     <div class="clearfix">
-                        <ul id="myTabs" class="nav nav-tabs pull-left"> <!-- remove pull-left to get a cool effect too -->
+                        <ul id="myTabs" class="nav nav-tabs"> <!-- remove pull-left to get a cool effect too -->
                             <li class="active"><a href="#student" data-toggle="tab">Etudiant</a></li>
                             <li class=""><a href="#TI" data-toggle="tab">Tuteur IUT</a></li>
                         </ul>
@@ -509,7 +510,7 @@
                             <p>tel : <a href="callto:0123456789"> 01 23 45 67 89</a></p>
                             <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
                         </div>
-                        <div class="tab-pane" id="TI">
+                        <div class="tab-pane clearfix" id="TI">
                             <h2>Arnaud Clérentin</h2>
                             <p>tel : <a href="callto:01 23 45 67 89"> 01 23 45 67 89</a></p>
                             <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
@@ -519,7 +520,7 @@
             </div>
 
 
-            <table class="table">
+            <table class="table border-survey">
                 <colgroup>
                     <col class="col-md-2">
                     <col class="col-md-8">
@@ -744,6 +745,7 @@
 <script src="../../../../../public/vendor/backgrid-paginator/backgrid-paginator.js"></script>
 <script src="../../../../../public/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="../../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
 
 <!-- page specific js -->
 <script src="../../../../../public/js/survey_part2.js"></script>

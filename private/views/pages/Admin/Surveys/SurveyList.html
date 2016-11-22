@@ -486,13 +486,9 @@
             <li>YOU ARE HERE</li>
             <li class="active">Tables Basic</li>
         </ol>
+        <button class="btn btn-default pull-right mt-sm"><i class="fa fa-plus"></i></button>
         <h1 class="page-title">Gestion - <span class="fw-semi-bold">Questionnaires</span></h1>
         <section class="widget">
-            <header>
-                <div class="col-md-12 text-left mb-n">
-                    <a class="col-md-2 display-inline-block" href="create_survey.html"><i class="fa fa-plus-circle fa-2x" aria-hidden="true"></i> </a>
-                </div>
-            </header>
             <div class="widget-body">
                 <div class="mt">
                     <table id="survey-table" class="table table-striped table-hover">
@@ -500,40 +496,28 @@
                         <tr>
                             <th>Id</th>
                             <th>Nom Questionnaire</th>
-                            <th class=" no-sort hidden-xs">Editeur</th>
                             <th>Date de création</th>
-                            <th class=" no-sort"> Actions </th>
-                            <th class=" no-sort"></th>
-                            <th class=" no-sort"></th>
+                            <th class=" no-sort text-center"> Actions </th>
                         </tr>
                         </thead>
                         <tbody>
                         <tr>
                             <td>1</td>
                             <td><span class="fw-semi-bold"> qInfo3-2017 </span></td>
-                            <td class="hidden-xs">Jean-François Lapiche</td>
                             <td> 11/11/2016 </td>
-                            <td> <a href="survey_show.html"><i class="fa fa-book" aria-hidden="true"></i> Consulter </a></td>
-                            <td> <a  href="create_survey.html"><i class="fa fa-pencil" aria-hidden="true"></i> Editer </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="text-center"><a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Consulter"><i class="fa fa-book" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
                         <tr>
                             <td>1</td>
                             <td><span class="fw-semi-bold"> qInfo3-2017 </span></td>
-                            <td class="hidden-xs">Jean-François Lapiche</td>
                             <td> 11/11/2016 </td>
-                            <td> <a href="survey_show.html"><i class="fa fa-book" aria-hidden="true"></i> Consulter </a></td>
-                            <td> <a  href="create_survey.html"><i class="fa fa-pencil" aria-hidden="true"></i> Editer </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="text-center"><a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Consulter"><i class="fa fa-book" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
                         <tr>
                             <td>1</td>
                             <td><span class="fw-semi-bold"> qInfo3-2017 </span></td>
-                            <td class="hidden-xs">Jean-François Lapiche</td>
                             <td> 11/11/2016 </td>
-                            <td> <a href="survey_show.html"><i class="fa fa-book" aria-hidden="true"></i> Consulter </a></td>
-                            <td> <a  href="create_survey.html"><i class="fa fa-pencil" aria-hidden="true"></i> Editer </a></td>
-                            <td> <a class="delete" href="#"><i class="fa fa-trash-o" aria-hidden="true"></i> Supprimer </a></td>
+                            <td class="text-center"><a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Consulter"><i class="fa fa-book" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="change" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Modifier"><i class="fa fa-pencil" aria-hidden="true"></i></a>&nbsp;&nbsp;<a class="delete" data-id="2" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></td>
                         </tr>
                         </tbody>
                     </table>
@@ -605,5 +589,8 @@
 
 <!-- page specific js -->
 <script src="../../../../../public/js/SurveyList.js"></script>
+<script>
+    $('[data-toggle="tooltip"]').tooltip();
+</script>
 </body>
 </html>

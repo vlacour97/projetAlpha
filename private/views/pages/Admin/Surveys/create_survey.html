@@ -3,6 +3,7 @@
 <head>
     <title>Sing - Tables Dynamic</title>
     <link href="../../../../../public/css/application.min.css" rel="stylesheet">
+    <link href="../../../../../public/css/main.css" rel="stylesheet">
     <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
     <!--[if IE 9]>
     <link href="../../../../../public/css/application-ie9-part2.css" rel="stylesheet">
@@ -19,6 +20,12 @@
          https://code.google.com/p/chromium/issues/detail?id=332189
          */
     </script>
+    <style>
+        table.border-survey tfoot tr{
+            background: #eee;
+            border: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
 <!--
@@ -493,7 +500,7 @@
 
 
         <section class="row bg-white">
-            <table class="table">
+            <table class="table border-survey">
                 <colgroup>
                     <col class="col-md-2">
                     <col class="col-md-8">
@@ -515,7 +522,7 @@
                                 <div class="panel-heading collapsed">
                                     <h4 class="panel-title">
                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                            Question 1 <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times"></i></div></a>
                                     </h4>
                                 </div>
                                 <div id="collapse1" class="panel-collapse collapse in">
@@ -586,7 +593,7 @@
                         </div>
 
                     </td>
-                    <td></td>
+                    <td class="text-center bottom"><h4 class="mt-n"><span class="fw-semi-bold">3 </span>pt.</h4></td>
                 </tr>
 
                 <tr>
@@ -598,7 +605,7 @@
                                 <div class="panel-heading collapsed">
                                     <h4 class="panel-title">
                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion2" href="#collapse2">
-                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                            Question 1 <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times"></i></div></a>
                                     </h4>
                                 </div>
                                 <div id="collapse2" class="panel-collapse collapse in">
@@ -669,7 +676,7 @@
                         </div>
 
                     </td>
-                    <td></td>
+                    <td class="text-center bottom"><h4 class="mt-n"><span class="fw-semi-bold">3 </span>pt.</h4></td>
                 </tr>
 
                 <tr>
@@ -681,7 +688,7 @@
                                 <div class="panel-heading collapsed">
                                     <h4 class="panel-title">
                                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion3" href="#collapse3">
-                                            Question 1 <i class="fa fa-angle-down pull-right"></i></a>
+                                            Question 1 <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times"></i></div></a>
                                     </h4>
                                 </div>
                                 <div id="collapse3" class="panel-collapse collapse in">
@@ -752,7 +759,7 @@
                         </div>
 
                     </td>
-                    <td></td>
+                    <td class="text-center bottom"><h4 class="mt-n"><span class="fw-semi-bold">3 </span>pt.</h4></td>
                 </tr>
 
                 <tr>
@@ -762,18 +769,17 @@
                     </td>
                     <td></td>
                 </tr>
-
-                <tr>
-                    <td></td>
-                    <td>
-                        <div class="col-md-12 text-center mt-n mb-lg">
-                            <button type="button" class="SaveButton btn btn-info">Enregistrer</button>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
                 </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="2"><h4 class="mt-n text-right fw-semi-bold">Total :</h4></th>
+                    <th><h4 class="mt-n"><span class="fw-semi-bold">9 </span>pt.</h4></th>
+                </tr>
+                </tfoot>
             </table>
+            <div class="col-md-12 text-center mt-n mb-lg">
+                <button type="button" class="SaveButton btn btn-info">Enregistrer</button>
+            </div>
         </section>
 
     </main>

@@ -3,6 +3,7 @@
 <head>
     <title>Sing - Tables Dynamic</title>
     <link href="../../../../../public/css/application.min.css" rel="stylesheet">
+    <link href="../../../../../public/css/main.css" rel="stylesheet">
     <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
     <!--[if IE 9]>
     <link href="../../../../../public/css/application-ie9-part2.css" rel="stylesheet">
@@ -491,9 +492,7 @@
             <div class="col-md-12 mt-n"> <h1 class="page-title"><span class="fw-semi-bold">Questionnaire</span></h1></div>
 
         <section class="row bg-white">
-
-
-            <table class="table">
+            <table class="table unbordered-first-line mb-lg">
                 <colgroup>
                     <col class="col-md-2">
                     <col class="col-md-8">
@@ -528,18 +527,6 @@
                                     Autre
                                 </label>
                             </div>
-
-                            <div class="commentary ">
-                                <button type="button" class="addComment btn btn-link"> Cliquez pour ajouter un commentaire </button>
-                                <div class="hidden">
-                                    <div class="col-md-12">
-                                        <textarea rows="4" class="col-md-6 col-md-offset-3" placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
-                            </div>
                         </form>
                     </td>
                     <td></td>
@@ -562,42 +549,18 @@
                                 </label>
                             </div>
                             <div class="radio radio-primary display-inline-block ml-n mr-n">
-                                <input type="radio" name="radio2" id="3" value="option1">
-                                <label for="3">
+                                <input type="radio" name="radio2" id="32" value="option1">
+                                <label for="32">
                                     Autre
                                 </label>
-                            </div>
-
-                            <div class="commentary ">
-                                <button type="button" class="addComment btn btn-link"> Cliquez pour ajouter un commentaire </button>
-                                <div class="hidden">
-                                    <div class="col-md-12">
-                                        <textarea rows="4" class="col-md-6 col-md-offset-3" placeholder="Ecrivez votre commentaire en quelques lignes..." style="resize:vertical;"></textarea>
-                                    </div>
-                                    <div class="col-md-12">
-                                        <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
-                                    </div>
-                                </div>
                             </div>
                         </form>
                     </td>
                     <td></td>
                 </tr>
-                <tr>
-                    <td></td>
-                    <td>
-                        <div class="col-md-12 text-center mt-n mb-lg">
-                            <button type="button" class="btn btn-info">Enregistrer</button>
-                            <button type="button" class="btn btn-primary">Envoyer</button>
-                        </div>
-                    </td>
-                    <td></td>
-                </tr>
                 </tbody>
             </table>
-
-
-
+            <button class="btn btn-primary center-block mb-lg">Retour</button>
         </section>
     </main>
 </div>
