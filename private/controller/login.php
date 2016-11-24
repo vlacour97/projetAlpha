@@ -29,8 +29,7 @@ $script_vendor = array(
     'messenger/build/js/messenger-theme-flat.js'
 );
 
-//TODO insere link
-$gabarit = str_replace('{forgottenPwdLink}','LINK',$gabarit);
+$gabarit = str_replace('{forgottenPwdLink}','index.php?'.\app\Navigation::$navigation_marker.'=forbiden_password',$gabarit);
 
 $html->open();
 echo $gabarit;

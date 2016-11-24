@@ -59,6 +59,17 @@ class Log extends \mainClass{
     }
 
     /**
+     * Gére un mot de passe oublié
+     * @param string $email
+     * @return bool
+     * @throws \Exception
+     */
+    static function forgottenPwd($email){
+        $id = PDOQueries::get_UserID_with_email($email);
+        return mail::send_forgotten_password_email($id);
+    }
+
+    /**
      * Permet l'inscription d'utilisateur par un utilisateur (partie 2)
      * @param int $id
      * @param string $pwd
@@ -94,11 +105,20 @@ class Log extends \mainClass{
     }
 
     /**
+     * Determine si un utilisateur existe
+     * @param int $id
+     * @return bool
+     */
+    static function userExist($id){
+        return PDOQueries::userID_exist($id);
+    }
+
+    /**
      * Determine si l'utilisateur est connecté
      * @return bool
      */
     static function isLogged(){
-        return isset($_SESSION[self::$id]) && !is_null($_SESSION[self::$id]) && PDOQueries::userID_exist(crypt::decrypt($_SESSION[self::$id]));
+        return isset($_SESSION[self::$id]) && !is_null($_SESSION[self::$id]) && self::userExist(crypt::decrypt($_SESSION[self::$id]));
     }
 
     /**
@@ -106,7 +126,16 @@ class Log extends \mainClass{
      * @return bool
      */
     static function need_to_lockscreen(){
-        return (!isset($_SESSION[self::$id]) || is_null($_SESSION[self::$id])) && isset($_COOKIE[self::$id]) && !is_null($_COOKIE[self::$id]) && PDOQueries::userID_exist(crypt::decrypt($_COOKIE[self::$id]));
+        return (!isset($_SESSION[self::$id]) || is_null($_SESSION[self::$id])) && isset($_COOKIE[self::$id]) && !is_null($_COOKIE[self::$id]) && self::userExist(crypt::decrypt($_COOKIE[self::$id]));
+    }
+
+
+    static function change_password($id,$pwd,$pwdVerif){
+        if($pwd != $pwdVerif)
+            throw new \Exception('Mots de passe différents',2);
+        if(!self::userExist($id))
+            throw new \Exception('L\'utilisateur n\'existe pas',2);
+        return User::change_password($id,$pwd);
     }
 
     /**

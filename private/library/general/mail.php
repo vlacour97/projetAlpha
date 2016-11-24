@@ -10,6 +10,7 @@ namespace general;
 
 
 use app\Config;
+use app\Navigation;
 
 class mail extends \mainClass{
 
@@ -18,7 +19,7 @@ class mail extends \mainClass{
     private static  $activation_page = ""; //TODO Completer le chemin
     private static  $message_page= ""; //TODO Completer le chemin
     private static  $answer_page= ""; //TODO Completer le chemin
-    private static  $forgotten_password_page= ""; //TODO Completer le chemin
+    private static  $forgotten_password_page= "forbiden_password";
     private static  $get_id = "id";
     private static  $get_id_message = "id_message";
 
@@ -457,7 +458,7 @@ class mail extends \mainClass{
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
-        $link = "http://".$_SERVER["HTTP_HOST"].self::$forgotten_password_page."?".self::$get_id."=".crypt::encrypt($id_user);
+        $link = "http://".$_SERVER["HTTP_HOST"].'?'.Navigation::$navigation_marker.'='.self::$forgotten_password_page."&".self::$get_id."=".crypt::encrypt($id_user);
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('forgottenPassword');
@@ -494,7 +495,7 @@ class mail extends \mainClass{
 
     static function feedback_bug($subject,$content,$author){
         $content = 'Contenu du message : <br>'.$content.'<br><br> Auteur : '.$author;
-        $mail = Config::$admin_mail;
+        $mail = Config::getAdminMail();
         return self::send_email($mail,$subject,$content);
     }
 

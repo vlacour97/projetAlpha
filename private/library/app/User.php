@@ -269,6 +269,8 @@ Class UserDatas extends ReturnDatas{
  */
 class User extends \mainClass{
 
+    public static $user_marker = "id";
+
     /**
      * Permet l'inscription d'utilisateur par un administrateur
      * @param string $email

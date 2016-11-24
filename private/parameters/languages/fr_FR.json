@@ -379,13 +379,28 @@
             "pwdForm" : "Mot de passe",
             "btnConnect" : "Connexion",
             "stayConnected" : "Mémoriser",
-            "forgottenPwd" : "Vous n'arrivez pas à vous connecter ?"
+            "forgottenPwd" : "Mot de passe oublié ?"
         },
         "lockscreen" : {
             "name" : "Connectez-vous",
             "pwdLbl" : "Mot de passe",
             "btnConnection" : "Connexion",
             "otherClient" : "Vous n'êtes pas {username}?"
+        },
+        "forbPassword" : {
+            "name" : "Mot de passe oublié",
+            "description" : "Veuillez saisir votre nom d'utilisateur",
+            "emailLbl" : "Votre e-mail",
+            "btnSubmit" : "Valider",
+            "returnLink" : "Retour à la page de connexion",
+            "successMessage" : "Un email viens de vous être envoyé pour changer votre mot de passe, vous allez être <b>redirigé d'ici peu</b>"
+        },
+        "forbPassword_part2" : {
+            "name" : "Mot de passe oublié",
+            "description" : "Veuillez changer votre mot de passe",
+            "pwdLbl" : "Mot de passe",
+            "pwdVerifLbl" : "Confirmation du mot de passe",
+            "btnSubmit" : "Valider"
         },
         "home": {
             "name": "Accueil",
