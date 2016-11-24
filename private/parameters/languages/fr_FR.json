@@ -236,7 +236,8 @@
             "1002" : "Connexion échouée : Base de données iconnue",
             "1003" : "Connexion échouée : Hôte iconnue",
             "2001" : "Connexion échouée : ",
-            "2020" : "Mot de passe incorrect"
+            "2020" : "Mot de passe incorrect",
+            "2040" : "Veuillez accepter les termes & conditions du contrat"
         }
     },
     "pages": {
@@ -401,6 +402,54 @@
             "pwdLbl" : "Mot de passe",
             "pwdVerifLbl" : "Confirmation du mot de passe",
             "btnSubmit" : "Valider"
+        },
+        "active_account" : {
+            "name" : "Inscription",
+            "form" : {
+                "name" : {
+                    "lbl" : "Nom*",
+                    "placeholder" : "Nom"
+                },
+                "fname" : {
+                    "lbl" : "Prénom*",
+                    "placeholder" : "Prénom"
+                },
+                "email" : {
+                    "lbl" : "Email",
+                    "placeholder" : "Email"
+                },
+                "pwd" : {
+                    "lbl" : "Mot de passe*",
+                    "placeholder" : "Mot de passe"
+                },
+                "pwdVerif" : {
+                    "lbl" : "Confirmation*",
+                    "placeholder" : "Confirmation de votre mot de passe"
+                },
+                "phone" : {
+                    "lbl" : "Téléphone",
+                    "placeholder" : "Numéro de téléphone"
+                },
+                "address" : {
+                    "lbl" : "Adresse",
+                    "placeholder" : "Adresse"
+                },
+                "zip_code" : {
+                    "lbl" : "Code Postal",
+                    "placeholder" : "Code Postal"
+                },
+                "city" : {
+                    "lbl" : "Ville",
+                    "placeholder" : "Ville"
+                },
+                "country" : {
+                    "lbl" : "Pays"
+                },
+                "language" : {
+                    "lbl" : "Langue"
+                },
+                "accept_terms_and_conditions" : "J'ai lu et j'accepte les conditions générales d'utilisation du site"
+            }
         },
         "home": {
             "name": "Accueil",

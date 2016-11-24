@@ -8,7 +8,7 @@
 
 include "private/config.php";
 
-$global_pages = array('forbiden_password');
+$global_pages = array('forbiden_password','active_user');
 
 //Si l'API n'est pas installé
 if(!\app\Install::APP_is_installed()){

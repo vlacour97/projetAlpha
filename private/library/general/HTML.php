@@ -76,13 +76,17 @@ class Select{
 
     /**
      * Génére des options pour les langues
+     * @param string $selected
      * @return string
      */
-    function language(){
+    function language($selected = ""){
         $datas = link_parameters('languages/dictionnary');
         $response = "";
+        $default_language = $this->default_language;
+        if($selected != "" && array_key_exists($selected,$datas))
+            $default_language = $selected;
         foreach($datas as $iso=>$language){
-            if($iso == $this->default_language)
+            if($iso == $default_language)
                 $response .= "<option value='$iso' selected>$language</option>";
             else
                 $response .= "<option value='$iso'>$language</option>";
@@ -92,13 +96,17 @@ class Select{
 
     /**
      * Génére des options pour les pays
+     * @param string $selected
      * @return string
      */
-    function country(){
+    function country($selected = ""){
         $datas = link_parameters('general/countries');
         $response = "";
+        $default_country = $this->default_country;
+        if($selected != "" && array_key_exists($selected,$datas))
+            $default_country = $selected;
         foreach($datas as $iso=>$country){
-            if($iso == $this->default_country)
+            if($iso == $default_country)
                 $response .= "<option value='$iso' selected>$country</option>";
             else
                 $response .= "<option value='$iso'>$country</option>";

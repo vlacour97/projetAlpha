@@ -36,6 +36,8 @@ class Log extends \mainClass{
             throw new \Exception('Adresse email ou mot de passe incorrect !',2);
         if(!($id_user = PDOQueries::get_UserID_with_email($email)) || !($user_lang = PDOQueries::get_User_language($id_user)))
             throw new \Exception('Erreur lors de la connexion de l\'utilisateur',1);
+        if(!PDOQueries::is_activated($id_user))
+            throw new \Exception('Veuillez activer votre compte, verifier vos mails',2);
         $_SESSION[self::$id] = crypt::encrypt($id_user);
         $_SESSION[self::$lang] = crypt::encrypt($user_lang);
         if($check)
@@ -151,9 +153,13 @@ class Log extends \mainClass{
      * @return string
      */
     static function get_lang(){
-        if(!Install::APP_is_installed() || !self::isLogged())
+        if(!Install::APP_is_installed())
             return parent::$lang;
-        $lang = PDOQueries::get_User_language(self::get_id());
+        try{
+            $lang = PDOQueries::get_User_language(self::get_id());
+        }catch (\Exception $e){
+
+        }
         if(is_null($lang) || $lang == "")
             $lang = parent::$lang;
         $lang = crypt::encrypt($lang);
