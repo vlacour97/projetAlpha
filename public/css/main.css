@@ -11,8 +11,6 @@ table.border-survey tr td table tr td:last-child{
     border-left : 0;
 }
 
-
-
 table.unbordered-first-line tr:first-child td{
     border-top: 0;
 }
@@ -20,4 +18,8 @@ table.unbordered-first-line tr:first-child td{
 .vertical-align {
     display: flex;
     align-items: center;
+}
+
+.loader-wrap{
+    z-index: 99;
 }

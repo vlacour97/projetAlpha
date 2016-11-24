@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html>
-<head>
-    <title>Gestion Stage - Installation</title>
-    <link href="../../../public/css/application.min.css" rel="stylesheet">
-    <!-- as of IE9 cannot parse css files with more that 4K classes separating in two files -->
-    <!--[if IE 9]>
-    <link href="../../../public/css/application-ie9-part2.css" rel="stylesheet">
-    <![endif]-->
-    <link rel="shortcut icon" href="../../../../public/img/favicon.png">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <script>
-        /* yeah we need this empty stylesheet here. It's cool chrome & chromium fix
-         chrome fix https://code.google.com/p/chromium/issues/detail?id=167083
-         https://code.google.com/p/chromium/issues/detail?id=332189
-         */
-    </script>
-</head>
 <body class="background-two text-center">
     <div class="wrap">
         <div class="container container-fluid">
             <div class="span10">
                 <header class="page-header">
-                    <h1>Installation :</h1>
+                    <h1>{name}</h1>
                 </header>
             </div>
             <div class="widget col-md-8 col-md-push-2">
@@ -33,56 +11,56 @@
                     <ul class="nav-justified mb-sm">
                         <li><a href="#step1" data-toggle="tab">
                             <small>1.</small>
-                            Base de Données</a></li>
+                            {navigation/step1}</a></li>
                         <li><a href="#step2" data-toggle="tab">
                             <small>2.</small>
-                            Informations du site</a></li>
+                            {navigation/step2}</a></li>
                         <li><a href="#step3" data-toggle="tab">
                             <small>3.</small>
-                            Compte Administrateur</a></li>
+                            {navigation/step3}</a></li>
                         <li><a href="#step4" data-toggle="tab">
                             <small>4.</small>
-                            Confirmation</a></li>
+                            {navigation/step4}</a></li>
                     </ul>
                     <div id="bar" class="progress progress-xs">
                         <div class="progress-bar progress-bar-gray-light"></div>
                     </div>
                     <div class="tab-content">
                         <div class="tab-pane bg-gray-lighter" id="step1">
-                            <h3>Base de Données :</h3>
-                            <span>Veuillez remplir les informations concernant votre base de données<br>&nbsp;</span>
-                            <form action='' method="POST" data-parsley-priority-enabled="false" novalidate="novalidate">
+                            <h3>{step1/title}</h3>
+                            <span>{step1/infos}<br>&nbsp;</span>
+                            <form action='' method="post" data-parsley-priority-enabled="false" novalidate="novalidate">
                                 <fieldset>
                                     <div class="form-group">
                                         <!-- Hôte -->
-                                        <label for="host">Hôte</label>
+                                        <label for="host">{step1/form/host/lbl}</label>
                                         <input type="text" id="host" name="host" placeholder="" class="form-control text-center" required="required">
                                     </div>
                                     <div class="form-group">
                                         <!-- Nom de la base de données -->
-                                        <label for="bdname">Nom de la base de données</label>
+                                        <label for="bdname">{step1/form/dbname/lbl}</label>
                                         <input type="text" id="bdname" name="bdname" placeholder="" class="form-control text-center" required="required">
-                                        <span class="help-block">Le nom de la base de données dans laquelle vous voulez installer Gestion-Stage</span>
+                                        <span class="help-block">{step1/form/dbname/help}</span>
                                     </div>
                                     <div class="form-group">
                                         <!-- Identifiant -->
-                                        <label for="username">Identifiant</label>
+                                        <label for="username">{step1/form/login/lbl}</label>
                                         <input type="text" id="username" name="username" placeholder="" class="form-control text-center" required="required">
-                                        <span class="help-block">L'identifiant servant à vos connecter sur la base de données MySQL</span>
+                                        <span class="help-block">{step1/form/login/help}</span>
                                     </div>
                                     <div class="form-group">
                                         <!-- Mot de passe -->
-                                        <label for="password">Mot de passe</label>
+                                        <label for="password">{step1/form/pwd/lbl}</label>
                                         <input type="password" id="password" name="password" placeholder="" class="form-control text-center" required="required">
-                                        <span class="help-block">... et son mot de passe MySQL</span>
+                                        <span class="help-block">{step1/form/pwd/help}</span>
                                     </div>
                                     <div class="form-group">
                                         <!-- Préfixe de table -->
-                                        <label for="prefix">Préfixe de table</label>
+                                        <label for="prefix">{step1/form/prefix/lbl}</label>
                                         <input type="text" id="prefix" name="prefix" value="gs_" class="form-control text-center">
-                                        <span class="help-block">Si vous désirez installer plusieurs site Gestion-Stage dans la même base de données, modifiez ce champ.</span>
+                                        <span class="help-block">{step1/form/prefix/help}</span>
                                     </div>
-                                    <button class="btn btn-default" id="testBDD"><i class="fa fa-play-circle-o"></i> Tester la connexion à la base de données</button>
+                                    <button class="btn btn-default" id="testBDD"><i class="fa fa-play-circle-o"></i> {step1/buttons/testConnection}</button>
                                 </fieldset>
                             </form>
                         </div>
@@ -91,38 +69,44 @@
                             <fieldset>
                                 <div class="form-group">
                                     <!-- Nom du site -->
-                                    <label for="config_name">Nom de site</label>
+                                    <label for="config_name">{step2/form/siteName/lbl}</label>
                                     <input type="text" id="config_name" name="config_name" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Il apparaitra sur les moteur de recherche</span>
+                                    <span class="help-block">{step2/form/siteName/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Description du site -->
-                                    <label for="config_description">Description du site</label>
+                                    <label for="config_description">{step2/form/describe/lbl}</label>
                                     <textarea rows="4" class="form-control" id="config_description" name="config_description"></textarea>
-                                    <span class="help-block">Elle apparaitra sur les moteur de recherche</span>
+                                    <span class="help-block">{step2/form/describe/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Mot clés du site -->
-                                    <label for="config_description">Mot clés du site</label>
+                                    <label for="config_description">{step2/form/keywords/lbl}</label>
                                     <textarea rows="4" class="form-control" id="config_keyword" name="config_keyword"></textarea>
-                                    <span class="help-block">Ils permettront de trouvé plus facilement votre site sur les moteurs de recherches. Mettez une <b>virgule (,) entre chaque mots clés</b></span>
+                                    <span class="help-block">{step2/form/keywords/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Nom de l'organisation -->
-                                    <label for="config_author">Nom de l'organisation</label>
+                                    <label for="config_author">{step2/form/organisationName/lbl}</label>
                                     <input type="text" id="config_author" name="config_author" placeholder="" class="form-control text-center" required="required">
                                 </div>
                                 <div class="form-group">
                                     <!-- Email de maintenance -->
-                                    <label for="config_admin_mail">Email de maintenance</label>
+                                    <label for="config_admin_mail">{step2/form/managerEmail/lbl}</label>
                                     <input type="email" id="config_admin_mail" name="config_admin_mail" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">C'est sur cet email que l'on vous contactera pour la maintenance du site</span>
+                                    <span class="help-block">{step2/form/managerEmail/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Date Butoire des questionnaires -->
-                                    <label for="config_deadline">Date Butoire des questionnaires</label>
+                                    <label for="config_deadline">{step2/form/deathdate/lbl}</label>
                                     <input type="text" id="config_deadline" name="config_deadline" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">C'est la date à laquelle tout les questionnaires devront être rendus</span>
+                                    <span class="help-block">{step2/form/deathdate/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Nom de l'organisation -->
+                                    <label for="config_owp_key">{step2/form/APIKey/lbl}</label>
+                                    <input type="text" id="config_owp_key" name="config_author" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step2/form/APIKey/help}</span>
                                 </div>
                             </fieldset>
                         </form>
@@ -132,118 +116,96 @@
                             <fieldset>
                                 <div class="form-group col-md-6">
                                     <!-- Nom -->
-                                    <label for="admin_name">Nom</label>
+                                    <label for="admin_name">{step3/form/name/lbl}</label>
                                     <input type="text" id="admin_name" name="admin_name" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Votre Nom</span>
+                                    <span class="help-block">{step3/form/name/help}</span>
                                 </div>
                                 <div class="form-group col-md-6">
                                     <!-- Prénom -->
-                                    <label for="admin_fname">Prénom</label>
+                                    <label for="admin_fname">{step3/form/fname/lbl}</label>
                                     <input type="text" id="admin_fname" name="admin_fname" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Votre Prénom</span>
+                                    <span class="help-block">{step3/form/fname/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Email -->
-                                    <label for="admin_email">Email</label>
+                                    <label for="admin_email">{step3/form/email/lbl}</label>
                                     <input type="text" id="admin_email" name="admin_email" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Votre email</span>
+                                    <span class="help-block">{step3/form/email/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Mot de passe -->
-                                    <label for="admin_password">Mot de passe</label>
+                                    <label for="admin_password">{step3/form/pwd/lbl}</label>
                                     <input type="password" id="admin_password" name="admin_password" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Votre mot de passe</span>
+                                    <span class="help-block">{step3/form/pwd/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Confirmation du mot de passe -->
-                                    <label for="admin_password_confirmation">Confirmation du mot de passe</label>
+                                    <label for="admin_password_confirmation">{step3/form/pwdVerif/lbl}</label>
                                     <input type="password" id="admin_password_confirmation" name="admin_password_confirmation" placeholder="" class="form-control text-center" required="required">
-                                    <span class="help-block">Confirmation de votre mot de passe</span>
+                                    <span class="help-block">{step3/form/pwdVerif/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Téléphone -->
-                                    <label for="admin_phone">Téléphone</label>
+                                    <label for="admin_phone">{step3/form/phone/lbl}</label>
                                     <input type="tel" id="admin_phone" name="admin_phone" placeholder="" class="form-control text-center">
-                                    <span class="help-block">Votre numéro de téléphone</span>
+                                    <span class="help-block">{step3/form/phone/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Adresse -->
-                                    <label for="admin_addresse">Adresse</label>
-                                    <input type="tel" id="admin_addresse" name="admin_addresse" placeholder="" class="form-control text-center">
-                                    <span class="help-block">Votre adresse</span>
+                                    <label for="admin_address">{step3/form/address/lbl}</label>
+                                    <input type="tel" id="admin_address" name="admin_address" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step3/form/address/help}</span>
                                 </div>
                                 <div class="form-group col-md-4">
                                     <!-- Code Postal -->
-                                    <label for="admin_zip_code">Code Postal</label>
+                                    <label for="admin_zip_code">{step3/form/zip_code/lbl}</label>
                                     <input type="tel" id="admin_zip_code" name="admin_zip_code" placeholder="" class="form-control text-center">
-                                    <span class="help-block">Votre Code Postal</span>
+                                    <span class="help-block">{step3/form/city/help}</span>
                                 </div>
                                 <div class="form-group col-md-8">
                                     <!-- Ville -->
-                                    <label for="admin_city">Ville</label>
+                                    <label for="admin_city">{step3/form/city/lbl}</label>
                                     <input type="tel" id="admin_city" name="admin_city" placeholder="" class="form-control text-center">
-                                    <span class="help-block">Votre ville</span>
+                                    <span class="help-block">{step3/form/city/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Pays -->
-                                    <label for="admin_country">Pays</label>
+                                    <label for="admin_country">{step3/form/country/lbl}</label>
                                     <select name="admin_country" id="admin_country" data-placeholder="Pays" class="chzn-select form-control">
-                                        <option value=""></option>
-                                        <option>Atlanta</option>
-                                        <option selected>France</option>
-                                        <option>Dallas</option>
-                                        <option>Denver</option>
-                                        <option>Fremont, CA</option>
-                                        <option>Los Angeles</option>
-                                        <option>Miami</option>
-                                        <option>Newark, NJ</option>
-                                        <option>Phoenix</option>
-                                        <option>Seattle</option>
-                                        <option>Washington, DC</option>
+                                        {select/countries}
                                     </select>
-                                    <span class="help-block">Votre Pays</span>
+                                    <span class="help-block">{step3/form/country/help}</span>
                                 </div>
                                 <div class="form-group">
                                     <!-- Langue -->
-                                    <label for="admin_language">Langue</label>
+                                    <label for="admin_language">{step3/form/language/lbl}</label>
                                     <select name="admin_language" id="admin_language" data-placeholder="Pays" class="chzn-select form-control">
-                                        <option value=""></option>
-                                        <option>Atlanta</option>
-                                        <option selected>France</option>
-                                        <option>Dallas</option>
-                                        <option>Denver</option>
-                                        <option>Fremont, CA</option>
-                                        <option>Los Angeles</option>
-                                        <option>Miami</option>
-                                        <option>Newark, NJ</option>
-                                        <option>Phoenix</option>
-                                        <option>Seattle</option>
-                                        <option>Washington, DC</option>
+                                        {select/language}
                                     </select>
-                                    <span class="help-block">Votre Langue</span>
+                                    <span class="help-block">{step3/form/language/help}</span>
                                 </div>
                             </fieldset>
-                                <span class="help-block text-left">* Ces Informations pourront être modifié aprés la création du compte</span>
+                                <span class="help-block text-left">* {step3/form/help}</span>
                         </form>
                     </div>
                         <div class="tab-pane bg-gray-lighter" id="step4">
-                        <h2>Finalisation :</h2>
+                        <h2>{step4/title}</h2>
 
-                        <p>Lorsque vous cliquerez sur "Terminez", un questionnaire prérempli sera installé et vous pourrez vous connecté sur votre sytéme de Gestion de Stage</p>
+                        <p>{step4/infos}</p>
                     </div>
                         <ul class="pager wizard">
                             <li class="previous">
                                 <button class="btn btn-default btn-rounded pull-left">
-                                    <i class="fa fa-caret-left"></i> &nbsp; Précédent
+                                    <i class="fa fa-caret-left"></i> &nbsp; {previous}
                                 </button>
                             </li>
                             <li class="next">
                                 <button class="btn btn-primary btn-rounded pull-right" >
-                                    Suivant &nbsp; <i class="fa fa-caret-right"></i></button>
+                                    {next} &nbsp; <i class="fa fa-caret-right"></i></button>
                             </li>
                             <li class="finish" style="display: none">
-                                <button class="btn btn-success btn-rounded pull-right" >
-                                    Terminer &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                                <button class="btn btn-success btn-rounded pull-right finish" >
+                                    {finish} &nbsp; <i class="glyphicon glyphicon-ok"></i>
                                 </button>
                             </li>
                         </ul>
@@ -252,48 +214,14 @@
             </div>
 
             <footer class="page-footer col-md-12">
-                2016 &copy; Projet-Alpha - Gestion-Stages
+                {site-year} &copy; {site-name} - {site-copyright}
             </footer>
         </div>
     </div>
-<!-- The Loader. Is shown when pjax happens -->
-<div class="loader-wrap hiding hide">
-    <i class="fa fa-circle-o-notch fa-spin-fast"></i>
-</div>
-
-<!-- common libraries. required for every page-->
-<script src="../../../public/vendor/jquery/dist/jquery.min.js"></script>
-<script src="../../../public/vendor/jquery-pjax/jquery.pjax.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/transition.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/collapse.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/dropdown.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/button.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js"></script>
-<script src="../../../public/vendor/jQuery-slimScroll/jquery.slimscroll.min.js"></script>
-<script src="../../../public/vendor/widgster/widgster.js"></script>
-
-<!-- page specific libs -->
-<script src="../../../public/vendor/parsleyjs/dist/parsley.min.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
-<script src="../../../public/vendor/twitter-bootstrap-wizard/jquery.bootstrap.wizard.min.js"></script>
-<script src="../../../public/vendor/select2/select2.js"></script>
-<script src="../../../public/vendor/moment/min/moment.min.js"></script>
-<script src="../../../public/vendor/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
-<script src="../../../public/vendor/jasny-bootstrap/js/inputmask.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"></script>
-<script src="../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/popover.js"></script>
-<script src="../../../public/vendor/bootstrap-application-wizard/src/bootstrap-wizard.js"></script>
-<script src="../../../public/vendor/messenger/build/js/messenger.js"></script>
-<script src="../../../public/vendor/messenger/build/js/messenger-theme-flat.js"></script>
-
-    <!-- common app js -->
-<script src="../../../public/js/settings.js"></script>
-<script src="../../../public/js/app.js"></script>
-<script src="../../../public/js/install.js"></script>
-
-
-<!-- page specific libs -->
-<!-- page specific js -->
-</body>
-</html>
+    <script>
+        var DB_connect = new Object();
+        DB_connect.success = '{script/DB_connect/success}';
+        DB_connect.fail = '{script/DB_connect/fail}';
+        var Step = new Object();
+        Step.value = '{script/step}';
+    </script>

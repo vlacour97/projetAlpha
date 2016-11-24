@@ -44,4 +44,4 @@ if(\app\Install::APP_is_installed())
 //TODO redirection
 
 //TODO à retirer
-\app\Log::login('vlacour97@icloud.com','azerty');
+//\app\Log::login('vlacour97@icloud.com','azerty',true);
