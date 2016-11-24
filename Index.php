@@ -9,12 +9,10 @@
 include "private/config.php";
 
 //Si l'API n'est pas installé
-//TODO S'il n'est pas installé (!)
 if(!\app\Install::APP_is_installed()){
     include "private/controller/install.php";
     die();
 }
-
 //Si l'utilisateur n'est pas connecté
 if(!\app\Log::isLogged()){
 
@@ -28,5 +26,6 @@ if(!\app\Log::isLogged()){
     die();
 }
 
+\app\Navigation::get_pages();
 
 echo 'ok';

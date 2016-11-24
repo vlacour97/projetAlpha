@@ -1365,7 +1365,6 @@ class PDOQueries extends \mainClass{
      * @return bool
      */
     static function verification_id_password($id,$password){
-        echo 'ok';
         if(!is_int($id) && !is_string($password))
             return false;
         $query = self::$PDO->prepare('SELECT '.self::$prefix.'verification_id_password(:id,:password)');

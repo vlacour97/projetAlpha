@@ -16,7 +16,7 @@ session_start();
 define('ROOT',$_SERVER['DOCUMENT_ROOT']);
 define('HOST','http://'.$_SERVER['HTTP_HOST']);
 define('TEMP_PATH',$_SERVER['DOCUMENT_ROOT'].'/private/datas/temp/');
-define('AVATAR_IMG',$_SERVER['DOCUMENT_ROOT'].'/private/datas/users/');
+define('AVATAR_IMG','/private/datas/users/');
 define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');
 define('PATH_CONTROLLER',$_SERVER['DOCUMENT_ROOT'].'/private/controller/');
 define('MESSAGE_ATTACHMENT_PATH','/private/datas/messages/');

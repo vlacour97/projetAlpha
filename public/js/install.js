@@ -125,7 +125,7 @@ $(function(){
                     document.location.href="index.php";
                 else{
                     var error;
-                    switch (datas.code){
+                    switch (Math.floor(datas.code/1000)){
                         case 1 :
                             error = 'info';
                             break;

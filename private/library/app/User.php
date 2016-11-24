@@ -694,9 +694,9 @@ class User extends \mainClass{
      * @return string
      */
     static function get_profile_photo($id){
-        $path = AVATAR_IMG.'0.jpg';
-        if(is_file(AVATAR_IMG.$id.'.jpg'))
-            $path = AVATAR_IMG.$id.'.jpg';
+        $path = HOST.AVATAR_IMG.'0.jpg';
+        if(is_file(ROOT.AVATAR_IMG.$id.'.jpg'))
+            $path = HOST.AVATAR_IMG.$id.'.jpg';
         return $path;
     }
 

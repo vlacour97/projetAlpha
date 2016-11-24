@@ -40,8 +40,8 @@ class Log extends \mainClass{
         $_SESSION[self::$lang] = crypt::encrypt($user_lang);
         if($check)
         {
-            setcookie(self::$id,crypt::encrypt($id_user),time()+self::$cookie_duration);
-            setcookie(self::$lang,crypt::encrypt($user_lang),time()+self::$cookie_duration);
+            setcookie(self::$id,crypt::encrypt($id_user),time()+self::$cookie_duration,'/');
+            setcookie(self::$lang,crypt::encrypt($user_lang),time()+self::$cookie_duration,'/');
         }
         PDOQueries::update_last_login_user($id_user);
         return true;
@@ -122,7 +122,7 @@ class Log extends \mainClass{
      * @return string
      */
     static function get_lang(){
-        if(!Install::APP_is_installed())
+        if(!Install::APP_is_installed() || !self::isLogged())
             return parent::$lang;
         $lang = PDOQueries::get_User_language(self::get_id());
         if(is_null($lang) || $lang == "")
@@ -175,7 +175,7 @@ class Log extends \mainClass{
      */
     static function stay_connected($password){
         if(!PDOQueries::verification_id_password(self::get_id(),$password))
-            throw new \Exception('Mot de passe incorrect',2);
+            throw new \PersonalizeException(2020);
         $_SESSION[self::$id] = $_COOKIE[self::$id];
         $_SESSION[self::$lang] = $_COOKIE[self::$lang];
     }

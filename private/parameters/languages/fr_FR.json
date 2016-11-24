@@ -235,7 +235,8 @@
             "1001" : "Connexion échouée : Accés non autorisé pour l'utilisateur \"$user\"",
             "1002" : "Connexion échouée : Base de données iconnue",
             "1003" : "Connexion échouée : Hôte iconnue",
-            "2001" : "Connexion échouée : "
+            "2001" : "Connexion échouée : ",
+            "2020" : "Mot de passe incorrect"
         }
     },
     "pages": {
@@ -371,6 +372,20 @@
             "site-year" : "2016",
             "site-name" : "Projet-Alpha",
             "site-copyright" : "Gestion-Alpha"
+        },
+        "login" : {
+            "name" : "Connectez-vous",
+            "emailForm" : "Nom d'utilisateur",
+            "pwdForm" : "Mot de passe",
+            "btnConnect" : "Connexion",
+            "stayConnected" : "Mémoriser",
+            "forgottenPwd" : "Vous n'arrivez pas à vous connecter ?"
+        },
+        "lockscreen" : {
+            "name" : "Connectez-vous",
+            "pwdLbl" : "Mot de passe",
+            "btnConnection" : "Connexion",
+            "otherClient" : "Vous n'êtes pas {username}?"
         },
         "home": {
             "name": "Accueil",
