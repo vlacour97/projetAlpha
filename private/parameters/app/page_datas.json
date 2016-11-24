@@ -1,9 +1,9 @@
 [
     {
-        "id" : "home",
-        "name" : "Accueil",
+        "id" : "install",
+        "name" : "Installation",
         "logo" : "",
-        "inNavigation" : true
+        "inNavigation" : false
     },
     {
         "id" : "nav",

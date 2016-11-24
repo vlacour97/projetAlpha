@@ -9,6 +9,8 @@
 namespace general;
 
 
+use app\Config;
+use app\Install;
 use app\Log;
 use other\GoogleTranslate;
 
@@ -20,11 +22,12 @@ class Language extends \mainClass{
     static $regex_marker = '#\\{([^}]+)\\}#';
 
     static function init(){
-        self::$datas = link_parameters('languages/'.Log::get_lang());
+       self::$datas = link_parameters('languages/'.Log::get_lang());
     }
 
     /**
      * Récupére les textes de dates
+     * @param string|null $lang
      * @return mixed
      */
     static function get_date_text($lang = null){
@@ -38,6 +41,7 @@ class Language extends \mainClass{
 
     /**
      * Récupére les textes de mail
+     * @param string|null $lang
      * @return mixed
      */
     static function get_mail_text($lang = null){
@@ -50,7 +54,30 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les textes de mail
+     * @param int $code
+     * @param array $var
+     * @param string|null $lang
+     * @return mixed
+     */
+    static function get_exception_text($code,$var = array(),$lang = null){
+        if(!is_int($code))
+            return "";
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        $response = $datas["general"]["exceptions"][(string)$code];
+        foreach($var as $key=>$content){
+            $response = str_replace('$'.$key,$content,$response);
+        }
+        return $response;
+    }
+
+    /**
      * Récupére les textes de Notifications
+     * @param string|null $lang
      * @return mixed
      */
     static function get_notification_texts($lang = null){
@@ -64,6 +91,7 @@ class Language extends \mainClass{
 
     /**
      * Récupére les textes d'une page
+     * @param string $page_name
      * @return mixed
      */
     static function get_page_text($page_name){
@@ -74,6 +102,7 @@ class Language extends \mainClass{
 
     /**
      * Récupére les textes d'une page
+     * @param string $page_name
      * @return mixed
      */
     static function get_pdf_text($page_name){
@@ -84,6 +113,7 @@ class Language extends \mainClass{
 
     /**
      * Récupére les textes d'un composant
+     * @param string $component_name
      * @return mixed
      */
     static function get_component_text($component_name){
@@ -136,6 +166,14 @@ class Language extends \mainClass{
             foreach($marker_array as $key=>$content)
                 $gabarit = str_replace($key,$content,$gabarit);
         }
+        //Variables globales
+        if(Install::APP_is_installed()){
+            $lastUpdate = new Date(Config::getLastUpdate());
+            $replace = array('{site-name}','{site-copyright}','{site-year}');
+            $by = array(Config::getName(),Config::getCopyright(),$lastUpdate->format('yyyy'));
+            $gabarit = str_replace($replace,$by,$gabarit);
+        }
+
         return $gabarit;
     }
 

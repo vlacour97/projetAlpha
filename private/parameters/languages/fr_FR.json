@@ -230,9 +230,148 @@
                 "mark_lbl" : "Note",
                 "total_lbl" : "Total"
             }
+        },
+        "exceptions" : {
+            "1001" : "Connexion échouée : Accés non autorisé pour l'utilisateur \"$user\"",
+            "1002" : "Connexion échouée : Base de données iconnue",
+            "1003" : "Connexion échouée : Hôte iconnue",
+            "2001" : "Connexion échouée : "
         }
     },
     "pages": {
+        "install" : {
+            "name" : "Installation :",
+            "navigation" : {
+                "step1" : "Base de Données",
+                "step2" : "Informations du site",
+                "step3" : "Compte Administrateur",
+                "step4" : "Confirmation"
+            },
+            "step1" : {
+                "title" : "Base de Données :",
+                "infos" : "Veuillez remplir les informations concernant votre base de données",
+                "form" : {
+                    "host" : {
+                        "lbl" : "Hôte"
+                    },
+                    "dbname" : {
+                        "lbl" : "Nom de la base de données",
+                        "help" : "Le nom de la base de données dans laquelle vous voulez installer Gestion-Stage"
+                    },
+                    "login" : {
+                        "lbl" : "Identifiant",
+                        "help" : "L'identifiant servant à vos connecter sur la base de données MySQL"
+                    },
+                    "pwd" : {
+                        "lbl" : "Mot de passe",
+                        "help" : "... et son mot de passe MySQL"
+                    },
+                    "prefix" : {
+                        "lbl" : "Préfixe de table",
+                        "help" : "Si vous désirez installer plusieurs site Gestion-Stage dans la même base de données, modifiez ce champ."
+                    }
+                },
+                "buttons" : {
+                    "testConnection" : "Tester la connexion à la base de données"
+                }
+            },
+            "step2" : {
+                "form" : {
+                    "siteName" : {
+                        "lbl" : "Nom de site",
+                        "help" : "Il apparaitra sur les moteurs de recherche"
+                    },
+                    "describe" : {
+                        "lbl" : "Description du site",
+                        "help" : "Elle apparaitra sur les moteurs de recherche"
+                    },
+                    "keywords" : {
+                        "lbl" : "Mot clés du site",
+                        "help" : "Ils permettront de trouvé plus facilement votre site sur les moteurs de recherches. Mettez une <b>virgule (,) entre chaque mots clés</b>"
+                    },
+                    "organisationName" : {
+                        "lbl" : "Nom de l'organisation"
+                    },
+                    "managerEmail" : {
+                        "lbl" : "Email de maintenance",
+                        "help" : "C'est sur cet email que l'on vous contactera pour la maintenance du site"
+                    },
+                    "deathdate" : {
+                        "lbl" : "Date Butoire des questionnaires",
+                        "help" : "C'est la date à laquelle tout les questionnaires devront être rendus"
+                    },
+                    "APIKey" : {
+                        "lbl" : "Clé de l'API OpenWeatherMap",
+                        "help" : "Pour obtenir des informations météo, veuillez vous inscrire sur <a href=\"http://openweathermap.org/\" target=\"_blank\">http://openweathermap.org/</a> pour obtenir une clé d'API"
+                    }
+                }
+            },
+            "step3" : {
+                "form" : {
+                    "name" : {
+                        "lbl" : "Nom",
+                        "help" : "Votre Nom"
+                    },
+                    "fname" : {
+                        "lbl" : "Prénom",
+                        "help" : "Votre Prénom"
+                    },
+                    "email" : {
+                        "lbl" : "Email",
+                        "help" : "Votre email"
+                    },
+                    "pwd" : {
+                        "lbl" : "Mot de passe",
+                        "help" : "Votre mot de passe"
+                    },
+                    "pwdVerif" : {
+                        "lbl" : "Confirmation du mot de passe",
+                        "help" : "Confirmation de votre mot de passe"
+                    },
+                    "phone" : {
+                        "lbl" : "Téléphone",
+                        "help" : "Votre numéro de téléphone"
+                    },
+                    "address" : {
+                        "lbl" : "Adresse",
+                        "help" : "Votre adresse"
+                    },
+                    "zip_code" : {
+                        "lbl" : "Code Postal",
+                        "help" : "Votre Code Postal"
+                    },
+                    "city" : {
+                        "lbl" : "Ville",
+                        "help" : "Votre ville"
+                    },
+                    "country" : {
+                        "lbl" : "Pays",
+                        "help" : "Votre Pays"
+                    },
+                    "language" : {
+                        "lbl" : "Langue",
+                        "help" : "Votre Langue"
+                    },
+                    "help" : "Ces Informations pourront être modifié aprés la création du compte"
+                }
+            },
+            "step4" : {
+                "title" : "Finalisation :",
+                "infos" : "Lorsque vous cliquerez sur \"Terminez\", un questionnaire prérempli sera installé et vous pourrez vous connecté sur votre sytéme de Gestion de Stage"
+            },
+            "previous" : "Précédent",
+            "next" : "Suivant",
+            "finish" : "Terminer",
+            "script" : {
+                "DB_connect" : {
+                    "success" : "Connexion réussi",
+                    "fail" : "Impossible de se connecter à la base de données"
+                }
+            },
+            "site-year" : "2016",
+            "site-name" : "Projet-Alpha",
+            "site-copyright" : "Gestion-Alpha"
+        },
         "home": {
             "name": "Accueil",
             "parts": {

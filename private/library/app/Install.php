@@ -9,6 +9,7 @@
 namespace app;
 
 
+use general\Language;
 use general\PDOQueries;
 
 /**
@@ -51,6 +52,7 @@ class Install {
 
             PDOQueries::init();
 
+
             if(PDOQueries::count_users() == 0){
                 self::$step = 2;
                 return self::$step;
@@ -66,6 +68,14 @@ class Install {
         }
 
         return self::$step;
+    }
+
+    /**
+     * Determine si le fichier de configuration existe
+     * @return bool
+     */
+    static function config_file_exist(){
+        return is_file(ROOT.config::$config_file_path.config::$config_file_name.'.json');
     }
 
     /**
@@ -349,23 +359,24 @@ class Install {
      * @throws \Exception
      */
     static public function PDO_connect($host,$dbname,$user,$password,$return_PDO_object = false){
-
+        if($host == "" || $dbname == "" || $user == "" || $password == "")
+            throw new \Exception('Connexion échouée : Pas d\'identifiants de connexion',1);
         $dsn = 'mysql:dbname='.$dbname.';host='.$host;
         try {
             $PDO = new \PDO($dsn, $user, $password);
         } catch (\PDOException $e) {
             switch($e->getCode()){
                 case 1045 :
-                    throw new \Exception("Connexion échouée : Accées non autorisé pour l'utilisateur \"$user\"",$e->getCode());
+                    throw new \PersonalizeException(1001,['user'=>$user]);
                     break;
                 case 1049 :
-                    throw new \Exception('Connexion échouée : Base de données iconnue',$e->getCode());
+                    throw new \PersonalizeException(1002);
                     break;
                 case 2005 :
-                    throw new \Exception('Connexion échouée : Hôte iconnue',$e->getCode());
+                    throw new \PersonalizeException(1003);
                     break;
             }
-            throw new \Exception('Connexion échouée : ' . $e->getMessage(),$e->getCode());
+            throw new \PersonalizeException(2001);
         }
         if($return_PDO_object)
             return $PDO;

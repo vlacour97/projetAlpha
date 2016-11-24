@@ -907,8 +907,8 @@ DROP TRIGGER IF EXISTS `{prefix}after_delete_users`;
 CREATE TRIGGER `{prefix}after_delete_users` AFTER DELETE ON `{prefix}users` FOR EACH ROW BEGIN
 DECLARE delete_content TEXT;
 SET delete_content = CONCAT('Suppression d\'un utilisateur :',OLD.fname,' ',OLD.name);
-INSERT INTO action_report(ID_USER, content, requested_date) VALUES (NULL,delete_content,NOW());
-DELETE FROM notifications WHERE content LIKE CONCAT('%id_user/',OLD.ID,'%') OR content LIKE CONCAT('%id_publisher/',OLD.ID,'%');
+INSERT INTO {prefix}action_report(ID_USER, content, requested_date) VALUES (NULL,delete_content,NOW());
+DELETE FROM {prefix}notifications WHERE content LIKE CONCAT('%id_user/',OLD.ID,'%') OR content LIKE CONCAT('%id_publisher/',OLD.ID,'%');
 END;
 
 

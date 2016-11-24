@@ -106,7 +106,7 @@ class Log extends \mainClass{
      * @return bool
      */
     static function need_to_lockscreen(){
-        return (!isset($_SESSION[self::$id]) || is_null($_SESSION[self::$id])) && ($_COOKIE[self::$id]) && !is_null($_COOKIE[self::$id]) && PDOQueries::userID_exist(crypt::decrypt($_COOKIE[self::$id]));
+        return (!isset($_SESSION[self::$id]) || is_null($_SESSION[self::$id])) && isset($_COOKIE[self::$id]) && !is_null($_COOKIE[self::$id]) && PDOQueries::userID_exist(crypt::decrypt($_COOKIE[self::$id]));
     }
 
     /**
@@ -122,6 +122,8 @@ class Log extends \mainClass{
      * @return string
      */
     static function get_lang(){
+        if(!Install::APP_is_installed())
+            return parent::$lang;
         $lang = PDOQueries::get_User_language(self::get_id());
         if(is_null($lang) || $lang == "")
             $lang = parent::$lang;

@@ -57,6 +57,8 @@ class Config {
      * Récupére toutes les données
      */
     private static function get_datas(){
+        if(!Install::config_file_exist())
+            return self::$check = true || false;
         $datas = link_parameters(self::$config_file_name);
         self::$name = $datas['name'];
         self::$description = $datas['description'];

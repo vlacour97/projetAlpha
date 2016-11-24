@@ -17,3 +17,4 @@ catch (Exception $e){
 }*/
 //var_dump(\general\Language::translate_text('Bonjour'));
 
+var_dump(\general\Language::get_exception_text(1001));
