@@ -16,6 +16,14 @@ if(!\app\Install::APP_is_installed()){
     die();
 }
 
+//Si déconnexion demandé
+if($_GET[\app\Navigation::$navigation_marker] == \app\Log::$logout_marker){
+    \app\Log::logout();
+    header('Location: index.php');
+}
+
+
+
 //Si une page globale est demandé
 if(in_array($_GET[\app\Navigation::$navigation_marker],$global_pages)){
     include "private/controller/".$_GET[\app\Navigation::$navigation_marker].".php";
@@ -35,6 +43,8 @@ if(!\app\Log::isLogged()){
     die();
 }
 
-//\app\Navigation::get_pages();
+\app\Log::set_stat();
 
-echo 'ok';
+\app\Navigation::get_pages();
+
+

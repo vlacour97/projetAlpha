@@ -48,6 +48,15 @@ class Notifications extends \mainClass{
     }
 
     /**
+     * Compte le nombre de notifications
+     * @return int
+     * @throws \Exception
+     */
+    static function countNotifications(){
+        return count(PDOQueries::show_notification(Log::get_id()));
+    }
+
+    /**
      * Formate une notification
      * @param string $content
      * @param string $link

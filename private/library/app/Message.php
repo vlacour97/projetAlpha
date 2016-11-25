@@ -290,6 +290,15 @@ class Message extends \mainClass
     }
 
     /**
+     * Compte le nombre de nouveau messages
+     * @param int $id_user
+     * @return int
+     */
+    static function count_message($id_user){
+        return count(PDOQueries::show_received_message($id_user));
+    }
+
+    /**
      * Recupére le pieces jointes
      * @param int $id_message
      * @return array

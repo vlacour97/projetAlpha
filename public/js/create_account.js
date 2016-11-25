@@ -12,6 +12,10 @@ $(function(){
         Messenger.options = { extraClasses: classes,theme: theme  };
     }
 
+    var disabled = $('input[value!=""][type!="checkbox"]');
+
+    disabled.attr('disabled','true');
+
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
@@ -19,7 +23,9 @@ $(function(){
 
         e.preventDefault();
         var url = "private/controller/active_user.php";
+        disabled.removeAttr('disabled');;
         var form = $('form').serializeArray();
+        disabled.attr('disabled','true');
         $.post(url,form)
             .done(function(datas){
                 datas = jQuery.parseJSON(datas);
@@ -43,5 +49,7 @@ $(function(){
             });
 
     });
+
+
 
 });

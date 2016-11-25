@@ -8,8 +8,14 @@
 
 namespace general;
 
+use app\Config;
+use app\Log;
+use app\Message;
 use app\Navigation;
+use app\Notifications;
 use app\Search;
+use app\Stats;
+use app\User;
 
 /**
  * Class Link
@@ -198,6 +204,81 @@ class HTML {
         </html>
         <?php
         echo ob_get_clean();
+    }
+
+    function sidebar(){
+
+        $id = Log::get_id();
+        $user = User::get_user($id);
+
+        $gabarit = Language::translate_gabarit('components/sidebar');
+
+        $replace = array('{profile_img_link}','{nb_notifications}','{user_fname}','{user_name}','{navigation_control}','{percent_response}');
+        $by = array(User::get_profile_photo($id),Notifications::countNotifications(),$user->fname,$user->name,$this->generate_navigation(),Stats::progressResponsesState($id));
+        $gabarit = str_replace($replace,$by,$gabarit);
+
+        $this->generate_navigation();
+
+        echo $gabarit;
+    }
+
+    private function generate_navigation(){
+        $datas = Navigation::get_navbar();
+        $response = '<ul class="sidebar-nav">';
+        foreach($datas as $page){
+            /** @var $page \app\NavLine */
+            $active = "";
+            if($page->id == $_GET[Navigation::$navigation_marker] || ($page->id == "home" && is_null($_GET[Navigation::$navigation_marker])))
+                $active = "active";
+            if(!is_null($page->navPage) && is_array($page->navPage)){
+                $flag = false;
+                $responseTmp = "";
+
+                foreach($page->navPage as $pageUnder){
+                    /** @var $pageUnder \app\NavLine */
+                    $active = "";
+                    if($page->id.Navigation::$navigation_separator.$pageUnder->id == $_GET[Navigation::$navigation_marker]){
+                        $active = "active";
+                        $flag = true;
+                    }
+
+                    $responseTmp .= '<li class="'.$active.'"><a href="'.$pageUnder->link.'">'.$pageUnder->name.'</a></li>';
+                }
+                $active = "";
+                if($flag)
+                    $active = "active";
+                $response .= '<li class="'.$active.'"><a class="collapsed" href="#user_nav_list" data-toggle="collapse" data-parent="#sidebar"><span class="icon"><i class="'.$page->logo.'"></i></span>'.$page->name.'<i class="toggle fa fa-angle-down"></i></a><ul id="user_nav_list" class="collapse">';
+                $response .= $responseTmp;
+                $response .= '</ul></li>';
+
+            }else{
+                $response .= '<li class="'.$active.'"><a href="'.$page->link.'"><span class="icon"><i class="'.$page->logo.'"></i></span>'.$page->name.'</a></li>';
+            }
+        }
+        $response .= '</ul>';
+        $this->label_nb_message($response);
+        return $response;
+    }
+
+    private function label_nb_message(&$gabarit){
+        if(($nb_message = Message::count_message(Log::get_id())) != "0")
+            $gabarit = str_replace('{nb_message}',$nb_message,$gabarit);
+    }
+
+    function navbar(){
+        $gabarit = Language::translate_gabarit('components/navbar');
+
+        $id = Log::get_id();
+        $user = User::get_user($id);
+        $date = new Date('now');
+
+        $replace = array('{user_fname}','{user_name}','{profile_img_link}','{now-date}');
+        $by = array($user->fname,$user->name,User::get_profile_photo($id),$date->format('dd MM yyyy {at} hh:mn'));
+        $gabarit = str_replace($replace,$by,$gabarit);
+
+        $this->label_nb_message($gabarit);
+
+        echo $gabarit;
     }
 
     /**

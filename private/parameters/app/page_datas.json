@@ -1,14 +1,20 @@
 [
     {
-        "id" : "install",
-        "name" : "Installation",
-        "logo" : "",
-        "inNavigation" : false
+        "id" : "home",
+        "name" : "Accueil",
+        "logo" : "fa fa-home",
+        "inNavigation" : true
     },
     {
-        "id" : "nav",
-        "name" : "Navigation",
-        "logo" : "",
+        "id" : "message",
+        "name" : "Messages <span class=\"label label-danger\">{nb_message}</span>",
+        "logo" : "fa fa-envelope",
+        "inNavigation" : true
+    },
+    {
+        "id" : "other",
+        "name" : "Autre",
+        "logo" : "fa fa-times",
         "inNavigation" : true,
         "pages" : [
             {

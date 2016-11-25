@@ -29,10 +29,34 @@ class Text {
         return substr( $str, 0, strrpos( $str,' ') ).$endStr;
     }
 
+    /**
+     * Génére automatique des émoticones
+     * @param string $string
+     * @return mixed
+     */
     static function automatic_emo($string){
         $replace = array(' :)',' ;)',' :(',' :/',' :$',' :p',' ;p',' :P',' ;P',' :D',' <3',' :\')',' :*',' B)',' :o','(caca)',' (y)');
         $by = array(' &#128522;',' &#128521;',' &#128532;',' &#128533;',' &#128563;',' &#128539;',' &#128540;',' &#128539;',' &#128540;',' &#128513;',' &#10084;',' &#128514;',' &#128514;',' &#128526;',' &#128558;','&#128169;',' &#128077;');
         return str_replace($replace,$by,$string);
     }
 
+    /**
+     * Récupére les initials d'une chaine
+     * @param string $string
+     * @return string
+     */
+    static function getInitials($string){
+        $flag = true;
+        $response = "";
+        for($i=0;$i<strlen($string);$i++){
+            if($string[$i-1] == " " && $string[$i] != " ")
+                $flag = true;
+            if($flag)
+            {
+                $response .= $string[$i];
+                $flag = false;
+            }
+        }
+        return $response;
+    }
 } 

@@ -18,6 +18,10 @@ use general\PDOQueries;
  */
 class NavLine{
     /**
+     * @var string Identifiant de la page
+     */
+    public $id;
+    /**
      * @var string Nom de la page
      */
     public $name;
@@ -89,6 +93,7 @@ class Navigation extends \mainClass{
                     if(in_array($content['id'].self::$navigation_separator.$content2['id'],$autorised_pages))
                     {
                         $temp = new NavLine();
+                        $temp->id = $content2['id'];
                         $temp->name = $content2['name'];
                         $temp->logo = $content2['logo'];
                         $temp->link = '?'.self::$navigation_marker.'='.$content['id'].self::$navigation_separator.$content2['id'];
@@ -99,6 +104,7 @@ class Navigation extends \mainClass{
                 if($autorised_part)
                 {
                     $temp = new NavLine();
+                    $temp->id = $content['id'];
                     $temp->name = $content['name'];
                     $temp->logo = $content['logo'];
                     $temp->link = '#';
@@ -109,6 +115,7 @@ class Navigation extends \mainClass{
             else
                 if(in_array($content['id'],$autorised_pages)){
                     $temp = new NavLine();
+                    $temp->id = $content['id'];
                     $temp->name = $content['name'];
                     $temp->logo = $content['logo'];
                     $temp->link = '?'.self::$navigation_marker.'='.$content['id'];

@@ -450,18 +450,13 @@
                 },
                 "accept_terms_and_conditions" : "J'ai lu et j'accepte les conditions générales d'utilisation du site"
             }
-        },
-        "home": {
-            "name": "Accueil",
-            "parts": {
-                "header": {
-                    "title": "Test",
-                    "h2" : "ddd"
-                },
-                "content" : {
-
-                }
-            }
+        }
+    },
+    "components" : {
+        "sidebar" : {
+            "stats_title" : "Stats",
+            "stats_progress" : "Taux de réponse au questionnaire",
+            "stats_progress_description" : "{percent_response}% des utilisateurs ont répondus"
         }
     }
 }

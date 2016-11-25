@@ -12,6 +12,7 @@ namespace general;
 use app\Config;
 use app\Install;
 use app\Log;
+use app\Navigation;
 use other\GoogleTranslate;
 
 class Language extends \mainClass{
@@ -169,8 +170,8 @@ class Language extends \mainClass{
         //Variables globales
         if(Install::APP_is_installed()){
             $lastUpdate = new Date(Config::getLastUpdate());
-            $replace = array('{site-name}','{site-copyright}','{site-year}');
-            $by = array(Config::getName(),Config::getCopyright(),$lastUpdate->format('yyyy'));
+            $replace = array('{site-name}','{site-copyright}','{site-year}','{site_name_initial}','{logout_link}');
+            $by = array(Config::getName(),Config::getCopyright(),$lastUpdate->format('yyyy'),Text::getInitials(Config::getName()),'?'.Navigation::$navigation_marker.'='.Log::$logout_marker);
             $gabarit = str_replace($replace,$by,$gabarit);
         }
 
