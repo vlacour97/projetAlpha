@@ -482,27 +482,27 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>Général</li>
-            <li class="active">Messages</li>
+            <li>{way/way1}</li>
+            <li class="active">{way/way2}</li>
         </ol>
         <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" id="app-alert">
             <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
             Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
         </div>
-        <h1 class="page-title">Messages - <span class="fw-semi-bold">Boite de reception</span></h1>
+        <h1 class="page-title">{menu/title}<span class="fw-semi-bold">{menu/semi_bold}</span></h1>
         <div class="row">
             <div class="col-md-3 col-lg-2">
-                <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">Nouveau Message</a>
+                <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">{menu/button}</a>
 
                 <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
                     <li class="active">
                         <a href="inbox.html">
                             <span class="badge pull-right">2</span>
-                            Reçus
+                            {menu/received}
                         </a>
                     </li>
-                    <li><a href="#">Envoyés</a></li>
-                    <li><a href="#">Supprimés</a></li>
+                    <li><a href="#">{menu/sent}</a></li>
+                    <li><a href="#">{menu/deleted}</a></li>
                 </ul>
             </div>
             <div class="col-md-9 col-lg-10">
@@ -513,13 +513,13 @@
                 </div>
                 <section class="widget widget-email">
                     <header>
-                        <h4>Compose <span class="fw-semi-bold">New</span></h4>
+                        <h4>{message/title}<span class="fw-semi-bold">{message/semi_bold}</span></h4>
                     </header>
                     <div class="widget-body">
                         <form id="email-compose" class="form-email-compose" method="get" action="inbox.html">
                             <div class="form-group">
                                 <select id="country-select"
-                                    data-placeholder="À:"
+                                    data-placeholder="{message/to}"
                                     class="select2 form-control"
                                     tabindex="-1"
                                     name="country">
@@ -532,7 +532,7 @@
                             </select>
                             </div>
                             <div class="form-group">
-                                <input type="text" id="input-subject" placeholder="Objet:" class="input-transparent form-control" value="">
+                                <input type="text" id="input-subject" placeholder="{message/object}" class="input-transparent form-control" value="">
                             </div>
                             <div class="form-group">
                                 <div class="tinymce fa-border">
@@ -549,8 +549,8 @@
                                         <span class="fileinput-filename"></span>
                                     </div>
                                             <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Integrer un fichier</span>
-                                                <span class="fileinput-exists">Changer</span>
+                                                <span class="fileinput-new">{message/attach}</span>
+                                                <span class="fileinput-exists">{message/send}</span>
                                                 <input type="hidden"><input id="fileupload1" type="file">
                                             </span>
                                     <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Supprimer</a>
@@ -558,8 +558,8 @@
                             </div>
                             <div class="clearfix">
                                 <div class="btn-toolbar pull-right">
-                                    <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;Envoyer&nbsp;&nbsp;&nbsp;</button>
-                                    <button type="reset" id="compose-discard-button" class="btn btn-gray">Annuler</button>
+                                    <button type="submit" id="compose-send-button" class="btn btn-danger">&nbsp;&nbsp;&nbsp;{message/send}&nbsp;&nbsp;&nbsp;</button>
+                                    <button type="reset" id="compose-discard-button" class="btn btn-gray">{message/cancel}</button>
                                 </div>
                             </div>
                         </form>

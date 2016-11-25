@@ -450,8 +450,173 @@
                 },
                 "accept_terms_and_conditions" : "J'ai lu et j'accepte les conditions générales d'utilisation du site"
             }
-        }
-    },
+        },
+        "404" : {
+            "expression" : "OOPS !",
+            "errorname" : "ERREUR 404 :",
+            "errordef" : "La page que vous cherchez n'existe pas",
+        },
+"email" : {
+            "chemin1" : "Général",
+            "name" : "Messages",
+            "inbox" : "Boite de reception",
+            "newmessage" : "Nouveau Message",
+            "recieved" : "Reçus",
+            "sent" : "Envoyés",
+            "deleted" : "Supprimés",
+            "answer" : "Répondre",
+            "print" : "imprimer",
+            "delete" : "Supprimer",
+        },
+"inbox" : {
+            "chemin1" : "Général",
+            "name" : "Messages",
+            "inbox" : "Boite de reception",
+            "newmessage" : "Nouveau Message",
+            "recieved" : "Reçus",
+            "sent" : "Envoyés",
+            "deleted" : "Supprimés",
+            "select" : "Selectionner",
+            "all" : "Tout",
+            "none" : "Aucun",
+            "read" : "Lus",
+            "noread" : "Non Lus",
+            "actions" : "Actions",
+            "answer" : "Répondre",
+            "markread" : "Marquer comme lus",
+            "marknoread" : "Marquer comme non lus",
+            "deletemsg" : "Supprimer",
+            "searchmsg" : "Rechercher Messages",
+        },
+"search" : {
+            "chemin1" : "Accueil",
+            "name" : "Recherches",
+            "resutsearch" : "Résultat des recherches pour :",
+            "users" : "Utilisateurs :",
+            "students" : "Etudiants :",
+            "messages" : "Messages :",
+            "timeline" : "Timeline :",
+        },
+"timeline" : {
+            "chemin1" : "Accueil",
+            "name" : "Fils d'actualité",
+            "writemsg" : "Exprimez-vous !",
+            "importfile" : "Integrer un fichier",
+            "changefile" : "Changer",
+            "delete" : "Supprimer",
+            "cancel" : "Annuler",
+            "post" : "Publier",
+        },
+        {
+          "500" :  {
+                "title" : " OOPS ! ",
+                "bold" : "500 Internal Server Error",
+                "text" : " Erreur lors du lancement de l'application ",
+                "button" : "Page d'acceuil"
+                  }
+        },
+
+        {
+          "compose" : {
+              "way" :{
+                "way1" : "Général",
+                "way2" : "Messages"
+              },
+              "menu" : {
+                "title" :"Messages - ",
+                "semi_bold" :"Boîte de reception",
+                "button" : "Nouveau Message",
+                "received" : "Reçus",
+                "sent" : "Envoyés",
+                "deleted" : "Supprimés"
+              },
+              "message" :{
+                "title" : "Compose ",
+                "semi_bold" : "Nouveau",
+                "to" : "À:",
+                "object" : "Objet:",
+                "attach" : "Integrer un fichier",
+                "send" : "Envoyer",
+                "cancel" : "Annuler"
+              }
+          },
+        {
+          "profile" : {
+            "way1" : "Accueil",
+            "way2" : "Mon Compte",
+            "title" : "Mon Compte",
+            "password" : {
+              "pwd" : {
+                "lbl" : "Nouveau mot de passe",
+                "help" : "Votre nouveau mot de passe"
+              }
+            },
+            "confirm_pwd" : {
+              "confirm" : {
+                "lbl" : "Confirmation du nouveau mot de passe",
+                "help" : "Confirmation de nouveau votre mot de passe"
+            },
+            "button1" : "Modifier",
+            "name" : {
+              "name" :{
+                "lbl" : "Nom",
+                "help" : "Votre Nom"
+              }
+            },
+            "fname" : {
+              "fname" :{
+                "lbl" : "Prénom",
+                "help" : "Votre Prénom"
+              }
+            },
+            "mail" : {
+              "mail" : {
+                "lbl" : "Email",
+                "help" : "Votre email"
+              }
+            },
+            "phone" : {
+              "phone" : {
+                "lbl" : "Téléphone",
+                "help" : "Votre numéro de téléphone"
+              }
+            },
+            "address" :{
+              "address" : {
+                "lbl" : "Adresse",
+                "help" : "Votre adresse"
+              }
+            },
+            "zip_code" : {
+              "zip" : {
+                "lbl" : "Code Postal",
+                "help" : "Votre Code Postal"
+              }
+            },
+            "city" : {
+              "city" : {
+                "lbl" : "Ville",
+                "help" : "Votre ville"
+              }
+            },
+            "country" : {
+              "country" : {
+                "lbl" : "Pays",
+                "help" : "Votre Pays"
+              }
+            },
+            "language" : {
+              "language" : {
+                "lbl" : "Langue",
+                "help" : "Votre Langue"
+              }
+            },
+            "button_modify" : "Modifier",
+            "button_back" : "Retour",
+          }
+        },
+
+        },
     "components" : {
         "sidebar" : {
             "stats_title" : "Stats",
