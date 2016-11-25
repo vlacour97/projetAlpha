@@ -262,15 +262,15 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>Accueil</li>
-            <li class="active">Fils d'actualité</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
-        <h1 class="page-title">Fils d'actualité</span></h1>
+        <h1 class="page-title">{name}</span></h1>
         <div class="row">
             <div class="col-xs-12" id="publication_part">
                 <section class="widget text-center">
                     <form>
-                        <h3 class="text-center">Exprimez-vous !</h3>
+                        <h3 class="text-center">{writemsg}</h3>
                         <!--<textarea rows="4" class="form-control" id="wysiwyg" placeholder="Exprimez-vous"></textarea>-->
                         <div class="fileinput fileinput-new input-group col-md-6 col-md-offset-3 col-xs-12" id="post_file_input" data-provides="fileinput">
                             <div class="form-control" data-trigger="fileinput">
@@ -278,11 +278,11 @@
                                 <span class="fileinput-filename"></span>
                             </div>
                                             <span class="input-group-addon btn btn-default btn-file">
-                                                <span class="fileinput-new">Integrer un fichier</span>
-                                                <span class="fileinput-exists">Changer</span>
+                                                <span class="fileinput-new">{importfile}</span>
+                                                <span class="fileinput-exists">{changefile}</span>
                                                 <input type="hidden"><input id="fileupload1" type="file">
                                             </span>
-                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">Supprimer</a>
+                            <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">{delete}</a>
                         </div>
                         <div class="tinymce fa-border bg-body-light row">
                         </div>
@@ -290,11 +290,11 @@
                             <span class="thumb-sm avatar pull-left">
                                 <img class="img-circle" src="../../../public/img/login/profile.png" alt="..." data-toggle="tooltip" data-placement="bottom" title="John Doe">
                             </span>
-                            <span class="pull-left mt-n-0 circle circle-lg bg-success fw-bold text-white" style="display: none; margin-left: .5em; cursor: pointer" id="add_file_to_post"  data-id="1" data-toggle="tooltip" data-placement="top" title="" data-original-title="Integrer un fichier">
+                            <span class="pull-left mt-n-0 circle circle-lg bg-success fw-bold text-white" style="display: none; margin-left: .5em; cursor: pointer" id="add_file_to_post"  data-id="1" data-toggle="tooltip" data-placement="top" title="" data-original-title="{importfile}">
                                     +
                             </span>
-                            <button type="reset" class="btn btn-sm pull-right">Annuler</button>
-                            <button type="submit" class="btn btn-sm btn-primary pull-right">Publier</button>
+                            <button type="reset" class="btn btn-sm pull-right">{cancel}</button>
+                            <button type="submit" class="btn btn-sm btn-primary pull-right">{post}</button>
                         </div>
                     </form>
                 </section>

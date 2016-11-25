@@ -30,15 +30,15 @@
                     <img  src="../../../public/img/errors/travolta.png" alt="..." height="200" width="165">
                 </div>
                 <div class="col-sm-8 col-sm-offset-2 bg-white img-rounded">
-                    <h1><span class="fw-semi-bold"> OOPS ! </span></h1>
-                    <h3 class="mb-lg"> <span class="fw-semi-bold">ERREUR 404 </span>: La page que vous cherchez n'existe pas </h3>
-                    <button type="button" class="btn btn-primary btn-lg mb-lg">Page d'acceuil</button>
+                    <h1><span class="fw-semi-bold"> {expression} </span></h1>
+                    <h3 class="mb-lg"> <span class="fw-semi-bold">{errorname} </span> {errordef} </h3>
+                    <button type="button" class="btn btn-primary btn-lg mb-lg">{homebutton}</button>
                 </div>
             </div>
         </div>
     </main>
     <footer class="page-footer">
-        2016 &copy; Projet-Alpha - Gestion-Stages
+        {site-year} &copy; {site-name} - {site-copyright}
     </footer>
 </div>
 <!-- The Loader. Is shown when pjax happens -->
