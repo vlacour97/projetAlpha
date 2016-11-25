@@ -481,27 +481,27 @@
 <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
 <main id="content" class="content" role="main">
 <ol class="breadcrumb">
-    <li>Général</li>
-    <li class="active">Messages</li>
+    <li>{chemin1}</li>
+    <li class="active">{name}</li>
 </ol>
 <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" id="app-alert">
     <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
     Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
 </div>
-<h1 class="page-title">Messages - <span class="fw-semi-bold">Boite de reception</span></h1>
+<h1 class="page-title">{name} - <span class="fw-semi-bold">{inbox}</span></h1>
 <div class="row">
     <div class="col-md-3 col-lg-2">
-        <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">Nouveau Message</a>
+        <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">{newmessage}</a>
 
         <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
             <li class="active">
                 <a href="inbox.html">
                     <span class="badge pull-right">2</span>
-                    Reçus
+                    {recieved}
                 </a>
             </li>
-            <li><a href="#">Envoyés</a></li>
-            <li><a href="#">Supprimés</a></li>
+            <li><a href="#">{sent}</a></li>
+            <li><a href="#">{deleted}</a></li>
         </ul>
     </div>
     <div class="col-md-9 col-lg-10">
@@ -509,15 +509,6 @@
             <a class="btn btn-default btn-sm width-50 pull-left hide" id="back-btn" href="inbox.html">
                 <i class="fa fa-angle-left fa-lg"></i>
             </a>
-            <div class="pull-right" id="folder-stats">
-                <p class="widget-email-count">Affiche 1 - 10 sur 96 messages</p>
-                <ul class="pagination pagination-sm widget-email-pagination">
-                    <li class="prev disabled"><a href="#"><i class="fa fa-chevron-left"></i></a></li>
-                    <li class="active"><a href="#">1</a></li>
-                    <li><a href="#">2</a></li>
-                    <li class="next"><a href="#"><i class="fa fa-chevron-right"></i></a></li>
-                </ul>
-            </div>
         </div>
         <section class="widget widget-email">
             <header id="widget-email-header">
@@ -525,34 +516,34 @@
                     <div class="col-sm-6">
                         <div class="btn-group">
                             <a class="btn btn-default btn-sm dropdown-toggle" href="#" data-toggle="dropdown">
-                                Selectionner
+                                {select}
                                 <i class="fa fa-angle-down "></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a id="select-all" href="#">Tout</a></li>
-                                <li><a id="select-none" href="#">Aucun</a></li>
+                                <li><a id="select-all" href="#">{all}</a></li>
+                                <li><a id="select-none" href="#">{none}</a></li>
                                 <li class="divider"></li>
-                                <li><a id="select-read" href="#">Lus</a></li>
-                                <li><a id="select-unread" href="#">Non Lus</a></li>
+                                <li><a id="select-read" href="#">{read}</a></li>
+                                <li><a id="select-unread" href="#">{noread}</a></li>
                             </ul>
                         </div>
                         <div class="btn-group">
                             <a class="btn btn-sm btn-default dropdown-toggle" href="#" data-toggle="dropdown">
-                                Actions
+                                {actions}
                                 <i class="fa fa-angle-down "></i>
                             </a>
                             <ul class="dropdown-menu">
-                                <li><a id="reply" href="#">Répondre</a></li>
+                                <li><a id="reply" href="#">{answer}</a></li>
                                 <li class="divider"></li>
-                                <li><a id="mark-as-read" href="#">Marquer comme Lus</a></li>
-                                <li><a id="mark-as-unread" href="#">Marquer comme non Lus</a></li>
+                                <li><a id="mark-as-read" href="#">{markread}</a></li>
+                                <li><a id="mark-as-unread" href="#">{marknoread}</a></li>
                                 <li class="divider"></li>
-                                <li><a id="delete" href="#">Supprimer</a></li>
+                                <li><a id="delete" href="#">{deletemsg}</a></li>
                             </ul>
                         </div>
                     </div>
                     <div class="col-sm-6">
-                        <input class="form-control input-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="Rechercher Messages">
+                        <input class="form-control input-sm width-200 pull-right" id="mailbox-search" type="text" placeholder="{searchmsg}">
                     </div>
                 </div>
             </header>

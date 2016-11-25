@@ -482,27 +482,27 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>Général</li>
-            <li class="active">Messages</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
         <div class="alert alert-warning alert-sm pull-right no-margin animated bounceInLeft hide" id="app-alert">
             <button type="button" class="ml-lg close" data-dismiss="alert" aria-hidden="true">×</button>
             Hey! This is a <span class="fw-semi-bold">real app</span> with CRUD and Search functions. Have fun!
         </div>
-        <h1 class="page-title">Messages - <span class="fw-semi-bold">Boite de reception</span></h1>
+        <h1 class="page-title">{name} - <span class="fw-semi-bold">{inbox}</span></h1>
         <div class="row">
             <div class="col-md-3 col-lg-2">
-                <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">Nouveau Message</a>
+                <a class="btn btn-danger btn-block" id="compose-btn" href="compose.html">{newmessage}</a>
 
                 <ul class="nav nav-pills nav-stacked nav-email-folders mt" id="folders-list">
                     <li class="active">
                         <a href="inbox.html">
                             <span class="badge pull-right">2</span>
-                            Reçus
+                            {recieved}
                         </a>
                     </li>
-                    <li><a href="#">Envoyés</a></li>
-                    <li><a href="#">Supprimés</a></li>
+                    <li><a href="#">{sent}</a></li>
+                    <li><a href="#">{deleted}</a></li>
                 </ul>
             </div>
             <div class="col-md-9 col-lg-10">
@@ -542,16 +542,16 @@
                                     <div class="email-actions pull-right">
                                         <div class="btn-group">
                                             <button id="email-opened-reply" class="btn btn-sm btn-gray">
-                                                <i class="fa fa-reply"></i> Répondre
+                                                <i class="fa fa-reply"></i> {answer}
                                             </button>
                                             <button class="btn btn-sm btn-gray dropdown-toggle" data-toggle="dropdown">
                                                 <i class="fa fa-angle-down"></i>
                                             </button>
                                             <ul class="dropdown-menu pull-right">
-                                                <li><a href="#"><i class="fa fa-reply reply-btn"></i> Répondre</a></li>
-                                                <li><a href="#"><i class="fa fa-print"></i> Imprimer</a></li>
+                                                <li><a href="#"><i class="fa fa-reply reply-btn"></i> {answer}</a></li>
+                                                <li><a href="#"><i class="fa fa-print"></i> {print}</a></li>
                                                 <li class="divider"></li>
-                                                <li><a href="#"><i class="glyphicon glyphicon-trash"></i> Supprimer</a></li>
+                                                <li><a href="#"><i class="glyphicon glyphicon-trash"></i> {delete}</a></li>
                                             </ul>
                                         </div>
                                     </div>
