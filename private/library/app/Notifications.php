@@ -9,6 +9,7 @@
 namespace app;
 
 
+use general\Date;
 use general\Language;
 use general\PDOQueries;
 
@@ -18,9 +19,22 @@ use general\PDOQueries;
  * @author Valentin Lacour
  */
 class NotificationsForm{
+    /**
+     * @var string
+     */
     public $text;
+    /**
+     * @var string
+     */
     public $link;
+    /**
+     * @var string
+     */
     public $icon;
+    /**
+     * @var \general\Date
+     */
+    public $date;
 }
 
 /**
@@ -41,7 +55,7 @@ class Notifications extends \mainClass{
         $response = array();
 
         foreach($notifications as $content){
-            $response[] = self::formate_notification($content['content'],$content['link'],$texts);
+            $response[] = self::formate_notification($content['content'],$content['link'],$texts,$content['requested_date']);
         }
 
         return $response;
@@ -53,7 +67,7 @@ class Notifications extends \mainClass{
      * @throws \Exception
      */
     static function countNotifications(){
-        return count(PDOQueries::show_notification(Log::get_id()));
+        return PDOQueries::count_notifications(Log::get_id());
     }
 
     /**
@@ -63,7 +77,7 @@ class Notifications extends \mainClass{
      * @param array $texts
      * @return NotificationsForm
      */
-    static private function formate_notification($content,$link,$texts){
+    static private function formate_notification($content,$link,$texts,$requested_date){
         $response = new NotificationsForm();
         //Récupération des marqueurs
         preg_match_all(Language::$regex_marker, $content, $markers);
@@ -82,6 +96,7 @@ class Notifications extends \mainClass{
         //Retour des informations
         $response->text = $text;
         $response->link = $link;
+        $response->date = new Date($requested_date);
         $response->icon = $texts[$markers[1][0]]['icon'];
         return $response;
     }

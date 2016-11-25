@@ -2,7 +2,7 @@
  * Created by valentinlacour on 19/11/16.
  */
 
-
+var url = 'private/controller/home.php';
 
 function initAnimations(){
     $('#geo-locations-number').each(function(){
@@ -15,23 +15,32 @@ function initAnimations(){
 }
 
 function initLineStats(){
-    Morris.Line({
-        element: 'LineStats',
-        resize: true,
-        data: [
-            { y: '2006', a: 100},
-            { y: '2007', a: 75},
-            { y: '2008', a: 50},
-            { y: '2009', a: 75},
-            { y: '2010', a: 50},
-            { y: '2011', a: 75},
-            { y: '2012', a: 10}
-        ],
-        xkey: 'y',
-        ykeys: ['a'],
-        labels: ['Nombre de connexions'],
-        lineColors: ['#88C4EE']
-    });
+
+    var countries = url + '?action=lineStats';
+
+    $.get(countries)
+        .done(function(datas){
+            datas = jQuery.parseJSON(datas);
+            if(datas.response)
+            {
+                Morris.Line({
+                    element: 'LineStats',
+                    resize: true,
+                    data: datas.content,
+                    xkey: 'd',
+                    ykeys: ['y'],
+                    dateFormat : function(d) {
+                        var date = new Date(d);
+                        return date.getDate()+'/'+(date.getMonth()+1);
+                    },
+                    xLabelFormat: function(d){
+                        return d.getDate()+'/'+(d.getMonth()+1);
+                    },
+                    labels: ['Nombre de connexions'],
+                    lineColors: ['#88C4EE']
+                });
+            }
+        });
 }
 
 function initDonutStatsAdmin(){
@@ -39,9 +48,9 @@ function initDonutStatsAdmin(){
     Morris.Donut({
         element: 'DonutStatsAdmin',
         data: [
-            {label: "Questionnaires Vides", value: 20},
-            {label: "Questionnaires Remplis", value: 12},
-            {label: "Questionnaires Validés", value: 30}
+            {label: "Questionnaires Vides", value: responses.empty},
+            {label: "Questionnaires Remplis", value: responses.finish},
+            {label: "Questionnaires Validés", value: responses.validate}
         ],
         colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
     });
@@ -53,9 +62,9 @@ function initDonutStatsTE(){
     Morris.Donut({
         element: 'DonutStatsTE',
         data: [
-            {label: "Questionnaires Vides", value: 20},
-            {label: "Questionnaires Remplis", value: 12},
-            {label: "Questionnaires Validés", value: 30}
+            {label: "Questionnaires Vides", value: responses.empty},
+            {label: "Questionnaires Remplis", value: responses.finish},
+            {label: "Questionnaires Validés", value: responses.validate}
         ],
         colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
     });
@@ -64,77 +73,48 @@ function initDonutStatsTE(){
 
 function initWeather(){
     var icons = new Skycons({"color": Sing.colors['white']});
-    icons.set("clear-day", "clear-day");
+    icons.set("day0", weather_icon[0]);
     icons.play();
 
     icons = new Skycons({"color": Sing.colors['white']});
-    icons.set("partly-cloudy-day", "partly-cloudy-day");
+    icons.set("day1", weather_icon[1]);
     icons.play();
 
     icons = new Skycons({"color": Sing.colors['white']});
-    icons.set("rain", "rain");
+    icons.set("day2", weather_icon[2]);
     icons.play();
 
     icons = new Skycons({"color": Sing.lighten(Sing.colors['brand-warning'], .1)});
-    icons.set("clear-day-3", "clear-day");
+    icons.set("day3", weather_icon[3]);
     icons.play();
 
     icons = new Skycons({"color": Sing.colors['white']});
-    icons.set("partly-cloudy-day-3", "partly-cloudy-day");
+    icons.set("day4", weather_icon[4]);
     icons.play();
+}
 
-    icons = new Skycons({"color": Sing.colors['white']});
-    icons.set("clear-day-1", "clear-day");
-    icons.play();
+function initMap(){
+    var countries = url + '?action=countries';
 
-    icons = new Skycons({"color": Sing.colors['brand-success']});
-    icons.set("partly-cloudy-day-1", "partly-cloudy-day");
-    icons.play();
-
-    icons = new Skycons({"color": Sing.colors['gray']});
-    icons.set("clear-day-2", "clear-day");
-    icons.play();
-
-    icons = new Skycons({"color": Sing.colors['gray-light']});
-    icons.set("wind-1", "wind");
-    icons.play();
-
-    icons = new Skycons({"color": Sing.colors['gray-light']});
-    icons.set("rain-1", "rain");
-    icons.play();
+    $.get(countries)
+        .done(function(datas){
+            datas = jQuery.parseJSON(datas);
+            if(datas.response)
+            {
+                $("#map").mapael(datas.content);
+            }
+        });
 }
 
 
 function PageLoad(){
     $('.widget').widgster();
-    $("#map").mapael({
-        map : {
-            name : "world_countries"
-        },
-        defaultPlot: {
-            attrs: {
-                fill: "#fff", opacity: 0.6
-            }
-        },
-        plots: {
-            // Image plot
-            'France': {
-                type: "circle",
-                size: 30,
-                latitude:46.0000,
-                longitude: 2.0000,
-                attrs: {
-                    opacity:.7,
-                    fill: "#888"
-                },
-                attrsHover: {
-                    transform: "s1.5"
-                }
-            }
-        }
-    });
+
+
+
     if(page == 'admin')
     {
+        initMap();
         initLineStats();
         initDonutStatsAdmin();
     }

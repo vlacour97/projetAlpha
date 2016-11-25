@@ -1,0 +1,85 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        <h1 class="page-title">{name}</h1>
+        <div class="row">
+            <div class="col-md-12">
+                <section class="widget bg-transparent">
+                    <!-- .widget-body is a mostly semantic class. may be a sibling to .widget>header or .widget>footer -->
+                    <div class="widget-body">
+                        <div id="map" class="mapael">
+                            <div>
+                                <h5 class="text-gray-dark"><span class="fw-semi-bold">{lbl_connections}</span></h5>
+                                <p class="h3 text-warning no-margin ml-lg"><strong id="geo-locations-number">{nb_connections}</strong> <i class="fa fa-map-marker"></i></p>
+                            </div>
+                            <div class="map">
+                                <span>{alternative_map}</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                {evolution_title}
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="{expand}" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="{collapse}" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </header>
+                        <div class="widget-body">
+                            <div id="LineStats">
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-12">
+                    {weather_widget}
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="col-md-12">
+                    <section class="widget">
+                        <header>
+                            <h4>
+                                {responses_rate}
+                            </h4>
+                            <div class="widget-controls">
+                                <a data-widgster="expand" title="{expand}" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                                <a data-widgster="collapse" title="{collapse}" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                                <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        </header>
+                        <div class="widget-body">
+                            <div id="DonutStatsAdmin">
+                            </div>
+                            <p class="fs-mini text-muted">
+                                {responses_rate_description}
+                            </p>
+                        </div>
+                    </section>
+                </div>
+                <div class="col-md-12 mt-lg">
+                    {message_widget}
+                </div>
+            </div>
+
+        </div>
+    </main>
+</div>
+<script>
+    var page = 'admin';
+    var responses = new Object();
+    responses.empty = {responses_empty};
+    responses.finish = {responses_finish};
+    responses.validate = {responses_validate};
+</script>

@@ -1,0 +1,52 @@
+<section class="widget">
+    <div class="widget-image text-white">
+        <img src="../../../../public/img/bg_weather.jpeg">
+        <h3 class="title">
+            <span class="fw-normal">{city}</span>, {country}
+        </h3>
+        <div class="info text-align-right">
+            <i class="fa fa-map-marker h1 no-margin mr-xs"></i>
+            <h6 class="no-margin mt-xs">{city}, {country}</h6>
+            <p class="fs-sm">{updated_date}</p>
+        </div>
+        <div class="forecast">
+            <div class="row">
+                <div class="col-xs-6 col-sm-4">
+                    <div class="row mt-xs">
+                        <div class="col-xs-6 no-padding">
+                            <canvas id="day0" width="40" height="40"></canvas>
+                            <p class="no-margin fw-normal mt-n-xs">{desc0}</p>
+                        </div>
+                        <div class="col-xs-6 no-padding">
+                            <h5 class="fw-semi-bold no-margin">{today}</h5>
+                            <p class="value1 ">{temp0}&deg;</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-3 col-sm-2 no-padding">
+                    <h6 class="no-margin">{tomorrow}</h6>
+                    <canvas class="mt-xs" id="day1" width="28" height="28"></canvas>
+                    <p class="no-margin fw-semi-bold">{temp1}&deg;</p>
+                </div>
+                <div class="col-xs-3 col-sm-2 no-padding">
+                    <h6 class="no-margin">{date2}</h6>
+                    <canvas class="mt-xs" id="day2" width="28" height="28"></canvas>
+                    <p class="no-margin fw-semi-bold">{temp2}&deg;</p>
+                </div>
+                <div class="col-xs-3 col-sm-2 no-padding">
+                    <h6 class="no-margin">{date3}</h6>
+                    <canvas class="mt-xs" id="day3" width="28" height="28"></canvas>
+                    <p class="no-margin fw-semi-bold">{temp3}&deg;</p>
+                </div>
+                <div class="col-xs-3 col-sm-2 no-padding">
+                    <h6 class="no-margin">{date4}</h6>
+                    <canvas class="mt-xs" id="day4" width="28" height="28"></canvas>
+                    <p class="no-margin fw-semi-bold">{temp4}&deg;</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script>
+    var weather_icon = ['{logo0}','{logo1}','{logo2}','{logo3}','{logo4}'];
+</script>

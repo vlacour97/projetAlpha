@@ -2,22 +2,30 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f5940ff-468e-47e5-80cc-96221cbd4b33" name="Default" comment="">
-<<<<<<< HEAD
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/encodings.xml" afterPath="$PROJECT_DIR$/.idea/encodings.xml" />
-=======
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/back-end/general/Text.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/pages/home.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/tests/back-end/other/html2pdf.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/back-end/general/Language.php" afterPath="$PROJECT_DIR$/tests/back-end/general/Language.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/Text.php" afterPath="$PROJECT_DIR$/private/library/general/Text.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/pages/admin_dashboard.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/home.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/parameters/general/localisations.json" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/main.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/main.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/message_widget.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/notifications.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/weather.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/private/views/pages/Admin/dashboard.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/private/views/pages/Admin/Students/StudentList.html" afterPath="$PROJECT_DIR$/private/views/pages/admin_studentList.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/HTML.php" afterPath="$PROJECT_DIR$/private/library/general/HTML.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/Language.php" afterPath="$PROJECT_DIR$/private/library/general/Language.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Log.php" afterPath="$PROJECT_DIR$/private/library/app/Log.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Notifications.php" afterPath="$PROJECT_DIR$/private/library/app/Notifications.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/PDOQueries.php" afterPath="$PROJECT_DIR$/private/library/general/PDOQueries.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Stats.php" afterPath="$PROJECT_DIR$/private/library/app/Stats.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Weather.php" afterPath="$PROJECT_DIR$/private/library/app/Weather.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/back-end/general/crypt.php" afterPath="$PROJECT_DIR$/tests/back-end/general/crypt.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/dashboard.js" afterPath="$PROJECT_DIR$/public/js/dashboard.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" afterPath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/install.sql" afterPath="$PROJECT_DIR$/private/parameters/app/install.sql" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/components/language_switcher.html" afterPath="$PROJECT_DIR$/private/views/components/language_switcher.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/components/navbar.html" afterPath="$PROJECT_DIR$/private/views/components/navbar.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Timeline.php" afterPath="$PROJECT_DIR$/private/library/app/Timeline.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/db_datas.json" afterPath="$PROJECT_DIR$/private/parameters/app/db_datas.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/projetIUT_dump.sql" afterPath="$PROJECT_DIR$/projetIUT_dump.sql" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/tests/back-end/app/Timeline.php" afterPath="$PROJECT_DIR$/tests/back-end/app/Timeline.php" />
     </list>
     <ignored path="Projet IUT.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -33,214 +41,180 @@
   <component name="CreatePatchCommitExecutor">
     <option name="PATCH_PATH" value="" />
   </component>
-  <component name="DatabaseView">
-    <option name="GROUP_SCHEMA" value="true" />
-    <option name="GROUP_CONTENTS" value="false" />
-    <option name="SORT_POSITIONED" value="false" />
-    <option name="SHOW_TABLE_DETAILS" value="true" />
-    <option name="SHOW_EMPTY_GROUPS" value="false" />
+  <component name="DaemonCodeAnalyzer">
+    <disable_hints />
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FavoritesManager">
     <favorites_list name="Projet IUT" />
   </component>
   <component name="FileEditorManager">
-<<<<<<< HEAD
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="Timeline.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/app/Timeline.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-17.0">
-              <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="62" selection-end-column="0" />
-              <folding>
-                <element signature="e#113#130#0#PHP" expanded="true" />
-                <element signature="e#2413#3072#0#PHP" expanded="false" />
-                <element signature="e#3078#3172#0#PHP" expanded="false" />
-                <element signature="e#3177#3271#0#PHP" expanded="false" />
-                <element signature="e#3277#3416#0#PHP" expanded="false" />
-                <element signature="e#3421#3553#0#PHP" expanded="false" />
-                <element signature="e#3559#3647#0#PHP" expanded="false" />
-                <element signature="e#3652#3758#0#PHP" expanded="false" />
-                <element signature="e#3764#3863#0#PHP" expanded="false" />
-                <element signature="e#3868#3971#0#PHP" expanded="false" />
-                <element signature="e#3977#4093#0#PHP" expanded="false" />
-                <element signature="e#4098#4205#0#PHP" expanded="false" />
-=======
     <leaf>
-      <file leaf-file-name="Text.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/general/Text.php">
+      <file leaf-file-name="HTML.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/library/general/HTML.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="345">
-              <caret line="32" column="124" selection-start-line="32" selection-start-column="124" selection-end-line="32" selection-end-column="124" />
+            <state vertical-scroll-proportion="-7.75" vertical-offset="4734" max-vertical-offset="5955">
+              <caret line="354" column="96" selection-start-line="354" selection-start-column="96" selection-end-line="354" selection-end-column="96" />
               <folding>
-                <element signature="e#135#326#0#PHP" expanded="false" />
-                <element signature="e#331#997#0#PHP" expanded="false" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+                <element signature="e#6#94#0#PHP" expanded="true" />
+                <element signature="e#116#131#0#PHP" expanded="true" />
+                <element signature="e#1584#1672#0#PHP" expanded="false" />
+                <element signature="e#1677#2715#0#PHP" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
+      <file leaf-file-name="main.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/main.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.653846" vertical-offset="0" max-vertical-offset="495">
+              <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+              <folding>
+                <element signature="e#0#49#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main.php" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/private/controller/main.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="533">
+              <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="PDOQueries.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.2264152">
-              <caret line="780" column="31" selection-start-line="780" selection-start-column="31" selection-end-line="780" selection-end-column="31" />
+            <state vertical-scroll-proportion="-4.96" vertical-offset="10282" max-vertical-offset="21045">
+              <caret line="707" column="53" selection-start-line="707" selection-start-column="53" selection-end-line="707" selection-end-column="53" />
               <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-                <marker date="1477667330701" expanded="true" signature="458:507" placeholder="SELECT * FRO..${self::$prefix}show_action_report..." />
-                <marker date="1477667330701" expanded="true" signature="605:653" placeholder="SELECT * FRO..${self::$prefix}show_all_students..." />
-                <marker date="1477667330701" expanded="true" signature="748:793" placeholder="SELECT * FRO..${self::$prefix}show_all_users..." />
-                <marker date="1477667330701" expanded="true" signature="896:949" placeholder="SELECT * FRO..${self::$prefix}show_answered_students..." />
-                <marker date="1477667330701" expanded="true" signature="1051:1103" placeholder="SELECT * FRO..${self::$prefix}show_deleted_students..." />
-                <marker date="1477667330701" expanded="true" signature="1202:1251" placeholder="SELECT * FRO..${self::$prefix}show_deleted_users..." />
-                <marker date="1477667330701" expanded="true" signature="1355:1409" placeholder="SELECT * FRO..${self::$prefix}show_last_stats_by_user..." />
-                <marker date="1477667330701" expanded="true" signature="1504:1545" placeholder="SELECT * FRO..${self::$prefix}show_posts..." />
-                <marker date="1477667330701" expanded="true" signature="1639:1683" placeholder="SELECT * FRO..${self::$prefix}show_te_users..." />
-                <marker date="1477667330701" expanded="true" signature="1777:1821" placeholder="SELECT * FRO..${self::$prefix}show_ti_users..." />
-                <marker date="1477667330701" expanded="true" signature="1924:1977" placeholder="SELECT * FRO..${self::$prefix}show_unactivated_users..." />
-                <marker date="1477667330701" expanded="true" signature="28882:28916" placeholder="SELECT max(I..posts..." />
-                <marker date="1477667330701" expanded="true" signature="29244:29300" placeholder="SELECT * FRO..${self::$prefix}answers..." />
-                <marker date="1477667330701" expanded="true" signature="29587:29765" placeholder="SELECT t1.*,..${self::$prefix}posts_comments..." />
-                <marker date="1477667330701" expanded="true" signature="30063:30391" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-                <marker date="1477667330701" expanded="true" signature="30658:30810" placeholder="SELECT t1.*,..${self::$prefix}liked_post..." />
-                <marker date="1477667330701" expanded="true" signature="31095:31173" placeholder="SELECT * fro..${self::$prefix}notifications..." />
-                <marker date="1477667330701" expanded="true" signature="31449:31498" placeholder="SELECT * fro..${self::$prefix}messages..." />
-                <marker date="1477667330701" expanded="true" signature="31805:31873" placeholder="SELECT * fro..${self::$prefix}message_attachments..." />
-                <marker date="1477667330701" expanded="true" signature="32157:32325" placeholder="SELECT t1.*,..${self::$prefix}posts..." />
-                <marker date="1477667330701" expanded="true" signature="32620:32683" placeholder="SELECT * fro..${self::$prefix}posts_attachments..." />
-                <marker date="1477667330701" expanded="true" signature="32977:33277" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-                <marker date="1477667330701" expanded="true" signature="33571:33866" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-                <marker date="1477667330701" expanded="true" signature="34789:34863" placeholder="SELECT * FRO..${self::$prefix}students..." />
-                <marker date="1477667330701" expanded="true" signature="35131:35321" placeholder="SELECT *,CAS..${self::$prefix}users..." />
-              </folding>
-=======
-      <file leaf-file-name="Text.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/back-end/general/Text.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Language.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.125" vertical-offset="1650" max-vertical-offset="2505">
-              <caret line="129" column="49" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="home.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/views/pages/home.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="255">
-              <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-              <folding />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="Date.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/general/Date.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-      <file leaf-file-name="User.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/app/User.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.75" vertical-offset="2370" max-vertical-offset="11400">
-              <caret line="173" column="15" selection-start-line="173" selection-start-column="6" selection-end-line="173" selection-end-column="15" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Timeline.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests/back-end/app/Timeline.php">
-          <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-            <state vertical-scroll-proportion="-0.0">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-              <folding>
-                <element signature="e#6#86#0#PHP" expanded="true" />
-              </folding>
-=======
-            <state vertical-scroll-proportion="-7.0416665" vertical-offset="41" max-vertical-offset="690">
-              <caret line="19" column="7" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="39" />
-              <folding />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-            </state>
-          </provider>
-        </entry>
-      </file>
-<<<<<<< HEAD
-      <file leaf-file-name="db_datas.json" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/private/parameters/app/db_datas.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14718615">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-              <folding />
-=======
-      <file leaf-file-name="html2pdf.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/tests/back-end/other/html2pdf.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3488372" vertical-offset="0" max-vertical-offset="559">
-              <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
+                <marker date="1480112278000" expanded="true" signature="491:540" placeholder="SELECT * FRO..self_prefixshow_action_report..." />
+                <marker date="1480112278000" expanded="true" signature="638:686" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+                <marker date="1480112278000" expanded="true" signature="781:826" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+                <marker date="1480112278000" expanded="true" signature="929:982" placeholder="SELECT * FRO..self_prefixshow_answered_students..." />
+                <marker date="1480112278000" expanded="true" signature="1084:1136" placeholder="SELECT * FRO..self_prefixshow_deleted_students..." />
+                <marker date="1480112278000" expanded="true" signature="1235:1284" placeholder="SELECT * FRO..self_prefixshow_deleted_users..." />
+                <marker date="1480112278000" expanded="true" signature="1388:1442" placeholder="SELECT * FRO..self_prefixshow_last_stats_by_user..." />
+                <marker date="1480112278000" expanded="true" signature="1537:1578" placeholder="SELECT * FRO..self_prefixshow_posts..." />
+                <marker date="1480112278000" expanded="true" signature="1672:1716" placeholder="SELECT * FRO..self_prefixshow_te_users..." />
+                <marker date="1480112278000" expanded="true" signature="1810:1854" placeholder="SELECT * FRO..self_prefixshow_ti_users..." />
+                <marker date="1480112278000" expanded="true" signature="1957:2010" placeholder="SELECT * FRO..self_prefixshow_unactivated_users..." />
+                <marker date="1480112278000" expanded="true" signature="28966:29182" placeholder="SELECT COUNT..." />
+                <marker date="1480112278000" expanded="true" signature="29454:29593" placeholder="SELECT COUNT..self_prefixstats..." />
+                <marker date="1480112278000" expanded="true" signature="29849:30167" placeholder="SELECT (SELE..." />
+                <marker date="1480112278000" expanded="true" signature="29857:29923" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="29947:30040" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="30060:30149" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="30517:30964" placeholder="SELECT (SELE..." />
+                <marker date="1480112278000" expanded="true" signature="30525:30634" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="30658:30794" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="30814:30946" placeholder="SELECT count..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="34784:34821" placeholder="SELECT max(I..messages..." />
+                <marker date="1480112278000" expanded="true" signature="35365:35399" placeholder="SELECT max(I..posts..." />
+                <marker date="1480112278000" expanded="true" signature="39647:40030" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="40345:40571" placeholder="SELECT t1.*,..self_prefixposts..." />
+                <marker date="1480112278000" expanded="true" signature="40934:41212" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+                <marker date="1480112278000" expanded="true" signature="41608:41905" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+                <marker date="1480112278000" expanded="true" signature="42325:42622" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+                <marker date="1480112278000" expanded="true" signature="43000:43175" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+                <marker date="1480112278000" expanded="true" signature="43596:43827" placeholder="SELECT * FRO..show_all_users..." />
+                <marker date="1480112278000" expanded="true" signature="43767:43813" placeholder="SELECT ID_TI..students..." />
+                <marker date="1480112278000" expanded="true" signature="44218:44274" placeholder="SELECT * FRO..self_prefixanswers..." />
+                <marker date="1480112278000" expanded="true" signature="44561:44739" placeholder="SELECT t1.*,..self_prefixposts_comments..." />
+                <marker date="1480112278000" expanded="true" signature="45041:45380" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="45724:45876" placeholder="SELECT t1.*,..self_prefixliked_post..." />
+                <marker date="1480112278000" expanded="true" signature="46170:46498" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="46851:46970" placeholder="SELECT * fro..self_prefixnotifications..." />
+                <marker date="1480112278000" expanded="true" signature="47241:47509" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="47887:47955" placeholder="SELECT * fro..self_prefixmessage_attachments..." />
+                <marker date="1480112278000" expanded="true" signature="48239:48407" placeholder="SELECT t1.*,..self_prefixposts..." />
+                <marker date="1480112278000" expanded="true" signature="48702:48765" placeholder="SELECT * fro..self_prefixposts_attachments..." />
+                <marker date="1480112278000" expanded="true" signature="49063:49370" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="49736:50044" placeholder="SELECT t1.*,..self_prefixmessages..." />
+                <marker date="1480112278000" expanded="true" signature="51038:51112" placeholder="SELECT * FRO..self_prefixstudents..." />
+                <marker date="1480112278000" expanded="true" signature="51380:51587" placeholder="SELECT ID,fn..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="html2pdf.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/other/html2pdf.php">
+      <file leaf-file-name="Notifications.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/library/app/Notifications.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="97500">
-              <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+            <state vertical-scroll-proportion="-7.75" vertical-offset="774" max-vertical-offset="3075">
+              <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
               <folding>
-                <marker date="1479330157000" expanded="true" signature="20373:20658" placeholder="..." />
-                <marker date="1479330157000" expanded="true" signature="20384:20550" placeholder="..." />
-                <marker date="1479330157000" expanded="false" signature="20569:20624" placeholder="..." />
-                <marker date="1479330157000" expanded="true" signature="20625:20650" placeholder="..." />
-                <marker date="1479330157000" expanded="false" signature="27219:27238" placeholder="..." />
+                <element signature="e#113#130#0#PHP" expanded="true" />
               </folding>
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
             </state>
           </provider>
         </entry>
       </file>
-<<<<<<< HEAD
-=======
+      <file leaf-file-name="home.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/controller/home.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.541667" vertical-offset="536" max-vertical-offset="1095">
+              <caret line="99" column="46" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
+              <folding>
+                <element signature="e#312#2005#0#PHP" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="admin_dashboard.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/views/pages/admin_dashboard.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-8.125" vertical-offset="780" max-vertical-offset="1350">
+              <caret line="65" column="59" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="59" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="navbar.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/views/components/navbar.html">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.5" vertical-offset="579" max-vertical-offset="1290">
+              <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="fr_FR.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.416666" vertical-offset="1871" max-vertical-offset="2430">
-              <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <state vertical-scroll-proportion="-6.375" vertical-offset="1182" max-vertical-offset="1830">
+              <caret line="614" column="28" selection-start-line="614" selection-start-column="28" selection-end-line="614" selection-end-column="28" />
               <folding>
+                <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#general#0;n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#part1#0;n#!!block;n#general#0;n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#part2#0;n#!!block;n#general#0;n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#part3#0;n#!!block;n#general#0;n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#csv_attribute#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#forbPassword#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#forbPassword_part2#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#active_account#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_dashboard#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
     </leaf>
   </component>
   <component name="FindManager">
@@ -252,67 +226,67 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
-    <option name="CHANGED_PATHS">
+    <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/projetIUT_dump.sql" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/crypt.php" />
-<<<<<<< HEAD
+        <option value="$PROJECT_DIR$/public/js/install.js" />
+        <option value="$PROJECT_DIR$/public/css/main.css" />
+        <option value="$PROJECT_DIR$/public/js/login.js" />
+        <option value="$PROJECT_DIR$/public/js/lockscreen.js" />
         <option value="$PROJECT_DIR$/private/config.php" />
-        <option value="$PROJECT_DIR$/private/library/general/file.php" />
-        <option value="$PROJECT_DIR$/private/parameters/app/db_datas.json" />
-        <option value="$PROJECT_DIR$/private/library/app/Timeline.php" />
-        <option value="$PROJECT_DIR$/tests/back-end/app/Timeline.php" />
-=======
-        <option value="$PROJECT_DIR$/private/library/general/crypt.php" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/file.php" />
-        <option value="$PROJECT_DIR$/private/parameters/languages/en_EN.json" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/mail.html" />
-        <option value="$PROJECT_DIR$/private/library/general/file.php" />
-        <option value="$PROJECT_DIR$/private/functions/db_connect.php" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/PDOQueries.php" />
-        <option value="$PROJECT_DIR$/private/views/mails/activateAccount.html" />
-        <option value="$PROJECT_DIR$/private/functions/linker.php" />
-        <option value="$PROJECT_DIR$/private/parameters/app_config.json" />
-        <option value="$PROJECT_DIR$/private/views/mails/confirmAccount.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/deleteAccount.html" />
-        <option value="$PROJECT_DIR$/private/library/general/PDOQueries.php" />
-        <option value="$PROJECT_DIR$/private/views/mails/msg.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/question.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/reactivateAccount.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/repQuestion.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/forgotten_password.html" />
-        <option value="$PROJECT_DIR$/private/views/mails/forgottenPassword.html" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/mail.php" />
+        <option value="$PROJECT_DIR$/private/controller/lockscreen.php" />
+        <option value="$PROJECT_DIR$/private/controller/install.php" />
+        <option value="$PROJECT_DIR$/private/controller/login.php" />
+        <option value="$PROJECT_DIR$/private/views/pages/login.html" />
+        <option value="$PROJECT_DIR$/private/views/pages/forbPassword.html" />
+        <option value="$PROJECT_DIR$/private/library/app/User.php" />
+        <option value="$PROJECT_DIR$/private/controller/forbiden_password.php" />
+        <option value="$PROJECT_DIR$/public/js/forbPassword.js" />
         <option value="$PROJECT_DIR$/private/library/general/mail.php" />
-        <option value="$PROJECT_DIR$/private/parameters/app/db_datas.json" />
+        <option value="$PROJECT_DIR$/private/views/pages/forbPassword_part2.html" />
+        <option value="$PROJECT_DIR$/private/controller/active_user.php" />
+        <option value="$PROJECT_DIR$/private/views/pages/active_account.html" />
+        <option value="$PROJECT_DIR$/public/js/create_account.js" />
         <option value="$PROJECT_DIR$/private/library/general/Text.php" />
-        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/Text.php" />
+        <option value="$PROJECT_DIR$/private/views/components/sidebar.html" />
+        <option value="$PROJECT_DIR$/private/views/pages/timeline.html" />
+        <option value="$PROJECT_DIR$/private/library/app/Navigation.php" />
+        <option value="$PROJECT_DIR$/private/parameters/app/rights.json" />
+        <option value="$PROJECT_DIR$/private/views/pages/lockscreen.html" />
+        <option value="$PROJECT_DIR$/private/library/app/Message.php" />
+        <option value="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
+        <option value="$PROJECT_DIR$/index.php" />
+        <option value="$PROJECT_DIR$/ll.txt" />
+        <option value="$PROJECT_DIR$/private/parameters/general/localisations.json" />
+        <option value="$PROJECT_DIR$/tests/back-end/general/crypt.php" />
+        <option value="$PROJECT_DIR$/private/library/app/Stats.php" />
+        <option value="$PROJECT_DIR$/private/library/app/Weather.php" />
+        <option value="$PROJECT_DIR$/public/js/dashboard.js" />
+        <option value="$PROJECT_DIR$/private/views/components/weather.html" />
+        <option value="$PROJECT_DIR$/private/views/components/message_widget.html" />
+        <option value="$PROJECT_DIR$/private/views/components/notifications.html" />
+        <option value="$PROJECT_DIR$/private/library/app/Log.php" />
+        <option value="$PROJECT_DIR$/private/views/components/language_switcher.html" />
         <option value="$PROJECT_DIR$/private/library/general/Language.php" />
-        <option value="$PROJECT_DIR$/private/views/pages/home.html" />
-        <option value="$PROJECT_DIR$/tests/back-end/general/Language.php" />
-        <option value="$PROJECT_DIR$/private/config.php" />
-        <option value="$PROJECT_DIR$/private/library/other/html2pdf.class.php" />
-        <option value="$PROJECT_DIR$/private/library/other/html2pdf.php" />
-        <option value="$PROJECT_DIR$/tests/back-end/other/html2pdf.php" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+        <option value="$PROJECT_DIR$/public/js/language_switcher.js" />
+        <option value="$PROJECT_DIR$/private/controller/language_switcher.php" />
+        <option value="$PROJECT_DIR$/private/views/pages/Admin/dashboard.html" />
+        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
+        <option value="$PROJECT_DIR$/public/js/main.js" />
+        <option value="$PROJECT_DIR$/private/views/components/navbar.html" />
+        <option value="$PROJECT_DIR$/private/library/general/HTML.php" />
+        <option value="$PROJECT_DIR$/private/library/app/Notifications.php" />
+        <option value="$PROJECT_DIR$/private/controller/home.php" />
+        <option value="$PROJECT_DIR$/private/library/general/PDOQueries.php" />
+        <option value="$PROJECT_DIR$/private/parameters/app/install.sql" />
+        <option value="$PROJECT_DIR$/private/controller/main.php" />
       </list>
     </option>
   </component>
-  <component name="JsBuildToolGruntFileManager" detection-done="true" />
-  <component name="JsBuildToolPackageJson" detection-done="true" />
-  <component name="JsGulpfileManager">
-    <detection-done>true</detection-done>
-  </component>
-  <component name="PhpServers">
-    <servers />
-  </component>
   <component name="PhpWorkspaceProjectConfiguration" backward_compatibility_performed="true" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="-4" />
-    <option name="y" value="-4" />
-    <option name="width" value="1608" />
-    <option name="height" value="864" />
+    <option name="y" value="23" />
+    <option name="width" value="1280" />
+    <option name="height" value="726" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -338,15 +312,9 @@
       <autoscrollToSource />
       <autoscrollFromSource />
       <sortByType />
-      <manualOrder />
-      <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-<<<<<<< HEAD
       <pane id="Scope" />
-      <pane id="Scratches" />
-=======
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -361,7 +329,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -371,11 +339,9 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
-          </PATH>
-          <PATH>
             <PATH_ELEMENT>
               <option name="myItemId" value="tests" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
@@ -387,25 +353,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="tests" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="back-end" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Projet IUT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -414,13 +362,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="back-end" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-<<<<<<< HEAD
-              <option name="myItemId" value="app" />
-=======
-              <option name="myItemId" value="other" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -443,6 +384,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="tests" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="back-end" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -457,7 +420,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="public" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -467,7 +429,83 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="js" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="login" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="public" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -481,7 +519,125 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Admin" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Students" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="components" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -499,7 +655,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -508,31 +664,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="parameters" />
-<<<<<<< HEAD
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
-=======
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet IUT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="private" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -546,40 +677,41 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="private" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="library" />
-<<<<<<< HEAD
-=======
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Projet IUT" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="private" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parameters" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="general" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
+          </PATH>
+          <PATH>
             <PATH_ELEMENT>
-              <option name="myItemId" value="other" />
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="parameters" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="app" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -589,7 +721,47 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="general" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -611,7 +783,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="e10" />
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
@@ -619,15 +791,65 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-<<<<<<< HEAD
+              <option name="myItemId" value="functions" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="datas" />
-=======
-              <option name="myItemId" value="library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="app" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="datas" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controller" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -638,64 +860,32 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../testDate" />
-    <property name="dynamic.classpath" value="false" />
   </component>
   <component name="RecentsManager">
-<<<<<<< HEAD
-=======
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/private/library/other/html2pdf" />
-      <recent name="$PROJECT_DIR$/private/library/other/html2pdf/_class" />
-      <recent name="$PROJECT_DIR$/private/views/mails" />
-      <recent name="$PROJECT_DIR$/private/parameters/languages" />
+      <recent name="$PROJECT_DIR$/public/vendor" />
+      <recent name="$PROJECT_DIR$/private/datas/users" />
+      <recent name="$PROJECT_DIR$/private/views/pages" />
       <recent name="$PROJECT_DIR$/docs" />
     </key>
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/private/library/other" />
-      <recent name="$PROJECT_DIR$/tests/back-end/other/html2pdf" />
-      <recent name="$PROJECT_DIR$/tests/back-end/other" />
-      <recent name="$PROJECT_DIR$/private/library/other/html2pdf" />
-      <recent name="$PROJECT_DIR$/public/img/mails" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\remi\cloneGit\e10\private\library\app" />
-      <recent name="$PROJECT_DIR$/private/views/mails" />
-      <recent name="$PROJECT_DIR$/private/parameters/languages" />
-      <recent name="$PROJECT_DIR$/docs" />
+      <recent name="$PROJECT_DIR$/private/views/pages" />
+      <recent name="$PROJECT_DIR$/private/datas/users" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
-      <method />
-    </configuration>
     <configuration default="true" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
       <TestRunner />
-      <method />
-    </configuration>
-<<<<<<< HEAD
-    <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
-      <BehatRunner />
       <method />
     </configuration>
     <configuration default="true" type="PhpLocalRunConfigurationType" factoryName="PHP Console">
       <method />
     </configuration>
-    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
-=======
-    <configuration default="true" type="com.intellij.database.run.ConsoleRunConfigurationType" factoryName="Query Language Console">
-      <option name="VM_PARAMETERS" value="" />
-      <option name="USER_CFG_CLASS" />
-      <option name="CONTEXT_PROVIDER" />
-      <method />
-    </configuration>
     <configuration default="true" type="JavascriptDebugType" factoryName="JavaScript Debug">
       <method />
     </configuration>
     <configuration default="true" type="PhpBehatConfigurationType" factoryName="Behat">
       <BehatRunner />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
       <method />
     </configuration>
     <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
@@ -706,24 +896,10 @@
       <envs />
       <method />
     </configuration>
-    <configuration default="true" type="js.build_tools.gulp" factoryName="Gulp.js">
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
+    <configuration default="true" type="PhpUnitRemoteRunConfigurationType" factoryName="PHPUnit on Server">
       <method />
     </configuration>
-<<<<<<< HEAD
-    <configuration default="true" type="js.build_tools.npm" factoryName="npm">
-      <command value="run-script" />
-      <scripts />
-      <envs />
-      <method />
-    </configuration>
-=======
     <list size="0" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
   </component>
   <component name="ShelveChangesManager" show_recycled="false" />
   <component name="SvnConfiguration">
@@ -738,120 +914,52 @@
     </task>
     <servers />
   </component>
-  <component name="TodoView" selected-index="0">
-    <todo-panel id="selected-file">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="all">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-    <todo-panel id="default-changelist">
-      <are-packages-shown value="false" />
-      <are-modules-shown value="false" />
-      <flatten-packages value="false" />
-      <is-autoscroll-to-source value="false" />
-    </todo-panel>
-  </component>
   <component name="ToolWindowManager">
-<<<<<<< HEAD
-    <frame x="-4" y="-4" width="1608" height="864" extended-state="6" />
-    <editor active="true" />
-    <layout>
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13414635" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.05156038" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3292683" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-    </layout>
-    <layout-to-restore>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.05156038" sideWeight="0.5" order="11" side_tool="true" content_ui="tabs" />
-      <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26933333" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32956383" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-=======
     <frame x="0" y="23" width="1280" height="726" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.26171243" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32956383" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Remote Host" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329653" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.329653" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2819063" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25767368" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
     </layout-to-restore>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -865,534 +973,318 @@
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <option name="myTodoPanelSettings">
+      <TodoPanelSettings />
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-<<<<<<< HEAD
-      <option name="time" value="30" />
-=======
-      <option name="time" value="28" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+      <option name="time" value="1" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/db_datas.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="12" selection-start-line="11" selection-start-column="12" selection-end-line="11" selection-end-column="12" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-    <entry file="file://$PROJECT_DIR$/private/library/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="63" column="0" selection-start-line="63" selection-start-column="0" selection-end-line="74" selection-end-column="60" />
-<<<<<<< HEAD
-=======
-          <folding />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="44" selection-start-line="8" selection-start-column="44" selection-end-line="8" selection-end-column="44" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="59" selection-start-line="23" selection-start-column="59" selection-end-line="23" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/en_EN.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="6" column="3" selection-start-line="6" selection-start-column="3" selection-end-line="6" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="84" column="61" selection-start-line="84" selection-start-column="61" selection-end-line="84" selection-end-column="61" />
-<<<<<<< HEAD
-=======
-          <folding />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="18" column="31" selection-start-line="18" selection-start-column="31" selection-end-line="18" selection-end-column="31" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/config.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="25" column="28" selection-start-line="25" selection-start-column="28" selection-end-line="25" selection-end-column="28" />
+        <state vertical-scroll-proportion="-1.7916666" vertical-offset="122" max-vertical-offset="705">
+          <caret line="16" column="12" selection-start-line="16" selection-start-column="8" selection-end-line="16" selection-end-column="12" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/other/db_test.php">
+    <entry file="file://$PROJECT_DIR$/private/library/app/Install.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12064343">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/en_EN.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.958333">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-=======
-    <entry file="file://$PROJECT_DIR$/../music-management/private/library/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.2466488" vertical-offset="0" max-vertical-offset="555">
-          <caret line="36" column="2" selection-start-line="36" selection-start-column="2" selection-end-line="36" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$USER_HOME$/Downloads/Slate (Responsive Email Templates) by Litmus/Simple Announcement/simple-announcement.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="3525">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="229" selection-end-column="0" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.875">
-          <caret line="31" column="20" selection-start-line="31" selection-start-column="20" selection-end-line="31" selection-end-column="20" />
-<<<<<<< HEAD
-=======
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="270">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="43" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/functions/db_connect.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.29516995">
-          <caret line="11" column="4" selection-start-line="11" selection-start-column="4" selection-end-line="11" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/dictionnary.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/functions/linker.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.26833633">
-          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.0">
-          <caret line="8" column="15" selection-start-line="8" selection-start-column="5" selection-end-line="8" selection-end-column="15" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/confirmAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-381.5">
-          <caret line="1025" column="10" selection-start-line="1025" selection-start-column="10" selection-end-line="1025" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/msg.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-13.375">
-          <caret line="938" column="59" selection-start-line="938" selection-start-column="59" selection-end-line="938" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/reactivateAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75274724">
-          <caret line="920" column="59" selection-start-line="920" selection-start-column="59" selection-end-line="920" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/activateAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="2.8481014">
-          <caret line="923" column="213" selection-start-line="923" selection-start-column="213" selection-end-line="923" selection-end-column="220" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/repQuestion.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-27.75">
-          <caret line="952" column="138" selection-start-line="952" selection-start-column="138" selection-end-line="952" selection-end-column="148" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/mails/mail.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/img/mails/ok.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/private/library/general/Text.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625">
-          <caret line="21" column="67" selection-start-line="21" selection-start-column="67" selection-end-line="21" selection-end-column="67" />
-        </state>
-      </provider>
-    </entry>
-=======
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-    <entry file="file://$PROJECT_DIR$/private/views/mails/deleteAccount.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.125">
-          <caret line="930" column="212" selection-start-line="930" selection-start-column="212" selection-end-line="930" selection-end-column="311" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/question.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.5">
-          <caret line="915" column="4" selection-start-line="915" selection-start-column="4" selection-end-line="921" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/mails/forgottenPassword.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3021978">
-          <caret line="919" column="145" selection-start-line="919" selection-start-column="145" selection-end-line="919" selection-end-column="145" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="0.0">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="12225" max-vertical-offset="18780">
-          <caret line="815" column="5" selection-start-line="815" selection-start-column="5" selection-end-line="815" selection-end-column="5" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="false" />
-          </folding>
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="27" column="22" selection-start-line="27" selection-start-column="22" selection-end-line="27" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-18.76923">
-          <caret line="360" column="5" selection-start-line="360" selection-start-column="5" selection-end-line="360" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19351166">
-          <caret line="25" column="1" selection-start-line="25" selection-start-column="1" selection-end-line="25" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/PDOQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.20318726">
-          <caret line="26" column="46" selection-start-line="26" selection-start-column="46" selection-end-line="26" selection-end-column="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/projetIUT_dump.sql">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4615829">
-          <caret line="47" column="23" selection-start-line="47" selection-start-column="23" selection-end-line="47" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="23" column="69" selection-start-line="23" selection-start-column="69" selection-end-line="23" selection-end-column="69" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/file.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="54" column="31" selection-start-line="54" selection-start-column="31" selection-end-line="54" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$APPLICATION_HOME_DIR$/plugins/php/lib/php.jar!/com/jetbrains/php/lang/psi/stubs/data/Core_c.php">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="0.0">
-          <caret line="182" column="20" selection-start-line="182" selection-start-column="20" selection-end-line="182" selection-end-column="20" />
-=======
-        <state vertical-scroll-proportion="0.0" vertical-offset="90" max-vertical-offset="285">
-          <caret line="11" column="45" selection-start-line="11" selection-start-column="45" selection-end-line="11" selection-end-column="45" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-          <folding />
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/Date.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-=======
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="6435" max-vertical-offset="7515">
-          <caret line="434" column="0" selection-start-line="434" selection-start-column="0" selection-end-line="434" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/PDOQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.12857144" vertical-offset="0" max-vertical-offset="450">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/db_datas.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-1.875" vertical-offset="0" max-vertical-offset="180">
-          <caret line="3" column="29" selection-start-line="3" selection-start-column="29" selection-end-line="3" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/en_EN.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.43956044" vertical-offset="120" max-vertical-offset="690">
-          <caret line="24" column="17" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding />
+        <state vertical-scroll-proportion="-13.125" vertical-offset="4725" max-vertical-offset="5715">
+          <caret line="369" column="74" selection-start-line="369" selection-start-column="74" selection-end-line="369" selection-end-column="74" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/private/library/app/User.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.75" vertical-offset="2370" max-vertical-offset="11400">
-          <caret line="173" column="15" selection-start-line="173" selection-start-column="6" selection-end-line="173" selection-end-column="15" />
+        <state vertical-scroll-proportion="-94.375" vertical-offset="5175" max-vertical-offset="10515">
+          <caret line="505" column="5" selection-start-line="505" selection-start-column="5" selection-end-line="505" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
+    <entry file="file://$PROJECT_DIR$/public/js/forbPassword.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.125" vertical-offset="1650" max-vertical-offset="2505">
-          <caret line="129" column="49" selection-start-line="129" selection-start-column="49" selection-end-line="129" selection-end-column="49" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+        <state vertical-scroll-proportion="0.0" vertical-offset="47" max-vertical-offset="945">
+          <caret line="35" column="24" selection-start-line="35" selection-start-column="24" selection-end-line="35" selection-end-column="24" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.521978" vertical-offset="0" max-vertical-offset="555">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="35" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/lockscreen.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.6779964" vertical-offset="146" max-vertical-offset="705">
+          <caret line="40" column="0" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/forbPassword_part2.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.83516484" vertical-offset="174" max-vertical-offset="735">
+          <caret line="42" column="13" selection-start-line="42" selection-start-column="13" selection-end-line="42" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/forbPassword.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.375" vertical-offset="219" max-vertical-offset="765">
+          <caret line="44" column="40" selection-start-line="44" selection-start-column="40" selection-end-line="44" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-12.0" vertical-offset="1752" max-vertical-offset="2790">
+          <caret line="182" column="40" selection-start-line="182" selection-start-column="40" selection-end-line="182" selection-end-column="57" />
+          <folding>
+            <element signature="tag#div#1;tag#div#1;tag#div#0;tag#div#1;tag#div#0;tag#div#0;tag#body#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-15.25" vertical-offset="849" max-vertical-offset="1395">
+          <caret line="86" column="0" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="133" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0" vertical-offset="1805" max-vertical-offset="7530">
+          <caret line="132" column="38" selection-start-line="132" selection-start-column="38" selection-end-line="132" selection-end-column="38" />
+          <folding>
+            <element signature="e#117#132#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/forbiden_password.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.0" vertical-offset="0" max-vertical-offset="900">
+          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="29" selection-end-column="1" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/active_account.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="480" max-vertical-offset="1875">
+          <caret line="42" column="98" selection-start-line="42" selection-start-column="98" selection-end-line="42" selection-end-column="98" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/create_account.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="120" max-vertical-offset="900">
+          <caret line="25" column="40" selection-start-line="25" selection-start-column="40" selection-end-line="25" selection-end-column="40" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-<<<<<<< HEAD
-        <state vertical-scroll-proportion="-3.2264152">
-          <caret line="780" column="31" selection-start-line="780" selection-start-column="31" selection-end-line="780" selection-end-column="31" />
-=======
-        <state vertical-scroll-proportion="-16.416666" vertical-offset="1871" max-vertical-offset="2430">
-          <caret line="212" column="0" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1477667330701" expanded="true" signature="458:507" placeholder="SELECT * FRO..${self::$prefix}show_action_report..." />
-            <marker date="1477667330701" expanded="true" signature="605:653" placeholder="SELECT * FRO..${self::$prefix}show_all_students..." />
-            <marker date="1477667330701" expanded="true" signature="748:793" placeholder="SELECT * FRO..${self::$prefix}show_all_users..." />
-            <marker date="1477667330701" expanded="true" signature="896:949" placeholder="SELECT * FRO..${self::$prefix}show_answered_students..." />
-            <marker date="1477667330701" expanded="true" signature="1051:1103" placeholder="SELECT * FRO..${self::$prefix}show_deleted_students..." />
-            <marker date="1477667330701" expanded="true" signature="1202:1251" placeholder="SELECT * FRO..${self::$prefix}show_deleted_users..." />
-            <marker date="1477667330701" expanded="true" signature="1355:1409" placeholder="SELECT * FRO..${self::$prefix}show_last_stats_by_user..." />
-            <marker date="1477667330701" expanded="true" signature="1504:1545" placeholder="SELECT * FRO..${self::$prefix}show_posts..." />
-            <marker date="1477667330701" expanded="true" signature="1639:1683" placeholder="SELECT * FRO..${self::$prefix}show_te_users..." />
-            <marker date="1477667330701" expanded="true" signature="1777:1821" placeholder="SELECT * FRO..${self::$prefix}show_ti_users..." />
-            <marker date="1477667330701" expanded="true" signature="1924:1977" placeholder="SELECT * FRO..${self::$prefix}show_unactivated_users..." />
-            <marker date="1477667330701" expanded="true" signature="28882:28916" placeholder="SELECT max(I..posts..." />
-            <marker date="1477667330701" expanded="true" signature="29244:29300" placeholder="SELECT * FRO..${self::$prefix}answers..." />
-            <marker date="1477667330701" expanded="true" signature="29587:29765" placeholder="SELECT t1.*,..${self::$prefix}posts_comments..." />
-            <marker date="1477667330701" expanded="true" signature="30063:30391" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-            <marker date="1477667330701" expanded="true" signature="30658:30810" placeholder="SELECT t1.*,..${self::$prefix}liked_post..." />
-            <marker date="1477667330701" expanded="true" signature="31095:31173" placeholder="SELECT * fro..${self::$prefix}notifications..." />
-            <marker date="1477667330701" expanded="true" signature="31449:31498" placeholder="SELECT * fro..${self::$prefix}messages..." />
-            <marker date="1477667330701" expanded="true" signature="31805:31873" placeholder="SELECT * fro..${self::$prefix}message_attachments..." />
-            <marker date="1477667330701" expanded="true" signature="32157:32325" placeholder="SELECT t1.*,..${self::$prefix}posts..." />
-            <marker date="1477667330701" expanded="true" signature="32620:32683" placeholder="SELECT * fro..${self::$prefix}posts_attachments..." />
-            <marker date="1477667330701" expanded="true" signature="32977:33277" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-            <marker date="1477667330701" expanded="true" signature="33571:33866" placeholder="SELECT t1.*,..${self::$prefix}messages..." />
-            <marker date="1477667330701" expanded="true" signature="34789:34863" placeholder="SELECT * FRO..${self::$prefix}students..." />
-            <marker date="1477667330701" expanded="true" signature="35131:35321" placeholder="SELECT *,CAS..${self::$prefix}users..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/private/library/app/Timeline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-17.0">
-          <caret line="61" column="20" selection-start-line="61" selection-start-column="20" selection-end-line="62" selection-end-column="0" />
-          <folding>
-            <element signature="e#113#130#0#PHP" expanded="true" />
-            <element signature="e#2413#3072#0#PHP" expanded="false" />
-            <element signature="e#3078#3172#0#PHP" expanded="false" />
-            <element signature="e#3177#3271#0#PHP" expanded="false" />
-            <element signature="e#3277#3416#0#PHP" expanded="false" />
-            <element signature="e#3421#3553#0#PHP" expanded="false" />
-            <element signature="e#3559#3647#0#PHP" expanded="false" />
-            <element signature="e#3652#3758#0#PHP" expanded="false" />
-            <element signature="e#3764#3863#0#PHP" expanded="false" />
-            <element signature="e#3868#3971#0#PHP" expanded="false" />
-            <element signature="e#3977#4093#0#PHP" expanded="false" />
-            <element signature="e#4098#4205#0#PHP" expanded="false" />
-=======
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/Text.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
-          </folding>
-        </state>
-      </provider>
-    </entry>
-<<<<<<< HEAD
-    <entry file="file://$PROJECT_DIR$/tests/back-end/app/Timeline.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#6#86#0#PHP" expanded="true" />
-=======
     <entry file="file://$PROJECT_DIR$/private/library/general/Text.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="345">
-          <caret line="32" column="124" selection-start-line="32" selection-start-column="124" selection-end-line="32" selection-end-column="124" />
+        <state vertical-scroll-proportion="-9.625" vertical-offset="189" max-vertical-offset="930">
+          <caret line="33" column="21" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/timeline.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-21.75" vertical-offset="1398" max-vertical-offset="3570">
+          <caret line="128" column="0" selection-start-line="128" selection-start-column="0" selection-end-line="258" selection-end-column="6" />
           <folding>
-            <element signature="e#135#326#0#PHP" expanded="false" />
-            <element signature="e#331#997#0#PHP" expanded="false" />
+            <element signature="tag#div#0;tag#body#0;tag#html#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/../tuto_cakePHP/my_app_name/src/Model/Table/ArticlesTable.php">
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.5" vertical-offset="0" max-vertical-offset="330">
+          <caret line="4" column="39" selection-start-line="4" selection-start-column="34" selection-end-line="4" selection-end-column="39" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Navigation.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.125" vertical-offset="1365" max-vertical-offset="3360">
+          <caret line="117" column="47" selection-start-line="117" selection-start-column="47" selection-end-line="117" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/vendor/tinymce/langs/readme.md">
+      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="553">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/page_datas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7916666" vertical-offset="92" max-vertical-offset="675">
+          <caret line="9" column="73" selection-start-line="9" selection-start-column="63" selection-end-line="9" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/sidebar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="675">
+          <caret line="12" column="49" selection-start-line="12" selection-start-column="49" selection-end-line="12" selection-end-column="67" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/lockscreen.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.875" vertical-offset="75" max-vertical-offset="900">
+          <caret line="8" column="20" selection-start-line="8" selection-start-column="20" selection-end-line="8" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="266" max-vertical-offset="840">
+          <caret line="45" column="21" selection-start-line="45" selection-start-column="21" selection-end-line="45" selection-end-column="21" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Message.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.6263735" vertical-offset="5739" max-vertical-offset="6285">
+          <caret line="293" column="18" selection-start-line="293" selection-start-column="18" selection-end-line="293" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32200357" vertical-offset="0" max-vertical-offset="559">
+          <caret line="12" column="57" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="57" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/active_user.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.10989011" vertical-offset="0" max-vertical-offset="855">
+          <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="27" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests/back-end/general/crypt.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="195">
+          <caret line="10" column="34" selection-start-line="10" selection-start-column="34" selection-end-line="10" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Stats.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="2321" max-vertical-offset="2880">
+          <caret line="127" column="103" selection-start-line="127" selection-start-column="84" selection-end-line="127" selection-end-column="103" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/login.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.9892666" vertical-offset="167" max-vertical-offset="855">
+          <caret line="48" column="30" selection-start-line="48" selection-start-column="30" selection-end-line="48" selection-end-column="30" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/search.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.7307693" vertical-offset="945" max-vertical-offset="8940">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/general/localisations.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="4218" max-vertical-offset="14505">
+          <caret line="293" column="7" selection-start-line="293" selection-start-column="5" selection-end-line="293" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/dashboard.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="842" max-vertical-offset="2025">
+          <caret line="75" column="19" selection-start-line="75" selection-start-column="15" selection-end-line="75" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/weather.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.8121646" vertical-offset="296" max-vertical-offset="855">
+          <caret line="50" column="31" selection-start-line="50" selection-start-column="26" selection-end-line="50" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Weather.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="32.25" vertical-offset="2349" max-vertical-offset="3210">
+          <caret line="111" column="81" selection-start-line="111" selection-start-column="81" selection-end-line="111" selection-end-column="81" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/message_widget.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32200357" vertical-offset="0" max-vertical-offset="559">
+          <caret line="12" column="56" selection-start-line="12" selection-start-column="56" selection-end-line="12" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/notifications.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.053667262" vertical-offset="0" max-vertical-offset="559">
+          <caret line="2" column="50" selection-start-line="2" selection-start-column="50" selection-end-line="2" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.9" vertical-offset="0" max-vertical-offset="4665">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="30" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/languages/dictionnary.json">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="583">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1400,62 +1292,187 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/general/Language.php">
+    <entry file="file://$PROJECT_DIR$/private/views/components/language_switcher.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="300">
-          <caret line="0" column="5" selection-start-line="0" selection-start-column="5" selection-end-line="0" selection-end-column="5" />
+        <state vertical-scroll-proportion="0.13416816" vertical-offset="0" max-vertical-offset="559">
+          <caret line="5" column="14" selection-start-line="5" selection-start-column="14" selection-end-line="5" selection-end-column="14" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/home.html">
+    <entry file="file://$PROJECT_DIR$/public/js/login.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="255">
-          <caret line="9" column="13" selection-start-line="9" selection-start-column="13" selection-end-line="9" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.0416665" vertical-offset="41" max-vertical-offset="690">
-          <caret line="19" column="7" selection-start-line="15" selection-start-column="14" selection-end-line="15" selection-end-column="39" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/other/html2pdf.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="97500">
-          <caret line="20" column="39" selection-start-line="20" selection-start-column="39" selection-end-line="20" selection-end-column="39" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="765">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="47" selection-end-column="3" />
           <folding>
-            <marker date="1479330157000" expanded="true" signature="20373:20658" placeholder="..." />
-            <marker date="1479330157000" expanded="true" signature="20384:20550" placeholder="..." />
-            <marker date="1479330157000" expanded="false" signature="20569:20624" placeholder="..." />
-            <marker date="1479330157000" expanded="true" signature="20625:20650" placeholder="..." />
-            <marker date="1479330157000" expanded="false" signature="27219:27238" placeholder="..." />
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/tests/back-end/other/html2pdf.php">
+    <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3488372" vertical-offset="0" max-vertical-offset="559">
-          <caret line="13" column="40" selection-start-line="13" selection-start-column="40" selection-end-line="13" selection-end-column="40" />
+        <state vertical-scroll-proportion="74.125" vertical-offset="1974" max-vertical-offset="3525">
+          <caret line="24" column="45" selection-start-line="24" selection-start-column="45" selection-end-line="24" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.375" vertical-offset="1182" max-vertical-offset="1830">
+          <caret line="614" column="28" selection-start-line="614" selection-start-column="28" selection-end-line="614" selection-end-column="28" />
+          <folding>
+            <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#csv_attribute#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#forbPassword#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#forbPassword_part2#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#active_account#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_dashboard#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/admin_dashboard.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="780" max-vertical-offset="1350">
+          <caret line="65" column="59" selection-start-line="65" selection-start-column="33" selection-end-line="65" selection-end-column="59" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/navbar.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.5" vertical-offset="579" max-vertical-offset="1290">
+          <caret line="49" column="71" selection-start-line="49" selection-start-column="71" selection-end-line="49" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/general/HTML.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.75" vertical-offset="4734" max-vertical-offset="5955">
+          <caret line="354" column="96" selection-start-line="354" selection-start-column="96" selection-end-line="354" selection-end-column="96" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
->>>>>>> 7ba2a15cbbcb1d7a848e5bf483d4c18d5f1ec338
+            <element signature="e#116#131#0#PHP" expanded="true" />
+            <element signature="e#1584#1672#0#PHP" expanded="false" />
+            <element signature="e#1677#2715#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/db_datas.json">
+    <entry file="file://$PROJECT_DIR$/private/controller/home.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14718615">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state vertical-scroll-proportion="-14.541667" vertical-offset="536" max-vertical-offset="1095">
+          <caret line="99" column="46" selection-start-line="99" selection-start-column="46" selection-end-line="99" selection-end-column="46" />
+          <folding>
+            <element signature="e#312#2005#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.653846" vertical-offset="0" max-vertical-offset="495">
+          <caret line="17" column="0" selection-start-line="17" selection-start-column="0" selection-end-line="17" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Notifications.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.75" vertical-offset="774" max-vertical-offset="3075">
+          <caret line="69" column="61" selection-start-line="69" selection-start-column="61" selection-end-line="69" selection-end-column="61" />
+          <folding>
+            <element signature="e#113#130#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/install.sql">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.42003852" vertical-offset="8902" max-vertical-offset="14385">
+          <caret line="608" column="83" selection-start-line="608" selection-start-column="83" selection-end-line="608" selection-end-column="83" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.96" vertical-offset="10282" max-vertical-offset="21045">
+          <caret line="707" column="53" selection-start-line="707" selection-start-column="53" selection-end-line="707" selection-end-column="53" />
+          <folding>
+            <marker date="1480112278000" expanded="true" signature="491:540" placeholder="SELECT * FRO..self_prefixshow_action_report..." />
+            <marker date="1480112278000" expanded="true" signature="638:686" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480112278000" expanded="true" signature="781:826" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+            <marker date="1480112278000" expanded="true" signature="929:982" placeholder="SELECT * FRO..self_prefixshow_answered_students..." />
+            <marker date="1480112278000" expanded="true" signature="1084:1136" placeholder="SELECT * FRO..self_prefixshow_deleted_students..." />
+            <marker date="1480112278000" expanded="true" signature="1235:1284" placeholder="SELECT * FRO..self_prefixshow_deleted_users..." />
+            <marker date="1480112278000" expanded="true" signature="1388:1442" placeholder="SELECT * FRO..self_prefixshow_last_stats_by_user..." />
+            <marker date="1480112278000" expanded="true" signature="1537:1578" placeholder="SELECT * FRO..self_prefixshow_posts..." />
+            <marker date="1480112278000" expanded="true" signature="1672:1716" placeholder="SELECT * FRO..self_prefixshow_te_users..." />
+            <marker date="1480112278000" expanded="true" signature="1810:1854" placeholder="SELECT * FRO..self_prefixshow_ti_users..." />
+            <marker date="1480112278000" expanded="true" signature="1957:2010" placeholder="SELECT * FRO..self_prefixshow_unactivated_users..." />
+            <marker date="1480112278000" expanded="true" signature="28966:29182" placeholder="SELECT COUNT..." />
+            <marker date="1480112278000" expanded="true" signature="29454:29593" placeholder="SELECT COUNT..self_prefixstats..." />
+            <marker date="1480112278000" expanded="true" signature="29849:30167" placeholder="SELECT (SELE..." />
+            <marker date="1480112278000" expanded="true" signature="29857:29923" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="29947:30040" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="30060:30149" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="30517:30964" placeholder="SELECT (SELE..." />
+            <marker date="1480112278000" expanded="true" signature="30525:30634" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="30658:30794" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="30814:30946" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="34784:34821" placeholder="SELECT max(I..messages..." />
+            <marker date="1480112278000" expanded="true" signature="35365:35399" placeholder="SELECT max(I..posts..." />
+            <marker date="1480112278000" expanded="true" signature="39647:40030" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="40345:40571" placeholder="SELECT t1.*,..self_prefixposts..." />
+            <marker date="1480112278000" expanded="true" signature="40934:41212" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480112278000" expanded="true" signature="41608:41905" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480112278000" expanded="true" signature="42325:42622" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480112278000" expanded="true" signature="43000:43175" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+            <marker date="1480112278000" expanded="true" signature="43596:43827" placeholder="SELECT * FRO..show_all_users..." />
+            <marker date="1480112278000" expanded="true" signature="43767:43813" placeholder="SELECT ID_TI..students..." />
+            <marker date="1480112278000" expanded="true" signature="44218:44274" placeholder="SELECT * FRO..self_prefixanswers..." />
+            <marker date="1480112278000" expanded="true" signature="44561:44739" placeholder="SELECT t1.*,..self_prefixposts_comments..." />
+            <marker date="1480112278000" expanded="true" signature="45041:45380" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="45724:45876" placeholder="SELECT t1.*,..self_prefixliked_post..." />
+            <marker date="1480112278000" expanded="true" signature="46170:46498" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="46851:46970" placeholder="SELECT * fro..self_prefixnotifications..." />
+            <marker date="1480112278000" expanded="true" signature="47241:47509" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="47887:47955" placeholder="SELECT * fro..self_prefixmessage_attachments..." />
+            <marker date="1480112278000" expanded="true" signature="48239:48407" placeholder="SELECT t1.*,..self_prefixposts..." />
+            <marker date="1480112278000" expanded="true" signature="48702:48765" placeholder="SELECT * fro..self_prefixposts_attachments..." />
+            <marker date="1480112278000" expanded="true" signature="49063:49370" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="49736:50044" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480112278000" expanded="true" signature="51038:51112" placeholder="SELECT * FRO..self_prefixstudents..." />
+            <marker date="1480112278000" expanded="true" signature="51380:51587" placeholder="SELECT ID,fn..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/main.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.36585367" vertical-offset="0" max-vertical-offset="533">
+          <caret line="18" column="8" selection-start-line="18" selection-start-column="8" selection-end-line="18" selection-end-column="8" />
           <folding />
         </state>
       </provider>
     </entry>
   </component>
 </project>
+

@@ -16,6 +16,7 @@ use app\Notifications;
 use app\Search;
 use app\Stats;
 use app\User;
+use app\Weather;
 
 /**
  * Class Link
@@ -66,6 +67,65 @@ class Link{
 
             echo '<script src="'.$link.'"></script>';
         }
+    }
+
+}
+
+class Widget{
+
+    /**
+     * Widget de météo
+     * @return mixed|string
+     * @throws \Exception
+     */
+    function weather(){
+        $gabarit = Language::translate_gabarit('components/weather');
+        $user = User::get_user(Log::get_id());
+        $weather = new Weather($user->city,$user->zip_code);
+        $weather = $weather->getWeather();
+
+        $replace = array('{city}','{country}','{updated_date}');
+        $by = array($weather->city,$weather->country,$weather->updated_date->format('h:mn'));
+        $gabarit = str_replace($replace,$by,$gabarit);
+
+        $replace = array('{temp0}','{date0}','{desc0}','{logo0}');
+        $by = array($weather->today->temp,$weather->today->date->format('WW'),$weather->today->lbl,$weather->today->icon);
+        $gabarit = str_replace($replace,$by,$gabarit);
+
+        for($i=1;$i<5;$i++)
+        {
+            $replace = array('{temp'.$i.'}','{date'.$i.'}','{logo'.$i.'}');
+            $by = array($weather->days[$i-1]->temp,$weather->days[$i-1]->date->format('WW'),$weather->days[$i-1]->icon);
+            $gabarit = str_replace($replace,$by,$gabarit);
+        }
+
+        return $gabarit;
+    }
+
+
+    /**
+     * Widget de message
+     * @return string
+     * @throws \Exception
+     */
+    function message(){
+
+        $id = Log::get_id();
+        $gabarit = Language::translate_gabarit('components/message_widget');
+        $messages = Message::get_all_messages($id);
+        $response = "";
+
+        for($i=0;$i<2;$i++)
+        {
+            $message = $messages[$i];
+            /** @var $message \app\messageDatas */
+            $user = User::get_user($message->id_sender);
+            $replace = array('{profile_img}','{fname}','{name}','{time}','{object}','{content}');
+            $by = array(User::get_profile_photo($message->id_sender),$user->fname,$user->name,$message->send_date->format('d MM yyyy'),$message->object,Text::cutString(Text::automatic_emo($message->content),0,50,'...'));
+            $response .= str_replace($replace,$by,$gabarit);
+        }
+
+        return $response;
     }
 
 }
@@ -143,7 +203,7 @@ class HTML {
         'jQuery-slimScroll/jquery.slimscroll.min.js',
         'widgster/widgster.js'
     );
-    private $basic_script = array('settings.js','app.js');
+    private $basic_script = array('settings.js','app.js','main.js');
     private $favicon_path = "";
 
     /**
@@ -206,6 +266,10 @@ class HTML {
         echo ob_get_clean();
     }
 
+    /**
+     * Génére la sidebar
+     * @throws \Exception
+     */
     function sidebar(){
 
         $id = Log::get_id();
@@ -222,6 +286,10 @@ class HTML {
         echo $gabarit;
     }
 
+    /**
+     * Génére la barre de navigation
+     * @return string
+     */
     private function generate_navigation(){
         $datas = Navigation::get_navbar();
         $response = '<ul class="sidebar-nav">';
@@ -260,11 +328,21 @@ class HTML {
         return $response;
     }
 
+    /**
+     * Place le nombre de massage non lues dans une balises correspondante
+     * @param $gabarit
+     * @throws \Exception
+     */
     private function label_nb_message(&$gabarit){
-        if(($nb_message = Message::count_message(Log::get_id())) != "0")
-            $gabarit = str_replace('{nb_message}',$nb_message,$gabarit);
+        if(($nb_message = Message::count_message(Log::get_id())) == "0")
+            $nb_message = "";
+        $gabarit = str_replace('{nb_message}',$nb_message,$gabarit);
     }
 
+    /**
+     * Génére la navbar
+     * @throws \Exception
+     */
     function navbar(){
         $gabarit = Language::translate_gabarit('components/navbar');
 
@@ -272,13 +350,61 @@ class HTML {
         $user = User::get_user($id);
         $date = new Date('now');
 
-        $replace = array('{user_fname}','{user_name}','{profile_img_link}','{now-date}');
-        $by = array($user->fname,$user->name,User::get_profile_photo($id),$date->format('dd MM yyyy {at} hh:mn'));
+        $nb_notifications = "";
+        if(($tmp = Notifications::countNotifications()) != 0)
+            $nb_notifications = "<span class=\"circle bg-warning fw-bold nb-notifications\">$tmp</span>";
+
+        $replace = array('{user_fname}','{user_name}','{profile_img_link}','{now-date}','{nb_notifications}','{notifications}','{language_switcher}');
+        $by = array($user->fname,$user->name,User::get_profile_photo($id),$date->format('dd MM yyyy {at} hh:mn'),$nb_notifications,$this->notifications(),$this->language_switcher());
         $gabarit = str_replace($replace,$by,$gabarit);
 
         $this->label_nb_message($gabarit);
 
         echo $gabarit;
+    }
+
+    /**
+     * Génére les notifications
+     * @return string
+     * @throws \Exception
+     */
+    private function notifications(){
+        $gabarit = Language::translate_gabarit('components/notifications');
+        $notifications = Notifications::get_notifications();
+
+        $response = "";
+
+        foreach($notifications as $notification)
+        {
+            /** @var $notification \app\NotificationsForm */
+            $replace = array('{link}','{content}','{time}','{icon}');
+            $by = array($notification->link,$notification->text,$notification->date->format('d MM yyyy - hh:mn'),$notification->icon);
+            $response .= str_replace($replace,$by,$gabarit);
+        }
+
+        return $response;
+    }
+
+    private function language_switcher(){
+        $gabarit = Language::translate_gabarit('components/language_switcher');
+        $languages = link_parameters('languages/dictionnary');
+        $tmp = "";
+
+        foreach ($languages as $iso=>$language) {
+            $tmp .= '<li><a class="language_switcher" data-id="'.$iso.'"><i class="flag flag-fr"></i> '.$language.'</a></li><li class="divider"></li>';
+        }
+        $tmp = substr($tmp,0,-strlen('<li class="divider"></li>'));
+        $gabarit = str_replace('{list}',$tmp,$gabarit);
+
+        return $gabarit;
+    }
+
+    /**
+     * Revois un objet widget instancié
+     * @return Widget
+     */
+    function widget(){
+        return new Widget();
     }
 
     /**

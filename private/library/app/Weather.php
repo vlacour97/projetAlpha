@@ -107,9 +107,9 @@ class Weather {
         $response->today->lbl = $this->getName($datas->list[0]->weather[0]->icon);
         $response->today->icon = $this->getIcon($datas->list[0]->weather[0]->icon);
         if($this->unit == "C")
-            $response->today->temp = round($datas->list[0]->temp->day).'°C';
+            $response->today->temp = round($datas->list[0]->temp->day);
         else
-            $response->today->temp = round($datas->list[0]->temp->day * 9/5 + 32).'°F';
+            $response->today->temp = round($datas->list[0]->temp->day * 9/5 + 32);
         for($i = 1; $i<5; $i++)
         {
             $tmp = new WeatherDayDatas();
@@ -121,9 +121,9 @@ class Weather {
             $tmp->lbl = $this->getName($datas->list[$i]->weather[0]->icon);
             $tmp->icon = $this->getIcon($datas->list[$i]->weather[0]->icon);
             if($this->unit == "C")
-                $tmp->temp = round($datas->list[$i]->temp->day).'°C';
+                $tmp->temp = round($datas->list[$i]->temp->day);
             else
-                $tmp->temp = round($datas->list[$i]->temp->day * 9/5 + 32).'°F';
+                $tmp->temp = round($datas->list[$i]->temp->day * 9/5 + 32);
             $response->days[] = $tmp;
         }
 

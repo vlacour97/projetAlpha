@@ -704,7 +704,10 @@ class PDOQueries extends \mainClass{
     static function count_notifications($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->prepare('SELECT '.self::$prefix.'count_notifications(:id_user)')->execute(array(':id_user'=>$id_user));
+        $query = self::$PDO->prepare('SELECT '.self::$prefix.'count_notifications(:id_user)');
+        $query->execute(array(':id_user'=>$id_user));
+        return intval($query->fetchAll()[0][0]);
+
     }
 
     /**
@@ -1209,7 +1212,7 @@ class PDOQueries extends \mainClass{
     static function show_notification($id_user){
         if(!is_int($id_user))
             return false;
-        return self::$PDO->query("SELECT * from ".self::$prefix."notifications WHERE ID_USER IS NULL OR ID_USER=".$id_user)->fetchAll();
+        return self::$PDO->query("SELECT * from ".self::$prefix."notifications WHERE ID_USER IS NULL OR ID_USER=".$id_user." ORDER BY requested_date DESC")->fetchAll();
     }
 
     /**

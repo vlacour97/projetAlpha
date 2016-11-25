@@ -74,9 +74,17 @@ class ConnectionsCountriesDatas extends ReturnDatas{
      */
     public $country;
     /**
+     * @var float
+     */
+    public $lat;
+    /**
+     * @var float
+     */
+    public $long;
+    /**
      * @var array
      */
-    protected $int = ['nbConnections'];
+    protected $int = ['nbConnections','lat','long'];
 }
 
 /**
@@ -137,9 +145,15 @@ class Stats {
      */
     static function count_connections_by_countries(){
         $datas = PDOQueries::count_stats_by_country();
+        $localisations = link_parameters('general/localisations');
         $response = [];
-        foreach($datas as $counter)
+        foreach($datas as $counter){
+            $id_pays = $counter['country'];
+            $infos_country = $localisations[$id_pays];
+            $counter['lat'] = $infos_country['lat'];
+            $counter['long'] = $infos_country['long'];
             ReturnDatas::format_datas($counter,$response[] = new ConnectionsCountriesDatas());
+        }
         return $response;
     }
 

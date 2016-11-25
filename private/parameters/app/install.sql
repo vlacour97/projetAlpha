@@ -547,8 +547,8 @@ END;
 
 DROP PROCEDURE IF EXISTS `{prefix}viewed_all_notification`;
 CREATE  PROCEDURE `{prefix}viewed_all_notification` (IN `param_id_user` INT)  UPDATE {prefix}notifications
-SET ID=param_id_user
-WHERE viewed=1;
+SET viewed=1
+WHERE ID_USER=param_id_user;
 
 DROP PROCEDURE IF EXISTS `{prefix}viewed_notification`;
 CREATE  PROCEDURE `{prefix}viewed_notification` (IN `param_id_notification` INT)  UPDATE {prefix}notifications
@@ -604,9 +604,9 @@ BEGIN
   END;
 
 DROP FUNCTION IF EXISTS `{prefix}count_notifications`;
-CREATE  FUNCTION `{prefix}count_notifications` (`id_user` INT) RETURNS INT(11) NO SQL
+CREATE  FUNCTION `{prefix}count_notifications` (`param_id_user` INT) RETURNS INT(11) NO SQL
 BEGIN
-    RETURN (SELECT count(ID) from {prefix}notifications where ID_USER=id_user and deleted = 0);
+    RETURN (SELECT count(ID) from {prefix}notifications where ID_USER=param_id_user and viewed IS NULL and deleted IS NULL);
   END;
 
 DROP FUNCTION IF EXISTS `{prefix}count_post`;

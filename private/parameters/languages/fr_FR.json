@@ -173,31 +173,31 @@
         "notifications" : {
             "add_post" : {
                 "value" : "{name_user} a publié un article accessible sur votre Timeline",
-                "icon" : ""
+                "icon" : "fa fa-globe"
             },
             "comment_post" : {
                 "value" :"{name_publisher} a commenté votre publication",
-                "icon" : ""
+                "icon" : "fa fa-comment"
             },
             "like_post" : {
                 "value" : "{name_user} a aimé votre publication",
-                "icon" : ""
+                "icon" : "fa fa-thumbs-up"
             },
             "wait_survey" : {
                 "value" : "Vous avez un questionnaire en attente",
-                "icon" : ""
+                "icon" : "fa fa-cloud-o"
             },
             "complete_survey" : {
                 "value" : "L'un de vos questionnaires a été complété",
-                "icon" : ""
+                "icon" : "fa fa-check"
             },
             "validate_survey" : {
                 "value" : "L'un de vos questionnaires a été validé",
-                "icon" : ""
+                "icon" : "fa fa-check"
             },
             "autorised_publication" : {
                 "value" : "Vous êtes autorisé à publier",
-                "icon" : ""
+                "icon" : "fa fa-bullhorn "
             }
         },
         "weather" : {
@@ -454,9 +454,9 @@
         "404" : {
             "expression" : "OOPS !",
             "errorname" : "ERREUR 404 :",
-            "errordef" : "La page que vous cherchez n'existe pas",
+            "errordef" : "La page que vous cherchez n'existe pas"
         },
-"email" : {
+        "email" : {
             "chemin1" : "Général",
             "name" : "Messages",
             "inbox" : "Boite de reception",
@@ -466,9 +466,9 @@
             "deleted" : "Supprimés",
             "answer" : "Répondre",
             "print" : "imprimer",
-            "delete" : "Supprimer",
+            "delete" : "Supprimer"
         },
-"inbox" : {
+        "inbox" : {
             "chemin1" : "Général",
             "name" : "Messages",
             "inbox" : "Boite de reception",
@@ -486,18 +486,18 @@
             "markread" : "Marquer comme lus",
             "marknoread" : "Marquer comme non lus",
             "deletemsg" : "Supprimer",
-            "searchmsg" : "Rechercher Messages",
+            "searchmsg" : "Rechercher Messages"
         },
-"search" : {
+        "search" : {
             "chemin1" : "Accueil",
             "name" : "Recherches",
             "resutsearch" : "Résultat des recherches pour :",
             "users" : "Utilisateurs :",
             "students" : "Etudiants :",
             "messages" : "Messages :",
-            "timeline" : "Timeline :",
+            "timeline" : "Timeline :"
         },
-"timeline" : {
+        "timeline" : {
             "chemin1" : "Accueil",
             "name" : "Fils d'actualité",
             "writemsg" : "Exprimez-vous !",
@@ -505,116 +505,124 @@
             "changefile" : "Changer",
             "delete" : "Supprimer",
             "cancel" : "Annuler",
-            "post" : "Publier",
+            "post" : "Publier"
         },
-        {
-          "500" :  {
-                "title" : " OOPS ! ",
-                "bold" : "500 Internal Server Error",
-                "text" : " Erreur lors du lancement de l'application ",
-                "button" : "Page d'acceuil"
-                  }
+        "500" :  {
+            "title" : " OOPS ! ",
+            "bold" : "500 Internal Server Error",
+            "text" : " Erreur lors du lancement de l'application ",
+            "button" : "Page d'acceuil"
         },
-
-        {
-          "compose" : {
-              "way" :{
-                "way1" : "Général",
-                "way2" : "Messages"
-              },
-              "menu" : {
-                "title" :"Messages - ",
-                "semi_bold" :"Boîte de reception",
-                "button" : "Nouveau Message",
-                "received" : "Reçus",
-                "sent" : "Envoyés",
-                "deleted" : "Supprimés"
-              },
-              "message" :{
-                "title" : "Compose ",
-                "semi_bold" : "Nouveau",
-                "to" : "À:",
-                "object" : "Objet:",
-                "attach" : "Integrer un fichier",
-                "send" : "Envoyer",
-                "cancel" : "Annuler"
-              }
-          },
-        {
+        "compose" : {
+            "way": {
+                "way1": "Général",
+                "way2": "Messages"
+            },
+            "menu": {
+                "title": "Messages - ",
+                "semi_bold": "Boîte de reception",
+                "button": "Nouveau Message",
+                "received": "Reçus",
+                "sent": "Envoyés",
+                "deleted": "Supprimés"
+            },
+            "message": {
+                "title": "Compose ",
+                "semi_bold": "Nouveau",
+                "to": "À:",
+                "object": "Objet:",
+                "attach": "Integrer un fichier",
+                "send": "Envoyer",
+                "cancel": "Annuler"
+            },
           "profile" : {
             "way1" : "Accueil",
             "way2" : "Mon Compte",
             "title" : "Mon Compte",
             "password" : {
-              "pwd" : {
-                "lbl" : "Nouveau mot de passe",
-                "help" : "Votre nouveau mot de passe"
-              }
+                "pwd" : {
+                    "lbl" : "Nouveau mot de passe",
+                    "help" : "Votre nouveau mot de passe"
+                },
+                "confirm_pwd" : {
+                    "confirm": {
+                        "lbl": "Confirmation du nouveau mot de passe",
+                        "help": "Confirmation de nouveau votre mot de passe"
+                    }
+                },
+                "button1" : "Modifier"
             },
-            "confirm_pwd" : {
-              "confirm" : {
-                "lbl" : "Confirmation du nouveau mot de passe",
-                "help" : "Confirmation de nouveau votre mot de passe"
-            },
-            "button1" : "Modifier",
-            "name" : {
-              "name" :{
-                "lbl" : "Nom",
-                "help" : "Votre Nom"
-              }
-            },
-            "fname" : {
-              "fname" :{
-                "lbl" : "Prénom",
-                "help" : "Votre Prénom"
-              }
-            },
-            "mail" : {
-              "mail" : {
-                "lbl" : "Email",
-                "help" : "Votre email"
-              }
-            },
-            "phone" : {
-              "phone" : {
-                "lbl" : "Téléphone",
-                "help" : "Votre numéro de téléphone"
-              }
-            },
-            "address" :{
-              "address" : {
-                "lbl" : "Adresse",
-                "help" : "Votre adresse"
-              }
-            },
-            "zip_code" : {
-              "zip" : {
-                "lbl" : "Code Postal",
-                "help" : "Votre Code Postal"
-              }
-            },
-            "city" : {
-              "city" : {
-                "lbl" : "Ville",
-                "help" : "Votre ville"
-              }
-            },
-            "country" : {
-              "country" : {
-                "lbl" : "Pays",
-                "help" : "Votre Pays"
-              }
-            },
-            "language" : {
-              "language" : {
-                "lbl" : "Langue",
-                "help" : "Votre Langue"
-              }
-            },
-            "button_modify" : "Modifier",
-            "button_back" : "Retour",
+            "form2" : {
+                "name" : {
+                    "name" :{
+                        "lbl" : "Nom",
+                        "help" : "Votre Nom"
+                    }
+                },
+                "fname" : {
+                    "fname" :{
+                        "lbl" : "Prénom",
+                        "help" : "Votre Prénom"
+                    }
+                },
+                "mail" : {
+                    "mail" : {
+                        "lbl" : "Email",
+                        "help" : "Votre email"
+                    }
+                },
+                "phone" : {
+                    "phone" : {
+                        "lbl" : "Téléphone",
+                        "help" : "Votre numéro de téléphone"
+                    }
+                },
+                "address" :{
+                    "address" : {
+                        "lbl" : "Adresse",
+                        "help" : "Votre adresse"
+                    }
+                },
+                "zip_code" : {
+                    "zip" : {
+                        "lbl" : "Code Postal",
+                        "help" : "Votre Code Postal"
+                    }
+                },
+                "city" : {
+                    "city" : {
+                        "lbl" : "Ville",
+                        "help" : "Votre ville"
+                    }
+                },
+                "country" : {
+                    "country" : {
+                        "lbl" : "Pays",
+                        "help" : "Votre Pays"
+                    }
+                },
+                "language" : {
+                    "language" : {
+                        "lbl" : "Langue",
+                        "help" : "Votre Langue"
+                    }
+                },
+                "button_modify" : "Modifier",
+                "button_back" : "Retour"
+            }
           }
         },
+        "admin_dashboard" : {
+            "previous" : "Accueil",
+            "name" : "Tableau de Bord",
+            "lbl_connections" : "NOMBRE DE CONNEXIONS",
+            "alternative_map" : "Erreur lors de l'affichage de la carte",
+            "evolution_title" : "Évolution du nombre de <span class=\"fw-semi-bold\">Connexions</span> des <span class=\"fw-semi-bold\">Utilisateurs</span>",
+            "expand" : "Étendre",
+            "collapse" : "Réduire",
+            "responses_rate" : "Taux de <span class=\"fw-semi-bold\">Réponses</span>",
+            "responses_rate_description": "Répartition de taux de réponses des questionnaires"
+        }
 
         },
     "components" : {
@@ -622,6 +630,22 @@
             "stats_title" : "Stats",
             "stats_progress" : "Taux de réponse au questionnaire",
             "stats_progress_description" : "{percent_response}% des utilisateurs ont répondus"
+        },
+        "weather" : {
+            "today" : "AUJOURD'HUI",
+            "tomorrow" : "DEMAIN"
+        },
+        "message_widget" : {
+            "from" : "De"
+        },
+        "navbar" : {
+            "hamburger_title" : "Etendre/Réduire la barre latérale",
+            "hamburger_title_2" : "Afficher/Cacher la barre latérale",
+            "search_form" : "Rechercher",
+            "updated_at" : "Mise à jour le",
+            "account" : "Mon Compte",
+            "inbox" : "Boite de réception",
+            "logout" : "Déconnexion"
         }
     }
 }

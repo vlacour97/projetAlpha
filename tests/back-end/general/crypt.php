@@ -8,6 +8,6 @@
 
 include_once '../../../private/config.php';
 
-$crypt = general\crypt::encrypt(1);
+$crypt = general\crypt::encrypt(54);
 echo $crypt."<br>";
 echo general\crypt::decrypt($crypt);
