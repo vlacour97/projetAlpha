@@ -90,7 +90,7 @@ class Navigation extends \mainClass{
                 $temp_array = array();
                 $autorised_part = false;
                 foreach($content['pages'] as $content2){
-                    if(in_array($content['id'].self::$navigation_separator.$content2['id'],$autorised_pages))
+                    if(in_array($content['id'].self::$navigation_separator.$content2['id'],$autorised_pages) && $content2['inNavigation'])
                     {
                         $temp = new NavLine();
                         $temp->id = $content2['id'];
@@ -113,7 +113,7 @@ class Navigation extends \mainClass{
                 }
             }
             else
-                if(in_array($content['id'],$autorised_pages)){
+                if(in_array($content['id'],$autorised_pages) && $content['inNavigation']){
                     $temp = new NavLine();
                     $temp->id = $content['id'];
                     $temp->name = $content['name'];

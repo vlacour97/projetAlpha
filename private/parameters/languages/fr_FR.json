@@ -673,6 +673,26 @@
                 "nb-header-cols" : "Nombre de colonnes d'en-têtes",
                 "nb-header-rows" : "Nombre de lignes d'en-têtes"
             }
+        },
+        "admin_studentScore" : {
+            "previous" : "Étudiant",
+            "name" : "Résultats",
+            "students" : "Étudiants",
+            "btn-student-list" : "Accéder à la liste des étudiants",
+            "btn-generate-pdf" : "Générer une liste PDF",
+            "table" : {
+                "attr1" : "ID",
+                "attr2" : "Prénom",
+                "attr3" : "Nom",
+                "attr4" : "Groupe",
+                "attr5" : "Status",
+                "attr6" : "Note"
+            },
+            "modal-generate-pdf" : {
+                "title" : "Générer une liste PDF",
+                "title-pdf" : "Nom de la liste PDF",
+                "btnValid" : "Valider"
+            }
         }
 
         },

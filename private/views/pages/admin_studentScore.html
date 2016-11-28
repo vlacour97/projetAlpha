@@ -1,0 +1,58 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        <div class="pull-right"><a href="?nav=students/student_list" class="btn btn-default">{btn-student-list}</a>&nbsp;<button class="btn btn-default" id="generate-pdf"><i class="fa fa-file-pdf-o"></i> {btn-generate-pdf}</button></div>
+        <h1 class="page-title">{name} <span class="fw-semi-bold">{students}</span></h1>
+        <section class="widget">
+            <div class="widget-body">
+                <div class="mt">
+                    <table id="students-table" class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>{table/attr1}</th>
+                            <th>{table/attr2}</th>
+                            <th>{table/attr3}</th>
+                            <th class="hidden-xs">{table/attr4}</th>
+                            <th>{table/attr5}</th>
+                            <th>{table/attr6}</th>
+
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" aria-labelledby="ChangeModal" id="generate-pdf-modal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{modal-generate-pdf/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <form method="get">
+                    <fieldset>
+                        <div class="form-group">
+                            <!-- Titre de la page -->
+                            <label for="title-pdf">{modal-generate-pdf/title-pdf}</label>
+                            <input type="tel" id="title-pdf" name="title-pdf" placeholder="{modal-generate-pdf/title-pdf}" class="form-control text-center">
+                        </div>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary center-block" id="generate-submit">{modal-generate-pdf/btnValid}</button>
+            </div>
+        </div>
+    </div>
+</div>

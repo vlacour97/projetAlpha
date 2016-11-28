@@ -22,6 +22,18 @@
                 "name" : "Liste des étudiants",
                 "logo" : "",
                 "inNavigation" : true
+            },
+            {
+                "id" : "student_score",
+                "name" : "Résultat étudiants",
+                "logo" : "",
+                "inNavigation" : true
+            },
+            {
+                "id" : "student_score_pdf",
+                "name" : "Liste des scores en PDF",
+                "logo" : "",
+                "inNavigation" : false
             }
         ]
     },

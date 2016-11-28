@@ -2,6 +2,11 @@
  * Created by antoine on 26/10/2016.
  */
 $(function(){
+
+    var url = 'private/controller/students/student_score.php';
+    var url_pdf = '?nav=students/student_score_pdf';
+    var table;
+
     function initDataTables(){
         /* Set the defaults for DataTables initialisation */
         $.extend( true, $.fn.dataTable.defaults, {
@@ -9,6 +14,7 @@ $(function(){
             "sPaginationType": "bootstrap",
             "oLanguage": {
                 "sLengthMenu": "_MENU_ enregistrements par page",
+                "sEmptyTable" : "Aucune donnée dans ce tableau",
                 "sSearch" :"Rechercher",
                 "oPaginate": {
                     "sPrevious": "Précédent",
@@ -127,7 +133,7 @@ $(function(){
             }
         });
 
-        $("#students-table").dataTable({
+        table = $("#students-table").DataTable({
             "sDom": "<'row'<'col-md-6 hidden-xs'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
@@ -137,7 +143,8 @@ $(function(){
                 "sFilter": "pull-right",
                 "sFilterInput": "form-control input-rounded ml-sm"
             },
-            "aoColumns": unsortableColumns
+            "aoColumns": unsortableColumns,
+            ajax: url + '?action=get_table_datas'
         });
 
         $(".dataTables_length select").selectpicker({
@@ -153,15 +160,14 @@ $(function(){
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
-    $(".student").click(function(e){
-       e.preventDefault();
-       $('#StudentsModal').modal();
-    });
-
-    $(".TI").click(function(e){
-        e.preventDefault();
-        $('#TIModal').modal();
-    });
+    $("body")
+        .on('click','#generate-pdf',function(){
+            $('#generate-pdf-modal').modal();
+        })
+        .on('click','#generate-submit',function(){
+            var title = $("#generate-pdf-modal form input[name='title-pdf']").val();
+            window.open(url_pdf + '&title=' + title);
+        })
     
     
 

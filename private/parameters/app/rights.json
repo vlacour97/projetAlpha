@@ -2,7 +2,7 @@
     {
         "id" : 1,
         "name" : "Administrateur",
-        "rights" : ["home","students/student_list"]
+        "rights" : ["home","students/student_list","students/student_score","students/student_score_pdf"]
     },
     {
         "id" : 2,
