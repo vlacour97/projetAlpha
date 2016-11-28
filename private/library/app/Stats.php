@@ -117,14 +117,17 @@ class Stats {
         $datas_iterator = 0;
         $max_datas_iterator = count($datas)-1;
 
+        $bd_dates = array();
+
+        foreach($datas as $data)
+            $bd_dates[] = $data['day'];
+
         for ($i = 0; $i < self::$nb_of_day; $i++)
         {
             $tmp_date = new Date('now');
             $tmp_date->sub('P'.($i+1).'D');
-            $tmp_db_date = new Date($datas[$datas_iterator]['day']);
 
-
-            if($tmp_date->format('dd-mm-yyyy') == $tmp_db_date->format('dd-mm-yyyy')){
+            if(in_array($tmp_date->format('yyyy-mm-dd'),$bd_dates)){
                 ReturnDatas::format_datas($datas[$datas_iterator],$response[] = new ConnectionsDayDatas());
                 if($datas_iterator < $max_datas_iterator)
                     $datas_iterator++;
@@ -136,6 +139,7 @@ class Stats {
             }
 
         }
+
         return $response;
     }
 

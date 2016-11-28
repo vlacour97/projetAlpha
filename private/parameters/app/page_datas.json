@@ -12,20 +12,14 @@
         "inNavigation" : true
     },
     {
-        "id" : "other",
-        "name" : "Autre",
-        "logo" : "fa fa-times",
+        "id" : "students",
+        "name" : "Étudiants",
+        "logo" : "fa fa-list",
         "inNavigation" : true,
         "pages" : [
             {
-                "id" : "page1",
-                "name" : "Page 1",
-                "logo" : "",
-                "inNavigation" : true
-            },
-            {
-                "id" : "page2",
-                "name" : "Page 2",
+                "id" : "student_list",
+                "name" : "Liste des étudiants",
                 "logo" : "",
                 "inNavigation" : true
             }

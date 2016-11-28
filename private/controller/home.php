@@ -100,6 +100,7 @@ $by = array(\app\Stats::count_connections(),$responses->count_not_respond,$respo
 $gabarit = str_replace($replace,$by,$gabarit);
 
 
+
 $html->open();
 $html->sidebar();
 $html->navbar();

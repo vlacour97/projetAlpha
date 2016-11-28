@@ -227,7 +227,7 @@ ALTER TABLE `{prefix}action_report`
   ADD CONSTRAINT `{prefix}action_report_ibfk_1` FOREIGN KEY (`ID_USER`) REFERENCES `{prefix}users` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `{prefix}answers`
-  ADD CONSTRAINT `{prefix}answers_ibfk_1` FOREIGN KEY (`ID_student`) REFERENCES `{prefix}students` (`ID`);
+  ADD CONSTRAINT `{prefix}answers_ibfk_1` FOREIGN KEY (`ID_student`) REFERENCES `{prefix}students` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE;
 
 ALTER TABLE `{prefix}liked_post`
   ADD CONSTRAINT `{prefix}liked_post_ibfk_1` FOREIGN KEY (`ID_POST`) REFERENCES `{prefix}posts` (`ID`) ON DELETE CASCADE ON UPDATE CASCADE,
@@ -264,7 +264,7 @@ DROP TABLE IF EXISTS `{prefix}show_action_report`;
 
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `{prefix}show_action_report`  AS  select `{prefix}action_report`.`ID` AS `ID`,`{prefix}action_report`.`ID_USER` AS `ID_USER`,`{prefix}action_report`.`content` AS `content`,`{prefix}action_report`.`requested_date` AS `requested_date` from `{prefix}action_report` ;
 
-DROP TABLE IF EXISTS `show_all_students`;
+DROP TABLE IF EXISTS `{prefix}show_all_students`;
 
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `{prefix}show_all_students`  AS  select `{prefix}students`.`ID` AS `ID`,`{prefix}students`.`ID_TE` AS `ID_TE`,`{prefix}students`.`ID_TI` AS `ID_TI`,`{prefix}students`.`name` AS `name`,`{prefix}students`.`fname` AS `fname`,`{prefix}students`.`group` AS `group`,`{prefix}students`.`email` AS `email`,`{prefix}students`.`phone` AS `phone`,`{prefix}students`.`address` AS `address`,`{prefix}students`.`zip_code` AS `zip_code`,`{prefix}students`.`city` AS `city`,`{prefix}students`.`country` AS `country`,`{prefix}students`.`birth_date` AS `birth_date`,`{prefix}students`.`informations` AS `informations`,`{prefix}students`.`creation_date` AS `creation_date`,`{prefix}students`.`delete_date` AS `delete_date`,`{prefix}students`.`deadline_date` AS `deadline_date`,`{prefix}students`.`answered` AS `answered`,`{prefix}students`.`answers_is_valided` AS `answers_is_valided`,concat(`u1`.`fname`,' ',`u1`.`name`) AS `name_TE`,concat(`u2`.`fname`,' ',`u2`.`name`) AS `name_TI` from ((`{prefix}students` join `{prefix}users` `u1`) join `{prefix}users` `u2`) where ((`{prefix}students`.`ID_TE` = `u1`.`ID`) and (`{prefix}students`.`ID_TI` = `u2`.`ID`)) ;
 

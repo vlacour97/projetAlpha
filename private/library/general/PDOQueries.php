@@ -777,7 +777,7 @@ class PDOQueries extends \mainClass{
      * @return bool|array
      */
     static function count_responses_for_admin(){
-        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided) as count_valided');
+        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0 AND delete_date IS NULL) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0 AND delete_date IS NULL) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided AND delete_date IS NULL) as count_valided');
         $datas->execute(array());
         return $datas->fetchAll()[0];
     }
@@ -790,7 +790,7 @@ class PDOQueries extends \mainClass{
     static function count_responses_for_users($id_user){
         if(!is_int($id_user))
             return false;
-        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0 and (ID_TI = :id_user OR ID_TE = :id_user)) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0 and (ID_TI = :id_user OR ID_TE = :id_user)) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided and (ID_TI = :id_user OR ID_TE = :id_user)) as count_valided');
+        $datas = self::$PDO->prepare('SELECT (SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 0 and (ID_TI = :id_user OR ID_TE = :id_user) AND delete_date IS NULL) as count_not_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided = 0 and (ID_TI = :id_user OR ID_TE = :id_user) AND delete_date IS NULL) as count_respond,(SELECT count(ID) FROM '.self::$prefix.'students WHERE answered = 1 and answers_is_valided and (ID_TI = :id_user OR ID_TE = :id_user) AND delete_date IS NULL) as count_valided');
         $datas->execute(array(':id_user' => $id_user));
         return $datas->fetchAll()[0];
     }

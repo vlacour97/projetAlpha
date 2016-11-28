@@ -168,22 +168,12 @@ $(function(){
         $('#StudentsModal').modal();
     });
 
-    $(".view").click(function(e){
-        e.preventDefault();
-        currentLineId = $(this).data('id');
-        $('#UsersModal').modal();
-    });
-
     $(".change").click(function(e){
         e.preventDefault();
         currentLineId = $(this).data('id');
         $('#ChangeModal').modal();
     });
-    $(".delete").click(function(e){
-        e.preventDefault();
-        currentLineId = $(this).data('id');
-        $('#DeleteModal').modal();
-    });
+
 
     $(".add_user_and_student").click(function(e){
         e.preventDefault();
@@ -238,31 +228,7 @@ $(function(){
     });
 
 
-    $('#addByCSV').click(function(){
-        $(this).addClass('text-danger');
-        $('.next button').removeAttr('disabled');
-        $('#addByHand').removeClass('text-danger');
-        $("#step2").html($('#CSVForm').html());
-    });
 
-    $('#addByHand').click(function(){
-        $(this).addClass('text-danger');
-        $('.next button').removeAttr('disabled');
-        $('#addByCSV').removeClass('text-danger');
-        $("#step2").html($('#HandForm').html());
-        $(".select2").each(function(){
-            $(this).select2($(this).data());
-        });
-        $('#add_student_birthdate').datetimepicker({
-            pickTime: false
-        });
-    });
-    
-    $('#deleteLine').click(function() {
-        $('#DeleteModal').modal('hide');
-        $("a.delete[data-id="+currentLineId+"]").parent().parent().addClass('selected');
-        table.row('.selected').remove().draw( false );
-    });
 
     $('#change-submit').click(function() {
         $('#ChangeModal').modal('hide');

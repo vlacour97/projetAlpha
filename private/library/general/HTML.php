@@ -80,9 +80,13 @@ class Widget{
      */
     function weather(){
         $gabarit = Language::translate_gabarit('components/weather');
-        $user = User::get_user(Log::get_id());
-        $weather = new Weather($user->city,$user->zip_code);
-        $weather = $weather->getWeather();
+        try{
+            $user = User::get_user(Log::get_id());
+            $weather = new Weather($user->city,$user->zip_code);
+            $weather = $weather->getWeather();
+        }catch (\Exception $e){
+            return "";
+        }
 
         $replace = array('{city}','{country}','{updated_date}');
         $by = array($weather->city,$weather->country,$weather->updated_date->format('h:mn'));
@@ -110,9 +114,17 @@ class Widget{
      */
     function message(){
 
-        $id = Log::get_id();
-        $gabarit = Language::translate_gabarit('components/message_widget');
-        $messages = Message::get_all_messages($id);
+        try{
+            $id = Log::get_id();
+            $gabarit = Language::translate_gabarit('components/message_widget');
+            $messages = Message::get_all_messages($id);
+        }catch (\Exception $e){
+            return "";
+        }
+
+        if(count($messages) == 0)
+            return "";
+
         $response = "";
 
         for($i=0;$i<2;$i++)
@@ -180,6 +192,36 @@ class Select{
         return $response;
     }
 
+    function TI($selected = 0){
+        $ti_list = \app\User::get_TI();
+        $html_ti = '<option value=""></option>';
+
+        foreach($ti_list as $ti){
+            /** @var $ti \app\UserDatas */
+            if($ti->ID == $selected)
+                $html_ti .= '<option selected value="'.$ti->ID.'">'.$ti->fname.' '.$ti->name.'</option>';
+            else
+                $html_ti .= '<option value="'.$ti->ID.'">'.$ti->fname.' '.$ti->name.'</option>';
+        }
+
+        return $html_ti;
+    }
+
+    function TE($selected = 0){
+        $te_list = \app\User::get_TE();
+        $html_te = '<option value=""></option>';
+
+        foreach($te_list as $te){
+            /** @var $ti \app\UserDatas */
+            if($te->ID == $selected)
+                $html_te .= '<option selected value="'.$te->ID.'">'.$te->fname.' '.$te->name.'</option>';
+            else
+                $html_te .= '<option value="'.$te->ID.'">'.$te->fname.' '.$te->name.'</option>';
+        }
+
+        return $html_te;
+    }
+
 }
 
 /**
@@ -201,7 +243,8 @@ class HTML {
         'bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
         'bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js',
         'jQuery-slimScroll/jquery.slimscroll.min.js',
-        'widgster/widgster.js'
+        'widgster/widgster.js',
+        'bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js'
     );
     private $basic_script = array('settings.js','app.js','main.js');
     private $favicon_path = "";

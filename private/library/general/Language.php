@@ -43,6 +43,20 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére le nom des attributs pour l'importation de CSV
+     * @param string|null $lang
+     * @return mixed
+     */
+    static function get_csv_attributes($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["csv_attributes"];
+    }
+
+    /**
      * Récupére les textes de mail
      * @param string|null $lang
      * @return mixed
@@ -172,11 +186,12 @@ class Language extends \mainClass{
         //Variables globales
         if(Install::APP_is_installed()){
             $lastUpdate = new Date(Config::getLastUpdate());
-            $replace = array('{site-name}','{site-copyright}','{site-year}','{site_name_initial}','{logout_link}','{home_page}','{account_link}','{inbox_link}');
+            $replace = array('{site-name}','{site-copyright}','{site-year}','{site-author}','{site_name_initial}','{logout_link}','{home_page}','{account_link}','{inbox_link}');
             $by = array(
                 Config::getName(),
                 Config::getCopyright(),
                 $lastUpdate->format('yyyy'),
+                Config::getAuthor(),
                 Text::getInitials(Config::getName()),
                 '?'.Navigation::$navigation_marker.'='.Log::$logout_marker,
                 '?'.Navigation::$navigation_marker.'='.Navigation::$default_page,

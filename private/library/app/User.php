@@ -89,7 +89,7 @@ Class StudentDatas extends ReturnDatas{
      */
     public $country;
     /**
-     * @var string
+     * @var \general\Date|null
      */
     public $birth_date;
     /**
@@ -317,16 +317,35 @@ class User extends \mainClass{
      * @param string $country
      * @param string $information
      * @param string $birth_date
-     * @param null $deadline_date
+     * @param string $deadline_date
      * @return bool
      * @throws \Exception
      */
-    static function add_student($id_te,$id_ti,$name,$fname,$group = "",$email = "",$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$information = "",$birth_date = "0000-00-00", $deadline_date = null){
-        if(is_null($deadline_date))
+    static function add_student($id_te,$id_ti,$name,$fname,$group = "",$email = "",$phone = "",$address = "",$zip_code = "",$city = "",$country = "",$information = "",$birth_date = "", $deadline_date = ""){
+        if($deadline_date == "")
             $deadline_date = Config::getDeadlineDate();
+        try{
+            $deadline_date = new Date($deadline_date);
+        }catch (\Exception $e){
+            throw $e;
+        }
+        if($birth_date == "")
+            $birth_date = "0000-00-00";
+        else
+        {
+            try{
+                $birth_date = new Date($birth_date);
+                $birth_date = $birth_date->format('yyyy-mm-dd');
+            }catch (\Exception $e){
+                throw $e;
+            }
+        }
+
         if(!PDOQueries::isTE($id_te) || !PDOQueries::isTI($id_ti))
             throw new \Exception('Erreur lors de l\'ajout de l\'Étudiant',2);
-        return PDOQueries::add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone,$address,$zip_code,$city,$country,$information,$deadline_date,$birth_date);
+        if(!PDOQueries::add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone,$address,$zip_code,$city,$country,$information,$deadline_date->format('yyyy-mm-dd'),$birth_date))
+            throw new \Exception('Erreur lors de l\'ajout de l\'Etudiant',2);
+        return true;
     }
 
     /**
@@ -414,7 +433,7 @@ class User extends \mainClass{
 
         //Requetes pour les Tuteurs Entreprises
         foreach($te_datas as $key=>$content){
-            if(($te_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key))== 0)
+            if(!(($te_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key)) > 0))
                 try{
                     if(self::registration_by_admin($content['email'],2,false,$content['name'],$content['fname'],$content['phone']))
                         if(($te_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key)) == 0)
@@ -426,7 +445,7 @@ class User extends \mainClass{
 
         //Requetes pour les Tuteurs IUT
         foreach($ti_datas as $key=>$content){
-            if(($ti_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key))== 0)
+            if(!(($ti_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key)) > 0))
                 try{
                     if(self::registration_by_admin($content['email'],3,false,$content['name'],$content['fname'],$content['phone']))
                         if(($ti_datas[$key]['id'] = PDOQueries::get_UserID_with_email($key)) == 0)
@@ -576,6 +595,14 @@ class User extends \mainClass{
     static function get_student($id){
         if(!($datas = PDOQueries::show_student($id)))
             throw new \Exception('Erreur lors de la récupération des données',2);
+        if($datas['deadline_date'] == "0000-00-00")
+            $datas['deadline_date'] = \app\Config::getDeadlineDate();
+        try{
+            $datas['deadline_date'] = new \general\Date($datas['deadline_date']->deadline_date);
+            $datas['deadline_date'] = $datas['deadline_date']->format('yyyy-mm-dd');
+        }catch (\Exception $e){
+            throw $e;
+        }
         $student = new StudentDatas();
         ReturnDatas::format_datas($datas,$student);
         return $student;
@@ -629,7 +656,30 @@ class User extends \mainClass{
     static function set_student($id,$id_te = null,$id_ti = null,$name = null,$fname = null ,$group = null,$email = null,$phone =null,$address = null,$zip_code = null,$city = null,$country = null,$birth_date = null,$information = null,$deadline_date = null){
         if((!is_null($id_te) && !PDOQueries::isTE($id_te)) || (!is_null($id_ti) && !PDOQueries::isTI($id_ti)))
             throw new \Exception('Erreur lors de la modification de l\'Étudiant',2);
+
         $args = func_get_args();
+
+        if($args[14] == "")
+            $args[14] = Config::getDeadlineDate();
+        try{
+            $args[14] = new Date($args[14]);
+            $args[14] = $args[14]->format('yyyy-mm-dd');
+        }catch (\Exception $e){
+            throw $e;
+        }
+
+        if($args[12] == "")
+            $args[12] = "0000-00-00";
+        else
+        {
+            try{
+                $args[12] = new Date($args[12]);
+                $args[12] = $args[12]->format('yyyy-mm-dd');
+            }catch (\Exception $e){
+                throw $e;
+            }
+        }
+
         $student = new StudentDatas();
         $datas = self::get_student($id);
         ReturnDatas::formate_datas_for_edit($datas,$args,$student);
@@ -652,9 +702,12 @@ class User extends \mainClass{
      * Supprime un étudiant
      * @param $id
      * @return bool
+     * @throws \Exception
      */
     static function delete_student($id){
-        return PDOQueries::delete_student($id);
+        if(!PDOQueries::delete_student($id))
+            throw new \PersonalizeException(2002);
+        return true;
     }
 
     /**

@@ -137,7 +137,7 @@
             }
 
         },
-        "csv_attribute": {
+        "csv_attributes": {
             "student": {
                 "name": "Etudiant",
                 "attr": {
@@ -236,6 +236,7 @@
             "1002" : "Connexion échouée : Base de données iconnue",
             "1003" : "Connexion échouée : Hôte iconnue",
             "2001" : "Connexion échouée : ",
+            "2002" : "Erreur lors de la suppression",
             "2020" : "Mot de passe incorrect",
             "2040" : "Veuillez accepter les termes & conditions du contrat"
         }
@@ -622,6 +623,56 @@
             "collapse" : "Réduire",
             "responses_rate" : "Taux de <span class=\"fw-semi-bold\">Réponses</span>",
             "responses_rate_description": "Répartition de taux de réponses des questionnaires"
+        },
+        "admin_studentList" : {
+            "previous" : "Accueil",
+            "name" : "Gestion",
+            "student" : "Étudiants",
+            "btnDelete" : "Supprimer",
+            "table" : {
+                "id" : "ID",
+                "student_name" : "Nom / Prenom",
+                "TI" : "Tuteur IUT",
+                "TE" : "Tuteur Entreprise",
+                "actions" : "Actions"
+            },
+            "modal-add" : {
+                "title" : "Ajouter un étudiant",
+                "step1" : {
+                    "title" : "Méthode d'ajout",
+                    "choice1" : "Importer un fichier CSV",
+                    "choice2" : "Ajouter un étudiant"
+                },
+                "step2" : {
+                    "title" : "Ajout des données"
+                },
+                "step3" : {
+                    "title" : "Finalisation",
+                    "success" : "L'Étudiant à été ajouté avec succés !"
+                },
+                "btnPrevious" : "Précédent",
+                "btnNext" : "Suivant",
+                "btnFinish" : "Terminer"
+            },
+            "modal-infos" : {
+                "title" : "Informations"
+            },
+            "modal-edit" : {
+                "title" : "Informations"
+            },
+            "modal-delete": {
+                "title" : "Suppression",
+                "message" : "Voulez-vous vraiment supprimer ce compte utilisateur ?",
+                "btnDelete" : "Supprimer",
+                "btnAbord" : "Annuler"
+            },
+            "modal-csv" : {
+                "importfile" : "Importer",
+                "changefile" : "Changer",
+                "delete" : "Supprimer",
+                "nb-header-cols" : "Nombre de colonnes d'en-têtes",
+                "nb-header-rows" : "Nombre de lignes d'en-têtes"
+            }
         }
 
         },
@@ -646,6 +697,43 @@
             "account" : "Mon Compte",
             "inbox" : "Boite de réception",
             "logout" : "Déconnexion"
+        },
+        "student_infos" : {
+            "deadline_lbl" : "Date butoire"
+        },
+        "edit_student" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "te-lbl" : "Tuteur Entreprise",
+            "ti-lbl" : "Tuteur IUT",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "informations-lbl" : "Informations",
+            "deadline-lbl" : "Date butoire",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "add_student" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "te-lbl" : "Tuteur Entreprise",
+            "ti-lbl" : "Tuteur IUT",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "informations-lbl" : "Informations",
+            "deadline-lbl" : "Date butoire",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
         }
     }
 }

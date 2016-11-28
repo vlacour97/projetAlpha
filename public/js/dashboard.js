@@ -72,6 +72,10 @@ function initDonutStatsTE(){
 }
 
 function initWeather(){
+
+    if($(".weather-widget").length == 0)
+        return false;
+
     var icons = new Skycons({"color": Sing.colors['white']});
     icons.set("day0", weather_icon[0]);
     icons.play();
