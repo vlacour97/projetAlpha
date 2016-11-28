@@ -34,7 +34,7 @@ class Answer extends \mainClass{
         $id_survey = $answer[0]['id_survey'];
         if(is_null($id_survey))
             return self::get_survey();
-        $survey = self::get_survey($id_survey);
+        $survey = self::get_survey($id_survey,$id_student);
         $scale = self::get_scale_survey($survey);
         $total_points = 0;
         foreach($survey->questions as $key_question=>$content_question)

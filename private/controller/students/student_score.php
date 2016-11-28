@@ -58,7 +58,7 @@ $script_vendor = array(
     'datatables/media/js/jquery.dataTables.js',
     'bootstrap-select/bootstrap-select.min.js'
 );
-$script = array('survey_part1.js');
+$script = array('survey_student_score.js');
 
 
 $html->open();

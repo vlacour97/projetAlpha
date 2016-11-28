@@ -160,16 +160,22 @@ $(function(){
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
+    $('#generate-pdf-modal form').submit(function(e){
+        e.preventDefault();
+        var title = $("#generate-pdf-modal form input[name='title-pdf']").val();
+        window.open(url_pdf + '&title=' + title);
+    });
+
     $("body")
         .on('click','#generate-pdf',function(){
             $('#generate-pdf-modal').modal();
         })
-        .on('click','#generate-submit',function(){
+        .on('click','#generate-submit',function(e){
             var title = $("#generate-pdf-modal form input[name='title-pdf']").val();
             window.open(url_pdf + '&title=' + title);
         })
-    
-    
+
+
 
 
 

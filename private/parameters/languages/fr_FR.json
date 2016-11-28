@@ -675,7 +675,7 @@
             }
         },
         "admin_studentScore" : {
-            "previous" : "Étudiant",
+            "previous" : "Étudiants",
             "name" : "Résultats",
             "students" : "Étudiants",
             "btn-student-list" : "Accéder à la liste des étudiants",
@@ -693,6 +693,22 @@
                 "title-pdf" : "Nom de la liste PDF",
                 "btnValid" : "Valider"
             }
+        },
+        "admin_survey_read" : {
+            "previous" : "Étudiants",
+            "name" : "Questionnaire",
+            "btn-generate-pdf" : "Générer un PDF",
+            "infos" : {
+                "part1" : "Etudiant",
+                "part2" : "Tuteur IUT",
+                "part3" : "Tuteur Entreprise"
+            },
+            "table" : {
+                "attr1" : "Numero Question",
+                "attr2" : "Résultat",
+                "total" : "Total"
+            },
+            "btnComeBack" : "Retour"
         }
 
         },

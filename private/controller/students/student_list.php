@@ -61,13 +61,18 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
             foreach($students as $student){
                 /** @var $student \app\StudentDatas */
+
+                $show_survey = '<a data-toggle="tooltip" data-placement="bottom" title="Voir le questionnaire" href="?nav=students/survey&id='.\general\crypt::encrypt($student->ID).'" target="_blank"><i class="fa fa-eye"></i></a>&nbsp;&nbsp;';
+                if(!$student->answered)
+                    $show_survey = "";
+
                 $data[] = array(
                     sprintf('%04d',$student->ID),
                     '<div class="checkbox"><input data-id="'.$student->ID.'" type="checkbox" id="inlineCheckbox'.$student->ID.'"><label for="inlineCheckbox'.$student->ID.'"></label></div>',
                     '<span class="fw-semi-bold"><a data-id="'.$student->ID.'" class="student">'.$student->fname.' '.$student->name.'</a></span>',
                     $student->name_TI,
                     $student->name_TE,
-                    '<a class="change" data-toggle="tooltip" data-id="'.$student->ID.'" data-placement="bottom" title="Modifier"><i class="fa fa-wrench"></i></a>&nbsp;&nbsp;<a class="delete" data-id="'.$student->ID.'" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a>'
+                    '<p class="text-center">'.$show_survey.'<a class="change" data-toggle="tooltip" data-id="'.$student->ID.'" data-placement="bottom" title="Modifier"><i class="fa fa-wrench"></i></a>&nbsp;&nbsp;<a class="delete" data-id="'.$student->ID.'" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></p>' //TODO textes de langues
                 );
             }
             echo json_encode(["data"=>$data]);

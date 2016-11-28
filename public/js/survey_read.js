@@ -10,19 +10,7 @@ $(function(){
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
-    $(".addComment").click(function(e){
-       $(this).addClass('hidden').parent().children('div').removeClass('hidden');
-    });
-    
-    $(".closeComment").click(function(e){
-       $(this).parent().parent().parent().children('div').addClass('hidden').parent().children('button').removeClass('hidden');
-    });
 
-
-    $(".HelpButton").click(function(e){
-        e.preventDefault();
-        $('#HelpModal').modal();
-    });
 
  
 });

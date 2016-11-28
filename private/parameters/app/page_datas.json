@@ -34,13 +34,19 @@
                 "name" : "Liste des scores en PDF",
                 "logo" : "",
                 "inNavigation" : false
+            },
+            {
+                "id" : "survey",
+                "name" : "Resultat du questionnaire",
+                "logo" : "",
+                "inNavigation" : false
+            },
+            {
+                "id" : "survey_pdf",
+                "name" : "Resultat du questionnaire en PDF",
+                "logo" : "",
+                "inNavigation" : false
             }
         ]
-    },
-    {
-        "id" : "other",
-        "name" : "Autre",
-        "logo" : "",
-        "inNavigation" : true
     }
 ]
