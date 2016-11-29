@@ -483,21 +483,21 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>YOU ARE HERE</li>
-            <li class="active">Tables Basic</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
         <button class="btn btn-default pull-right mt-sm"><i class="fa fa-plus"></i></button>
-        <h1 class="page-title">Gestion - <span class="fw-semi-bold">Questionnaires</span></h1>
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
         <section class="widget">
             <div class="widget-body">
                 <div class="mt">
                     <table id="survey-table" class="table table-striped table-hover">
                         <thead>
                         <tr>
-                            <th>Id</th>
-                            <th>Nom Questionnaire</th>
-                            <th>Date de création</th>
-                            <th class=" no-sort text-center"> Actions </th>
+                            <th>{titleID}</th>
+                            <th>{titleSurvey}</th>
+                            <th>{titleDate}</th>
+                            <th class=" no-sort text-center"> {titleAction} </th>
                         </tr>
                         </thead>
                         <tbody>
@@ -535,15 +535,15 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title" id="StudentModalLabel">Suppression</h4>
+                <h4 class="modal-title" id="StudentModalLabel">{bigDelete}</h4>
             </div>
             <div class="modal-body text-center">
-                <h3> <span class="fw-semi-bold">Voulez-vous vraiment supprimer ce questionnaire?</span> </h3>
+                <h3> <span class="fw-semi-bold">{agreeDelete}</span> </h3>
                 <div class="col-md-12">
                     &nbsp
                 </div>
-                <button type="button" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i>  Supprimer</button>
-                <button type="button" class="btn btn-default">Annuler</button>
+                <button type="button" class="btn btn-danger"><i class="fa fa-ban" aria-hidden="true"></i>  {btnDelete}</button>
+                <button type="button" class="btn btn-default">{btnCancel}</button>
             </div>
             <div class="modal-footer">
             </div>
