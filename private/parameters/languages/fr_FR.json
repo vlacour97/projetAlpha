@@ -514,6 +514,8 @@
             "text" : " Erreur lors du lancement de l'application ",
             "button" : "Page d'acceuil"
         },
+
+
         "compose" : {
             "way": {
                 "way1": "Général",
@@ -712,6 +714,78 @@
         }
 
         },
+    "admin_dashboard" : {
+        "previous" : "Accueil",
+        "name" : "Tableau de Bord",
+        "lbl_connections" : "NOMBRE DE CONNEXIONS",
+        "alternative_map" : "Erreur lors de l'affichage de la carte",
+        "evolution_title" : "Évolution du nombre de <span class=\"fw-semi-bold\">Connexions</span> des <span class=\"fw-semi-bold\">Utilisateurs</span>",
+        "expand" : "Étendre",
+        "collapse" : "Réduire",
+        "responses_rate" : "Taux de <span class=\"fw-semi-bold\">Réponses</span>",
+        "responses_rate_description": "Répartition de taux de réponses des questionnaires"
+    },
+
+    "survey_show" : {
+        "chemin1" : "Gestion",
+        "name" : "Questionnaires",
+        "numquestion" : "Numéro Question",
+        "cancel" : "Retour"
+    },
+
+    "UserList" : {
+        "chemin1" : "Gestion",
+        "name" : "Utilisateurs",
+        "checkTE" : "Tuteur Entreprise",
+        "checkTI" : "Tuteur IUT",
+        "checkAdmin" : "Administrateur",
+        "delete" : "Supprimer",
+        "table" : {
+            "titleID": "ID",
+            "nameuser": "Nom / Prénom",
+            "statutuser": "Statut",
+            "actionuser": "Action"
+        }
+    },
+
+    "action_report" : {
+        "chemin1" : "Accueil",
+        "name" : "Rapport d'actions",
+        "table" : {
+            "titleID": "ID",
+            "nameuser": "Utilisateur",
+            "content": "Contenu",
+            "date": "Date"
+        }
+    },
+
+    "survey_part2_edit" : {
+        "chemin1" : "Gestion",
+        "name" : "Questionnaire",
+        "btninfo" : "info",
+        "tab": {
+            "tabstudent": "Etudiant",
+            "tabTI": "Tuteur IUT",
+            "phone": "tel: ",
+            "mail":"mail"
+        },
+        "btnsave" : "Enregistrer",
+        "btnsend" : "Envoyer"
+    },
+
+    "survey_part2_read" : {
+        "chemin1" : "Gestion",
+        "name" : "Questionnaire",
+        "tab": {
+            "tabstudent": "Etudiant",
+            "tabTI": "Tuteur IUT",
+            "phone": "tel: ",
+            "mail":"mail"
+        },
+        "numQuestion" : "Numéro Question",
+        "cancel" : "Retour"
+    },
+
     "components" : {
         "sidebar" : {
             "stats_title" : "Stats",
@@ -760,7 +834,7 @@
             "email-lbl" : "Email",
             "te-lbl" : "Tuteur Entreprise",
             "ti-lbl" : "Tuteur IUT",
-            "group-lbl" : "Groupe",
+
             "birth-date-lbl" : "Date de Naissance",
             "phone-lbl" : "Téléphone",
             "address-lbl" : "Adresse",
@@ -771,5 +845,6 @@
             "deadline-lbl" : "Date butoire",
             "help" : "Ces Informations pourront être modifié ultérieurement"
         }
+
     }
 }

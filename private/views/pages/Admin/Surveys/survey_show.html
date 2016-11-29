@@ -484,12 +484,12 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>VOUS ETES ICI</li>
-            <li class="active">Questionnaires</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
 
 
-            <div class="col-md-12 mt-n"> <h1 class="page-title"><span class="fw-semi-bold">Questionnaire</span></h1></div>
+            <div class="col-md-12 mt-n"> <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1></div>
 
         <section class="row bg-white">
             <table class="table unbordered-first-line mb-lg">
@@ -500,7 +500,7 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <td class="text-center"> <h5> <span class="fw-semi-bold"> Numero Question </span></h5></td>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold"> {numquestion} </span></h5></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -560,7 +560,7 @@
                 </tr>
                 </tbody>
             </table>
-            <button class="btn btn-primary center-block mb-lg">Retour</button>
+            <button class="btn btn-primary center-block mb-lg">{cancel}</button>
         </section>
     </main>
 </div>

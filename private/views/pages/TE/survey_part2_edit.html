@@ -484,13 +484,13 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>VOUS ETES ICI</li>
-            <li class="active">Questionnaires</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
 
 
-            <div class="col-md-11"> <h1 class="page-title"><span class="fw-semi-bold">Questionnaire</span></h1></div>
-            <div class="cl-md-1 mb-n"><button type="button" class="HelpButton ButtonInfo btn btn-info">Info</button></div>
+            <div class="col-md-11"> <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1></div>
+            <div class="cl-md-1 mb-n"><button type="button" class="HelpButton ButtonInfo btn btn-info">{btninfo}</button></div>
 
         <section class="row bg-white">
             <div class="col-md-12">
@@ -500,20 +500,20 @@
                 <div class="col-md-4">
                     <div class="clearfix">
                         <ul id="myTabs" class="nav nav-tabs pull-left"> <!-- remove pull-left to get a cool effect too -->
-                            <li class="active"><a href="#student" data-toggle="tab">Etudiant</a></li>
-                            <li class=""><a href="#TI" data-toggle="tab">Tuteur IUT</a></li>
+                            <li class="active"><a href="#student" data-toggle="tab">{tabstudent}</a></li>
+                            <li class=""><a href="#TI" data-toggle="tab">{tabTI}</a></li>
                         </ul>
                     </div>
                     <div id="TableStudentTI" class="tab-content mb-lg">
                         <div class="tab-pane clearfix active" id="student">
                             <h2>Rémi Lemaire</h2>
-                            <p>tel : <a href="callto:0123456789"> 01 23 45 67 89</a></p>
-                            <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
+                            <p>{phone} <a href="callto:0123456789"> 01 23 45 67 89</a></p>
+                            <p>{mail} <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
                         </div>
                         <div class="tab-pane" id="TI">
                             <h2>Arnaud Clérentin</h2>
-                            <p>tel : <a href="callto:01 23 45 67 89"> 01 23 45 67 89</a></p>
-                            <p>mail : <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
+                            <p>{phone} <a href="callto:01 23 45 67 89"> 01 23 45 67 89</a></p>
+                            <p>{mail} <a href="mailto:zeguigui80@gmail.com"> zeguigui80@gmail.com</a></p>
                         </div>
                     </div>
                 </div>
@@ -614,8 +614,8 @@
                     <td></td>
                     <td>
                         <div class="col-md-12 text-center mt-n mb-lg">
-                            <button type="button" class="btn btn-info">Enregistrer</button>
-                            <button type="button" class="btn btn-primary">Envoyer</button>
+                            <button type="button" class="btn btn-info">{btnsave}</button>
+                            <button type="button" class="btn btn-primary">{btnsend}</button>
                         </div>
                     </td>
                     <td></td>
@@ -677,6 +677,7 @@
 <script src="../../../../public/vendor/backgrid-paginator/backgrid-paginator.js"></script>
 <script src="../../../../public/vendor/datatables/media/js/jquery.dataTables.js"></script>
 <script src="../../../../public/vendor/bootstrap-select/bootstrap-select.min.js"></script>
+<script src="../../../../public/vendor/bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js"></script>
 
 <!-- page specific js -->
 <script src="../../../../public/js/survey_part2.js"></script>

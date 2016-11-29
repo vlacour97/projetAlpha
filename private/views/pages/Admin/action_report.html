@@ -262,10 +262,10 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>Accueil</li>
-            <li class="active">Audit des Utilisateurs</li>
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
         </ol>
-        <h1 class="page-title">Rapport d'actions</h1>
+        <h1 class="page-title">{name}</h1>
         <div class="row">
             <section class="widget">
                 <header>
@@ -279,10 +279,10 @@
                         <table id="action-table" class="table table-striped table-hover">
                             <thead>
                             <tr>
-                                <th>Id</th>
-                                <th>Utilisateurs</th>
-                                <th class="no-sort">Contenu</th>
-                                <th class="no-sort">Date</th>
+                                <th>{titleID}</th>
+                                <th>{nameuser}</th>
+                                <th class="no-sort">{content}</th>
+                                <th class="no-sort">{date}</th>
                             </tr>
                             </thead>
                             <tbody>
