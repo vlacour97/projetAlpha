@@ -23,3 +23,8 @@ table.unbordered-first-line tr:first-child td{
 .loader-wrap{
     z-index: 999;
 }
+
+table.border-survey tfoot tr{
+    background: #eee;
+    border: 1px solid #ddd;
+}

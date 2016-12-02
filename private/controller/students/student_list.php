@@ -58,7 +58,6 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
         case 'get_table_datas':
             $students = \app\User::get_all_students();
             $data = array();
-
             foreach($students as $student){
                 /** @var $student \app\StudentDatas */
 
@@ -69,9 +68,9 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
                 $data[] = array(
                     sprintf('%04d',$student->ID),
                     '<div class="checkbox"><input data-id="'.$student->ID.'" type="checkbox" id="inlineCheckbox'.$student->ID.'"><label for="inlineCheckbox'.$student->ID.'"></label></div>',
-                    '<span class="fw-semi-bold"><a data-id="'.$student->ID.'" class="student">'.$student->fname.' '.$student->name.'</a></span>',
-                    $student->name_TI,
-                    $student->name_TE,
+                    '<span class="fw-semi-bold"><a data-id="'.$student->ID.'" class="student">'.htmlentities($student->fname).' '.htmlentities($student->name).'</a></span>',
+                    htmlentities($student->name_TI),
+                    htmlentities($student->name_TE),
                     '<p class="text-center">'.$show_survey.'<a class="change" data-toggle="tooltip" data-id="'.$student->ID.'" data-placement="bottom" title="Modifier"><i class="fa fa-wrench"></i></a>&nbsp;&nbsp;<a class="delete" data-id="'.$student->ID.'" data-toggle="tooltip" data-placement="bottom" title="Supprimer"><i class="fa fa-trash-o" aria-hidden="true"></i></a></p>' //TODO textes de langues
                 );
             }

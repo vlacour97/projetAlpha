@@ -48,5 +48,19 @@
                 "inNavigation" : false
             }
         ]
+    },
+    {
+        "id" : "survey",
+        "name" : "Questionnaires",
+        "logo" : "fa fa-list-ol",
+        "inNavigation" : true,
+        "pages" : [
+            {
+                "id" : "create_survey",
+                "name" : "Création d'un questionnaire",
+                "logo" : "",
+                "inNavigation" : true
+            }
+        ]
     }
 ]

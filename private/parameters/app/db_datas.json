@@ -1,7 +1,1 @@
-{
-    "host" : "109.31.179.110",
-    "login" : "projetiut",
-    "password" : "projetiut",
-    "db_name" : "projetIUT",
-    "prefix" : ""
-}
+{"host":"localhost","login":"root","password":"root","db_name":"projetIUT","prefix":"gs_"}

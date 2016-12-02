@@ -336,7 +336,7 @@ class HTML {
     private function generate_navigation(){
         $datas = Navigation::get_navbar();
         $response = '<ul class="sidebar-nav">';
-        foreach($datas as $page){
+        foreach($datas as $key=>$page){
             /** @var $page \app\NavLine */
             $active = "";
             if($page->id == $_GET[Navigation::$navigation_marker] || ($page->id == "home" && is_null($_GET[Navigation::$navigation_marker])))
@@ -358,7 +358,7 @@ class HTML {
                 $active = "";
                 if($flag)
                     $active = "active";
-                $response .= '<li class="'.$active.'"><a class="collapsed" href="#user_nav_list" data-toggle="collapse" data-parent="#sidebar"><span class="icon"><i class="'.$page->logo.'"></i></span>'.$page->name.'<i class="toggle fa fa-angle-down"></i></a><ul id="user_nav_list" class="collapse">';
+                $response .= '<li class="'.$active.'"><a class="collapsed" href="#user_nav_list'.$key.'" data-toggle="collapse" data-parent="#sidebar"><span class="icon"><i class="'.$page->logo.'"></i></span>'.$page->name.'<i class="toggle fa fa-angle-down"></i></a><ul id="user_nav_list'.$key.'" class="collapse">';
                 $response .= $responseTmp;
                 $response .= '</ul></li>';
 
