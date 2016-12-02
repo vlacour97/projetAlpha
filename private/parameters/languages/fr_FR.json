@@ -638,6 +638,12 @@
                 "empty_name" : "Veuillez renseigner le nom du questionnaire"
             }
         },
+        "admin_survey_show": {
+            "chemin1": "Gestion",
+            "name": "Questionnaires",
+            "numquestion": "Numéro Question",
+            "cancel": "Retour"
+        },
 
 
         "compose": {
@@ -740,13 +746,6 @@
             }
         },
 
-
-        "survey_show": {
-            "chemin1": "Gestion",
-            "name": "Questionnaires",
-            "numquestion": "Numéro Question",
-            "cancel": "Retour"
-        },
 
         "UserList": {
             "chemin1": "Gestion",
