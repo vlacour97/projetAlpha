@@ -66,6 +66,26 @@
                 "name" : "Affichage d'un questionnaire",
                 "logo" : "",
                 "inNavigation" : false
+            },
+            {
+                "id" : "survey_list",
+                "name" : "Questionnaires Créés",
+                "logo" : "",
+                "inNavigation" : true
+            }
+        ]
+    },
+    {
+        "id" : "user",
+        "name" : "Utilisateurs",
+        "logo" : "fa fa-user",
+        "inNavigation" : true,
+        "pages" : [
+            {
+                "id" : "user_list",
+                "name" : "Liste des utilisateurs",
+                "logo" : "",
+                "inNavigation" : true
             }
         ]
     }

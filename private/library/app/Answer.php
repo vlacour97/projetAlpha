@@ -229,6 +229,17 @@ class Answer extends \mainClass{
     }
 
     /**
+     * Determine si un questionnaire existe
+     * @param $id
+     * @return bool
+     */
+    static function isset_survey($id){
+        if(!is_file(self::get_survey_path($id)))
+            return false;
+        return true;
+    }
+
+    /**
      * Ajoute la date de creation sur le questionnaire
      * @param object $survey
      * @param int|null $id

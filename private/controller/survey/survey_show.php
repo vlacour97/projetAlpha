@@ -8,6 +8,10 @@
 
 $html = new \general\HTML();
 $gabarit = \general\Language::translate_gabarit('pages/admin_survey_show');
+$id = \general\crypt::decrypt($_GET['id']);
+
+if(!\app\Answer::isset_survey($id))
+    header('Location: index.php');
 
 $script_vendor = array(
     'underscore/underscore-min.js',
@@ -20,14 +24,10 @@ $script_vendor = array(
     'messenger/build/js/messenger.js',
     'messenger/build/js/messenger-theme-flat.js'
 );
-$script = array('survey_part2.js');
 
-$survey_datas = \app\Answer::get_survey(1);
+$survey_datas = \app\Answer::get_survey($id);
 $survey_gabarit = \general\Language::translate_gabarit('components/survey_read2');
 $survey = "";
-
-//echo '<pre>';
-//var_dump($survey_datas);
 
 foreach($survey_datas->questions as $key=>$question){
     $reponses = "";
@@ -41,10 +41,12 @@ foreach($survey_datas->questions as $key=>$question){
     $survey .= str_replace($replace,$by,$survey_gabarit);
 }
 
-$gabarit = str_replace('{question_list}',$survey,$gabarit);
+$replace = array('{question_list}','{name-survey}');
+$by = array($survey,$survey_datas->name);
+$gabarit = str_replace($replace,$by,$gabarit);
 
 $html->open();
 $html->sidebar();
 $html->navbar();
 echo $gabarit;
-$html->close($script_vendor,$script);
+$html->close($script_vendor);

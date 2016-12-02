@@ -644,7 +644,17 @@
             "numquestion": "Numéro Question",
             "cancel": "Retour"
         },
-
+        "admin_surveyList": {
+            "chemin1": "Gestion",
+            "name": "Questionnaires",
+            "table": {
+                "titleID": "Id",
+                "titleSurvey": "Nom Questionnaire",
+                "titleDate": "Date de création",
+                "status" : "Status",
+                "titleAction": "Actions"
+            }
+        },
 
         "compose": {
             "way": {
@@ -799,23 +809,6 @@
             "numQuestion": "Numéro Question",
             "cancel": "Retour"
         },
-
-        "SurveyList": {
-            "chemin1": "Gestion",
-            "name": "Questionnaires",
-            "table": {
-                "titleID": "Id",
-                "titleSurvey": "Nom Questionnaire",
-                "titleDate": "Date de création",
-                "titleAction": "Actions"
-            },
-            "Delete": {
-                "bigDelete": "Suppression",
-                "agreeDelete": "Voulez-vous vraiment supprimer ce questionnaire?",
-                "btnDelete": "Supprimer",
-                "btnCancel": "Annuler"
-            }
-        },
         "survey_part1": {
             "chemin1": "Gestion",
             "name": "Questionnaires",
@@ -902,6 +895,11 @@
         "answer_survey" : {
             "response" : "Réponse",
             "value" : "Valeur"
+        },
+        "survey_list_element" : {
+            "view" : "Consulter",
+            "edit" : "Modifier",
+            "remove" : "Supprimer"
         }
 
     }

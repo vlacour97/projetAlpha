@@ -2,6 +2,11 @@
  * Created by antoine on 05/11/2016.
  */
 $(function(){
+
+    var url = 'private/controller/survey/survey_list.php';
+    var currentLineId;
+    var table;
+
     function initDataTables(){
         /* Set the defaults for DataTables initialisation */
         $.extend( true, $.fn.dataTable.defaults, {
@@ -9,6 +14,7 @@ $(function(){
             "sPaginationType": "bootstrap",
             "oLanguage": {
                 "sLengthMenu": "_MENU_ enregistrements par page",
+                "sEmptyTable" : "Aucune donnée dans ce tableau",
                 "sSearch" :"Rechercher",
                 "oPaginate": {
                     "sPrevious": "Précédent",
@@ -127,7 +133,7 @@ $(function(){
             }
         });
 
-        $("#survey-table").dataTable({
+        table = $("#survey-table").DataTable({
             "sDom": "<'row'<'col-md-6 hidden-xs'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
@@ -152,16 +158,5 @@ $(function(){
 
     pageLoad();
     SingApp.onPageLoad(pageLoad);
-
-    
-    $(".delete").click(function(e){
-        e.preventDefault();
-        $('#DeleteModal').modal();
-    });
-
-
-
-
-
 
 });
