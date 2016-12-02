@@ -88,5 +88,11 @@
                 "inNavigation" : true
             }
         ]
+    },
+    {
+        "id" : "student_list",
+        "name" : "Liste des étudiants",
+        "logo" : "fa fa-list",
+        "inNavigation" : true
     }
 ]

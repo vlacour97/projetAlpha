@@ -158,5 +158,6 @@ $(function(){
 
     pageLoad();
     SingApp.onPageLoad(pageLoad);
+    $('[data-toggle="tooltip"]').tooltip();
 
 });

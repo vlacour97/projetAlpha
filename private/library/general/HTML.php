@@ -122,14 +122,13 @@ class Widget{
             return "";
         }
 
-        if(count($messages) == 0)
-            return "";
-
         $response = "";
 
         for($i=0;$i<2;$i++)
         {
             $message = $messages[$i];
+            if(!isset($message))
+                return $response;
             /** @var $message \app\messageDatas */
             $user = User::get_user($message->id_sender);
             $replace = array('{profile_img}','{fname}','{name}','{time}','{object}','{content}');

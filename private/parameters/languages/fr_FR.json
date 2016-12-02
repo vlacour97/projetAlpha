@@ -655,6 +655,39 @@
                 "titleAction": "Actions"
             }
         },
+        "admin_userList": {
+            "chemin1": "Gestion",
+            "name": "Utilisateurs",
+            "checkTE": "Tuteur Entreprise",
+            "checkTI": "Tuteur IUT",
+            "checkAdmin": "Administrateur",
+            "delete": "Supprimer",
+            "table": {
+                "titleID": "ID",
+                "nameuser": "Nom / Prénom",
+                "statutuser": "Statut",
+                "actionuser": "Action"
+            }
+        },
+        "te_studentList": {
+            "chemin1": "Gestion",
+            "name": "Questionnaires",
+            "table": {
+                "titleID": "Id",
+                "titleEtud": "Nom Etudiant",
+                "titleTut": "Nom Tuteur IUT",
+                "titleStatut": "Etat",
+                "titleDate": "Date Butoire",
+                "titleAction": "Action"
+            },
+            "etud": {
+                "etudiant": "Etudiant"
+            },
+
+            "tut": {
+                "tuteur": "Tuteur IUT"
+            }
+        },
 
         "compose": {
             "way": {
@@ -756,22 +789,6 @@
             }
         },
 
-
-        "UserList": {
-            "chemin1": "Gestion",
-            "name": "Utilisateurs",
-            "checkTE": "Tuteur Entreprise",
-            "checkTI": "Tuteur IUT",
-            "checkAdmin": "Administrateur",
-            "delete": "Supprimer",
-            "table": {
-                "titleID": "ID",
-                "nameuser": "Nom / Prénom",
-                "statutuser": "Statut",
-                "actionuser": "Action"
-            }
-        },
-
         "action_report": {
             "chemin1": "Accueil",
             "name": "Rapport d'actions",
@@ -808,25 +825,6 @@
             },
             "numQuestion": "Numéro Question",
             "cancel": "Retour"
-        },
-        "survey_part1": {
-            "chemin1": "Gestion",
-            "name": "Questionnaires",
-            "table": {
-                "titleID": "Id",
-                "titleEtud": "Nom Etudiant",
-                "titleTut": "Nom Tuteur IUT",
-                "titleStatut": "Etat",
-                "titleDate": "Date Butoire",
-                "titleAction": "Action"
-            },
-            "etud": {
-                "etudiant": "Etudiant"
-            },
-
-            "tut": {
-                "tuteur": "Tuteur IUT"
-            }
         }
     },
     "components" : {

@@ -122,7 +122,7 @@ function PageLoad(){
         initLineStats();
         initDonutStatsAdmin();
     }
-    if(page == 'TE' || page == 'TI')
+    if(page == 'other')
         initDonutStatsTE();
     initAnimations();
     initWeather();

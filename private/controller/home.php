@@ -72,7 +72,6 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 }
 
 $html = new \general\HTML();
-$gabarit = \general\Language::translate_gabarit('pages/admin_dashboard');
 
 $script_vendor = array(
     'bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
@@ -93,12 +92,24 @@ $script_vendor = array(
 );
 $script = array('dashboard.js');
 
-$responses = \app\Stats::globalResponsesState();
+$type = \app\Log::get_type();
 
-$replace = array('{nb_connections}','{responses_empty}','{responses_finish}','{responses_validate}','{weather_widget}','{message_widget}');
-$by = array(\app\Stats::count_connections(),$responses->count_not_respond,$responses->count_respond,$responses->count_valided,$html->widget()->weather(),$html->widget()->message());
-$gabarit = str_replace($replace,$by,$gabarit);
-
+switch($type){
+    case 1:
+        $responses = \app\Stats::globalResponsesState();
+        $gabarit = \general\Language::translate_gabarit('pages/admin_dashboard');
+        $replace = array('{nb_connections}','{responses_empty}','{responses_finish}','{responses_validate}','{weather_widget}','{message_widget}');
+        $by = array(\app\Stats::count_connections(),$responses->count_not_respond,$responses->count_respond,$responses->count_valided,$html->widget()->weather(),$html->widget()->message());
+        $gabarit = str_replace($replace,$by,$gabarit);
+        break;
+    default:
+        $responses = \app\Stats::userResponsesState(\app\Log::get_id());
+        $gabarit = \general\Language::translate_gabarit('pages/other_dashboard');
+        $replace = array('{responses_empty}','{responses_finish}','{responses_validate}','{weather_widget}','{message_widget}');
+        $by = array($responses->count_not_respond,$responses->count_respond,$responses->count_valided,$html->widget()->weather(),$html->widget()->message());
+        $gabarit = str_replace($replace,$by,$gabarit);
+        break;
+}
 
 
 $html->open();

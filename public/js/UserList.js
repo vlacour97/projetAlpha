@@ -234,4 +234,5 @@ $(function(){
         $('#ChangeModal').modal('hide');
     })
 
+    $('[data-toggle="tooltip"]').tooltip();
 });
