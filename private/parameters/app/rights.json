@@ -7,7 +7,7 @@
     {
         "id" : 2,
         "name" : "Tuteur Entreprise",
-        "rights" : ["home","student_list"]
+        "rights" : ["home","student_list","see_survey"]
     },
     {
         "id" : 3,

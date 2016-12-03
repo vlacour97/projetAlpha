@@ -613,7 +613,7 @@
                 }
             }
         },
-        "admin_dashboard" : {
+        "dashboard" : {
             "previous" : "Home",
             "name" : "Dashboard",
             "lbl_connections" : "NUMBER OF CONNEXIONS",

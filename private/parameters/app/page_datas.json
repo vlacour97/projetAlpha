@@ -94,5 +94,11 @@
         "name" : "Liste des étudiants",
         "logo" : "fa fa-list",
         "inNavigation" : true
+    },
+    {
+        "id" : "see_survey",
+        "name" : "Consultation du questionnaire",
+        "logo" : "",
+        "inNavigation" : false
     }
 ]

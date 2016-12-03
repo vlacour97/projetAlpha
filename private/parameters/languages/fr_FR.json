@@ -515,7 +515,7 @@
             "button": "Page d'acceuil"
         },
 
-        "admin_dashboard": {
+        "dashboard": {
             "previous": "Accueil",
             "name": "Tableau de Bord",
             "lbl_connections": "NOMBRE DE CONNEXIONS",
@@ -898,6 +898,10 @@
             "view" : "Consulter",
             "edit" : "Modifier",
             "remove" : "Supprimer"
+        },
+        "parts" : {
+            "see-survey" : "Voir le questionnaire",
+            "answer-survey" : "Répondre au questionnaire"
         }
 
     }

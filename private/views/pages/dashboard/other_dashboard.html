@@ -2,10 +2,10 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>Accueil</li>
-            <li class="active">Tableau de Bord</li>
+            <li>{previous}</li>
+            <li class="active">{name}</li>
         </ol>
-        <h1 class="page-title">Tableau de Bord</h1>
+        <h1 class="page-title">{name}</h1>
         <div class="row">
             <div class="col-md-6">
                 <div class="col-md-12">
@@ -19,7 +19,7 @@
                 <section class="widget">
                     <header>
                         <h4>
-                            Taux de <span class="fw-semi-bold">Réponses</span>
+                            {responses_rate}
                         </h4>
                         <div class="widget-controls">
                             <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
@@ -31,7 +31,7 @@
                         <div id="DonutStatsTE">
                         </div>
                         <p class="fs-mini text-muted">
-                            Répartition de taux de réponses des questionnaires
+                            {responses_rate_description}
                         </p>
                     </div>
                 </section>
