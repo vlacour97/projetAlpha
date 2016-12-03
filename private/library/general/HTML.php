@@ -243,7 +243,9 @@ class HTML {
         'bootstrap-sass/vendor/assets/javascripts/bootstrap/alert.js',
         'jQuery-slimScroll/jquery.slimscroll.min.js',
         'widgster/widgster.js',
-        'bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js'
+        'bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js',
+        'messenger/build/js/messenger.js',
+        'messenger/build/js/messenger-theme-flat.js'
     );
     private $basic_script = array('settings.js','app.js','main.js');
     private $favicon_path = "";
@@ -262,7 +264,7 @@ class HTML {
         <!DOCTYPE html>
         <html>
         <head>
-            <title></title>
+            <title><?php if(Log::isLogged()) echo Navigation::get_title(); ?></title>
             <!-- Applications Links -->
             <?php $linker->css($links) ?>
             <?php $linker->css($links_ie,true) ?>
@@ -287,6 +289,9 @@ class HTML {
         $linker = new Link();
         ob_start();
         ?>
+
+        <?php if(Log::isLogged()) echo Language::translate_gabarit('components/feedBack') ?>
+
         <!-- The Loader. Is shown when pjax happens -->
         <div class="loader-wrap hiding hide">
             <i class="fa fa-circle-o-notch fa-spin-fast"></i>

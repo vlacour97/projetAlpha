@@ -162,7 +162,7 @@ class Log extends \mainClass{
         }catch (\Exception $e){
 
         }
-        if(is_null($lang) || $lang == "")
+        if(!isset($lang) || $lang == "")
             $lang = parent::$lang;
         $lang = crypt::encrypt($lang);
         isset($_COOKIE[self::$lang]) && !is_null($_COOKIE[self::$lang]) && $lang = $_COOKIE[self::$lang];

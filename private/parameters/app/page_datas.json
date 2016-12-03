@@ -1,49 +1,41 @@
 [
     {
         "id" : "home",
-        "name" : "Accueil",
         "logo" : "fa fa-home",
         "inNavigation" : true
     },
     {
         "id" : "message",
-        "name" : "Messages <span class=\"label label-danger\">{nb_message}</span>",
         "logo" : "fa fa-envelope",
         "inNavigation" : true
     },
     {
         "id" : "students",
-        "name" : "Étudiants",
         "logo" : "fa fa-list",
         "inNavigation" : true,
         "pages" : [
             {
                 "id" : "student_list",
-                "name" : "Liste des étudiants",
                 "logo" : "",
                 "inNavigation" : true
             },
             {
                 "id" : "student_score",
-                "name" : "Résultat étudiants",
                 "logo" : "",
                 "inNavigation" : true
             },
             {
                 "id" : "student_score_pdf",
-                "name" : "Liste des scores en PDF",
                 "logo" : "",
                 "inNavigation" : false
             },
             {
                 "id" : "survey",
-                "name" : "Resultat du questionnaire",
                 "logo" : "",
                 "inNavigation" : false
             },
             {
                 "id" : "survey_pdf",
-                "name" : "Resultat du questionnaire en PDF",
                 "logo" : "",
                 "inNavigation" : false
             }
@@ -51,25 +43,21 @@
     },
     {
         "id" : "survey",
-        "name" : "Questionnaires",
         "logo" : "fa fa-list-ol",
         "inNavigation" : true,
         "pages" : [
             {
                 "id" : "create_survey",
-                "name" : "Création d'un questionnaire",
                 "logo" : "",
                 "inNavigation" : true
             },
             {
                 "id" : "survey_show",
-                "name" : "Affichage d'un questionnaire",
                 "logo" : "",
                 "inNavigation" : false
             },
             {
                 "id" : "survey_list",
-                "name" : "Questionnaires Créés",
                 "logo" : "",
                 "inNavigation" : true
             }
@@ -77,13 +65,11 @@
     },
     {
         "id" : "user",
-        "name" : "Utilisateurs",
         "logo" : "fa fa-user",
         "inNavigation" : true,
         "pages" : [
             {
                 "id" : "user_list",
-                "name" : "Liste des utilisateurs",
                 "logo" : "",
                 "inNavigation" : true
             }
@@ -91,25 +77,21 @@
     },
     {
         "id" : "student_list",
-        "name" : "Liste des étudiants",
         "logo" : "fa fa-list",
         "inNavigation" : true
     },
     {
         "id" : "see_survey",
-        "name" : "Consultation du questionnaire",
         "logo" : "",
         "inNavigation" : false
     },
     {
         "id" : "answer_survey",
-        "name" : "Répondre au questionnaire",
         "logo" : "",
         "inNavigation" : false
     },
     {
         "id" : "profile",
-        "name" : "Mon Compte",
         "logo" : "",
         "inNavigation" : false
     }

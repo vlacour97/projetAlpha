@@ -121,6 +121,20 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les noms des pages de navigation
+     * @param string $lang
+     * @return mixed
+     */
+    static function get_page_name($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["page_name"];
+    }
+
+    /**
      * Récupére les textes d'une page
      * @param string $page_name
      * @return mixed

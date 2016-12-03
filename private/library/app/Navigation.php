@@ -9,6 +9,7 @@
 namespace app;
 
 
+use general\Language;
 use general\PDOQueries;
 
 /**
@@ -82,6 +83,7 @@ class Navigation extends \mainClass{
         $response = array();
         $page_datas = self::$page_datas;
         $autorised_pages = self::autorised_pages();
+        $page_name = Language::get_page_name();
 
         foreach($page_datas as $key=>$content)
         {
@@ -94,7 +96,7 @@ class Navigation extends \mainClass{
                     {
                         $temp = new NavLine();
                         $temp->id = $content2['id'];
-                        $temp->name = $content2['name'];
+                        $temp->name = $page_name[$content['id'].'/'.$content2['id']];
                         $temp->logo = $content2['logo'];
                         $temp->link = '?'.self::$navigation_marker.'='.$content['id'].self::$navigation_separator.$content2['id'];
                         $temp_array[] = $temp;
@@ -105,7 +107,7 @@ class Navigation extends \mainClass{
                 {
                     $temp = new NavLine();
                     $temp->id = $content['id'];
-                    $temp->name = $content['name'];
+                    $temp->name = $page_name[$content['id']];
                     $temp->logo = $content['logo'];
                     $temp->link = '#';
                     $temp->navPage = $temp_array;
@@ -116,7 +118,7 @@ class Navigation extends \mainClass{
                 if(in_array($content['id'],$autorised_pages) && $content['inNavigation']){
                     $temp = new NavLine();
                     $temp->id = $content['id'];
-                    $temp->name = $content['name'];
+                    $temp->name = $page_name[$content['id']];
                     $temp->logo = $content['logo'];
                     $temp->link = '?'.self::$navigation_marker.'='.$content['id'];
                     $response[$key] = $temp;
@@ -185,8 +187,6 @@ class Navigation extends \mainClass{
             else
                 if($content['id'] == $page_name)
                     $response = true;
-
-
         }
         return $response;
     }
@@ -199,17 +199,7 @@ class Navigation extends \mainClass{
         if(!self::$isInit)
             self::init();
         $idPage = self::get_page_id();
-        $parts = explode(self::$navigation_separator,$idPage);
-        $datas = self::$page_datas;
-        foreach($parts as $content){
-            foreach($datas as $key=>$pages)
-                if($pages['id'] == $content)
-                    $datas = $datas[$key];
-            if(is_array($datas['pages']))
-                $datas = $datas['pages'];
-        }
-
-        return $datas['name'];
+        return Language::get_page_name()[$idPage];
     }
 
     /**

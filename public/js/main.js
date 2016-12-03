@@ -5,6 +5,12 @@
 
 $(function(){
 
+    var theme = 'air';
+    var classes = 'messenger-fixed messenger-on-top';
+
+    $.globalMessenger({ extraClasses: classes,theme: theme });
+    Messenger.options = { extraClasses: classes,theme: theme  };
+
     $('.language_switcher').click(function (e) {
         e.preventDefault();
         var id = $(this).data('id');
@@ -22,6 +28,22 @@ $(function(){
         $.get(url)
             .done(function(){
                 $('#notifications-dropdown-toggle').find('.nb-notifications').fadeOut();
+            });
+    });
+
+    $('#sendFeedBack').on('click',function(){
+        var url = 'private/controller/main.php?action=send_feedback';
+        var form = $('#feedBackModal form').serializeArray();
+        $.post(url,form)
+            .done(function(){
+                Messenger().post({
+                    message: feedbackMessage,
+                    type: 'success',
+                    showCloseButton: true
+                });
+                $('#feedBackModal').modal('hide');
+                $('#feedBackModal input').val('');
+                $('#feedBackModal textarea').val('');
             });
     });
 

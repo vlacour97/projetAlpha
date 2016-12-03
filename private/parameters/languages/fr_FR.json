@@ -244,7 +244,27 @@
             "Administrateur",
             "Tuteur Entreprise",
             "Tuteur IUT"
-        ]
+        ],
+        "page_name" : {
+            "home" : "Accueil",
+            "message" : "Messages <span class=\"label label-danger\">{nb_message}</span>",
+            "students" : "Étudiants",
+            "students/student_list" : "Liste des étudiants",
+            "students/student_score" : "Résultat étudiants",
+            "students/student_score_pdf" : "Liste des scores en PDF",
+            "students/survey" : "Resultat du questionnaire",
+            "students/survey_pdf" : "Resultat du questionnaire en PDF",
+            "survey" : "Questionnaires",
+            "survey/create_survey" : "Création d'un questionnaire",
+            "survey/survey_show" : "Affichage d'un questionnaire",
+            "survey/survey_list" : "Questionnaires Créés",
+            "user" : "Utilisateurs",
+            "user/user_list" : "Liste des utilisateurs",
+            "student_list" : "Liste des étudiants",
+            "see_survey" : "Consultation du questionnaire",
+            "answer_survey" : "Répondre au questionnaire",
+            "profile" : "Mon Compte"
+        }
     },
     "pages": {
         "install": {
@@ -1000,6 +1020,14 @@
         "answer_survey2" : {
             "addComment" : "Cliquez pour ajouter un commentaire",
             "textarea_descript" : "Ecrivez votre commentaire en quelques lignes..."
+        },
+        "feedBack" : {
+            "title" : "Envoyer un rapport d'erreur",
+            "object-lbl" : "Objet",
+            "message-lbl" : "Message",
+            "close" : "Annuler",
+            "send" : "Envoyer",
+            "message" : "Note de correctif envoyé !"
         }
 
     }

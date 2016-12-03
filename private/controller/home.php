@@ -75,8 +75,6 @@ $html = new \general\HTML();
 
 $script_vendor = array(
     'bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
-    'bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js"',
-    'bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.min.js',
     'bootstrap3-wysihtml5/src/bootstrap3-wysihtml5.js',
     'underscore/underscore-min.js',
     'backbone/backbone.js',
