@@ -239,7 +239,12 @@
             "2002" : "Erreur lors de la suppression",
             "2020" : "Mot de passe incorrect",
             "2040" : "Veuillez accepter les termes & conditions du contrat"
-        }
+        },
+        "user_type" : [
+            "Administrateur",
+            "Tuteur Entreprise",
+            "Tuteur IUT"
+        ]
     },
     "pages": {
         "install": {
@@ -689,6 +694,65 @@
             "bold": "403 Forbidden",
             "text": " Accès refusé ! ",
             "button": "Retourner à la page d'accueil"
+        },
+        "profile" : {
+            "previous" : "Accueil",
+            "name" : "Mon Compte",
+            "form1" : {
+                "pwd" : {
+                    "lbl" : "Nouveau mot de passe",
+                    "help" : "Votre nouveau mot de passe"
+                },
+                "confirm" : {
+                    "lbl" : "Nouveau mot de passe (Confirmation)",
+                    "help" : "Votre réécrivez votre nouveau mot de passe"
+                },
+                "btnChange" : "Modifier"
+            },
+            "form2" : {
+                "name" : {
+                    "lbl" : "Nom",
+                    "help" : "Votre nom"
+                },
+                "fname" : {
+                    "lbl" : "Prénom",
+                    "help" : "Votre prénom"
+                },
+                "mail" : {
+                    "lbl" : "Email",
+                    "help" : "Votre email"
+                },
+                "phone" : {
+                    "lbl" : "Téléphone",
+                    "help" : "Votre téléphone"
+                },
+                "address" : {
+                    "lbl" : "Adresse",
+                    "help" : "Votre adresse"
+                },
+                "zip" : {
+                    "lbl" : "Code Postal",
+                    "help" : "Votre code postal"
+                },
+                "city" : {
+                    "lbl" : "Ville",
+                    "help" : "Votre ville actuelle"
+                },
+                "country" : {
+                    "lbl" : "Pays",
+                    "help" : "Votre pays actuelle"
+                },
+                "language" : {
+                    "lbl" : "Langue",
+                    "help" : "Votre langue (si elle est disponible)"
+                },
+                "btnChange" : "Modifier",
+                "btnReset" : "Annuler"
+            },
+            "message" : {
+                "changePassword" : "Mot de passe modifié",
+                "changeDatas" : "Les informations ont été modifié"
+            }
         },
 
         "compose": {

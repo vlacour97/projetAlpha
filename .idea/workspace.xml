@@ -2,15 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f5940ff-468e-47e5-80cc-96221cbd4b33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.htaccess" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/pages/403.html" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/error/403.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/error/404.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/error/500.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/pages/404.html" afterPath="$PROJECT_DIR$/private/views/pages/404.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/pages/500.html" afterPath="$PROJECT_DIR$/private/views/pages/500.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/profile.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/profile.php" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/user_card.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/Language.php" afterPath="$PROJECT_DIR$/private/library/general/Language.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Log.php" afterPath="$PROJECT_DIR$/private/library/app/Log.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" afterPath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/page_datas.json" afterPath="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/pages/profile.html" afterPath="$PROJECT_DIR$/private/views/pages/profile.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/rights.json" afterPath="$PROJECT_DIR$/private/parameters/app/rights.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="Projet IUT.iws" />
@@ -40,26 +40,6 @@
                 <provider selected="true" editor-type-id="text-editor">
                   <state vertical-scroll-proportion="-6.875" vertical-offset="0" max-vertical-offset="540">
                     <caret line="11" column="48" selection-start-line="11" selection-start-column="48" selection-end-line="11" selection-end-column="48" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="admin_surveyList.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/private/views/pages/admin_surveyList.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="540">
-                    <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="survey_list_element.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/private/views/components/survey_list_element.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180">
-                    <caret line="5" column="236" selection-start-line="5" selection-start-column="236" selection-end-line="5" selection-end-column="236" />
                     <folding />
                   </state>
                 </provider>
@@ -127,11 +107,21 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="ti_see_survey.html" pinned="false" current-in-tab="true">
+            <file leaf-file-name="ti_see_survey.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/private/views/pages/ti_see_survey.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.47972587" vertical-offset="0" max-vertical-offset="1751">
+                  <state vertical-scroll-proportion="-35.0" vertical-offset="0" max-vertical-offset="1080">
                     <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="profile.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/private/views/pages/profile.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.094936706" vertical-offset="0" max-vertical-offset="1740">
+                    <caret line="11" column="48" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="48" />
                     <folding />
                   </state>
                 </provider>
@@ -158,21 +148,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".htaccess" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/.htaccess">
+      <file leaf-file-name="page_datas.json" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/parameters/app/page_datas.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="120">
-              <caret line="0" column="42" selection-start-line="0" selection-start-column="42" selection-end-line="0" selection-end-column="42" />
+            <state vertical-scroll-proportion="-20.291666" vertical-offset="1178" max-vertical-offset="1815">
+              <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="500.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/controller/error/500.php">
+      <file leaf-file-name="profile.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/controller/profile.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="285">
-              <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
+            <state vertical-scroll-proportion="-7.875" vertical-offset="261" max-vertical-offset="1215">
+              <caret line="30" column="27" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="27" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
               </folding>
@@ -180,34 +170,44 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="500.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/views/pages/500.html">
+      <file leaf-file-name="user_card.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/views/components/user_card.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="405">
-              <caret line="12" column="94" selection-start-line="12" selection-start-column="94" selection-end-line="12" selection-end-column="94" />
+            <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="420">
+              <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="90" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="403.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/views/pages/403.html">
+      <file leaf-file-name="login.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/login.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="405">
-              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="795">
+              <caret line="42" column="17" selection-start-line="25" selection-start-column="16" selection-end-line="42" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="404.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/controller/error/404.php">
+      <file leaf-file-name="profile.js" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/js/profile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="300">
-              <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="15" />
+            <state vertical-scroll-proportion="-0.2542662" vertical-offset="659" max-vertical-offset="1590">
+              <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
               <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
+                <element signature="e#0#49#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="install.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/controller/install.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-13.583333" vertical-offset="334" max-vertical-offset="1395">
+              <caret line="49" column="314" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="314" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -222,21 +222,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Language.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-5.375" vertical-offset="2526" max-vertical-offset="3750">
-              <caret line="188" column="131" selection-start-line="188" selection-start-column="131" selection-end-line="188" selection-end-column="142" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="fr_FR.json" pinned="false" current-in-tab="true">
+      <file leaf-file-name="fr_FR.json" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.67395264" vertical-offset="140" max-vertical-offset="2085">
-              <caret line="689" column="36" selection-start-line="689" selection-start-column="36" selection-end-line="689" selection-end-column="36" />
+            <state vertical-scroll-proportion="-16.625" vertical-offset="936" max-vertical-offset="5220">
+              <caret line="753" column="65" selection-start-line="753" selection-start-column="65" selection-end-line="753" selection-end-column="65" />
               <folding>
                 <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
@@ -245,6 +235,7 @@
                 <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#exceptions#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="e#9259#9358#0" expanded="false" />
                 <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
@@ -265,13 +256,18 @@
                 <element signature="n#!!block;n#ti_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
                 <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-                <element signature="n#!!block;n#action_report#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#403#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Language.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-14.125" vertical-offset="1281" max-vertical-offset="3960">
+              <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -289,12 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/private/views/components/survey_read2.html" />
-        <option value="$PROJECT_DIR$/private/controller/survey/survey_show.php" />
-        <option value="$PROJECT_DIR$/private/views/pages/admin_survey_show.html" />
-        <option value="$PROJECT_DIR$/public/js/student_list.js" />
-        <option value="$PROJECT_DIR$/private/views/pages/admin_surveyList.html" />
-        <option value="$PROJECT_DIR$/private/views/components/survey_list_element.html" />
         <option value="$PROJECT_DIR$/public/js/SurveyList.js" />
         <option value="$PROJECT_DIR$/public/js/UserList.js" />
         <option value="$PROJECT_DIR$/private/views/pages/admin_userList.html" />
@@ -309,7 +299,6 @@
         <option value="$PROJECT_DIR$/private/views/components/survey_read3.html" />
         <option value="$PROJECT_DIR$/private/library/app/User.php" />
         <option value="$PROJECT_DIR$/private/views/pages/te_see_survey.html" />
-        <option value="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
         <option value="$PROJECT_DIR$/private/views/components/survey_answer.html" />
         <option value="$PROJECT_DIR$/public/js/action_report.js" />
         <option value="$PROJECT_DIR$/private/views/components/answer_survey2.html" />
@@ -329,17 +318,24 @@
         <option value="$PROJECT_DIR$/private/library/app/Notifications.php" />
         <option value="$PROJECT_DIR$/private/views/pages/ti_studentList.html" />
         <option value="$PROJECT_DIR$/private/views/pages/te_studentList.html" />
-        <option value="$PROJECT_DIR$/private/parameters/app/rights.json" />
         <option value="$PROJECT_DIR$/private/views/pages/ti_see_survey.html" />
         <option value="$PROJECT_DIR$/private/controller/see_survey.php" />
         <option value="$PROJECT_DIR$/private/controller/error/404.php" />
         <option value="$PROJECT_DIR$/private/views/pages/404.html" />
         <option value="$PROJECT_DIR$/private/controller/error/500.php" />
         <option value="$PROJECT_DIR$/private/views/pages/500.html" />
-        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
         <option value="$PROJECT_DIR$/private/controller/error/403.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/.htaccess" />
+        <option value="$PROJECT_DIR$/private/parameters/app/rights.json" />
+        <option value="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
+        <option value="$PROJECT_DIR$/private/library/app/Log.php" />
+        <option value="$PROJECT_DIR$/private/library/general/Language.php" />
+        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
+        <option value="$PROJECT_DIR$/private/views/components/user_card.html" />
+        <option value="$PROJECT_DIR$/private/controller/profile.php" />
+        <option value="$PROJECT_DIR$/private/views/pages/profile.html" />
+        <option value="$PROJECT_DIR$/public/js/profile.js" />
       </list>
     </option>
   </component>
@@ -1203,104 +1199,10 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/private/library/app/User.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.166667" vertical-offset="7865" max-vertical-offset="11310">
-          <caret line="548" column="55" selection-start-line="548" selection-start-column="55" selection-end-line="548" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/admin_survey_read.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.46279493" vertical-offset="480" max-vertical-offset="1125">
-          <caret line="15" column="20" selection-start-line="15" selection-start-column="20" selection-end-line="21" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/action_report.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.3979592" vertical-offset="1470" max-vertical-offset="2505">
-          <caret line="4" column="4" selection-start-line="4" selection-start-column="4" selection-end-line="145" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/config.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="141" max-vertical-offset="705">
-          <caret line="43" column="4" selection-start-line="43" selection-start-column="4" selection-end-line="43" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/components/answer_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="255">
-          <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/admin_create_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1305">
-          <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="82" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/components/survey_read2.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="225">
-          <caret line="5" column="12" selection-start-line="5" selection-start-column="12" selection-end-line="5" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/admin_surveyList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="270" max-vertical-offset="540">
-          <caret line="18" column="50" selection-start-line="18" selection-start-column="50" selection-end-line="18" selection-end-column="50" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/components/survey_list_element.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="75" max-vertical-offset="180">
-          <caret line="5" column="236" selection-start-line="5" selection-start-column="236" selection-end-line="5" selection-end-column="236" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/dashboard/admin_dashboard.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="975" max-vertical-offset="1350">
-          <caret line="65" column="32" selection-start-line="65" selection-start-column="32" selection-end-line="65" selection-end-column="60" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/create_account.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="291" max-vertical-offset="900">
           <caret line="46" column="23" selection-start-line="35" selection-start-column="20" selection-end-line="46" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/students/student_score.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.051282" vertical-offset="0" max-vertical-offset="1020">
-          <caret line="46" column="1" selection-start-line="9" selection-start-column="0" selection-end-line="46" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/install.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.19704433" vertical-offset="30" max-vertical-offset="2250">
-          <caret line="10" column="8" selection-start-line="10" selection-start-column="8" selection-end-line="14" selection-end-column="68" />
           <folding />
         </state>
       </provider>
@@ -1453,30 +1355,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/student_list.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="3558" max-vertical-offset="6375">
-          <caret line="405" column="27" selection-start-line="384" selection-start-column="20" selection-end-line="405" selection-end-column="27" />
-          <folding>
-            <element signature="e#377#6699#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/students/student_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.33697632" vertical-offset="640" max-vertical-offset="1575">
-          <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="104" selection-end-column="13" />
-          <folding>
-            <element signature="e#287#791#0#PHP" expanded="false" />
-            <element signature="e#800#1580#0#PHP" expanded="false" />
-            <element signature="e#1589#2082#0#PHP" expanded="false" />
-            <element signature="e#2091#2581#0#PHP" expanded="false" />
-            <element signature="e#5344#6233#0#PHP" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/views/pages/admin_studentList.html">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="13.375" vertical-offset="1896" max-vertical-offset="3360">
@@ -1498,17 +1376,6 @@
         <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
           <caret line="0" column="33" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="33" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/student_list_te.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1305">
-          <caret line="193" column="48" selection-start-line="193" selection-start-column="48" selection-end-line="193" selection-end-column="48" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-            <element signature="e#165#6495#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1547,14 +1414,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="54" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/controller/student_list.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.625" vertical-offset="1500" max-vertical-offset="2145">
@@ -1573,7 +1432,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/private/views/pages/ti_see_survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.47972587" vertical-offset="0" max-vertical-offset="1751">
+        <state vertical-scroll-proportion="-35.0" vertical-offset="0" max-vertical-offset="1080">
           <caret line="56" column="51" selection-start-line="56" selection-start-column="51" selection-end-line="56" selection-end-column="51" />
           <folding />
         </state>
@@ -1595,28 +1454,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/login.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.08196721" vertical-offset="0" max-vertical-offset="555">
-          <caret line="8" column="0" selection-start-line="8" selection-start-column="0" selection-end-line="35" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.375" vertical-offset="2526" max-vertical-offset="3750">
-          <caret line="188" column="131" selection-start-line="188" selection-start-column="131" selection-end-line="188" selection-end-column="142" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/controller/error/500.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="285">
           <caret line="9" column="58" selection-start-line="9" selection-start-column="58" selection-end-line="9" selection-end-column="58" />
           <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
+            <element signature="e#6#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1626,7 +1469,7 @@
         <state vertical-scroll-proportion="-5.625" vertical-offset="0" max-vertical-offset="300">
           <caret line="9" column="0" selection-start-line="9" selection-start-column="0" selection-end-line="14" selection-end-column="15" />
           <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
+            <element signature="e#6#94#0#PHP" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1647,26 +1490,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/404.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="390">
-          <caret line="12" column="109" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="109" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/controller/error/403.php">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.13345195" vertical-offset="0" max-vertical-offset="562">
           <caret line="10" column="58" selection-start-line="10" selection-start-column="58" selection-end-line="10" selection-end-column="58" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/index.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="780">
-          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
           <folding />
         </state>
       </provider>
@@ -1679,10 +1506,151 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/app/Log.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.125" vertical-offset="0" max-vertical-offset="4665">
+          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/login.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5191257" vertical-offset="0" max-vertical-offset="555">
+          <caret line="24" column="0" selection-start-line="24" selection-start-column="0" selection-end-line="35" selection-end-column="42" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/students/student_score.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.27935943" vertical-offset="458" max-vertical-offset="1020">
+          <caret line="46" column="1" selection-start-line="9" selection-start-column="0" selection-end-line="46" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/404.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="390">
+          <caret line="12" column="109" selection-start-line="12" selection-start-column="19" selection-end-line="12" selection-end-column="109" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.125" vertical-offset="0" max-vertical-offset="780">
+          <caret line="10" column="78" selection-start-line="10" selection-start-column="78" selection-end-line="10" selection-end-column="78" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/install.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5080552" vertical-offset="1742" max-vertical-offset="3480">
+          <caret line="175" column="45" selection-start-line="173" selection-start-column="37" selection-end-line="175" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21857923" vertical-offset="0" max-vertical-offset="549">
+          <caret line="8" column="18" selection-start-line="8" selection-start-column="18" selection-end-line="8" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/page_datas.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-20.291666" vertical-offset="1178" max-vertical-offset="1815">
+          <caret line="111" column="28" selection-start-line="111" selection-start-column="28" selection-end-line="111" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/general/Language.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-14.125" vertical-offset="1281" max-vertical-offset="3960">
+          <caret line="119" column="43" selection-start-line="119" selection-start-column="43" selection-end-line="119" selection-end-column="43" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/student_list_te.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.84641635" vertical-offset="719" max-vertical-offset="1305">
+          <caret line="226" column="3" selection-start-line="5" selection-start-column="0" selection-end-line="226" selection-end-column="3" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
+            <element signature="e#165#6495#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/install.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-1.4317406" vertical-offset="1019" max-vertical-offset="1965">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding>
+            <element signature="e#511#1350#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/student_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="6.5968585" vertical-offset="150" max-vertical-offset="6375">
+          <caret line="405" column="27" selection-start-line="384" selection-start-column="20" selection-end-line="405" selection-end-column="27" />
+          <folding>
+            <element signature="e#377#6699#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/add_student.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.59016395" vertical-offset="81" max-vertical-offset="1290">
+          <caret line="27" column="110" selection-start-line="27" selection-start-column="97" selection-end-line="27" selection-end-column="110" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/students/student_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.08196721" vertical-offset="780" max-vertical-offset="1575">
+          <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="104" selection-end-column="13" />
+          <folding>
+            <element signature="e#287#791#0#PHP" expanded="false" />
+            <element signature="e#800#1580#0#PHP" expanded="false" />
+            <element signature="e#1589#2082#0#PHP" expanded="false" />
+            <element signature="e#2091#2581#0#PHP" expanded="false" />
+            <element signature="e#5344#6233#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/login.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="165" max-vertical-offset="795">
+          <caret line="42" column="17" selection-start-line="25" selection-start-column="16" selection-end-line="42" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/install.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-13.583333" vertical-offset="334" max-vertical-offset="1395">
+          <caret line="49" column="314" selection-start-line="49" selection-start-column="16" selection-end-line="49" selection-end-column="314" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.67395264" vertical-offset="140" max-vertical-offset="2085">
-          <caret line="689" column="36" selection-start-line="689" selection-start-column="36" selection-end-line="689" selection-end-column="36" />
+        <state vertical-scroll-proportion="-16.625" vertical-offset="936" max-vertical-offset="5220">
+          <caret line="753" column="65" selection-start-line="753" selection-start-column="65" selection-end-line="753" selection-end-column="65" />
           <folding>
             <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
@@ -1691,6 +1659,7 @@
             <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#exceptions#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="e#9259#9358#0" expanded="false" />
             <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
@@ -1711,12 +1680,43 @@
             <element signature="n#!!block;n#ti_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
             <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#action_report#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#403#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/user_card.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="420">
+          <caret line="10" column="77" selection-start-line="10" selection-start-column="77" selection-end-line="10" selection-end-column="90" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/profile.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.875" vertical-offset="261" max-vertical-offset="1215">
+          <caret line="30" column="27" selection-start-line="30" selection-start-column="14" selection-end-line="30" selection-end-column="27" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/profile.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.094936706" vertical-offset="0" max-vertical-offset="1740">
+          <caret line="11" column="48" selection-start-line="11" selection-start-column="40" selection-end-line="11" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/profile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.2542662" vertical-offset="659" max-vertical-offset="1590">
+          <caret line="36" column="25" selection-start-line="36" selection-start-column="25" selection-end-line="36" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#49#0" expanded="false" />
           </folding>
         </state>
       </provider>

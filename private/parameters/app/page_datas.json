@@ -106,5 +106,11 @@
         "name" : "Répondre au questionnaire",
         "logo" : "",
         "inNavigation" : false
+    },
+    {
+        "id" : "profile",
+        "name" : "Mon Compte",
+        "logo" : "",
+        "inNavigation" : false
     }
 ]

@@ -18,7 +18,7 @@ class Log extends \mainClass{
     static $id = 'id';
     static $lang = 'language';
     static $logout_marker = 'logout';
-    static $account_marker = 'account';
+    static $account_marker = 'profile';
     static $cookie_duration = 31104000; //1 an
     static $get_country_api_link = 'http://getcitydetails.geobytes.com/GetCityDetails?fqcn=';
     static $min_pwd_size = 8;

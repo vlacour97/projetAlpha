@@ -107,6 +107,20 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les noms des type d'utilisateurs
+     * @param string $lang
+     * @return mixed
+     */
+    static function get_user_type_text($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["user_type"];
+    }
+
+    /**
      * Récupére les textes d'une page
      * @param string $page_name
      * @return mixed
