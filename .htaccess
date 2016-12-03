@@ -1,0 +1,3 @@
+ErrorDocument 403 /index.php?nav=error/403
+ErrorDocument 404 /index.php?nav=error/404
+ErrorDocument 500 /index.php?nav=error/500

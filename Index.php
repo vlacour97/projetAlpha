@@ -8,13 +8,13 @@
 
 include "private/config.php";
 
-$global_pages = array('forbiden_password','active_user');
+$global_pages = array('forbiden_password','active_user','error/404','error/403','error/500');
 /*
 //Si l'API n'est pas installé
 if(!\app\Install::APP_is_installed()){
     include "private/controller/install.php";
     die();
-}
+}*/
 
 //Si déconnexion demandé
 if($_GET[\app\Navigation::$navigation_marker] == \app\Log::$logout_marker){
@@ -29,6 +29,9 @@ if(in_array($_GET[\app\Navigation::$navigation_marker],$global_pages)){
     die();
 }
 
+
+
+/*
 //Si l'utilisateur n'est pas connecté
 if(!\app\Log::isLogged()){
 
@@ -40,10 +43,9 @@ if(!\app\Log::isLogged()){
 
     include "private/controller/login.php";
     die();
-}
+}*/
 
-\app\Log::set_stat();*/
-
+//\app\Log::set_stat();
 \app\Navigation::get_pages();
 
 

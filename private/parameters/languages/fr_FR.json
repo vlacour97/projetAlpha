@@ -672,6 +672,24 @@
                 "refreshSuccess" : "Relance envoyé auprés du tuteur entreprise"
             }
         },
+        "404": {
+            "expression": "OOPS !",
+            "errorname": "ERREUR 404 :",
+            "errordef": "La page que vous cherchez n'existe pas",
+            "homebutton" : "Retourner à la page d'accueil"
+        },
+        "500": {
+            "title": " OOPS ! ",
+            "bold": "500 Internal Server Error",
+            "text": " Erreur lors du lancement de l'application ",
+            "button": "Retourner à la page d'accueil"
+        },
+        "403": {
+            "title": " OOPS ! ",
+            "bold": "403 Forbidden",
+            "text": " Accès refusé ! ",
+            "button": "Retourner à la page d'accueil"
+        },
 
         "compose": {
             "way": {
@@ -773,11 +791,6 @@
             }
         },
 
-        "404": {
-            "expression": "OOPS !",
-            "errorname": "ERREUR 404 :",
-            "errordef": "La page que vous cherchez n'existe pas"
-        },
         "email": {
             "chemin1": "Général",
             "name": "Messages",
@@ -828,12 +841,6 @@
             "delete": "Supprimer",
             "cancel": "Annuler",
             "post": "Publier"
-        },
-        "500": {
-            "title": " OOPS ! ",
-            "bold": "500 Internal Server Error",
-            "text": " Erreur lors du lancement de l'application ",
-            "button": "Page d'acceuil"
         },
 
         "action_report": {
