@@ -688,6 +688,18 @@
                 "tuteur": "Tuteur IUT"
             }
         },
+        "te_see_survey": {
+            "chemin1": "Gestion",
+            "name": "Questionnaire",
+            "tab": {
+                "tabstudent": "Etudiant",
+                "tabTI": "Tuteur IUT",
+                "phone": "tel: ",
+                "mail": "mail"
+            },
+            "numQuestion": "Numéro Question",
+            "cancel": "Retour"
+        },
 
         "compose": {
             "way": {
@@ -812,19 +824,6 @@
             },
             "btnsave": "Enregistrer",
             "btnsend": "Envoyer"
-        },
-
-        "survey_part2_read": {
-            "chemin1": "Gestion",
-            "name": "Questionnaire",
-            "tab": {
-                "tabstudent": "Etudiant",
-                "tabTI": "Tuteur IUT",
-                "phone": "tel: ",
-                "mail": "mail"
-            },
-            "numQuestion": "Numéro Question",
-            "cancel": "Retour"
         }
     },
     "components" : {

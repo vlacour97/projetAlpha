@@ -545,8 +545,8 @@ class User extends \mainClass{
      * @return array
      * @throws \Exception
      */
-    static function get_all_students(){
-        $datas = PDOQueries::show_all_students();
+    static function get_all_students($id_user = null){
+        $datas = PDOQueries::show_all_students($id_user);
         $response = array();
         foreach($datas as $content)
         {

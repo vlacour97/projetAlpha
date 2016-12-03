@@ -28,8 +28,13 @@ class PDOQueries extends \mainClass{
         return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_action_report')->fetchAll();
     }
 
-    static function show_all_students(){
-        return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_all_students')->fetchAll();
+    static function show_all_students($id_user = null){
+        if(is_null($id_user))
+            return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_all_students')->fetchAll();
+        else
+            if(is_int($id_user))
+                return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_all_students where ID_TE = '.$id_user.' OR ID_TI = '.$id_user)->fetchAll();
+        return array();
     }
 
     static function show_all_users(){

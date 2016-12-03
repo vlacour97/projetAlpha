@@ -12,7 +12,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     switch($_GET['action']){
         case 'get_table_datas':
-            $students = \app\User::get_all_students();
+            $students = \app\User::get_all_students(\app\Log::get_id());
             $data = array();
 
             foreach($students as $student){
