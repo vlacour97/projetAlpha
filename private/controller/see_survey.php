@@ -10,7 +10,7 @@ $html = new \general\HTML();
 $gabarit = \general\Language::translate_gabarit('pages/te_see_survey');
 $id = \general\crypt::decrypt($_GET['id']);
 
-if(!\general\PDOQueries::isset_student($id))
+if(!\general\PDOQueries::isset_student($id) || !\general\PDOQueries::have_answered($id))
     header('Location: index.php');
 
 $script_vendor = array(
@@ -25,14 +25,10 @@ $script_vendor = array(
     'messenger/build/js/messenger-theme-flat.js',
     'bootstrap-sass/vendor/assets/javascripts/bootstrap/tab.js'
 );
-$script = "student_list_te.js";
 
 $survey_datas = \app\Answer::get_answers($id);
 $survey_gabarit = \general\Language::translate_gabarit('components/survey_read3');
 $survey = "";
-
-//echo '<pre>';
-//var_dump($survey_datas);
 
 foreach($survey_datas->questions as $key=>$question){
     $reponses = "";
@@ -54,7 +50,7 @@ $student = \app\User::get_student($id);
 $ti = \app\User::get_user($student->ID_TI);
 $te = \app\User::get_user($student->ID_TE);
 
-$replace = array('{survey_datas}','{mark}','{student-id}','{student-fname}','{student-name}','{student-phone}','{student-email}','{ti-fname}','{ti-name}','{ti-phone}','{ti-email}','{te-fname}','{te-name}','{te-phone}','{te-email}');
+$replace = array('{survey_datas}','{student-id}','{student-fname}','{student-name}','{student-phone}','{student-email}','{ti-fname}','{ti-name}','{ti-phone}','{ti-email}','{te-fname}','{te-name}','{te-phone}','{te-email}');
 $by = array($survey,\general\crypt::encrypt($student->ID),$student->fname,$student->name,$student->phone,$student->email,$ti->fname,$ti->name,$ti->phone,$ti->email,$te->fname,$te->name,$te->phone,$te->email);
 $gabarit = str_replace($replace,$by,$gabarit);
 

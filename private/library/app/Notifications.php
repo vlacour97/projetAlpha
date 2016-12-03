@@ -9,6 +9,7 @@
 namespace app;
 
 
+use general\crypt;
 use general\Date;
 use general\Language;
 use general\PDOQueries;
@@ -173,7 +174,7 @@ class Notifications extends \mainClass{
         if(!($id_user = PDOQueries::get_TI_ID_of_student($id_student)) > 0)
             throw new \Exception('Erreur : La récupération des données a échoué',2);
         $marker = '{complete_survey}';
-        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.$id_student;
+        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);
     }
 

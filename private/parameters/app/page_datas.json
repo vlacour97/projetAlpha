@@ -100,5 +100,11 @@
         "name" : "Consultation du questionnaire",
         "logo" : "",
         "inNavigation" : false
+    },
+    {
+        "id" : "answer_survey",
+        "name" : "Répondre au questionnaire",
+        "logo" : "",
+        "inNavigation" : false
     }
 ]

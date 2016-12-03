@@ -18,7 +18,7 @@ class mail extends \mainClass{
     private static  $img_path = "/public/img/mails/";
     private static  $activation_page = ""; //TODO Completer le chemin
     private static  $message_page= ""; //TODO Completer le chemin
-    private static  $answer_page= ""; //TODO Completer le chemin
+    private static  $answer_page= "?nav=student_list";
     private static  $forgotten_password_page= "forbiden_password";
     private static  $get_id = "id";
     private static  $get_id_message = "id_message";

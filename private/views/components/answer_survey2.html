@@ -1,0 +1,21 @@
+<tr>
+    <td class="text-center"> <h4 class="fw-semi-bold mt-n">{id-survey}-</h4> </td>
+    <td class="text-center">
+        <h3 class="fw-semi-bold">{survey-lbl}</h3>
+        <form >
+            {responses}
+            <div class="commentary ">
+                <button type="button" class="addComment btn btn-link {not-hidden}">{addComment}</button>
+                <div class="{hidden}">
+                    <div class="col-md-12">
+                        <textarea rows="4" class="col-md-6 col-md-offset-3" name="comment{ID}" placeholder="{textarea_descript}" style="resize:vertical;">{comment}</textarea>
+                    </div>
+                    <div class="col-md-12">
+                        <button type="button" class="closeComment btn btn-link"> <i class="fa fa-times"></i></button>
+                    </div>
+                </div>
+            </div>
+        </form>
+    </td>
+    <td></td>
+</tr>

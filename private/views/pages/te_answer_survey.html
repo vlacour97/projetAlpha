@@ -5,10 +5,7 @@
             <li>{chemin1}</li>
             <li class="active">{name}</li>
         </ol>
-
-
-            <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
-
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
 
         <section class="row bg-white">
             <div class="col-md-12">
@@ -37,7 +34,8 @@
                 </div>
             </div>
 
-            <table class="table unbordered-first-line">
+
+            <table class="table unbordered-first-line" data-id="{ID_Student}">
                 <colgroup>
                     <col class="col-md-2">
                     <col class="col-md-8">
@@ -45,7 +43,7 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <td class="text-center"> <h5> <span class="fw-semi-bold"> {numQuestion} </span></h5></td>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold">{nb-question}</span></h5></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -54,13 +52,45 @@
                     <td></td>
                     <td>
                         <div class="col-md-12 text-center mt-n mb-lg">
-                            <a href="?nav=student_list" type="button" class="btn btn-default">{cancel}</a>
+                            <button type="button" class="btn btn-info btnSave">{btnsave}</button>
+                            <button type="button" class="btn btn-primary btnSend">{btnsend}</button>
                         </div>
                     </td>
                     <td></td>
                 </tr>
                 </tbody>
             </table>
+
+
         </section>
     </main>
 </div>
+
+
+<div class="modal fade" id="sendConfirm" tabindex="-1" role="dialog" aria-labelledby="sendConfirm">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="TIModalLabel">{modal-send/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h3> <span class="fw-semi-bold">{modal-send/description}</span></h3>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+                <button type="button" class="btn btn-success" id="sendSurvey"><i class="fa fa-check" aria-hidden="true"></i> {modal-send/btnSend}</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="fa fa-times" aria-hidden="true"></i> {modal-send/btnAbort}</button>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var message = new Object();
+    message.saveSuccess = "{messages/saveSuccess}";
+    message.completeSurvey = "{messages/completeSurvey}";
+    message.returnPath = "{returnPath}";
+</script>

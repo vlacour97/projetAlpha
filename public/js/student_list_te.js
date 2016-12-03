@@ -126,7 +126,7 @@ $(function(){
         } );
 
         var unsortableColumns = [];
-        $('#students-table').find('thead th').each(function(){
+        $('#students-table-te').find('thead th').each(function(){
             if ($(this).hasClass( 'no-sort')){
                 unsortableColumns.push({"bSortable": false});
             } else {
@@ -134,7 +134,7 @@ $(function(){
             }
         });
 
-        table = $("#students-table").DataTable({
+        table = $("#students-table-te").DataTable({
             "sDom": "<'row'<'col-md-6 hidden-xs'l><'col-md-6'f>r>t<'row'<'col-md-6'i><'col-md-6'p>>",
             "oLanguage": {
                 "sLengthMenu": "_MENU_",
@@ -155,8 +155,8 @@ $(function(){
 
     function pageLoad(){
         $('.widget').widgster();
-        initDataTables();
     }
+    initDataTables();
 
     pageLoad();
     SingApp.onPageLoad(pageLoad);

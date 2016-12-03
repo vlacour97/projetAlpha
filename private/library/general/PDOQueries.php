@@ -97,6 +97,8 @@ class PDOQueries extends \mainClass{
     static function add_answer($id_student,$id_survey,$id_question,$id_answer,$comments){
         if(!is_int($id_student) || !is_int($id_survey) || !is_int($id_question) || !is_int($id_answer) || !is_string($comments))
             return false;
+
+        self::$PDO->prepare('DELETE FROM '.self::$prefix.'answers WHERE ID_student = :id_student AND id_question = :id_question AND id_survey = :id_survey')->execute(array(':id_student'=>$id_student,':id_question'=>$id_question,':id_survey'=>$id_survey));
         return self::$PDO->prepare('CALL '.self::$prefix.'add_answer(:id_student,:id_survey,:id_question,:id_answer,:comments)')->execute(array(':id_student'=>$id_student,':id_survey'=>$id_survey,':id_question' => $id_question,':id_answer' => $id_answer,':comments' => $comments));
     }
 

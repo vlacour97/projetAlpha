@@ -9,7 +9,7 @@
 include "private/config.php";
 
 $global_pages = array('forbiden_password','active_user');
-
+/*
 //Si l'API n'est pas installé
 if(!\app\Install::APP_is_installed()){
     include "private/controller/install.php";
@@ -21,7 +21,6 @@ if($_GET[\app\Navigation::$navigation_marker] == \app\Log::$logout_marker){
     \app\Log::logout();
     header('Location: index.php');
 }
-
 
 
 //Si une page globale est demandé
@@ -43,7 +42,7 @@ if(!\app\Log::isLogged()){
     die();
 }
 
-\app\Log::set_stat();
+\app\Log::set_stat();*/
 
 \app\Navigation::get_pages();
 

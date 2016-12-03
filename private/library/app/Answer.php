@@ -18,8 +18,8 @@ use general\PDOQueries;
 class Answer extends \mainClass{
 
     static private $survey_path = "/private/parameters/surveys/";
-    static $survey_marker = "s";
-    static $survey_id_page = "answer";
+    static $survey_marker = "id";
+    static $survey_id_page = "see_survey";
 
     /**
      * Récupére les questions et les réponses d'un questionnaire (cf get_survey) et retourner cela sous forme de tableau
@@ -99,6 +99,7 @@ class Answer extends \mainClass{
             throw new \Exception('Erreur sur le type de variable',1);
         foreach($answer as $key=>$content)
             PDOQueries::add_answer($id_student,$id_survey,$key,$content['response'],$content['comment']);
+
         if($publish)
         {
             if(!self::survey_is_completed($answer,$id_survey))

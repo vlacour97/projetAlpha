@@ -693,12 +693,31 @@
             "name": "Questionnaire",
             "tab": {
                 "tabstudent": "Etudiant",
-                "tabTI": "Tuteur IUT",
-                "phone": "tel: ",
-                "mail": "mail"
+                "tabTI": "Tuteur IUT"
             },
             "numQuestion": "Numéro Question",
             "cancel": "Retour"
+        },
+        "te_answer_survey": {
+            "chemin1": "Gestion",
+            "name": "Questionnaire",
+            "tab": {
+                "tabstudent": "Etudiant",
+                "tabTI": "Tuteur IUT"
+            },
+            "modal-send": {
+                "title" : "Confirmation",
+                "description" : "Êtes-vous sûre de vouloir envoyer ce question au tuteur IUT ?",
+                "btnSend" : "Oui",
+                "btnAbort" : "Non"
+            },
+            "messages" : {
+                "saveSuccess" : "Questionnaire sauvegardé avec succés !",
+                "completeSurvey" : "Veuillez remplir entiérement votre questionnaire pour l'envoyer au tuteur IUT"
+            },
+            "nb-question" : "Numéro des Questions",
+            "btnsave": "Enregistrer",
+            "btnsend": "Envoyer"
         },
 
         "compose": {
@@ -810,21 +829,9 @@
                 "content": "Contenu",
                 "date": "Date"
             }
-        },
-
-        "survey_part2_edit": {
-            "chemin1": "Gestion",
-            "name": "Questionnaire",
-            "btninfo": "info",
-            "tab": {
-                "tabstudent": "Etudiant",
-                "tabTI": "Tuteur IUT",
-                "phone": "tel: ",
-                "mail": "mail"
-            },
-            "btnsave": "Enregistrer",
-            "btnsend": "Envoyer"
         }
+
+
     },
     "components" : {
         "sidebar" : {
@@ -901,6 +908,10 @@
         "parts" : {
             "see-survey" : "Voir le questionnaire",
             "answer-survey" : "Répondre au questionnaire"
+        },
+        "answer_survey2" : {
+            "addComment" : "Cliquez pour ajouter un commentaire",
+            "textarea_descript" : "Ecrivez votre commentaire en quelques lignes..."
         }
 
     }
