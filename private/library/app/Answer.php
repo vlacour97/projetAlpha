@@ -20,6 +20,7 @@ class Answer extends \mainClass{
     static private $survey_path = "/private/parameters/surveys/";
     static $survey_marker = "id";
     static $survey_id_page = "see_survey";
+    static $survey_complete_id_page = "answer_survey";
 
     /**
      * Récupére les questions et les réponses d'un questionnaire (cf get_survey) et retourner cela sous forme de tableau

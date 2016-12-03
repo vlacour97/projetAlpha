@@ -2,21 +2,18 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9f5940ff-468e-47e5-80cc-96221cbd4b33" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/js/answer_survey.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/controller/answer_survey.php" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/answer_survey2.html" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/Index.php" afterPath="$PROJECT_DIR$/index.php" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/private/views/pages/TE/survey_part2_edit.html" afterPath="$PROJECT_DIR$/private/views/pages/te_answer_survey.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/parts/refresh_te.html" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/private/views/components/user_infos.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/private/views/pages/TI/dashboard.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/private/views/pages/TI/survey_part1.html" afterPath="$PROJECT_DIR$/private/views/pages/ti_studentList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Answer.php" afterPath="$PROJECT_DIR$/private/library/app/Answer.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/app/Notifications.php" afterPath="$PROJECT_DIR$/private/library/app/Notifications.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/PDOQueries.php" afterPath="$PROJECT_DIR$/private/library/general/PDOQueries.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/components/parts/answer_survey.html" afterPath="$PROJECT_DIR$/private/views/components/parts/answer_survey.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" afterPath="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/library/general/mail.php" afterPath="$PROJECT_DIR$/private/library/general/mail.php" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/page_datas.json" afterPath="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/parameters/app/rights.json" afterPath="$PROJECT_DIR$/private/parameters/app/rights.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/controller/see_survey.php" afterPath="$PROJECT_DIR$/private/controller/see_survey.php" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/components/parts/see_survey.html" afterPath="$PROJECT_DIR$/private/views/components/parts/see_survey.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/controller/student_list.php" afterPath="$PROJECT_DIR$/private/controller/student_list.php" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/js/student_list_te.js" afterPath="$PROJECT_DIR$/public/js/student_list_te.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/pages/te_see_survey.html" afterPath="$PROJECT_DIR$/private/views/pages/te_see_survey.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/private/views/pages/te_studentList.html" afterPath="$PROJECT_DIR$/private/views/pages/te_studentList.html" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -42,26 +39,6 @@
       <content type="file-editors">
         <state>
           <leaf>
-            <file leaf-file-name="answer_survey.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/private/views/components/answer_survey.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="45" max-vertical-offset="255">
-                    <caret line="3" column="67" selection-start-line="3" selection-start-column="67" selection-end-line="3" selection-end-column="85" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
-            <file leaf-file-name="admin_create_survey.html" pinned="false" current-in-tab="false">
-              <entry file="file://$PROJECT_DIR$/private/views/pages/admin_create_survey.html">
-                <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.0" vertical-offset="1050" max-vertical-offset="1305">
-                    <caret line="70" column="62" selection-start-line="70" selection-start-column="62" selection-end-line="70" selection-end-column="82" />
-                    <folding />
-                  </state>
-                </provider>
-              </entry>
-            </file>
             <file leaf-file-name="admin_survey_show.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/private/views/pages/admin_survey_show.html">
                 <provider selected="true" editor-type-id="text-editor">
@@ -124,11 +101,11 @@
                 </provider>
               </entry>
             </file>
-            <file leaf-file-name="te_answer_survey.html" pinned="false" current-in-tab="true">
+            <file leaf-file-name="te_answer_survey.html" pinned="false" current-in-tab="false">
               <entry file="file://$PROJECT_DIR$/private/views/pages/te_answer_survey.html">
                 <provider selected="true" editor-type-id="text-editor">
-                  <state vertical-scroll-proportion="0.70771" vertical-offset="0" max-vertical-offset="1738">
-                    <caret line="82" column="104" selection-start-line="82" selection-start-column="104" selection-end-line="82" selection-end-column="104" />
+                  <state vertical-scroll-proportion="-22.2" vertical-offset="0" max-vertical-offset="1515">
+                    <caret line="74" column="59" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="59" />
                     <folding />
                   </state>
                 </provider>
@@ -139,6 +116,26 @@
                 <provider selected="true" editor-type-id="text-editor">
                   <state vertical-scroll-proportion="-6.25" vertical-offset="0" max-vertical-offset="390">
                     <caret line="10" column="92" selection-start-line="10" selection-start-column="92" selection-end-line="10" selection-end-column="92" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="ti_studentList.html" pinned="false" current-in-tab="false">
+              <entry file="file://$PROJECT_DIR$/private/views/pages/ti_studentList.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="885">
+                    <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="53" selection-end-column="9" />
+                    <folding />
+                  </state>
+                </provider>
+              </entry>
+            </file>
+            <file leaf-file-name="te_studentList.html" pinned="false" current-in-tab="true">
+              <entry file="file://$PROJECT_DIR$/private/views/pages/te_studentList.html">
+                <provider selected="true" editor-type-id="text-editor">
+                  <state vertical-scroll-proportion="0.50542545" vertical-offset="0" max-vertical-offset="1751">
+                    <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
                     <folding />
                   </state>
                 </provider>
@@ -155,43 +152,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="answer_survey.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/controller/answer_survey.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="540" max-vertical-offset="1710">
-              <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="86" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="see_survey.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/controller/see_survey.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="990">
-              <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="mail.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.38251367" vertical-offset="0" max-vertical-offset="7515">
-              <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="student_list.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/controller/student_list.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="7.5" vertical-offset="495" max-vertical-offset="1080">
-              <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+            <state vertical-scroll-proportion="-0.625" vertical-offset="1500" max-vertical-offset="2145">
+              <caret line="106" column="76" selection-start-line="106" selection-start-column="76" selection-end-line="106" selection-end-column="76" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Notifications.php" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/library/app/Notifications.php">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.625" vertical-offset="2151" max-vertical-offset="3045">
+              <caret line="162" column="96" selection-start-line="162" selection-start-column="96" selection-end-line="162" selection-end-column="96" />
               <folding />
             </state>
           </provider>
@@ -200,84 +175,22 @@
       <file leaf-file-name="Answer.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/library/app/Answer.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.2" vertical-offset="15" max-vertical-offset="8235">
-              <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+            <state vertical-scroll-proportion="-10.0" vertical-offset="15" max-vertical-offset="8250">
+              <caret line="22" column="35" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="35" />
               <folding>
                 <element signature="e#6#94#0#PHP" expanded="true" />
-                <marker date="1480786732000" expanded="true" signature="15264:15395" placeholder="..." />
+                <marker date="1480794775000" expanded="true" signature="15319:15450" placeholder="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Notifications.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/app/Notifications.php">
+      <file leaf-file-name="refresh_te.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/private/views/components/parts/refresh_te.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-7.5" vertical-offset="2385" max-vertical-offset="3090">
-              <caret line="176" column="146" selection-start-line="176" selection-start-column="146" selection-end-line="176" selection-end-column="146" />
-              <folding>
-                <element signature="e#113#131#0#PHP" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="PDOQueries.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.54" vertical-offset="14878" max-vertical-offset="21225">
-              <caret line="1007" column="79" selection-start-line="1007" selection-start-column="79" selection-end-line="1007" selection-end-column="79" />
-              <folding>
-                <element signature="e#6#94#0#PHP" expanded="true" />
-                <marker date="1480784216000" expanded="true" signature="491:540" placeholder="SELECT * FRO..self_prefixshow_action_report..." />
-                <marker date="1480784216000" expanded="true" signature="687:735" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-                <marker date="1480784216000" expanded="true" signature="839:926" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-                <marker date="1480784216000" expanded="true" signature="1054:1099" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
-                <marker date="1480784216000" expanded="true" signature="1202:1255" placeholder="SELECT * FRO..self_prefixshow_answered_students..." />
-                <marker date="1480784216000" expanded="true" signature="1357:1409" placeholder="SELECT * FRO..self_prefixshow_deleted_students..." />
-                <marker date="1480784216000" expanded="true" signature="1508:1557" placeholder="SELECT * FRO..self_prefixshow_deleted_users..." />
-                <marker date="1480784216000" expanded="true" signature="1661:1715" placeholder="SELECT * FRO..self_prefixshow_last_stats_by_user..." />
-                <marker date="1480784216000" expanded="true" signature="1810:1851" placeholder="SELECT * FRO..self_prefixshow_posts..." />
-                <marker date="1480784216000" expanded="true" signature="1945:1989" placeholder="SELECT * FRO..self_prefixshow_te_users..." />
-                <marker date="1480784216000" expanded="true" signature="2083:2127" placeholder="SELECT * FRO..self_prefixshow_ti_users..." />
-                <marker date="1480784216000" expanded="true" signature="2230:2283" placeholder="SELECT * FRO..self_prefixshow_unactivated_users..." />
-                <marker date="1480784216000" expanded="true" signature="3131:3256" placeholder="DELETE FROM ..." />
-                <marker date="1480784216000" expanded="true" signature="3137:3256" placeholder="SELECT count..site2_answers..." />
-                <marker date="1480784216000" expanded="true" signature="29496:29712" placeholder="SELECT COUNT..." />
-                <marker date="1480784216000" expanded="true" signature="29984:30123" placeholder="SELECT COUNT..self_prefixstats..." />
-                <marker date="1480784216000" expanded="true" signature="30379:30769" placeholder="SELECT (SELE..." />
-                <marker date="1480784216000" expanded="true" signature="30387:30477" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="30501:30618" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="30638:30751" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="31119:31638" placeholder="SELECT (SELE..." />
-                <marker date="1480784216000" expanded="true" signature="31127:31260" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="31284:31444" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="31464:31620" placeholder="SELECT count..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="35458:35495" placeholder="SELECT max(I..messages..." />
-                <marker date="1480784216000" expanded="true" signature="36039:36073" placeholder="SELECT max(I..posts..." />
-                <marker date="1480784216000" expanded="true" signature="40321:40704" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="41019:41245" placeholder="SELECT t1.*,..self_prefixposts..." />
-                <marker date="1480784216000" expanded="true" signature="41608:41886" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-                <marker date="1480784216000" expanded="true" signature="42282:42579" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-                <marker date="1480784216000" expanded="true" signature="42999:43296" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-                <marker date="1480784216000" expanded="true" signature="43674:43849" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
-                <marker date="1480784216000" expanded="true" signature="44270:44501" placeholder="SELECT * FRO..show_all_users..." />
-                <marker date="1480784216000" expanded="true" signature="44441:44487" placeholder="SELECT ID_TI..students..." />
-                <marker date="1480784216000" expanded="true" signature="44892:44948" placeholder="SELECT * FRO..self_prefixanswers..." />
-                <marker date="1480784216000" expanded="true" signature="45235:45413" placeholder="SELECT t1.*,..self_prefixposts_comments..." />
-                <marker date="1480784216000" expanded="true" signature="45715:46054" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="46398:46550" placeholder="SELECT t1.*,..self_prefixliked_post..." />
-                <marker date="1480784216000" expanded="true" signature="46844:47172" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="47525:47644" placeholder="SELECT * fro..self_prefixnotifications..." />
-                <marker date="1480784216000" expanded="true" signature="47915:48183" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="48561:48629" placeholder="SELECT * fro..self_prefixmessage_attachments..." />
-                <marker date="1480784216000" expanded="true" signature="48913:49081" placeholder="SELECT t1.*,..self_prefixposts..." />
-                <marker date="1480784216000" expanded="true" signature="49376:49439" placeholder="SELECT * fro..self_prefixposts_attachments..." />
-                <marker date="1480784216000" expanded="true" signature="49737:50044" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="50410:50718" placeholder="SELECT t1.*,..self_prefixmessages..." />
-                <marker date="1480784216000" expanded="true" signature="51712:51786" placeholder="SELECT * FRO..self_prefixstudents..." />
-                <marker date="1480784216000" expanded="true" signature="52054:52261" placeholder="SELECT ID,fn..." />
-              </folding>
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+              <caret line="0" column="33" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="33" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -285,8 +198,8 @@
       <file leaf-file-name="student_list_te.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/js/student_list_te.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-              <caret line="158" column="21" selection-start-line="158" selection-start-column="21" selection-end-line="158" selection-end-column="21" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1305">
+              <caret line="193" column="48" selection-start-line="193" selection-start-column="48" selection-end-line="193" selection-end-column="48" />
               <folding>
                 <element signature="e#0#49#0" expanded="false" />
                 <element signature="e#165#6495#0" expanded="false" />
@@ -295,12 +208,56 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="te_studentList.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/private/views/pages/te_studentList.html">
+      <file leaf-file-name="fr_FR.json" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="600">
-              <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-              <folding />
+            <state vertical-scroll-proportion="0.5355191" vertical-offset="231" max-vertical-offset="2355">
+              <caret line="618" column="14" selection-start-line="618" selection-start-column="14" selection-end-line="618" selection-end-column="14" />
+              <folding>
+                <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#csv_attributes#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#notifications#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#exceptions#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#forbPassword#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#forbPassword_part2#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#active_account#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#dashboard#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_studentScore#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_survey_read#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_create_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_survey_show#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_surveyList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#admin_userList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#te_see_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#te_answer_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#ti_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+                <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="student_list.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/js/student_list.js">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="3558" max-vertical-offset="6375">
+              <caret line="405" column="27" selection-start-line="384" selection-start-column="20" selection-end-line="405" selection-end-column="27" />
+              <folding>
+                <element signature="e#377#6699#0" expanded="false" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -308,7 +265,7 @@
       <file leaf-file-name="admin_studentList.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/private/views/pages/admin_studentList.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-64.375" vertical-offset="30" max-vertical-offset="3360">
+            <state vertical-scroll-proportion="13.375" vertical-offset="1896" max-vertical-offset="3360">
               <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
               <folding />
             </state>
@@ -328,9 +285,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/private/views/pages/admin_survey_read.html" />
-        <option value="$PROJECT_DIR$/public/css/main.css" />
-        <option value="$PROJECT_DIR$/private/controller/students/student_list.php" />
         <option value="$PROJECT_DIR$/private/parameters/app_config.json" />
         <option value="$PROJECT_DIR$/private/controller/students/student_score.php" />
         <option value="$PROJECT_DIR$/private/views/components/answer_survey.html" />
@@ -355,14 +309,10 @@
         <option value="$PROJECT_DIR$/private/parameters/languages/en_EN.json" />
         <option value="$PROJECT_DIR$/private/controller/home.php" />
         <option value="$PROJECT_DIR$/private/views/pages/dashboard/other_dashboard.html" />
-        <option value="$PROJECT_DIR$/private/views/components/parts/see_survey.html" />
-        <option value="$PROJECT_DIR$/private/views/components/parts/answer_survey.html" />
         <option value="$PROJECT_DIR$/private/views/components/survey_read3.html" />
         <option value="$PROJECT_DIR$/private/library/app/User.php" />
         <option value="$PROJECT_DIR$/private/views/pages/te_see_survey.html" />
-        <option value="$PROJECT_DIR$/private/controller/student_list.php" />
         <option value="$PROJECT_DIR$/private/parameters/app/page_datas.json" />
-        <option value="$PROJECT_DIR$/private/parameters/app/rights.json" />
         <option value="$PROJECT_DIR$/private/views/components/survey_answer.html" />
         <option value="$PROJECT_DIR$/public/js/action_report.js" />
         <option value="$PROJECT_DIR$/private/views/components/answer_survey2.html" />
@@ -370,15 +320,22 @@
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/private/library/general/PDOQueries.php" />
         <option value="$PROJECT_DIR$/public/js/answer_survey.js" />
-        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
         <option value="$PROJECT_DIR$/private/views/pages/te_answer_survey.html" />
-        <option value="$PROJECT_DIR$/private/views/pages/te_studentList.html" />
-        <option value="$PROJECT_DIR$/public/js/student_list_te.js" />
         <option value="$PROJECT_DIR$/private/controller/answer_survey.php" />
         <option value="$PROJECT_DIR$/private/controller/see_survey.php" />
+        <option value="$PROJECT_DIR$/private/library/general/mail.php" />
+        <option value="$PROJECT_DIR$/private/parameters/app/rights.json" />
+        <option value="$PROJECT_DIR$/private/views/components/parts/answer_survey.html" />
+        <option value="$PROJECT_DIR$/private/views/components/parts/see_survey.html" />
+        <option value="$PROJECT_DIR$/private/views/components/user_infos.html" />
+        <option value="$PROJECT_DIR$/private/views/components/parts/refresh_te.html" />
+        <option value="$PROJECT_DIR$/public/js/student_list_te.js" />
+        <option value="$PROJECT_DIR$/private/controller/student_list.php" />
         <option value="$PROJECT_DIR$/private/library/app/Answer.php" />
         <option value="$PROJECT_DIR$/private/library/app/Notifications.php" />
-        <option value="$PROJECT_DIR$/private/library/general/mail.php" />
+        <option value="$PROJECT_DIR$/private/views/pages/ti_studentList.html" />
+        <option value="$PROJECT_DIR$/private/parameters/languages/fr_FR.json" />
+        <option value="$PROJECT_DIR$/private/views/pages/te_studentList.html" />
       </list>
     </option>
   </component>
@@ -649,6 +606,32 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Projet IUT" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="private" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="pages" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="TI" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -1219,48 +1202,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/js/dashboard.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="372" max-vertical-offset="960">
-          <caret line="125" column="8" selection-start-line="125" selection-start-column="8" selection-end-line="125" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/infos.md">
-      <provider editor-type-id="MultiMarkdownFxPreviewEditor">
-        <state />
-      </provider>
-      <provider editor-type-id="MultiMarkdownFxHtmlEditor">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="558">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/HTML.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.75" vertical-offset="1569" max-vertical-offset="6780">
-          <caret line="130" column="33" selection-start-line="130" selection-start-column="33" selection-end-line="130" selection-end-column="33" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/survey/survey_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-5.1666665" vertical-offset="41" max-vertical-offset="750">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="21" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/js/survey_student_score.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="15" max-vertical-offset="660">
-          <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="181" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/SurveyList.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8469388" vertical-offset="1902" max-vertical-offset="2520">
@@ -1272,6 +1213,16 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-9.583333" vertical-offset="5800" max-vertical-offset="7500">
           <caret line="615" column="9" selection-start-line="615" selection-start-column="9" selection-end-line="615" selection-end-column="9" />
+          <folding>
+            <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#csv_attributes#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#notifications#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#StudentList#0;n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_studentScore#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -1286,34 +1237,9 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-7.6666665" vertical-offset="281" max-vertical-offset="855">
           <caret line="99" column="63" selection-start-line="99" selection-start-column="63" selection-end-line="99" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/students/student_list.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.4246824" vertical-offset="460" max-vertical-offset="1575">
-          <caret line="127" column="31" selection-start-line="127" selection-start-column="31" selection-end-line="127" selection-end-column="31" />
           <folding>
-            <element signature="e#287#791#0#PHP" expanded="false" />
-            <element signature="e#800#1580#0#PHP" expanded="false" />
-            <element signature="e#1589#2082#0#PHP" expanded="false" />
-            <element signature="e#2091#2581#0#PHP" expanded="false" />
-            <element signature="e#5344#6233#0#PHP" expanded="false" />
+            <element signature="e#96#2743#0#PHP" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/components/parts/answer_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="564">
-          <caret line="0" column="28" selection-start-line="0" selection-start-column="28" selection-end-line="0" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/components/parts/see_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -1349,14 +1275,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1161" max-vertical-offset="1725">
           <caret line="105" column="29" selection-start-line="105" selection-start-column="29" selection-end-line="105" selection-end-column="29" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="210" max-vertical-offset="330">
-          <caret line="14" column="27" selection-start-line="14" selection-start-column="27" selection-end-line="14" selection-end-column="27" />
           <folding />
         </state>
       </provider>
@@ -1513,44 +1431,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-6.875" vertical-offset="510" max-vertical-offset="3870">
-          <caret line="711" column="33" selection-start-line="711" selection-start-column="33" selection-end-line="711" selection-end-column="33" />
-          <folding>
-            <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#csv_attributes#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#notifications#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#exceptions#0;n#!!block;n#general#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#forbPassword#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#forbPassword_part2#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#active_account#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#dashboard#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_studentScore#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_survey_read#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_create_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_survey_show#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_surveyList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#admin_userList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#te_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-            <element signature="n#!!block;n#te_see_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/js/answer_survey.js">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="570">
@@ -1567,10 +1447,102 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/student_list.php">
+    <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="7.5" vertical-offset="495" max-vertical-offset="1080">
-          <caret line="26" column="57" selection-start-line="26" selection-start-column="57" selection-end-line="26" selection-end-column="57" />
+        <state vertical-scroll-proportion="-4.54" vertical-offset="14878" max-vertical-offset="21225">
+          <caret line="1007" column="79" selection-start-line="1007" selection-start-column="79" selection-end-line="1007" selection-end-column="79" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="true" />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_action_report..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_answered_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_deleted_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_deleted_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_last_stats_by_user..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_posts..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_te_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_ti_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_unactivated_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="DELETE FROM ..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..site2_answers..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT COUNT..self_prefixstats..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT (SELE..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT count..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT max(I..messages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT max(I..posts..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixposts..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..show_all_users..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT ID_TI..students..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixanswers..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixposts_comments..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixliked_post..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * fro..self_prefixnotifications..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * fro..self_prefixmessage_attachments..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixposts..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * fro..self_prefixposts_attachments..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT t1.*,..self_prefixmessages..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT * FRO..self_prefixstudents..." />
+            <marker date="1480784216000" expanded="true" signature="-1:-1" placeholder="SELECT ID,fn..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.38251367" vertical-offset="0" max-vertical-offset="7515">
+          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/see_survey.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32786885" vertical-offset="0" max-vertical-offset="990">
+          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
+          <folding>
+            <element signature="e#6#94#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/answer_survey.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.32786885" vertical-offset="540" max-vertical-offset="1710">
+          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="86" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/app/rights.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-8.75" vertical-offset="0" max-vertical-offset="330">
+          <caret line="14" column="41" selection-start-line="14" selection-start-column="41" selection-end-line="14" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/parts/answer_survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1585,18 +1557,74 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/student_infos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.18683274" vertical-offset="0" max-vertical-offset="562">
+          <caret line="7" column="4" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="69" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/parts/see_survey.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="562">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="33" selection-end-line="0" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/js/student_list.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="3558" max-vertical-offset="6375">
+          <caret line="405" column="27" selection-start-line="384" selection-start-column="20" selection-end-line="405" selection-end-column="27" />
+          <folding>
+            <element signature="e#377#6699#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/students/student_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.33697632" vertical-offset="640" max-vertical-offset="1575">
+          <caret line="99" column="12" selection-start-line="99" selection-start-column="12" selection-end-line="104" selection-end-column="13" />
+          <folding>
+            <element signature="e#287#791#0#PHP" expanded="false" />
+            <element signature="e#800#1580#0#PHP" expanded="false" />
+            <element signature="e#1589#2082#0#PHP" expanded="false" />
+            <element signature="e#2091#2581#0#PHP" expanded="false" />
+            <element signature="e#5344#6233#0#PHP" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/private/views/pages/admin_studentList.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-64.375" vertical-offset="30" max-vertical-offset="3360">
+        <state vertical-scroll-proportion="13.375" vertical-offset="1896" max-vertical-offset="3360">
           <caret line="105" column="26" selection-start-line="105" selection-start-column="26" selection-end-line="105" selection-end-column="26" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/user_infos.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="270">
+          <caret line="12" column="10" selection-start-line="12" selection-start-column="10" selection-end-line="12" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/components/parts/refresh_te.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
+          <caret line="0" column="33" selection-start-line="0" selection-start-column="27" selection-end-line="0" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/js/student_list_te.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
-          <caret line="158" column="21" selection-start-line="158" selection-start-column="21" selection-end-line="158" selection-end-column="21" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="464" max-vertical-offset="1305">
+          <caret line="193" column="48" selection-start-line="193" selection-start-column="48" selection-end-line="193" selection-end-column="48" />
           <folding>
             <element signature="e#0#49#0" expanded="false" />
             <element signature="e#165#6495#0" expanded="false" />
@@ -1604,124 +1632,94 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/te_studentList.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-16.875" vertical-offset="0" max-vertical-offset="600">
-          <caret line="27" column="0" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/answer_survey.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="540" max-vertical-offset="1710">
-          <caret line="53" column="44" selection-start-line="53" selection-start-column="44" selection-end-line="53" selection-end-column="86" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/controller/see_survey.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="0" max-vertical-offset="990">
-          <caret line="12" column="48" selection-start-line="12" selection-start-column="48" selection-end-line="12" selection-end-column="48" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/PDOQueries.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.54" vertical-offset="14878" max-vertical-offset="21225">
-          <caret line="1007" column="79" selection-start-line="1007" selection-start-column="79" selection-end-line="1007" selection-end-column="79" />
-          <folding>
-            <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1480784216000" expanded="true" signature="491:540" placeholder="SELECT * FRO..self_prefixshow_action_report..." />
-            <marker date="1480784216000" expanded="true" signature="687:735" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-            <marker date="1480784216000" expanded="true" signature="839:926" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-            <marker date="1480784216000" expanded="true" signature="1054:1099" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
-            <marker date="1480784216000" expanded="true" signature="1202:1255" placeholder="SELECT * FRO..self_prefixshow_answered_students..." />
-            <marker date="1480784216000" expanded="true" signature="1357:1409" placeholder="SELECT * FRO..self_prefixshow_deleted_students..." />
-            <marker date="1480784216000" expanded="true" signature="1508:1557" placeholder="SELECT * FRO..self_prefixshow_deleted_users..." />
-            <marker date="1480784216000" expanded="true" signature="1661:1715" placeholder="SELECT * FRO..self_prefixshow_last_stats_by_user..." />
-            <marker date="1480784216000" expanded="true" signature="1810:1851" placeholder="SELECT * FRO..self_prefixshow_posts..." />
-            <marker date="1480784216000" expanded="true" signature="1945:1989" placeholder="SELECT * FRO..self_prefixshow_te_users..." />
-            <marker date="1480784216000" expanded="true" signature="2083:2127" placeholder="SELECT * FRO..self_prefixshow_ti_users..." />
-            <marker date="1480784216000" expanded="true" signature="2230:2283" placeholder="SELECT * FRO..self_prefixshow_unactivated_users..." />
-            <marker date="1480784216000" expanded="true" signature="3131:3256" placeholder="DELETE FROM ..." />
-            <marker date="1480784216000" expanded="true" signature="3137:3256" placeholder="SELECT count..site2_answers..." />
-            <marker date="1480784216000" expanded="true" signature="29496:29712" placeholder="SELECT COUNT..." />
-            <marker date="1480784216000" expanded="true" signature="29984:30123" placeholder="SELECT COUNT..self_prefixstats..." />
-            <marker date="1480784216000" expanded="true" signature="30379:30769" placeholder="SELECT (SELE..." />
-            <marker date="1480784216000" expanded="true" signature="30387:30477" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="30501:30618" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="30638:30751" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="31119:31638" placeholder="SELECT (SELE..." />
-            <marker date="1480784216000" expanded="true" signature="31127:31260" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="31284:31444" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="31464:31620" placeholder="SELECT count..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="35458:35495" placeholder="SELECT max(I..messages..." />
-            <marker date="1480784216000" expanded="true" signature="36039:36073" placeholder="SELECT max(I..posts..." />
-            <marker date="1480784216000" expanded="true" signature="40321:40704" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="41019:41245" placeholder="SELECT t1.*,..self_prefixposts..." />
-            <marker date="1480784216000" expanded="true" signature="41608:41886" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-            <marker date="1480784216000" expanded="true" signature="42282:42579" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-            <marker date="1480784216000" expanded="true" signature="42999:43296" placeholder="SELECT * FRO..self_prefixshow_all_students..." />
-            <marker date="1480784216000" expanded="true" signature="43674:43849" placeholder="SELECT * FRO..self_prefixshow_all_users..." />
-            <marker date="1480784216000" expanded="true" signature="44270:44501" placeholder="SELECT * FRO..show_all_users..." />
-            <marker date="1480784216000" expanded="true" signature="44441:44487" placeholder="SELECT ID_TI..students..." />
-            <marker date="1480784216000" expanded="true" signature="44892:44948" placeholder="SELECT * FRO..self_prefixanswers..." />
-            <marker date="1480784216000" expanded="true" signature="45235:45413" placeholder="SELECT t1.*,..self_prefixposts_comments..." />
-            <marker date="1480784216000" expanded="true" signature="45715:46054" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="46398:46550" placeholder="SELECT t1.*,..self_prefixliked_post..." />
-            <marker date="1480784216000" expanded="true" signature="46844:47172" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="47525:47644" placeholder="SELECT * fro..self_prefixnotifications..." />
-            <marker date="1480784216000" expanded="true" signature="47915:48183" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="48561:48629" placeholder="SELECT * fro..self_prefixmessage_attachments..." />
-            <marker date="1480784216000" expanded="true" signature="48913:49081" placeholder="SELECT t1.*,..self_prefixposts..." />
-            <marker date="1480784216000" expanded="true" signature="49376:49439" placeholder="SELECT * fro..self_prefixposts_attachments..." />
-            <marker date="1480784216000" expanded="true" signature="49737:50044" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="50410:50718" placeholder="SELECT t1.*,..self_prefixmessages..." />
-            <marker date="1480784216000" expanded="true" signature="51712:51786" placeholder="SELECT * FRO..self_prefixstudents..." />
-            <marker date="1480784216000" expanded="true" signature="52054:52261" placeholder="SELECT ID,fn..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/private/library/app/Answer.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.2" vertical-offset="15" max-vertical-offset="8235">
-          <caret line="20" column="31" selection-start-line="20" selection-start-column="31" selection-end-line="20" selection-end-column="31" />
+        <state vertical-scroll-proportion="-10.0" vertical-offset="15" max-vertical-offset="8250">
+          <caret line="22" column="35" selection-start-line="22" selection-start-column="11" selection-end-line="22" selection-end-column="35" />
           <folding>
             <element signature="e#6#94#0#PHP" expanded="true" />
-            <marker date="1480786732000" expanded="true" signature="15264:15395" placeholder="..." />
+            <marker date="1480794775000" expanded="true" signature="15319:15450" placeholder="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/private/views/pages/te_answer_survey.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.70771" vertical-offset="0" max-vertical-offset="1738">
-          <caret line="82" column="104" selection-start-line="82" selection-start-column="104" selection-end-line="82" selection-end-column="104" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/private/library/app/Notifications.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-7.5" vertical-offset="2385" max-vertical-offset="3090">
-          <caret line="176" column="146" selection-start-line="176" selection-start-column="146" selection-end-line="176" selection-end-column="146" />
-          <folding>
-            <element signature="e#113#131#0#PHP" expanded="true" />
-          </folding>
+        <state vertical-scroll-proportion="-6.625" vertical-offset="2151" max-vertical-offset="3045">
+          <caret line="162" column="96" selection-start-line="162" selection-start-column="96" selection-end-line="162" selection-end-column="96" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/private/library/general/mail.php">
+    <entry file="file://$PROJECT_DIR$/private/views/pages/te_answer_survey.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.38251367" vertical-offset="0" max-vertical-offset="7515">
-          <caret line="20" column="52" selection-start-line="20" selection-start-column="52" selection-end-line="20" selection-end-column="52" />
+        <state vertical-scroll-proportion="-22.2" vertical-offset="0" max-vertical-offset="1515">
+          <caret line="74" column="59" selection-start-line="74" selection-start-column="58" selection-end-line="74" selection-end-column="59" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/controller/student_list.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.625" vertical-offset="1500" max-vertical-offset="2145">
+          <caret line="106" column="76" selection-start-line="106" selection-start-column="76" selection-end-line="106" selection-end-column="76" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/ti_studentList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-18.75" vertical-offset="0" max-vertical-offset="885">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="53" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/views/pages/te_studentList.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.50542545" vertical-offset="0" max-vertical-offset="1751">
+          <caret line="59" column="9" selection-start-line="59" selection-start-column="9" selection-end-line="59" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/private/parameters/languages/fr_FR.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.5355191" vertical-offset="231" max-vertical-offset="2355">
+          <caret line="618" column="14" selection-start-line="618" selection-start-column="14" selection-end-line="618" selection-end-column="14" />
+          <folding>
+            <element signature="n#!!block;n#date#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#mail#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#csv_attributes#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#notifications#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#weather#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#PDF#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#exceptions#0;n#!!block;n#general#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#install#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#login#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#lockscreen#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#forbPassword#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#forbPassword_part2#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#active_account#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#dashboard#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_studentScore#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_survey_read#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_create_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_survey_show#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_surveyList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#admin_userList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#te_see_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#te_answer_survey#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#ti_studentList#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#compose#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#404#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#email#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#inbox#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#search#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#timeline#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+            <element signature="n#!!block;n#500#0;n#!!block;n#pages#0;n#!!top" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

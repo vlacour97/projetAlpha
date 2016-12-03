@@ -452,69 +452,6 @@
                 "accept_terms_and_conditions": "J'ai lu et j'accepte les conditions générales d'utilisation du site"
             }
         },
-        "404": {
-            "expression": "OOPS !",
-            "errorname": "ERREUR 404 :",
-            "errordef": "La page que vous cherchez n'existe pas"
-        },
-        "email": {
-            "chemin1": "Général",
-            "name": "Messages",
-            "inbox": "Boite de reception",
-            "newmessage": "Nouveau Message",
-            "recieved": "Reçus",
-            "sent": "Envoyés",
-            "deleted": "Supprimés",
-            "answer": "Répondre",
-            "print": "imprimer",
-            "delete": "Supprimer"
-        },
-        "inbox": {
-            "chemin1": "Général",
-            "name": "Messages",
-            "inbox": "Boite de reception",
-            "newmessage": "Nouveau Message",
-            "recieved": "Reçus",
-            "sent": "Envoyés",
-            "deleted": "Supprimés",
-            "select": "Selectionner",
-            "all": "Tout",
-            "none": "Aucun",
-            "read": "Lus",
-            "noread": "Non Lus",
-            "actions": "Actions",
-            "answer": "Répondre",
-            "markread": "Marquer comme lus",
-            "marknoread": "Marquer comme non lus",
-            "deletemsg": "Supprimer",
-            "searchmsg": "Rechercher Messages"
-        },
-        "search": {
-            "chemin1": "Accueil",
-            "name": "Recherches",
-            "resutsearch": "Résultat des recherches pour :",
-            "users": "Utilisateurs :",
-            "students": "Etudiants :",
-            "messages": "Messages :",
-            "timeline": "Timeline :"
-        },
-        "timeline": {
-            "chemin1": "Accueil",
-            "name": "Fils d'actualité",
-            "writemsg": "Exprimez-vous !",
-            "importfile": "Integrer un fichier",
-            "changefile": "Changer",
-            "delete": "Supprimer",
-            "cancel": "Annuler",
-            "post": "Publier"
-        },
-        "500": {
-            "title": " OOPS ! ",
-            "bold": "500 Internal Server Error",
-            "text": " Erreur lors du lancement de l'application ",
-            "button": "Page d'acceuil"
-        },
-
         "dashboard": {
             "previous": "Accueil",
             "name": "Tableau de Bord",
@@ -680,12 +617,9 @@
                 "titleDate": "Date Butoire",
                 "titleAction": "Action"
             },
-            "etud": {
-                "etudiant": "Etudiant"
-            },
-
-            "tut": {
-                "tuteur": "Tuteur IUT"
+            "modal" : {
+                "student" : "Étudiant",
+                "user" : "Tuteur Entreprise"
             }
         },
         "te_see_survey": {
@@ -718,6 +652,25 @@
             "nb-question" : "Numéro des Questions",
             "btnsave": "Enregistrer",
             "btnsend": "Envoyer"
+        },
+        "ti_studentList": {
+            "previous": "Gestion",
+            "name": "Questionnaire",
+            "table": {
+                "titleID": "Id",
+                "titleEtud": "Nom Etudiant",
+                "titleTut": "Nom Tuteur IUT",
+                "titleStatut": "Etat",
+                "titleDate": "Date Butoire",
+                "titleAction": "Action"
+            },
+            "modal" : {
+                "student" : "Étudiant",
+                "user" : "Tuteur Entreprise"
+            },
+            "message" : {
+                "refreshSuccess" : "Relance envoyé auprés du tuteur entreprise"
+            }
         },
 
         "compose": {
@@ -820,6 +773,69 @@
             }
         },
 
+        "404": {
+            "expression": "OOPS !",
+            "errorname": "ERREUR 404 :",
+            "errordef": "La page que vous cherchez n'existe pas"
+        },
+        "email": {
+            "chemin1": "Général",
+            "name": "Messages",
+            "inbox": "Boite de reception",
+            "newmessage": "Nouveau Message",
+            "recieved": "Reçus",
+            "sent": "Envoyés",
+            "deleted": "Supprimés",
+            "answer": "Répondre",
+            "print": "imprimer",
+            "delete": "Supprimer"
+        },
+        "inbox": {
+            "chemin1": "Général",
+            "name": "Messages",
+            "inbox": "Boite de reception",
+            "newmessage": "Nouveau Message",
+            "recieved": "Reçus",
+            "sent": "Envoyés",
+            "deleted": "Supprimés",
+            "select": "Selectionner",
+            "all": "Tout",
+            "none": "Aucun",
+            "read": "Lus",
+            "noread": "Non Lus",
+            "actions": "Actions",
+            "answer": "Répondre",
+            "markread": "Marquer comme lus",
+            "marknoread": "Marquer comme non lus",
+            "deletemsg": "Supprimer",
+            "searchmsg": "Rechercher Messages"
+        },
+        "search": {
+            "chemin1": "Accueil",
+            "name": "Recherches",
+            "resutsearch": "Résultat des recherches pour :",
+            "users": "Utilisateurs :",
+            "students": "Etudiants :",
+            "messages": "Messages :",
+            "timeline": "Timeline :"
+        },
+        "timeline": {
+            "chemin1": "Accueil",
+            "name": "Fils d'actualité",
+            "writemsg": "Exprimez-vous !",
+            "importfile": "Integrer un fichier",
+            "changefile": "Changer",
+            "delete": "Supprimer",
+            "cancel": "Annuler",
+            "post": "Publier"
+        },
+        "500": {
+            "title": " OOPS ! ",
+            "bold": "500 Internal Server Error",
+            "text": " Erreur lors du lancement de l'application ",
+            "button": "Page d'acceuil"
+        },
+
         "action_report": {
             "chemin1": "Accueil",
             "name": "Rapport d'actions",
@@ -907,7 +923,8 @@
         },
         "parts" : {
             "see-survey" : "Voir le questionnaire",
-            "answer-survey" : "Répondre au questionnaire"
+            "answer-survey" : "Répondre au questionnaire",
+            "refresh-te" : "Relancer le tuteur entreprise"
         },
         "answer_survey2" : {
             "addComment" : "Cliquez pour ajouter un commentaire",

@@ -2,16 +2,12 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>{chemin1}</li>
+            <li>{previous}</li>
             <li class="active">{name}</li>
         </ol>
         <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
         <section class="widget">
-            <header>
-
-            </header>
             <div class="widget-body">
-
                 <div class="mt">
                     <table id="students-table-te" class="table table-striped table-hover">
                         <thead>
@@ -19,13 +15,12 @@
                             <th>{table/titleID}</th>
                             <th>{table/titleEtud}</th>
                             <th class="no-sort hidden-xs">{table/titleTut}</th>
-                            <th class="no-sort text-center">{table/titleStatut}</th>
+                            <th class="no-sort">{table/titleStatut}</th>
                             <th class="hidden-xs no-sort">{table/titleDate}</th>
                             <th class="no-sort">{table/titleAction}</th>
                         </tr>
                         </thead>
                         <tbody>
-
                         </tbody>
                     </table>
                 </div>
@@ -33,7 +28,6 @@
         </section>
     </main>
 </div>
-
 
 <!-- Modal -->
 <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="Modal">

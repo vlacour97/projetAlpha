@@ -155,8 +155,71 @@ $(function(){
 
     function pageLoad(){
         $('.widget').widgster();
+        var theme = 'air';
+        var classes = 'messenger-fixed messenger-on-top';
+
+        $.globalMessenger({ extraClasses: classes,theme: theme });
+        Messenger.options = { extraClasses: classes,theme: theme  };
+        events();
     }
     initDataTables();
+
+    function events(){
+        $("body")
+            .on('click', '.student', function (e) {
+                e.preventDefault();
+                var currentLineId = $(this).data('id');
+                var urlTmp = url + '?action=get_student_infos&id=' + currentLineId;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        $("#Modal .modal-body").html(datas);
+                        $("#ModalLabel").html(modalText.student);
+                        $('#Modal').modal();
+                    });
+            })
+            .on('click', '.user', function (e) {
+                e.preventDefault();
+                var currentLineId = $(this).data('id');
+                var urlTmp = url + '?action=get_user_infos&id=' + currentLineId;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        $("#Modal .modal-body").html(datas);
+                        $("#ModalLabel").html(modalText.user);
+                        $('#Modal').modal();
+                    });
+            })
+            .on('click','.refresh-te', function(e){
+                e.preventDefault();
+                var idStudent = $(this).attr('data-idStudent');
+                var idUser = $(this).attr('data-idUser');
+                var urlTmp = url + '?action=refresh_user&idStudent=' + idStudent + '&idUser=' + idUser;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        datas = jQuery.parseJSON(datas);
+                        if (datas.response) {
+                            Messenger().post({
+                                message: message.refreshSuccess,
+                                type: 'success',
+                                showCloseButton: true
+                            });
+                        }
+                        else {
+                            switch (Math.floor(datas.code / 1000)) {
+                                case 2 :
+                                    error = 'info';
+                                    break;
+                                default :
+                                    error = 'error';
+                            }
+                            Messenger().post({
+                                message: datas.exception,
+                                type: error,
+                                showCloseButton: true
+                            });
+                        }
+                    });
+            })
+    }
 
     pageLoad();
     SingApp.onPageLoad(pageLoad);

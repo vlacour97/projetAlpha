@@ -160,7 +160,7 @@ class Notifications extends \mainClass{
         if(!($id_user = PDOQueries::get_TE_ID_of_student($id_student)) > 0)
             throw new \Exception('Erreur : La récupération des données a échoué',2);
         $marker = '{wait_survey}';
-        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.$id_student;
+        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_complete_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);
     }
 
@@ -188,7 +188,7 @@ class Notifications extends \mainClass{
         if(!($id_user = PDOQueries::get_TE_ID_of_student($id_student)) > 0)
             throw new \Exception('Erreur : La récupération des données a échoué',2);
         $marker = '{validate_survey}';
-        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.$id_student;
+        $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);
     }
 
