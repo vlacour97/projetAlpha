@@ -185,7 +185,7 @@
             },
             "wait_survey" : {
                 "value" : "Vous avez un questionnaire en attente",
-                "icon" : "fa fa-cloud-o"
+                "icon" : "fa fa-clock-o"
             },
             "complete_survey" : {
                 "value" : "L'un de vos questionnaires a été complété",

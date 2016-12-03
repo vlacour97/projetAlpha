@@ -6,8 +6,17 @@
  * Time: 10:24
  */
 
+
+if(\app\Log::get_type() == 3 && $_GET['action'] == "validate" && \general\PDOQueries::isset_student($id_student = \general\crypt::decrypt($_GET['id'])))
+    if(\app\Answer::validate_survey($id_student))
+        header('Location: index.php?nav=student_list');
+
+
 $html = new \general\HTML();
-$gabarit = \general\Language::translate_gabarit('pages/te_see_survey');
+if(\app\Log::get_type() == 3)
+    $gabarit = \general\Language::translate_gabarit('pages/ti_see_survey');
+else
+    $gabarit = \general\Language::translate_gabarit('pages/te_see_survey');
 $id = \general\crypt::decrypt($_GET['id']);
 
 if(!\general\PDOQueries::isset_student($id) || !\general\PDOQueries::have_answered($id))
@@ -50,8 +59,8 @@ $student = \app\User::get_student($id);
 $ti = \app\User::get_user($student->ID_TI);
 $te = \app\User::get_user($student->ID_TE);
 
-$replace = array('{survey_datas}','{student-id}','{student-fname}','{student-name}','{student-phone}','{student-email}','{ti-fname}','{ti-name}','{ti-phone}','{ti-email}','{te-fname}','{te-name}','{te-phone}','{te-email}');
-$by = array($survey,\general\crypt::encrypt($student->ID),$student->fname,$student->name,$student->phone,$student->email,$ti->fname,$ti->name,$ti->phone,$ti->email,$te->fname,$te->name,$te->phone,$te->email);
+$replace = array('{survey_datas}','{student-id}','{student-fname}','{student-name}','{student-phone}','{student-email}','{ti-fname}','{ti-name}','{ti-phone}','{ti-email}','{te-fname}','{te-name}','{te-phone}','{te-email}','{validate_link}');
+$by = array($survey,\general\crypt::encrypt($student->ID),$student->fname,$student->name,$student->phone,$student->email,$ti->fname,$ti->name,$ti->phone,$ti->email,$te->fname,$te->name,$te->phone,$te->email,'?nav=see_survey&action=validate&id='.\general\crypt::encrypt($student->ID));
 $gabarit = str_replace($replace,$by,$gabarit);
 
 $html->open();

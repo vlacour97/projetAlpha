@@ -12,6 +12,6 @@
     {
         "id" : 3,
         "name" : "Tuteur IUT",
-        "rights" : ["home","student_list"]
+        "rights" : ["home","student_list","see_survey"]
     }
 ]
