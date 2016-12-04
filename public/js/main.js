@@ -77,8 +77,27 @@ $(function(){
         e.preventDefault();
     });
 
+    function get_notification(){
+        var url = 'private/controller/main.php?action=get_notifications';
+        $.get(url)
+            .done(function(data){
+                data = jQuery.parseJSON(data);
+                $('#notifications-list').html(data.notifications);
+                $('.nbNotifications').html(data.nb_notification);
+            })
+    }
 
+    function get_nb_message(){
+        var url = 'private/controller/main.php?action=get_unviewed_message_number';
+        $.get(url)
+            .done(function(data){
+                $('.nbMessage').html(data);
+            })
+    }
 
     //TODO Màj des données
+
+    var notification_timer = setInterval(get_notification,1000);
+    var message_timer = setInterval(get_nb_message,1000);
 
 });

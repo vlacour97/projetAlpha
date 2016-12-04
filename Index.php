@@ -43,7 +43,6 @@ if(!\app\Log::isLogged()){
     die();
 }
 
-//\app\Log::set_stat();
 \app\Navigation::get_pages();
 
 

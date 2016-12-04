@@ -155,11 +155,11 @@ Class UserDatas extends ReturnDatas{
     /**
      * @var string
      */
-    public $fname;
+    public $name;
     /**
      * @var string
      */
-    public $name;
+    public $fname;
     /**
      * @var int
      */

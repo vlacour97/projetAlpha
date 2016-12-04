@@ -32,7 +32,6 @@ $gabarit = \general\Language::translate_gabarit('pages/manage_API');
 $scripts_vendor = array(
     'select2/select2.js',
     'bootstrap-sass/vendor/assets/javascripts/bootstrap/tooltip.js',
-    'bootstrap-sass/vendor/assets/javascripts/bootstrap/modal.js',
     'bootstrap3-wysihtml5/lib/js/wysihtml5-0.3.0.min.js',
     'bootstrap3-wysihtml5/src/bootstrap3-wysihtml5.js',
     'moment/min/moment.min.js',

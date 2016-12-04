@@ -447,7 +447,7 @@ class HTML {
      * @return string
      * @throws \Exception
      */
-    private function notifications(){
+    function notifications(){
         $gabarit = Language::translate_gabarit('components/notifications');
         $notifications = Notifications::get_notifications();
 

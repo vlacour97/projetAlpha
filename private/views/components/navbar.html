@@ -48,7 +48,7 @@
                         </span>
                         &nbsp;
                         {user_fname} <strong>{user_name}</strong>&nbsp;
-                        {nb_notifications}
+                        <span class="nbNotifications">{nb_notifications}</span>
                         <b class="caret"></b></a>
 
                     <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
@@ -70,7 +70,7 @@
                     <ul class="dropdown-menu">
                         <li><a href="{account_link}"><i class="glyphicon glyphicon-user"></i> &nbsp; {account}</a></li>
                         <li class="divider"></li>
-                        <li><a href="{inbox_link}">{inbox} &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn">{nb_message}</span></a></li>
+                        <li><a href="{inbox_link}">{inbox} &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn nbMessage">{nb_message}</span></a></li>
                         <li class="divider"></li>
                         <li><a href="{logout_link}"><i class="fa fa-sign-out"></i> &nbsp; {logout}</a></li>
                     </ul>

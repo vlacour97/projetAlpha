@@ -247,7 +247,7 @@
         ],
         "page_name" : {
             "home" : "Accueil",
-            "message" : "Messages <span class=\"label label-danger\">{nb_message}</span>",
+            "message" : "Messages <span class=\"label label-danger nbMessage\">{nb_message}</span>",
             "students" : "Étudiants",
             "students/student_list" : "Liste des étudiants",
             "students/student_score" : "Résultat étudiants",
