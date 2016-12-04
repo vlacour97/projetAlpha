@@ -373,6 +373,16 @@ CREATE  PROCEDURE `{prefix}change_password` (IN `id_user` INT, IN `param_passwor
 UPDATE {prefix}users SET pwd=md5(param_password) WHERE ID=id_user;
 END;
 
+CREATE PROCEDURE `{prefix}change_user_type`(IN `id_user` INT, IN `param_type` INT)
+BEGIN
+UPDATE {prefix}users SET type=param_type WHERE ID=id_user;
+END;
+
+CREATE PROCEDURE `{prefix}change_user_publication_right`(IN `id_user` INT, IN `param_right` BOOLEAN)
+BEGIN
+UPDATE {prefix}users SET publication_entitled=param_right WHERE ID=id_user;
+END;
+
 DROP PROCEDURE IF EXISTS `{prefix}delete_all_answer`;
 CREATE  PROCEDURE `{prefix}delete_all_answer` (IN `param_id_student` INT)  BEGIN
 DELETE FROM {prefix}answers WHERE ID_student=param_id_student;

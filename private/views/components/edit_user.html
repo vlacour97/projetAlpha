@@ -1,0 +1,68 @@
+<form action='' method="POST">
+    <fieldset>
+        <div class="form-group col-md-6">
+            <!-- Nom -->
+            <label for="edit_user_name">{name-lbl}</label>
+            <input type="text" id="edit_user_name" name="edit_user_name" value="{name}" placeholder="{name-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group col-md-6">
+            <!-- Prénom -->
+            <label for="edit_user_fname">{fname-lbl}</label>
+            <input type="text" id="edit_user_fname" name="edit_user_fname" value="{fname}" placeholder="{fname-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group">
+            <!-- Email -->
+            <label for="edit_user_email">{email-lbl}</label>
+            <input type="text" id="edit_user_email" name="edit_user_email" value="{email}" placeholder="{email-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group">
+            <!-- Type -->
+            <label for="edit_user_type">{type-lbl}</label>
+            <select id="edit_user_type" data-placeholder="{type-lbl}" class="select2 form-control" tabindex="-1" name="edit_user_type" required="required">
+                {type_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Téléphone -->
+            <label for="edit_user_phone">{phone-lbl}</label>
+            <input type="tel" id="edit_user_phone" name="edit_user_phone" value="{phone}" placeholder="{phone-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Adresse -->
+            <label for="edit_user_addresse">{address-lbl}</label>
+            <input type="tel" id="edit_user_addresse" name="edit_user_address" value="{address}" placeholder="{address-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-4">
+            <!-- Code Postal -->
+            <label for="edit_user_zip_code">{zip-code-lbl}</label>
+            <input type="tel" id="edit_user_zip_code" name="edit_user_zip_code" value="{zip-code}" placeholder="{zip-code-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-8">
+            <!-- Ville -->
+            <label for="edit_user_city">{city-lbl}</label>
+            <input type="tel" id="edit_user_city" name="edit_user_city" value="{city}" placeholder="{city-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Pays -->
+            <label for="edit_user_country">{country-lbl}</label>
+            <select id="edit_user_country" data-placeholder="{country-lbl}" class="select2 form-control" tabindex="-1" name="edit_user_country">
+                {country_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Langue -->
+            <label for="edit_user_language">{language-lbl}</label>
+            <select id="edit_user_language" data-placeholder="{language-lbl}" class="select2 form-control" tabindex="-1" name="edit_user_language" required="required">
+                {language_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Autorisation à la publication d'article -->
+            <label for="edit_user_publication">{publication-lbl}</label>
+            <select id="edit_user_publication" data-placeholder="{publication-lbl}" class="select2 form-control" tabindex="-1" name="edit_user_publication" required="required">
+                {boolChose_list}
+            </select>
+        </div>
+    </fieldset>
+    <span class="help-block text-left">* {help}</span>
+</form>

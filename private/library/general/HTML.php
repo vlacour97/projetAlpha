@@ -221,6 +221,35 @@ class Select{
         return $html_te;
     }
 
+    function type($selected = 0){
+        $type_list = Language::get_user_type_text();
+        $html_type = '<option value=""></option>';
+
+        foreach($type_list as $key=>$type){
+            $key++;
+            if($key == $selected)
+                $html_type .= '<option selected value="'.$key.'">'.$type.'</option>';
+            else
+                $html_type .= '<option value="'.$key.'">'.$type.'</option>';
+        }
+
+        return $html_type;
+    }
+
+    function boolChose($selected = 0){
+        $type_list = Language::get_boolChose_text();
+        $html_type = '<option value=""></option>';
+
+        foreach($type_list as $key=>$type){
+            if($key == $selected)
+                $html_type .= '<option selected value="'.$key.'">'.$type.'</option>';
+            else
+                $html_type .= '<option value="'.$key.'">'.$type.'</option>';
+        }
+
+        return $html_type;
+    }
+
 }
 
 /**

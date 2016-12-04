@@ -255,6 +255,30 @@ class PDOQueries extends \mainClass{
     }
 
     /**
+     * Change le type d'un utilisateur
+     * @param int $id_user
+     * @param int $type
+     * @return bool
+     */
+    static function change_user_type($id_user,$type){
+        if(!is_int($id_user) && !is_int($type))
+            return false;
+        return self::$PDO->prepare('CALL '.self::$prefix.'change_user_type(:id_user,:type)')->execute(array(':id_user'=>$id_user,':type' => $type));
+    }
+
+    /**
+     * Change le droit de publication d'un utilisateur
+     * @param int $id_user
+     * @param bool $right
+     * @return bool
+     */
+    static function change_user_publication_right($id_user,$right){
+        if(!is_int($id_user) && !is_bool($right))
+            return false;
+        return self::$PDO->prepare('CALL '.self::$prefix.'change_user_publication_right(:id_user,:right)')->execute(array(':id_user'=>$id_user,':right' => $right));
+    }
+
+    /**
      * Supprime toute les questions d'un étudiant
      * @param int $id_student
      * @return bool

@@ -135,6 +135,20 @@ class Language extends \mainClass{
     }
 
     /**
+     * Récupére les textes pour les choix binaires
+     * @param string $lang
+     * @return mixed
+     */
+    static function get_boolChose_text($lang = null){
+        if(is_null(self::$datas) && is_null($lang))
+            self::init();
+        $datas = self::$datas;
+        if(!is_null($lang))
+            $datas = link_parameters('languages/'.$lang);
+        return $datas["general"]["boolChose"];
+    }
+
+    /**
      * Récupére les textes d'une page
      * @param string $page_name
      * @return mixed

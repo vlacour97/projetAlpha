@@ -629,8 +629,10 @@ class User extends \mainClass{
         $args = func_get_args();
         $user = new UserDatas();
         $datas = self::get_user($id);
+        if(!$datas->publication_entitled && $publication_entitled)
+            Notifications::autorised_publication($datas->ID);
         ReturnDatas::formate_datas_for_edit($datas,$args,$user);
-        return PDOQueries::edit_user($user->ID,$user->name,$user->fname,$user->email,$user->phone,$user->address,$user->zip_code,$user->city,$user->country,$user->language);
+        return PDOQueries::edit_user($user->ID,$user->name,$user->fname,$user->email,$user->phone,$user->address,$user->zip_code,$user->city,$user->country,$user->language) && PDOQueries::change_user_type($user->ID,$user->type) && PDOQueries::change_user_publication_right($user->ID,$user->publication_entitled);
     }
 
     /**

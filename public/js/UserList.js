@@ -3,8 +3,17 @@
  */
 $(function(){
 
+    var url = 'private/controller/user/user_list.php';
+    var choice = "";
+    var part = 1;
+    var res;
     var currentLineId;
     var table;
+    var infos_csv = new Object();
+    var unchecked = true;
+    var event8;
+    infos_csv.nb_col = 0;
+    infos_csv.nb_row = 0;
 
     function initDataTables(){
         /* Set the defaults for DataTables initialisation */
@@ -142,7 +151,8 @@ $(function(){
                 "sFilter": "pull-right",
                 "sFilterInput": "form-control input-rounded ml-sm"
             },
-            "aoColumns": unsortableColumns
+            "aoColumns": unsortableColumns,
+            ajax: url + '?action=get_table_datas'
         });
 
         $(".dataTables_length select").selectpicker({
@@ -152,40 +162,19 @@ $(function(){
 
     function pageLoad(){
         $('.widget').widgster();
+        var theme = 'air';
+        var classes = 'messenger-fixed messenger-on-top';
+
+        $.globalMessenger({ extraClasses: classes,theme: theme });
+        Messenger.options = { extraClasses: classes,theme: theme  };
         initDataTables();
+        events();
     }
 
     pageLoad();
     SingApp.onPageLoad(pageLoad);
 
-    $(".user").click(function(e){
-        e.preventDefault();
-        $('#UsersModal').modal();
-    });
-
-    $(".student").click(function(e){
-        e.preventDefault();
-        $('#StudentsModal').modal();
-    });
-
-    $(".change").click(function(e){
-        e.preventDefault();
-        currentLineId = $(this).data('id');
-        $('#ChangeModal').modal();
-    });
-
-
-    $(".add_user_and_student").click(function(e){
-        e.preventDefault();
-        $('#AddStudentModal').modal();
-    });
-
-    $(".ImportStudent").click(function(e){
-        e.preventDefault();
-        $('#ImportModal').modal();
-    });
-
-    var wizard = $('#wizard').bootstrapWizard({
+    $('#wizard').bootstrapWizard({
         onTabShow: function($activeTab, $navigation, index) {
             var $total = $navigation.find('li').length;
             var $current = index + 1;
@@ -214,25 +203,352 @@ $(function(){
 
             // validate form in casa there is form
             if ($form.length){
-                return $form.parsley().validate();
+                if($form.parsley().validate())
+                {
+                    //Deuxiéme page
+                    if(nextIndex == 2){
+                        switch (choice){
+                            case 'hand':
+                                var urlTmp = url + '?action=add_user_form_hand';
+                                var datas = $('#step'+ nextIndex +' form').serializeArray();
+                                $('.loader-wrap').removeClass('hide').removeClass('hiding');
+                                $.post(urlTmp,datas)
+                                    .done(function (datas) {
+                                        datas = jQuery.parseJSON(datas);
+                                        if(datas.response){
+                                            $('#wizard').bootstrapWizard('show',nextIndex);
+                                            table.ajax.reload( null, false );
+                                        }else{
+                                            Messenger().post({
+                                                message: datas.exception,
+                                                type: 'error',
+                                                showCloseButton: true
+                                            });
+                                        }
+                                        $('.loader-wrap').addClass('hide').addClass('hiding');
+                                    });
+                                break;
+                            case 'csv':
+                                if(part == 1){
+                                    var urlTmp = url + '?action=upload_csv_file';
+                                    var file = $("#csv")[0].files;
+                                    var datas = new FormData();
+                                    $.each(file, function(key, value)
+                                    {
+                                        datas.append(key, value);
+                                    });
+                                    infos_csv.nb_col = $('#nb_col').val();
+                                    infos_csv.nb_row = $('#nb_row').val();
+                                    datas.append('nb_col',infos_csv.nb_col);
+                                    datas.append('nb_row',infos_csv.nb_row);
+                                    $('.loader-wrap').removeClass('hide').removeClass('hiding');
+                                    $.ajax({
+                                        url: urlTmp,
+                                        type: 'POST',
+                                        data: datas,
+                                        cache: false,
+                                        dataType: 'json',
+                                        processData: false, // Don't process the files
+                                        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+                                        success: function(datas, textStatus, jqXHR)
+                                        {
+                                            if(datas.response){
+                                                $("#step2").html('<form><table class="table"><thead><tr class="selects"></tr></thead><tbody></tbody></table></form>');
+                                                add_data(datas.data);
+                                                add_attr(datas.attr);
+                                                part = 2;
+                                                res = [];
+                                            }else{
+                                                Messenger().post({
+                                                    message: datas.exception,
+                                                    type: 'error',
+                                                    showCloseButton: true
+                                                });
+                                            }
+                                            $('.loader-wrap').addClass('hide').addClass('hiding');
+                                        }});
+                                }else{
+                                    var array = {'nb_col' : infos_csv.nb_col, nb_row : infos_csv.nb_row, data : res};
+                                    var datas = new FormData();
+                                    $.each(array, function(key, value)
+                                    {
+                                        datas.append(key, value);
+                                    });
+                                    var urlTmp = url + '?action=save_csv_list';
+                                    $.ajax({
+                                        url: urlTmp,
+                                        type: 'POST',
+                                        data: datas,
+                                        cache: false,
+                                        dataType: 'json',
+                                        processData: false, // Don't process the files
+                                        contentType: false, // Set content type to false as jQuery will tell the server its a query string request
+                                        success: function(datas, textStatus, jqXHR)
+                                        {
+                                            if(!datas.response){
+                                                var description = $("#step3 .description");
+                                                description.html(datas.exception);
+                                                if(datas.code == 2)
+                                                    description.addClass('text-danger');
+                                                else{
+                                                    description.addClass('text-warning');
+                                                    var tableException = "";
+                                                    var items = datas.items;
+                                                    console.log(datas.items);
+                                                    if(items.student != null)
+                                                        items.student.forEach(function(content2,key2){
+                                                            tableException += "<tr class='bg-warning'><td>" + key2 + "</td><td>" + content2 + "</td></tr>";
+                                                        });
+                                                    if(items.ti != null)
+                                                        items.ti.forEach(function(content2,key2){
+                                                            tableException += "<tr class='bg-success'><td>" + key2 + "</td><td>" + content2 + "</td></tr>";
+                                                        });
+                                                    if(items.te != null)
+                                                        items.te.forEach(function(content2,key2){
+                                                            tableException += "<tr class='bg-info'><td>" + key2 + "</td><td>" + content2 + "</td></tr>";
+                                                        });
+                                                    $("#step3 table").html(tableException);
+                                                }
+                                                $("#step3 .error").removeClass('hidden');
+                                                $("#step3 .success").addClass('hidden');
+                                            }else{
+                                                $("#step3 .success").removeClass('hidden');
+                                                $("#step3 .error").addClass('hidden');
+                                            }
+                                            $('#wizard').bootstrapWizard('show',nextIndex);
+                                            table.ajax.reload( null, false );
+                                            $('.loader-wrap').addClass('hide').addClass('hiding');
+                                        }});
+                                }
+                                break;
+                        }
+                    }
+                }
+                return false;
             }
+
         },
         //diable tab clicking
         onTabClick: function($activeTab, $navigation, currentIndex, clickedIndex){
             return false;
+        },
+        onPrevious : function($activeTab, $navigation, previousIndex){
+            console.log(previousIndex);
+            if(previousIndex == 1)
+                return false;
+            return true;
         }
     });
 
-    $(".select2").each(function(){
-        $(this).select2($(this).data());
+    function events() {
+        $("body")
+            .on('click', '.user', function (e) {
+                e.preventDefault();
+                var currentLineId = $(this).data('id');
+                var urlTmp = url + '?action=get_user_infos&id=' + currentLineId;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        $('#UserModal').modal();
+                        $("#UserModal .modal-body").html(datas);
+                    });
+            })
+            .on('click', '.change', function (e) {
+                e.preventDefault();
+                currentLineId = $(this).data('id');
+                var urlTmp = url + '?action=get_edit_user_form&id=' + currentLineId;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        $('#ChangeModal').modal();
+                        $("#ChangeModal .modal-body").html(datas);
+                        $("#ChangeModal .select2").each(function () {
+                            $(this).select2($(this).data());
+                        });
+                    });
+            })
+            .on('click', '.delete_multiple', function () {
+                var values = [];
+                var checkedLines = $("#user-table input:checked[data-action!='check-all']");
+                checkedLines.each(function (key, content) {
+                    values[key] = $(content).data('id');
+                });
+                values.forEach(function (content) {
+                    var urlTmp = url + '?action=delete_user&id=' + content;
+                    $.get(urlTmp)
+                        .done(function (datas) {
+                            datas = jQuery.parseJSON(datas);
+                            if (datas.response) {
+                                $("input[data-id='" + content + "']").parent().parent().parent().addClass('selected');
+                                table.row('.selected').remove().draw(false);
+                            }
+                            else {
+                                switch (Math.floor(datas.code / 1000)) {
+                                    case 2 :
+                                        error = 'info';
+                                        break;
+                                    default :
+                                        error = 'error';
+                                }
+                                Messenger().post({
+                                    message: datas.exception,
+                                    type: error,
+                                    showCloseButton: true
+                                });
+                            }
+                        });
+                })
+            })
+            .on('click', '#deleteLine', function () {
+                var urlTmp = url + '?action=delete_user&id=' + currentLineId;
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        datas = jQuery.parseJSON(datas);
+                        if (datas.response) {
+                            $('#DeleteModal').modal('hide');
+                            $("a[data-id='" + currentLineId + "']").parent().parent().addClass('selected');
+                            table.row('.selected').remove().draw(false);
+                        }
+                        else {
+                            switch (Math.floor(datas.code / 1000)) {
+                                case 2 :
+                                    error = 'info';
+                                    break;
+                                default :
+                                    error = 'error';
+                            }
+                            Messenger().post({
+                                message: datas.exception,
+                                type: error,
+                                showCloseButton: true
+                            });
+                        }
+                    });
+            })
+            .on('click', '#user-table .delete', function (e) {
+                e.preventDefault();
+                currentLineId = $(this).data('id');
+                $('#DeleteModal').modal();
+            })
+            .on('click', '#wizard .finish button', function (e) {
+                $('#AddStudentModal').modal('hide');
+                $('#wizard').delay(200).bootstrapWizard('show', 0);
+                $('#addByCSV').removeClass('text-danger');
+                $('#addByHand').removeClass('text-danger');
+                choice = "";
+                part = 1;
+            })
+            .on('click', '.add_user_and_student', function (e) {
+                e.preventDefault();
+                $('#AddStudentModal').modal();
+            })
+            .on('click', '#addByHand', function () {
+                $(this).addClass('text-danger');
+
+                var urlTmp = url + '?action=get_add_user_form_hand';
+                $.get(urlTmp)
+                    .done(function (datas) {
+                        $('.next button').removeAttr('disabled');
+                        $('#addByCSV').removeClass('text-danger');
+                        $("#step2").html(datas);
+                        $("#step2 .select2").each(function () {
+                            $(this).select2($(this).data());
+                        });
+                        $('#add_student_birthdate').datetimepicker({
+                            pickTime: false
+                        });
+                        $('#add_student_deathdate').datetimepicker({
+                            pickTime: false
+                        });
+                        choice = "hand";
+                    })
+            })
+            .on('click', '#addByCSV', function () {
+                $(this).addClass('text-danger');
+                $('.next button').removeAttr('disabled');
+                $('#addByHand').removeClass('text-danger');
+                $("#step2").html($('#CSVForm').html());
+                choice = 'csv';
+                part = 1;
+            })
+            .on('click', '#change-submit', function(e){
+                e.preventDefault();
+                var urlTmp = url + '?action=change_user&id=' + currentLineId;
+                var form = $("#ChangeModal .modal-body form").serializeArray();
+                $.post(urlTmp,form)
+                    .done(function (datas) {
+                        datas = jQuery.parseJSON(datas);
+                        if (datas.response) {
+                            $('#ChangeModal').modal('hide');
+                            table.ajax.reload( null, false );
+                        }
+                        else {
+                            switch (Math.floor(datas.code / 1000)) {
+                                case 2 :
+                                    error = 'info';
+                                    break;
+                                default :
+                                    error = 'error';
+                            }
+                            Messenger().post({
+                                message: datas.exception,
+                                type: error,
+                                showCloseButton: true
+                            });
+                        }
+                    });
+            });
+    }
+
+    $("#check-all").click(function(){
+        if(unchecked)
+            $("#user-table input[type='checkbox']").prop('checked',1);
+        else
+            $("#user-table input[type='checkbox']").prop('checked',false);
+        unchecked = !unchecked;
     });
 
+    function add_data(data){
+        var flag_head = true;
 
+        for(var rows in data) {
 
+            $('#step2 tbody').append('<tr>');
 
-    $('#change-submit').click(function() {
-        $('#ChangeModal').modal('hide');
-    })
+            data[rows].forEach(function(cols,key){
 
-    $('[data-toggle="tooltip"]').tooltip();
+                $('tbody').append('<td>'+cols+'</td>');
+
+                if(flag_head){
+                    $('.selects').append('<td><select class="select2 form-control csv" tabindex="-1" id="'+key+'"></select></td>');
+                }
+
+            });
+
+            flag_head = false;
+            $('#step2 tbody').append('</tr>');
+        }
+    }
+
+    function add_attr(data){
+        for(var element in data) {
+            if((typeof data[element] === "object") && (data[element] !== null)){
+                $('#step2 select').append('<optgroup label="'+data[element].name+'">');
+                for(var element2 in data[element].attr) {
+                    $('#step2 select').append('<option value="'+element+'/'+element2+'">'+data[element].attr[element2]+'</option>');
+                }
+                $('#step2 select').append('</optgroup');
+            }else{
+                $('#step2 select').append('<optgroup label="Autre"><option selected>'+data[element]+'</option></optgroup>');
+            }
+        }
+
+        $('#step2 select').change(function(){
+            res[$(this).attr('id')] = $(this).val();
+            $('#step2 option').prop('disabled',false);
+            res.forEach(function(value){
+                if(value != 'other')
+                    $('#step2 option[value="'+value+'"]').prop('disabled',true);
+            });
+        });
+    }
+
 });

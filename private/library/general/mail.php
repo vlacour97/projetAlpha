@@ -16,8 +16,8 @@ class mail extends \mainClass{
 
     private static  $gabarit_path = "/private/views/mails/";
     private static  $img_path = "/public/img/mails/";
-    private static  $activation_page = ""; //TODO Completer le chemin
-    private static  $message_page= ""; //TODO Completer le chemin
+    private static  $activation_page = "?nav=active_user";
+    private static  $message_page= "?nav=message";
     private static  $answer_page= "?nav=student_list";
     private static  $forgotten_password_page= "forbiden_password";
     private static  $get_id = "id";
@@ -84,7 +84,7 @@ class mail extends \mainClass{
         $app_name = Config::getName();
 
         //On génére un lien pour l'activation
-        $link = "http://".$_SERVER["HTTP_HOST"].self::$activation_page."?".self::$get_id."=".crypt::encrypt($id_user);
+        $link = "http://".$_SERVER["HTTP_HOST"].self::$activation_page."&".self::$get_id."=".crypt::encrypt($id_user);
 
         //On récupére le gabarit du mail
         $gabarit = self::get_gabarit('activateAccount');

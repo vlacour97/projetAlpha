@@ -1,0 +1,68 @@
+<form action='' method="POST">
+    <fieldset>
+        <div class="form-group col-md-6">
+            <!-- Nom -->
+            <label for="add_user_name">{name-lbl}</label>
+            <input type="text" id="add_user_name" name="add_user_name" placeholder="{name-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group col-md-6">
+            <!-- Prénom -->
+            <label for="add_user_fname">{fname-lbl}</label>
+            <input type="text" id="add_user_fname" name="add_user_fname" placeholder="{fname-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group">
+            <!-- Email -->
+            <label for="add_user_email">{email-lbl}</label>
+            <input type="text" id="add_user_email" name="add_user_email" placeholder="{email-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group">
+            <!-- Type -->
+            <label for="add_user_type">{type-lbl}</label>
+            <select id="add_user_type" data-placeholder="{type-lbl}" class="select2 form-control" tabindex="-1" name="add_user_type" required="required">
+                {type_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Téléphone -->
+            <label for="add_user_phone">{phone-lbl}</label>
+            <input type="tel" id="add_user_phone" name="add_user_phone" placeholder="{phone-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Adresse -->
+            <label for="add_user_addresse">{address-lbl}</label>
+            <input type="tel" id="add_user_addresse" name="add_user_address" placeholder="{address-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-4">
+            <!-- Code Postal -->
+            <label for="add_user_zip_code">{zip-code-lbl}</label>
+            <input type="tel" id="add_user_zip_code" name="add_user_zip_code" placeholder="{zip-code-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-8">
+            <!-- Ville -->
+            <label for="add_user_city">{city-lbl}</label>
+            <input type="tel" id="add_user_city" name="add_user_city" placeholder="{city-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Pays -->
+            <label for="add_user_country">{country-lbl}</label>
+            <select id="add_user_country" data-placeholder="{country-lbl}" class="select2 form-control" tabindex="-1" name="add_user_country">
+                {country_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Langue -->
+            <label for="add_user_language">{language-lbl}</label>
+            <select id="add_user_language" data-placeholder="{language-lbl}" class="select2 form-control" tabindex="-1" name="add_user_language" required="required">
+                {language_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- Autorisation à la publication d'article -->
+            <label for="add_user_publication">{publication-lbl}</label>
+            <select id="add_user_publication" data-placeholder="{publication-lbl}" class="select2 form-control" tabindex="-1" name="add_user_publication" required="required">
+                {boolChose_list}
+            </select>
+        </div>
+    </fieldset>
+    <span class="help-block text-left">* {help}</span>
+</form>

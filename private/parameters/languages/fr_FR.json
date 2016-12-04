@@ -264,7 +264,11 @@
             "see_survey" : "Consultation du questionnaire",
             "answer_survey" : "Répondre au questionnaire",
             "profile" : "Mon Compte"
-        }
+        },
+        "boolChose" : [
+            "Non",
+            "Oui"
+        ]
     },
     "pages": {
         "install": {
@@ -1028,7 +1032,12 @@
             "answer-survey" : "Répondre au questionnaire",
             "refresh-te" : "Relancer le tuteur entreprise",
             "translate_btn" : "Traduire ce texte ?",
-            "translate_btn_back" : "Revenir à la langue d'origine ?"
+            "translate_btn_back" : "Revenir à la langue d'origine ?",
+            "user_actions" : {
+                "contact" : "Contacter",
+                "edit" : "Modifier",
+                "remove" : "Supprimer"
+            }
         },
         "answer_survey2" : {
             "addComment" : "Cliquez pour ajouter un commentaire",
@@ -1041,6 +1050,22 @@
             "close" : "Annuler",
             "send" : "Envoyer",
             "message" : "Note de correctif envoyé !"
+        },
+        "edit_user" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "type-lbl" : "Type d'utilisateur",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "language-lbl" : "Langue",
+            "publication-lbl" : "Autoriser cet utilisateur à publier des articles",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
         }
 
     }
