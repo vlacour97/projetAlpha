@@ -770,6 +770,12 @@
             "informations-lbl" : "Informations",
             "deadline-lbl" : "Date butoire",
             "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "parts" : {
+            "see-survey" : "Voir le questionnaire",
+            "answer-survey" : "Répondre au questionnaire",
+            "refresh-te" : "Relancer le tuteur entreprise",
+            "translate_btn" : "Translate this text ?"
         }
     }
 }

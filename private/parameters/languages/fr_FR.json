@@ -697,6 +697,17 @@
                 "refreshSuccess" : "Relance envoyé auprés du tuteur entreprise"
             }
         },
+        "ti_see_survey": {
+            "previous": "Gestion",
+            "name": "Questionnaire",
+            "tab": {
+                "tabstudent": "Etudiant",
+                "tabTE": "Tuteur Entreprise"
+            },
+            "numQuestion": "Numéro Question",
+            "btnBack": "Retour",
+            "btnValid": "Valider"
+        },
         "404": {
             "expression": "OOPS !",
             "errorname": "ERREUR 404 :",
@@ -1015,7 +1026,9 @@
         "parts" : {
             "see-survey" : "Voir le questionnaire",
             "answer-survey" : "Répondre au questionnaire",
-            "refresh-te" : "Relancer le tuteur entreprise"
+            "refresh-te" : "Relancer le tuteur entreprise",
+            "translate_btn" : "Traduire ce texte ?",
+            "translate_btn_back" : "Revenir à la langue d'origine ?"
         },
         "answer_survey2" : {
             "addComment" : "Cliquez pour ajouter un commentaire",

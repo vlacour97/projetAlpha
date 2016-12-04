@@ -2,12 +2,11 @@
     <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
     <main id="content" class="content" role="main">
         <ol class="breadcrumb">
-            <li>VOUS ETES ICI</li>
-            <li class="active">Questionnaires</li>
+            <li>{previous}</li>
+            <li class="active">{name}</li>
         </ol>
-
-
-            <h1 class="page-title"><span class="fw-semi-bold">Questionnaire</span></h1>
+        {translate_button}
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
 
 
         <section class="row bg-white">
@@ -45,7 +44,7 @@
                 </colgroup>
                 <tbody>
                 <tr>
-                    <td class="text-center"> <h5> <span class="fw-semi-bold"> Numero Question </span></h5></td>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold">{numQuestion}</span></h5></td>
                     <td></td>
                     <td></td>
                 </tr>
@@ -54,8 +53,8 @@
                     <td></td>
                     <td>
                         <div class="col-md-12 text-center mt-n mb-lg">
-                            <a href="{validate_link}"  class="btn btn-success">Valider</a>
-                            <button type="button" class="btn btn-default">Retour</button>
+                            <a href="{validate_link}"  class="btn btn-success">{btnValid}</a>
+                            <button type="button" class="btn btn-default">{btnBack}</button>
                         </div>
                     </td>
                     <td></td>
