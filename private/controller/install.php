@@ -26,7 +26,6 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
     }
     if(!isset($_GET['step']))
         die();
-    sleep(1);
     switch($_GET['step']){
         case 1:
             try{

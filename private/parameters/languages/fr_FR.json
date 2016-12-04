@@ -263,7 +263,8 @@
             "student_list" : "Liste des étudiants",
             "see_survey" : "Consultation du questionnaire",
             "answer_survey" : "Répondre au questionnaire",
-            "profile" : "Mon Compte"
+            "profile" : "Mon Compte",
+            "manage_API" : "Gestion de l'API"
         },
         "boolChose" : [
             "Non",
@@ -633,6 +634,43 @@
                 "nameuser": "Nom / Prénom",
                 "statutuser": "Statut",
                 "actionuser": "Action"
+            },
+            "modal-add": {
+                "title": "Ajouter un étudiant",
+                "step1": {
+                    "title": "Méthode d'ajout",
+                    "choice1": "Importer un fichier CSV",
+                    "choice2": "Ajouter un étudiant"
+                },
+                "step2": {
+                    "title": "Ajout des données"
+                },
+                "step3": {
+                    "title": "Finalisation",
+                    "success": "L'Étudiant à été ajouté avec succés !"
+                },
+                "btnPrevious": "Précédent",
+                "btnNext": "Suivant",
+                "btnFinish": "Terminer"
+            },
+            "modal-infos": {
+                "title": "Informations"
+            },
+            "modal-edit": {
+                "title": "Informations"
+            },
+            "modal-delete": {
+                "title": "Suppression",
+                "message": "Voulez-vous vraiment supprimer ce compte utilisateur ?",
+                "btnDelete": "Supprimer",
+                "btnAbord": "Annuler"
+            },
+            "modal-csv": {
+                "importfile": "Importer",
+                "changefile": "Changer",
+                "delete": "Supprimer",
+                "nb-header-cols": "Nombre de colonnes d'en-têtes",
+                "nb-header-rows": "Nombre de lignes d'en-têtes"
             }
         },
         "te_studentList": {
@@ -787,6 +825,42 @@
             "message" : {
                 "changePassword" : "Mot de passe modifié",
                 "changeDatas" : "Les informations ont été modifié"
+            }
+        },
+        "manage_API" : {
+            "previous" : "Accueil",
+            "name" : "Gestion de l'API",
+            "form": {
+                "siteName": {
+                    "lbl": "Nom de site",
+                    "help": "Il apparaitra sur les moteurs de recherche"
+                },
+                "describe": {
+                    "lbl": "Description du site",
+                    "help": "Elle apparaitra sur les moteurs de recherche"
+                },
+                "keywords": {
+                    "lbl": "Mot clés du site",
+                    "help": "Ils permettront de trouvé plus facilement votre site sur les moteurs de recherches. Mettez une <b>virgule (,) entre chaque mots clés</b>"
+                },
+                "organisationName": {
+                    "lbl": "Nom de l'organisation"
+                },
+                "managerEmail": {
+                    "lbl": "Email de maintenance",
+                    "help": "C'est sur cet email que l'on vous contactera pour la maintenance du site"
+                },
+                "deathdate": {
+                    "lbl": "Date Butoire des questionnaires",
+                    "help": "C'est la date à laquelle tout les questionnaires devront être rendus"
+                },
+                "APIKey": {
+                    "lbl": "Clé de l'API OpenWeatherMap",
+                    "help": "Pour obtenir des informations météo, veuillez vous inscrire sur <a href=\"http://openweathermap.org/\" target=\"_blank\">http://openweathermap.org/</a> pour obtenir une clé d'API"
+                }
+            },
+            "message" : {
+                "success" : "Informations modifier avec succès !"
             }
         },
 

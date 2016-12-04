@@ -1,0 +1,68 @@
+<div class="content-wrap">
+<!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+<main id="content" class="content" role="main">
+    <ol class="breadcrumb">
+        <li>{previous}</li>
+        <li class="active">{name}</li>
+    </ol>
+    <h1 class="page-title">{name}</span></h1>
+    <div class="row">
+        <section class="widget text-center">
+            <h3 class="mb-lg">Modifiez ces champs pour reconfigurer votre API :</h3>
+            <form id="configForm" method="POST">
+                <fieldset>
+                    <div class="form-group">
+                        <!-- Nom du site -->
+                        <label for="config_name">{form/siteName/lbl}</label>
+                        <input type="text" id="config_name" name="config_name" placeholder="" value="{sitename}" class="form-control text-center" required="required">
+                        <span class="help-block">{form/siteName/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <!-- Description du site -->
+                        <label for="config_description">{form/describe/lbl}</label>
+                        <textarea rows="4" class="form-control" id="config_description" name="config_description">{describe}</textarea>
+                        <span class="help-block">{form/describe/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <!-- Mot clés du site -->
+                        <label for="config_description">{form/keywords/lbl}</label>
+                        <textarea rows="4" class="form-control" id="config_keyword" name="config_keyword">{keywords}</textarea>
+                        <span class="help-block">{form/keywords/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <!-- Nom de l'organisation -->
+                        <label for="config_author">{form/organisationName/lbl}</label>
+                        <input type="text" id="config_author" name="config_author" placeholder="" value="{organisationName}" class="form-control text-center" required="required">
+                    </div>
+                    <div class="form-group">
+                        <!-- Email de maintenance -->
+                        <label for="config_admin_mail">{form/managerEmail/lbl}</label>
+                        <input type="email" id="config_admin_mail" name="config_admin_mail" placeholder="" value="{managerEmail}" class="form-control text-center" required="required">
+                        <span class="help-block">{form/managerEmail/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <!-- Date Butoire des questionnaires -->
+                        <label for="config_deadline">{form/deathdate/lbl}</label>
+                        <input type="text" id="config_deadline" name="config_deadline" placeholder="" value="{deathdate}" class="form-control text-center" required="required">
+                        <span class="help-block">{form/deathdate/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <!-- Nom de l'organisation -->
+                        <label for="config_owp_key">{form/APIKey/lbl}</label>
+                        <input type="text" id="config_owp_key" name="config_author" placeholder="" value="{APIKey}" class="form-control text-center">
+                        <span class="help-block">{form/APIKey/help}</span>
+                    </div>
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-inverse validForm">Modifier</button>
+                        <button type="reset" class="btn btn-default">Annuler</button>
+                    </div>
+                </fieldset>
+            </form>
+        </section>
+    </div>
+</main>
+</div>
+<script>
+    var message = new Object();
+    message.success = "{message/success}";
+</script>

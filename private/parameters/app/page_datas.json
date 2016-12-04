@@ -94,5 +94,10 @@
         "id" : "profile",
         "logo" : "",
         "inNavigation" : false
+    },
+    {
+        "id" : "manage_API",
+        "logo" : "fa fa-rocket",
+        "inNavigation" : true
     }
 ]
