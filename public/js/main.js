@@ -8,6 +8,9 @@ $(function(){
     var theme = 'air';
     var classes = 'messenger-fixed messenger-on-top';
 
+    var datas_page;
+    var flag = false;
+
     $.globalMessenger({ extraClasses: classes,theme: theme });
     Messenger.options = { extraClasses: classes,theme: theme  };
 
@@ -46,6 +49,35 @@ $(function(){
                 $('#feedBackModal textarea').val('');
             });
     });
+
+    $('#searchBar').on('input',function(){
+            $('.loader-wrap').removeClass('hide').removeClass('hiding');
+            var value = $(this).val();
+            if(!flag){
+                datas_page = $('.content-wrap').html();
+                flag = true;
+            }
+            if($(this).val() == ""){
+                $('.content-wrap').html(datas_page);
+                $('.loader-wrap').addClass('hide').addClass('hiding');
+                return false;
+            }
+            var url = 'private/controller/search.php?q=' + value;
+            $.get(url)
+                .done(function(data){
+                    $('.content-wrap').html(data);
+                    $('.loader-wrap').addClass('hide').addClass('hiding');
+                })
+                .fail(function(){
+                    $('.loader-wrap').addClass('hide').addClass('hiding');
+                })
+
+        });
+    $('#searchForm').submit(function(e){
+        e.preventDefault();
+    });
+
+
 
     //TODO Màj des données
 

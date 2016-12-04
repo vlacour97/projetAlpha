@@ -11,12 +11,16 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
     include "../config.php";
 
-    try{
-        $date = new \general\Date($_POST['config_deadline']);
-        \app\Config::create_config_file($_POST['config_name'],$_POST['config_description'],$_POST['config_keyword'],$_POST['config_author'],$_POST['config_admin_mail'],$date->format('yyyy-mm-dd'),$_POST['config_author']);
-        echo json_encode(array('response'=>true,'exception'=>null,'code' => null));
-    }catch (Exception $e){
-        echo json_encode(array('response'=>true,'exception'=>$e->getMessage(),'code' => $e->getCode()));
+    switch($_GET['action']){
+        case 'update_data':
+            try{
+                $date = new \general\Date($_POST['config_deadline']);
+                \app\Config::create_config_file($_POST['config_name'],$_POST['config_description'],$_POST['config_keyword'],$_POST['config_author'],$_POST['config_admin_mail'],$date->format('yyyy-mm-dd'),$_POST['config_APIKey']);
+                echo json_encode(array('response'=>true,'exception'=>null,'code' => null));
+            }catch (Exception $e){
+                echo json_encode(array('response'=>true,'exception'=>$e->getMessage(),'code' => $e->getCode()));
+            }
+            break;
     }
     die();
 }

@@ -18,7 +18,7 @@ $(function(){
 
     $('.validForm').click(function(e){
         e.preventDefault();
-        var url = "private/controller/manage_API.php";
+        var url = "private/controller/manage_API.php?action=update_data";
         var form = $('#configForm').serializeArray();
         $.post(url,form)
             .done(function(datas){

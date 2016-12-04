@@ -299,8 +299,11 @@ class HTML {
             <?php $linker->css($links_ie,true) ?>
             <link rel="shortcut icon" href="<?php echo $this->favicon_path ?>">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-            <meta name="description" content="">
-            <meta name="author" content="">
+            <meta name="description" content="<?php echo Config::getDescription() ?>">
+            <meta name="keywords" content="<?php echo Config::getKeywords() ?>">
+            <meta name="author" content="<?php echo Config::getAuthor() ?>">
+            <meta name="copyright" content="<?php echo Config::getCopyright() ?>">
+            <meta http-equiv="Content-Language" content="<?php echo Log::get_lang() ?>" />
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         </head>

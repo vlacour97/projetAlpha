@@ -1140,6 +1140,15 @@
             "language-lbl" : "Langue",
             "publication-lbl" : "Autoriser cet utilisateur à publier des articles",
             "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "search": {
+            "no_result" : "Aucun Résultat",
+            "user_card" : {
+                "sendMessage" : "Envoyer un message"
+            },
+            "message_card" : {
+                "from" : "De"
+            }
         }
 
     }
