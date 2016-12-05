@@ -1,0 +1,81 @@
+<form action='' method="POST">
+    <fieldset>
+        <div class="form-group col-md-6">
+            <!-- Nom -->
+            <label for="edit_student_name">{name-lbl}</label>
+            <input type="text" id="edit_student_name" name="edit_student_name" value="{name}" placeholder="{name-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group col-md-6">
+            <!-- Prénom -->
+            <label for="edit_student_fname">{fname-lbl}</label>
+            <input type="text" id="edit_student_fname" name="edit_student_fname" value="{fname}" placeholder="{fname-lbl}" class="form-control text-center" required="required">
+        </div>
+        <div class="form-group">
+            <!-- Email -->
+            <label for="edit_student_email">{email-lbl}</label>
+            <input type="text" id="edit_student_email" name="edit_student_email" value="{email}" placeholder="{email-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- TE -->
+            <label for="edit_student_te">{te-lbl}</label>
+            <select id="edit_student_te" data-placeholder="{te-lbl}" class="select2 form-control" tabindex="-1" name="edit_student_te" required="required">
+                {te_list}
+            </select>
+        </div>
+        <div class="form-group">
+            <!-- TI -->
+            <label for="edit_student_ti">{ti-lbl}</label>
+            <select id="edit_student_ti" data-placeholder="{ti-lbl}" class="select2 form-control" tabindex="-1" name="edit_student_ti" required="required">
+                {ti_list}
+            </select>
+        </div>
+        <div class="form-group col-md-6">
+            <!-- Groupe -->
+            <label for="edit_student_group">{group-lbl}</label>
+            <input type="text" id="edit_student_group" name="edit_student_group" value="{group}" placeholder="{group-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-6">
+            <!-- Date de Naissance -->
+            <label for="edit_student_birthdate">{birth-date-lbl}</label>
+            <input type="text" id="edit_student_birthdate" name="edit_student_birthdate" value="{birth-date}" placeholder="{birth-date-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Téléphone -->
+            <label for="edit_student_phone">{phone-lbl}</label>
+            <input type="tel" id="edit_student_phone" name="edit_student_phone" value="{phone}" placeholder="{phone-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Adresse -->
+            <label for="edit_student_addresse">{address-lbl}</label>
+            <input type="tel" id="edit_student_addresse" name="edit_student_address" value="{address}" placeholder="{address-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-4">
+            <!-- Code Postal -->
+            <label for="edit_student_zip_code">{zip-code-lbl}</label>
+            <input type="tel" id="edit_student_zip_code" name="edit_student_zip_code" value="{zip-code}" placeholder="{zip-code-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group col-md-8">
+            <!-- Ville -->
+            <label for="edit_student_city">{city-lbl}</label>
+            <input type="tel" id="edit_student_city" name="edit_student_city" value="{city}" placeholder="{city-lbl}" class="form-control text-center">
+        </div>
+        <div class="form-group">
+            <!-- Pays -->
+            <label for="edit_student_country">{country-lbl}</label>
+            <select id="edit_student_country" data-placeholder="Pays" class="select2 form-control" tabindex="-1" name="edit_student_country">
+                {country_list}
+            </select>
+        </div>
+        <div class="form-group col-md-12">
+            <!-- Informations -->
+            <label for="edit_student_deathdate">{informations-lbl}</label>
+            <textarea class="form-control text-center" id="edit_student_informations" name="edit_student_informations" >{informations}</textarea>
+        </div>
+        <div class="form-group col-md-12">
+            <!-- Date Butoire -->
+            <label for="edit_student_deathdate">{deadline-lbl}</label>
+            <input type="text" id="edit_student_deathdate" name="edit_student_deathdate" placeholder="{deathdate}" value="{deathdate}" class="form-control text-center" required="required">
+        </div>
+    </fieldset>
+    <span class="help-block text-left">* {help}</span>
+</form>

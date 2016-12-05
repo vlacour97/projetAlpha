@@ -1,0 +1,781 @@
+{
+    "general" : {
+        "date": {
+            "week": [
+                "Monday",
+                "Tuesday",
+                "Wednesday",
+                "Thursday",
+                "Friday",
+                "Saturday",
+                "Sunday"
+            ],
+            "cut_week": [
+                "Lun.",
+                "Mar.",
+                "Mer.",
+                "Jeu.",
+                "Vend.",
+                "Sam.",
+                "Dim."
+            ],
+            "month": [
+                "Janvier",
+                "Février",
+                "Mars",
+                "Avril",
+                "Mai",
+                "Juin",
+                "Juillet",
+                "Aout",
+                "September",
+                "October",
+                "November",
+                "December"
+            ],
+            "cut_month": [
+                "Jan.",
+                "Fév.",
+                "Mars",
+                "Avr.",
+                "Mai",
+                "Juin",
+                "Juil.",
+                "Aout",
+                "Sept.",
+                "Oct.",
+                "Nov.",
+                "Dec."
+            ],
+            "connector": {
+                "at": "at",
+                "y_s": "an",
+                "m_s": "mois",
+                "d_s": "jour",
+                "h_s": "heure",
+                "min_s": "minute",
+                "s_s": "seconde",
+                "y_p": "an",
+                "m_p": "mois",
+                "d_p": "jours",
+                "h_p": "heures",
+                "min_p": "minutes",
+                "s_p": "secondes",
+                "h": "h",
+                "min": "min",
+                "s": "sec"
+            },
+            "format": {
+                "short_form_date": "dd/mm/yyyy",
+                "long_form_date": "d MM yyyy",
+                "long_cut_date": "d M yyyy",
+                "short_time_form": "hh{h}mm",
+                "long_time_form": "hh:mm:ss",
+                "the": "le",
+                "at": "à"
+            }
+        },
+        "mail": {
+            "general": {
+                "part1": {
+                    "title": "Simplicité",
+                    "content": "Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles."
+                },
+                "part2": {
+                    "title": "Efficacité",
+                    "content": "Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages."
+                },
+                "part3": {
+                    "title": "Ergonomie",
+                    "content": "Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise."
+                }
+            },
+            "activation": {
+                "subject": "Demande d'activation de votre compte",
+                "title": "Votre compte est prêt !",
+                "content": "Votre compte utilisateur est créé ! Vous pourrez commencer à l'utiliser dans quelques instants mais d'abord, veuillez confirmer votre inscription et compléter vos informations personnelles en cliquant sur le lien ci-dessous.",
+                "button_text": "Confirmation d'inscription"
+            },
+            "confirmation": {
+                "subject": "Confirmation d'activation de votre compte",
+                "title": "Création de compte validée !",
+                "content": "Félicitation! La création de votre compte est confirmée, vous pouvez maintenant vous connecter !",
+                "button_text": "Connectez-vous"
+            },
+            "delete": {
+                "subject": "Désactivation de votre compte",
+                "title": "Votre compte a été supprimé",
+                "content": "Votre compte gestion-stage.eu a été supprimé. Pour plus d'informations, contactez l'administrateur."
+            },
+            "message": {
+                "subject": "Vous avez reçu un message de {user_name}",
+                "title": "Vous avez reçu un message !",
+                "button_text": "Répondre à {user_name}"
+            },
+            "question": {
+                "subject": "Un questionnaire demande votre attention",
+                "title": "Un questionnaire demande votre attention",
+                "content": "De nouveaux questionnaires sont disponnibles, vous pouvez y accéder à partir de maintenant.",
+                "button_text": "Répondre au questionnaire"
+            },
+            "reactivation": {
+                "subject": "Votre compte à été remis en service !",
+                "title": "Votre compte à été remis en service !",
+                "content": "Félicitation! Vous pouvez à nouveau vous connecter à votre compte {app_html_link} !",
+                "button_text": "Connectez-vous"
+            },
+            "reponse_question": {
+                "subject": "Questionnaire validé !",
+                "title": "Votre questionnaire a été validé !",
+                "content": "Un de vos questionnaires a été validé par le tuteur école."
+            },
+            "forgotten_password": {
+                "subject": "Mot de passe oublié ?",
+                "title": "Changement de votre mot de passe",
+                "content": "Vous avez oublié votre mots de passe et avez une demande pour le changer. Tout ce passe en cliquant sur ce bouton !",
+                "button_text": "Changer de mot de passe"
+            }
+
+        },
+        "csv_attributes": {
+            "student": {
+                "name": "Etudiant",
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "group": "Groupe",
+                    "phone": "Téléphone"
+                }
+            },
+            "ti": {
+                "name": "Tuteur IUT",
+                "type": 3,
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "phone": "Téléphone"
+                }
+            },
+            "te": {
+                "name": "Tuteur Entreprise",
+                "type": 2,
+                "attr": {
+                    "name": "Nom",
+                    "fname": "Prénom",
+                    "email": "Email",
+                    "phone": "Téléphone"
+                }
+            },
+            "other": "Autre"
+        },
+        "notifications" : {
+            "add_post" : {
+                "value" : "{name_user} a publié un article accessible sur votre Timeline",
+                "icon" : "fa fa-globe"
+            },
+            "comment_post" : {
+                "value" :"{name_publisher} a commenté votre publication",
+                "icon" : "fa fa-comment"
+            },
+            "like_post" : {
+                "value" : "{name_user} a aimé votre publication",
+                "icon" : "fa fa-thumbs-up"
+            },
+            "wait_survey" : {
+                "value" : "Vous avez un questionnaire en attente",
+                "icon" : "fa fa-cloud-o"
+            },
+            "complete_survey" : {
+                "value" : "L'un de vos questionnaires a été complété",
+                "icon" : "fa fa-check"
+            },
+            "validate_survey" : {
+                "value" : "L'un de vos questionnaires a été validé",
+                "icon" : "fa fa-check"
+            },
+            "autorised_publication" : {
+                "value" : "Vous êtes autorisé à publier",
+                "icon" : "fa fa-bullhorn "
+            }
+        },
+        "weather" : {
+            "clearSky" : "Ciel Clair",
+            "fewClouds" : "Quelques nuages",
+            "scatteredCloud" : "Nuages Dispersés",
+            "brokenClouds" : "Nuageux",
+            "showerRain" : "Pluie Dense",
+            "rain" : "Pluie",
+            "thunderstorm" : "Orage",
+            "snow" : "Neige",
+            "mist" : "Brouillard"
+        },
+        "PDF" : {
+            "StudentList" : {
+                "ID" : "ID",
+                "student_name" : "Nom Etudiant",
+                "TI_name" : "Nom Tuteur Entreprise",
+                "TE_name" : "Nom Tuteur IUT",
+                "group" : "Groupe",
+                "mark" : "Note"
+            },
+            "SurveyList" : {
+                "address_lbl" : "Adresse",
+                "email_lbl" : "Email",
+                "phone_lbl" : "Téléphone",
+                "TE_lbl" : "Tuteur Entreprise",
+                "TI_lbl" : "Tuteur IUT",
+                "answer_lbl" : "Numéro Question",
+                "mark_lbl" : "Note",
+                "total_lbl" : "Total"
+            }
+        },
+        "exceptions" : {
+            "1001" : "Connexion échouée : Accés non autorisé pour l'utilisateur \"$user\"",
+            "1002" : "Connexion échouée : Base de données iconnue",
+            "1003" : "Connexion échouée : Hôte iconnue",
+            "2001" : "Connexion échouée : ",
+            "2002" : "Erreur lors de la suppression",
+            "2020" : "Mot de passe incorrect",
+            "2040" : "Veuillez accepter les termes & conditions du contrat"
+        }
+    },
+    "pages": {
+        "install" : {
+            "name" : "Installation :",
+            "navigation" : {
+                "step1" : "Base de Données",
+                "step2" : "Informations du site",
+                "step3" : "Compte Administrateur",
+                "step4" : "Confirmation"
+            },
+            "step1" : {
+                "title" : "Base de Données :",
+                "infos" : "Veuillez remplir les informations concernant votre base de données",
+                "form" : {
+                    "host" : {
+                        "lbl" : "Hôte"
+                    },
+                    "dbname" : {
+                        "lbl" : "Nom de la base de données",
+                        "help" : "Le nom de la base de données dans laquelle vous voulez installer Gestion-Stage"
+                    },
+                    "login" : {
+                        "lbl" : "Identifiant",
+                        "help" : "L'identifiant servant à vos connecter sur la base de données MySQL"
+                    },
+                    "pwd" : {
+                        "lbl" : "Mot de passe",
+                        "help" : "... et son mot de passe MySQL"
+                    },
+                    "prefix" : {
+                        "lbl" : "Préfixe de table",
+                        "help" : "Si vous désirez installer plusieurs site Gestion-Stage dans la même base de données, modifiez ce champ."
+                    }
+                },
+                "buttons" : {
+                    "testConnection" : "Tester la connexion à la base de données"
+                }
+            },
+            "step2" : {
+                "form" : {
+                    "siteName" : {
+                        "lbl" : "Nom de site",
+                        "help" : "Il apparaitra sur les moteurs de recherche"
+                    },
+                    "describe" : {
+                        "lbl" : "Description du site",
+                        "help" : "Elle apparaitra sur les moteurs de recherche"
+                    },
+                    "keywords" : {
+                        "lbl" : "Mot clés du site",
+                        "help" : "Ils permettront de trouvé plus facilement votre site sur les moteurs de recherches. Mettez une <b>virgule (,) entre chaque mots clés</b>"
+                    },
+                    "organisationName" : {
+                        "lbl" : "Nom de l'organisation"
+                    },
+                    "managerEmail" : {
+                        "lbl" : "Email de maintenance",
+                        "help" : "C'est sur cet email que l'on vous contactera pour la maintenance du site"
+                    },
+                    "deathdate" : {
+                        "lbl" : "Date Butoire des questionnaires",
+                        "help" : "C'est la date à laquelle tout les questionnaires devront être rendus"
+                    },
+                    "APIKey" : {
+                        "lbl" : "Clé de l'API OpenWeatherMap",
+                        "help" : "Pour obtenir des informations météo, veuillez vous inscrire sur <a href=\"http://openweathermap.org/\" target=\"_blank\">http://openweathermap.org/</a> pour obtenir une clé d'API"
+                    }
+                }
+            },
+            "step3" : {
+                "form" : {
+                    "name" : {
+                        "lbl" : "Nom",
+                        "help" : "Votre Nom"
+                    },
+                    "fname" : {
+                        "lbl" : "Prénom",
+                        "help" : "Votre Prénom"
+                    },
+                    "email" : {
+                        "lbl" : "Email",
+                        "help" : "Votre email"
+                    },
+                    "pwd" : {
+                        "lbl" : "Mot de passe",
+                        "help" : "Votre mot de passe"
+                    },
+                    "pwdVerif" : {
+                        "lbl" : "Confirmation du mot de passe",
+                        "help" : "Confirmation de votre mot de passe"
+                    },
+                    "phone" : {
+                        "lbl" : "Téléphone",
+                        "help" : "Votre numéro de téléphone"
+                    },
+                    "address" : {
+                        "lbl" : "Adresse",
+                        "help" : "Votre adresse"
+                    },
+                    "zip_code" : {
+                        "lbl" : "Code Postal",
+                        "help" : "Votre Code Postal"
+                    },
+                    "city" : {
+                        "lbl" : "Ville",
+                        "help" : "Votre ville"
+                    },
+                    "country" : {
+                        "lbl" : "Pays",
+                        "help" : "Votre Pays"
+                    },
+                    "language" : {
+                        "lbl" : "Langue",
+                        "help" : "Votre Langue"
+                    },
+                    "help" : "Ces Informations pourront être modifié aprés la création du compte"
+                }
+            },
+            "step4" : {
+                "title" : "Finalisation :",
+                "infos" : "Lorsque vous cliquerez sur \"Terminez\", un questionnaire prérempli sera installé et vous pourrez vous connecté sur votre sytéme de Gestion de Stage"
+            },
+            "previous" : "Précédent",
+            "next" : "Suivant",
+            "finish" : "Terminer",
+            "script" : {
+                "DB_connect" : {
+                    "success" : "Connexion réussi",
+                    "fail" : "Impossible de se connecter à la base de données"
+                }
+            },
+            "site-year" : "2016",
+            "site-name" : "Projet-Alpha",
+            "site-copyright" : "Gestion-Alpha"
+        },
+        "login" : {
+            "name" : "Connectez-vous",
+            "emailForm" : "Nom d'utilisateur",
+            "pwdForm" : "Mot de passe",
+            "btnConnect" : "Connexion",
+            "stayConnected" : "Mémoriser",
+            "forgottenPwd" : "Mot de passe oublié ?"
+        },
+        "lockscreen" : {
+            "name" : "Connectez-vous",
+            "pwdLbl" : "Mot de passe",
+            "btnConnection" : "Connexion",
+            "otherClient" : "Vous n'êtes pas {username}?"
+        },
+        "forbPassword" : {
+            "name" : "Mot de passe oublié",
+            "description" : "Veuillez saisir votre nom d'utilisateur",
+            "emailLbl" : "Votre e-mail",
+            "btnSubmit" : "Valider",
+            "returnLink" : "Retour à la page de connexion",
+            "successMessage" : "Un email viens de vous être envoyé pour changer votre mot de passe, vous allez être <b>redirigé d'ici peu</b>"
+        },
+        "forbPassword_part2" : {
+            "name" : "Mot de passe oublié",
+            "description" : "Veuillez changer votre mot de passe",
+            "pwdLbl" : "Mot de passe",
+            "pwdVerifLbl" : "Confirmation du mot de passe",
+            "btnSubmit" : "Valider"
+        },
+        "active_account" : {
+            "name" : "Inscription",
+            "form" : {
+                "name" : {
+                    "lbl" : "Nom*",
+                    "placeholder" : "Nom"
+                },
+                "fname" : {
+                    "lbl" : "Prénom*",
+                    "placeholder" : "Prénom"
+                },
+                "email" : {
+                    "lbl" : "Email",
+                    "placeholder" : "Email"
+                },
+                "pwd" : {
+                    "lbl" : "Mot de passe*",
+                    "placeholder" : "Mot de passe"
+                },
+                "pwdVerif" : {
+                    "lbl" : "Confirmation*",
+                    "placeholder" : "Confirmation de votre mot de passe"
+                },
+                "phone" : {
+                    "lbl" : "Téléphone",
+                    "placeholder" : "Numéro de téléphone"
+                },
+                "address" : {
+                    "lbl" : "Adresse",
+                    "placeholder" : "Adresse"
+                },
+                "zip_code" : {
+                    "lbl" : "Code Postal",
+                    "placeholder" : "Code Postal"
+                },
+                "city" : {
+                    "lbl" : "Ville",
+                    "placeholder" : "Ville"
+                },
+                "country" : {
+                    "lbl" : "Pays"
+                },
+                "language" : {
+                    "lbl" : "Langue"
+                },
+                "accept_terms_and_conditions" : "J'ai lu et j'accepte les conditions générales d'utilisation du site"
+            }
+        },
+        "404" : {
+            "expression" : "OOPS !",
+            "errorname" : "ERREUR 404 :",
+            "errordef" : "La page que vous cherchez n'existe pas"
+        },
+        "email" : {
+            "chemin1" : "Général",
+            "name" : "Messages",
+            "inbox" : "Boite de reception",
+            "newmessage" : "Nouveau Message",
+            "recieved" : "Reçus",
+            "sent" : "Envoyés",
+            "deleted" : "Supprimés",
+            "answer" : "Répondre",
+            "print" : "imprimer",
+            "delete" : "Supprimer"
+        },
+        "inbox" : {
+            "chemin1" : "Général",
+            "name" : "Messages",
+            "inbox" : "Boite de reception",
+            "newmessage" : "Nouveau Message",
+            "recieved" : "Reçus",
+            "sent" : "Envoyés",
+            "deleted" : "Supprimés",
+            "select" : "Selectionner",
+            "all" : "Tout",
+            "none" : "Aucun",
+            "read" : "Lus",
+            "noread" : "Non Lus",
+            "actions" : "Actions",
+            "answer" : "Répondre",
+            "markread" : "Marquer comme lus",
+            "marknoread" : "Marquer comme non lus",
+            "deletemsg" : "Supprimer",
+            "searchmsg" : "Rechercher Messages"
+        },
+        "search" : {
+            "chemin1" : "Accueil",
+            "name" : "Recherches",
+            "resutsearch" : "Résultat des recherches pour :",
+            "users" : "Utilisateurs :",
+            "students" : "Etudiants :",
+            "messages" : "Messages :",
+            "timeline" : "Timeline :"
+        },
+        "timeline" : {
+            "chemin1" : "Accueil",
+            "name" : "Fils d'actualité",
+            "writemsg" : "Exprimez-vous !",
+            "importfile" : "Integrer un fichier",
+            "changefile" : "Changer",
+            "delete" : "Supprimer",
+            "cancel" : "Annuler",
+            "post" : "Publier"
+        },
+        "500" :  {
+            "title" : " OOPS ! ",
+            "bold" : "500 Internal Server Error",
+            "text" : " Erreur lors du lancement de l'application ",
+            "button" : "Page d'acceuil"
+        },
+        "compose" : {
+            "way": {
+                "way1": "Général",
+                "way2": "Messages"
+            },
+            "menu": {
+                "title": "Messages - ",
+                "semi_bold": "Boîte de reception",
+                "button": "Nouveau Message",
+                "received": "Reçus",
+                "sent": "Envoyés",
+                "deleted": "Supprimés"
+            },
+            "message": {
+                "title": "Compose ",
+                "semi_bold": "Nouveau",
+                "to": "À:",
+                "object": "Objet:",
+                "attach": "Integrer un fichier",
+                "send": "Envoyer",
+                "cancel": "Annuler"
+            },
+            "profile" : {
+                "way1" : "Accueil",
+                "way2" : "Mon Compte",
+                "title" : "Mon Compte",
+                "password" : {
+                    "pwd" : {
+                        "lbl" : "Nouveau mot de passe",
+                        "help" : "Votre nouveau mot de passe"
+                    },
+                    "confirm_pwd" : {
+                        "confirm": {
+                            "lbl": "Confirmation du nouveau mot de passe",
+                            "help": "Confirmation de nouveau votre mot de passe"
+                        }
+                    },
+                    "button1" : "Modifier"
+                },
+                "form2" : {
+                    "name" : {
+                        "name" :{
+                            "lbl" : "Nom",
+                            "help" : "Votre Nom"
+                        }
+                    },
+                    "fname" : {
+                        "fname" :{
+                            "lbl" : "Prénom",
+                            "help" : "Votre Prénom"
+                        }
+                    },
+                    "mail" : {
+                        "mail" : {
+                            "lbl" : "Email",
+                            "help" : "Votre email"
+                        }
+                    },
+                    "phone" : {
+                        "phone" : {
+                            "lbl" : "Téléphone",
+                            "help" : "Votre numéro de téléphone"
+                        }
+                    },
+                    "address" :{
+                        "address" : {
+                            "lbl" : "Adresse",
+                            "help" : "Votre adresse"
+                        }
+                    },
+                    "zip_code" : {
+                        "zip" : {
+                            "lbl" : "Code Postal",
+                            "help" : "Votre Code Postal"
+                        }
+                    },
+                    "city" : {
+                        "city" : {
+                            "lbl" : "Ville",
+                            "help" : "Votre ville"
+                        }
+                    },
+                    "country" : {
+                        "country" : {
+                            "lbl" : "Pays",
+                            "help" : "Votre Pays"
+                        }
+                    },
+                    "language" : {
+                        "language" : {
+                            "lbl" : "Langue",
+                            "help" : "Votre Langue"
+                        }
+                    },
+                    "button_modify" : "Modifier",
+                    "button_back" : "Retour"
+                }
+            }
+        },
+        "dashboard" : {
+            "previous" : "Home",
+            "name" : "Dashboard",
+            "lbl_connections" : "NUMBER OF CONNEXIONS",
+            "alternative_map" : "Erreur lors de l'affichage de la carte",
+            "evolution_title" : "Evolution of the number of <span class=\"fw-semi-bold\">user connections</span>",
+            "expand" : "Expand",
+            "collapse" : "Collapse",
+            "responses_rate" : "Responses <span class=\"fw-semi-bold\">Rate</span>",
+            "responses_rate_description": "Breakdown of survey response rates"
+        },
+        "admin_studentList" : {
+            "previous" : "Accueil",
+            "name" : "Gestion",
+            "student" : "Étudiants",
+            "btnDelete" : "Supprimer",
+            "table" : {
+                "id" : "ID",
+                "student_name" : "Nom / Prenom",
+                "TI" : "Tuteur IUT",
+                "TE" : "Tuteur Entreprise",
+                "actions" : "Actions"
+            },
+            "modal-add" : {
+                "title" : "Ajouter un étudiant",
+                "step1" : {
+                    "title" : "Méthode d'ajout",
+                    "choice1" : "Importer un fichier CSV",
+                    "choice2" : "Ajouter un étudiant"
+                },
+                "step2" : {
+                    "title" : "Ajout des données"
+                },
+                "step3" : {
+                    "title" : "Finalisation",
+                    "success" : "L'Étudiant à été ajouté avec succés !"
+                },
+                "btnPrevious" : "Précédent",
+                "btnNext" : "Suivant",
+                "btnFinish" : "Terminer"
+            },
+            "modal-infos" : {
+                "title" : "Informations"
+            },
+            "modal-edit" : {
+                "title" : "Informations"
+            },
+            "modal-delete": {
+                "title" : "Suppression",
+                "message" : "Voulez-vous vraiment supprimer ce compte utilisateur ?",
+                "btnDelete" : "Supprimer",
+                "btnAbord" : "Annuler"
+            },
+            "modal-csv" : {
+                "importfile" : "Importer",
+                "changefile" : "Changer",
+                "delete" : "Supprimer",
+                "nb-header-cols" : "Nombre de colonnes d'en-têtes",
+                "nb-header-rows" : "Nombre de lignes d'en-têtes"
+            }
+        },
+        "admin_studentScore" : {
+            "previous" : "Étudiants",
+            "name" : "Résultats",
+            "students" : "Étudiants",
+            "btn-student-list" : "Accéder à la liste des étudiants",
+            "btn-generate-pdf" : "Générer une liste PDF",
+            "table" : {
+                "attr1" : "ID",
+                "attr2" : "Prénom",
+                "attr3" : "Nom",
+                "attr4" : "Groupe",
+                "attr5" : "Status",
+                "attr6" : "Note"
+            },
+            "modal-generate-pdf" : {
+                "title" : "Générer une liste PDF",
+                "title-pdf" : "Nom de la liste PDF",
+                "btnValid" : "Valider"
+            }
+        },
+        "admin_survey_read" : {
+            "previous" : "Étudiants",
+            "name" : "Questionnaire",
+            "btn-generate-pdf" : "Générer un PDF",
+            "infos" : {
+                "part1" : "Etudiant",
+                "part2" : "Tuteur IUT",
+                "part3" : "Tuteur Entreprise"
+            },
+            "table" : {
+                "attr1" : "Numero Question",
+                "attr2" : "Résultat",
+                "total" : "Total"
+            },
+            "btnComeBack" : "Retour"
+        }
+
+    },
+    "components" : {
+        "sidebar" : {
+            "stats_title" : "Stats",
+            "stats_progress" : "Survey's response rate",
+            "stats_progress_description" : "{percent_response}% of users have respond"
+        },
+        "weather" : {
+            "today" : "TODAY",
+            "tomorrow" : "TOMORROW"
+        },
+        "message_widget" : {
+            "from" : "De"
+        },
+        "navbar" : {
+            "hamburger_title" : "Expand/Collapse the navbar",
+            "hamburger_title_2" : "Expand/Collapse aside",
+            "search_form" : "Search",
+            "updated_at" : "Updated at",
+            "account" : "My Account",
+            "inbox" : "Inbox",
+            "logout" : "Logout"
+        },
+        "student_infos" : {
+            "deadline_lbl" : "Date butoire"
+        },
+        "edit_student" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "te-lbl" : "Tuteur Entreprise",
+            "ti-lbl" : "Tuteur IUT",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "informations-lbl" : "Informations",
+            "deadline-lbl" : "Date butoire",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "add_student" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "te-lbl" : "Tuteur Entreprise",
+            "ti-lbl" : "Tuteur IUT",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "informations-lbl" : "Informations",
+            "deadline-lbl" : "Date butoire",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "parts" : {
+            "see-survey" : "Voir le questionnaire",
+            "answer-survey" : "Répondre au questionnaire",
+            "refresh-te" : "Relancer le tuteur entreprise",
+            "translate_btn" : "Translate this text ?"
+        }
+    }
+}

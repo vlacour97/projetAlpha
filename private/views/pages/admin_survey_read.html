@@ -1,0 +1,70 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        <div class="pull-right"><a class="btn btn-default" target="_blank" href="?nav=students/survey_pdf&id={student-id}"><i class="fa fa-file-pdf-o"></i> {btn-generate-pdf}</a></div>
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
+        <section class="row bg-white">
+            <div class="col-md-12">
+                <div class="col-md-offset-1 col-md-6 mt-xlg">
+                    <h2> {student-fname} <span class="fw-semi-bold">{student-name}</span></h2>
+                </div>
+                <div class="col-md-4 mt-lg">
+                    <div class="clearfix">
+                        <ul id="myTabs" class="nav nav-tabs"> <!-- remove pull-left to get a cool effect too -->
+                            <li class="active"><a href="#student" data-toggle="tab">{infos/part1}</a></li>
+                            <li class=""><a href="#TI" data-toggle="tab">{infos/part2}</a></li>
+                            <li class=""><a href="#TE" data-toggle="tab">{infos/part3}</a></li>
+                        </ul>
+                    </div>
+                    <div id="TableStudentTI" class="tab-content mb-lg">
+                        <div class="tab-pane clearfix active" id="student">
+                            <h2>{student-fname} {student-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{student-phone">{student-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{student-email}">{student-email}</a></p>
+                        </div>
+                        <div class="tab-pane clearfix" id="TI">
+                            <h2>{ti-fname} {ti-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{ti-phone}">{ti-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{ti-email}">{ti-email}</a></p>
+                        </div>
+                        <div class="tab-pane clearfix" id="TE">
+                            <h2>{te-fname} {te-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{te-phone}">{te-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{te-email}">{te-email}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <table class="table border-survey">
+                <colgroup>
+                    <col class="col-md-2">
+                    <col class="col-md-8">
+                    <col class="col-md-2">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold">{table/attr1}</span></h5></td>
+                    <td></td>
+                    <td class="text-center"><h5> <span class="fw-semi-bold">{table/attr2}</span></h5>  </td>
+                </tr>
+                {survey_datas}
+                </tbody>
+                <tfoot>
+                <tr>
+                    <th colspan="2"><h4 class="mt-n text-right fw-semi-bold">{table/total} :</h4></th>
+                    <th><h4 class="mt-n"><span class="fw-semi-bold">{mark} </span>/20</h4></th>
+                </tr>
+                </tfoot>
+            </table>
+            <div class="col-md-12 text-center mt-n mb-lg">
+                <a href="?nav=students/student_list" class="btn btn-default">{btnComeBack}</a>
+            </div>
+        </section>
+    </main>
+</div>

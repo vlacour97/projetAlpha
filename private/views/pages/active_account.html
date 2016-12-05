@@ -1,0 +1,120 @@
+<body class="login-page">
+
+<div class="container">
+    <main id="content" class="widget-login-container" role="main">
+        <div class="row">
+            <div class="col-lg-6 col-sm-6 col-xs-6 col-lg-offset-3 col-sm-offset-3 col-xs-offset-3">
+                <h4 class="widget-login-logo animated fadeInUp">
+                    <i class="fa fa-circle text-gray"></i>
+                    {site-name}
+                    <i class="fa fa-circle text-warning"></i>
+                </h4>
+                <section class="widget widget-login animated fadeInUp">
+                    <header>
+                        <h3  align="center">{name}</h3>
+                    </header>
+                    <div class="widget-body">
+
+                        <form class="form-horizontal login-form mt-lg" method="post">
+                            <input type="hidden" name="{id_name}" value="{id_value}">
+                            <div class="form-group">
+                                <label  class="col-sm-3 control-label" for="name">{form/name/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{name_user}" name="name" id="name" placeholder="{form/name/placeholder}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="fname">{form/fname/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{fname_user}" name="fname" id="fname" placeholder="{form/fname/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="email">{form/email/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control"  disabled="disabled" value="{email_user}" name="email" id="email" placeholder="{form/email/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="pwd">{form/pwd/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" name="pwd" value="" id="pwd" placeholder="{form/pwd/placeholder}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="control-label col-sm-3" for="pwdVerif">{form/pwdVerif/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input type="password" class="form-control" name="pwdVerif" value="" id="pwdVerif" placeholder="{form/pwdVerif/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="phone">{form/phone/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{phone_user}" name="phone" id="phone" placeholder="{form/phone/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="address">{form/address/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{address_user}" name="address" id="address" placeholder="{form/address/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="city">{form/city/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{city_user}" name="city" id="city" placeholder="{form/city/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="zip_code">{form/zip_code/lbl}</label>
+                                <div class="col-sm-6">
+                                    <input  class="form-control" value="{zip_code_user}" name="zip_code" id="zip_code" placeholder="{form/zip_code/placeholder}">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="country">{form/country/lbl}</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" name="country" id="country">
+                                        {select/countries}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-sm-3 control-label" for="language">{form/language/lbl}</label>
+                                <div class="col-sm-6">
+                                    <select class="form-control" name="language" id="language">
+                                        {select/language}
+                                    </select>
+                                </div>
+                            </div>
+
+                            <iframe class="col-md-12 mt-lg mb-lg fa-border" src="private/views/components/licences.html"></iframe>
+
+                            <div class="col-lg-12 mb-md">
+                                <div class="checkbox widget-login-info  text-center">
+                                    <input type="checkbox" value="1" name="conditions" id="conditions">
+                                    <label for="conditions">{form/accept_terms_and_conditions}</label>
+                                </div>
+                            </div>
+
+                            <div class="clearfix">
+                                <div class="btn-toolbar  text-center">
+                                    <button class="btn btn-inverse btn-sm" id="submit">Valider</button>
+                                </div>
+                            </div>
+
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </main>
+</div>

@@ -1,0 +1,47 @@
+<tr data-id="{ID}" class="survey">
+
+    <td class="text-center"> <h4 class="fw-semi-bold mt-n">{ID}-</h4> </td>
+    <td class="text-center">
+        <div class="panel-group mt-xs" id="accordion-{ID}">
+            <div class="panel panel-default">
+                <div class="panel-heading collapsed">
+                    <h4 class="panel-title">
+                        <a class="collapsed" data-toggle="collapse" data-parent="#accordion-{ID}" href="#collapse-{ID}">
+                            {title} {ID} <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times rmvQuestion"></i></div></a>
+                    </h4>
+                </div>
+                <div id="collapse-{ID}" class="panel-collapse collapse in">
+                    <div class="panel-body">
+                        <form>
+                            <input type="text" name="question-name-{ID}" value="{question-name-value}" class="form-control question-name" placeholder="{title}">
+                            <table class="table">
+                                <tbody>
+                                <div class="form-group">
+                                    <tr class="head_answer">
+                                        <td></td>
+                                        <td class="col-md-8">
+                                            <h4 class="mt-n"> <span class="fw-semi-bold"> {responses} </span></h4>
+                                        </td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    {answers}
+                                    <tr>
+                                        <td></td>
+                                        <td><button type="button" class="addAnswer btn btn-link"><i class="fa fa-plus-circle" aria-hidden="true"></i> Ajouter une réponse</button></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </div>
+                                </tbody>
+                            </table>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </td>
+    <td class="text-center bottom"><h4 class="mt-n"><span class="fw-semi-bold nb_point">0 </span>pt.</h4></td>
+</tr>

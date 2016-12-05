@@ -1,0 +1,47 @@
+[
+    {
+        "id" : "ie",
+        "name" : "Internet Explorer",
+        "regex" : "/msie/i"
+    },
+    {
+        "id" : "fi",
+        "name" : "Firefox",
+        "regex" : "/firefox/i"
+    },
+    {
+        "id" : "sa",
+        "name" : "Safari",
+        "regex" : "/safari/i"
+    },
+    {
+        "id" : "ch",
+        "name" : "Chrome",
+        "regex" : "/chrome/i"
+    },
+    {
+        "id" : "op",
+        "name" : "Opera",
+        "regex" : "/opera/i"
+    },
+    {
+        "id" : "ne",
+        "name" : "Netscape",
+        "regex" : "/netscape/i"
+    },
+    {
+        "id" : "ma",
+        "name" : "Maxthon",
+        "regex" : "/maxthon/i"
+    },
+    {
+        "id" : "ko",
+        "name" : "Konqueror",
+        "regex" : "/konqueror/i"
+    },
+    {
+        "id" : "hb",
+        "name" : "Handheld Browser",
+        "regex" : "/mobile/i"
+    }
+]
