@@ -1,0 +1,4 @@
+AuthName "Page à l'acces restreint "
+AuthType Basic
+AuthUserFile "C:\Users\PAUL\e10\private\parameters\.htpasswd"
+Require valid-user
