@@ -98,7 +98,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
             break;
         case 'change_student':
             try{
-                \app\User::set_student(intval($_GET['id']),intval($_POST['edit_student_te']),intval($_POST['edit_student_ti']),$_POST['edit_student_name'],$_POST['edit_student_fname'],$_POST['edit_student_group'],$_POST['edit_student_email'],$_POST['edit_student_phone'],$_POST['edit_student_address'],$_POST['edit_student_zip_code'],$_POST['edit_student_city'],$_POST['edit_student_country'],$_POST['edit_student_informations'],$_POST['edit_student_birthdate'],$_POST['edit_student_deathdate']);
+                \app\User::set_student(intval($_GET['id']),intval($_POST['edit_student_te']),intval($_POST['edit_student_ti']),$_POST['edit_student_name'],$_POST['edit_student_fname'],$_POST['edit_student_group'],$_POST['edit_student_email'],$_POST['edit_student_phone'],$_POST['edit_student_address'],$_POST['edit_student_zip_code'],$_POST['edit_student_city'],$_POST['edit_student_country'],$_POST['edit_student_birthdate'],$_POST['edit_student_informations'],$_POST['edit_student_deathdate']);
                 echo json_encode(array('response'=>true,'exception'=>null,'code' => null));
             }catch (Exception $e){
                 echo json_encode(array('response'=>false,'exception'=>$e->getMessage(),'code' => $e->getCode()));

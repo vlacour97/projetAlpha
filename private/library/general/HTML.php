@@ -9,6 +9,7 @@
 namespace general;
 
 use app\Config;
+use app\Install;
 use app\Log;
 use app\Message;
 use app\Navigation;
@@ -293,7 +294,7 @@ class HTML {
         <!DOCTYPE html>
         <html>
         <head>
-            <title><?php if(Log::isLogged()) echo Navigation::get_title(); ?></title>
+            <title><?php if(Log::isLogged()) echo Navigation::get_title(); elseif(Install::APP_is_installed()) echo Config::getName(); ?></title>
             <!-- Applications Links -->
             <?php $linker->css($links) ?>
             <?php $linker->css($links_ie,true) ?>

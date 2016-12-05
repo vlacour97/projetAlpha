@@ -16,8 +16,8 @@
                         <p>{status}</p>
                         <a href="{message_link}" class="btn btn-danger btn-sm mt">&nbsp; {user_card/sendMessage} <i class="fa fa-envelope ml-xs"></i>&nbsp;</a>
                         <ul class="contacts">
-                            <li><i class="fa fa-phone fa-fw mr-xs"></i><a href="#">{phone}&nbsp;</a></li>
-                            <li><i class="fa fa-envelope fa-fw mr-xs"></i><a href="#">{email}&nbsp;</a></li>
+                            <li><i class="fa fa-phone fa-fw mr-xs"></i><a href="callto:{phone}">{phone}&nbsp;</a></li>
+                            <li><i class="fa fa-envelope fa-fw mr-xs"></i><a href="mailto:{email}">{email}&nbsp;</a></li>
                             <li><i class="fa fa-map-marker fa-fw mr-xs"></i><a href="#">{city}, {country}&nbsp;</a></li>
                         </ul>
                     </div>
