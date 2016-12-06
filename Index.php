@@ -8,7 +8,7 @@
 
 include "private/config.php";
 
-$global_pages = array('forbiden_password','active_user','error/404','error/403','error/500');
+$global_pages = array('forbiden_password','active_user','error/404','error/403','error/500','survey_read');
 
 //Si l'API n'est pas installé
 if(!\app\Install::APP_is_installed()){
@@ -45,4 +45,5 @@ if(!\app\Log::isLogged()){
 
 \app\Navigation::get_pages();
 
+//\app\Log::set_stat();
 

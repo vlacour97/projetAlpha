@@ -65,7 +65,18 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
                 $datas[] = $tmp;
                 $iterator++;
             }
-            \app\Answer::set_survey($datas,$_GET['name']);
+            if(isset($_GET['name'])){
+                \app\Answer::set_survey($datas,$_GET['name']);
+            }elseif(isset($_GET['id'])){
+                $id = \general\crypt::decrypt($_GET['id']);
+
+                if(!\app\Answer::isset_survey($id))
+                    header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
+
+                \app\Answer::set_survey($datas,\app\Answer::getSurveyName($id),$id);
+            }else{
+                header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
+            }
             break;
     }
 
@@ -88,17 +99,68 @@ $script_vendor = array(
 );
 $script = array('survey_create.js');
 
+
 $survey_gabarit = \general\Language::translate_gabarit('components/add_survey');
 $answers_gabarit = \general\Language::translate_gabarit('components/answer_survey');
 
-$answers = "";
-for($i=1;$i<=2;$i++){
-    $answers .= str_replace(['{ID_answer}','{response_content}','{value_content}'],[$i,'',0],$answers_gabarit);
-}
+if(isset($_GET['id'])){
+    $id = \general\crypt::decrypt($_GET['id']);
 
-$replace = array('{add_answer_content}','{answers}','{ID}','{question-name-value}');
-$by = array($survey_gabarit,$answers,1,'');
-$gabarit = str_replace($replace,$by,$gabarit);
+    if(!\app\Answer::isset_survey($id))
+        header('Location: index.php?nav=error/404');
+
+    /*
+
+
+
+
+        $answers = "";
+        for($i=1;$i<=2;$i++){
+            $answers .= str_replace(['{ID_answer}','{response_content}','{value_content}'],[$i,'',0],$answers_gabarit);
+        }
+        $replace = array('{answers}','{ID}','{question-name-value}');
+        $by = array($answers,1,$answer->questionLbl);
+        $survey .= str_replace($replace,$by,$survey_gabarit);
+
+    }
+
+    $replace = array('{add_answer_content}');
+    $by = array($survey);
+    $gabarit = str_replace($replace,$by,$survey);*/
+    //die();
+
+    $survey_datas = \app\Answer::get_survey($id);
+    $survey = "";
+
+    foreach($survey_datas->questions as $key=>$answer) {
+        $answers = "";
+        $iterator = 1;
+        while(isset($answer->$iterator)) {
+            $answers .= str_replace(['{ID_answer}', '{response_content}', '{value_content}'], [$iterator, $answer->$iterator->lbl, $answer->$iterator->nb_point], $answers_gabarit);
+            $iterator++;
+        }
+
+        $replace = array('{answers}', '{ID}', '{question-name-value}');
+        $by = array($answers, $key+1, $answer->questionLbl);
+        $survey .= str_replace($replace, $by, $survey_gabarit);
+    }
+
+    $replace = array('{add_answer_content}');
+    $by = array($survey);
+    $gabarit = str_replace($replace,$by,$gabarit);
+
+
+}else{
+
+    $answers = "";
+    for($i=1;$i<=2;$i++){
+        $answers .= str_replace(['{ID_answer}','{response_content}','{value_content}'],[$i,'',0],$answers_gabarit);
+    }
+
+    $replace = array('{add_answer_content}','{answers}','{ID}','{question-name-value}');
+    $by = array($survey_gabarit,$answers,1,'');
+    $gabarit = str_replace($replace,$by,$gabarit);
+}
 
 $html->open();
 $html->sidebar();

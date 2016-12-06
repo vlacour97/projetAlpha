@@ -20,6 +20,7 @@ class Answer extends \mainClass{
     static private $survey_path = "/private/parameters/surveys/";
     static $survey_marker = "id";
     static $survey_id_page = "see_survey";
+    static $survey_public_id_page = "survey_read";
     static $survey_complete_id_page = "answer_survey";
 
     /**
@@ -460,7 +461,7 @@ class Answer extends \mainClass{
         $gabarit = Language::translate_gabarit('pdf/SurveyList');
 
         //Student Infos
-        $link = HOST.'index.php?'.Navigation::$navigation_marker.'='.self::$survey_id_page.'&'.self::$survey_marker.'='.crypt::encrypt($id_student);
+        $link = HOST.'/index.php?'.Navigation::$navigation_marker.'='.self::$survey_public_id_page.'&'.self::$survey_marker.'='.crypt::encrypt($id_student);
         $replace = ['{student_fname}','{student_name}','{student_group}','{student_address}','{student_email}','{student_phone}','{student_TE}','{student_TI}','{survey_link}'];
         $by = [$student_datas->fname,$student_datas->name,$student_datas->group,$student_datas->address,$student_datas->email,$student_datas->phone,$student_datas->name_TE,$student_datas->name_TI,$link];
         $gabarit = str_replace($replace,$by,$gabarit);
@@ -545,6 +546,17 @@ class Answer extends \mainClass{
         $html2pdf->pdf->SetDisplayMode('fullpage');
         $html2pdf->writeHTML($gabarit);
         $html2pdf->Output('StudentList.pdf');
+    }
+
+
+    /**
+     * Récupére le nom d'un questionnaire
+     * @param int $id
+     * @return string
+     * @throws \Exception
+     */
+    static function getSurveyName($id){
+        return self::get_survey($id)->name;
     }
 
 } 

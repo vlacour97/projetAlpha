@@ -2,12 +2,12 @@
 /**
  * Created by PhpStorm.
  * User: valentinlacour
- * Date: 28/11/16
- * Time: 22:22
+ * Date: 06/12/16
+ * Time: 23:38
  */
 
 $html = new \general\HTML();
-$gabarit = \general\Language::translate_gabarit('pages/survey_read/admin_survey_read');
+$gabarit = \general\Language::translate_gabarit('pages/survey_read/public_survey_read');
 $id = \general\crypt::decrypt($_GET['id']);
 
 if(!\general\PDOQueries::isset_student($id))
@@ -61,7 +61,5 @@ $gabarit = str_replace($replace,$by,$gabarit);
 
 
 $html->open();
-$html->sidebar();
-$html->navbar();
 echo $gabarit;
 $html->close($script_vendor,$script);

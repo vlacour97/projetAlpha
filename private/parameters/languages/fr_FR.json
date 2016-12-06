@@ -563,7 +563,7 @@
                 "btnValid": "Valider"
             }
         },
-        "admin_survey_read": {
+        "survey_read": {
             "previous": "Étudiants",
             "name": "Questionnaire",
             "btn-generate-pdf": "Générer un PDF",

@@ -14,6 +14,8 @@ $(function(){
 
         $.globalMessenger({ extraClasses: classes,theme: theme });
         Messenger.options = { extraClasses: classes,theme: theme  };
+
+        updateValue()
     }
 
     pageLoad();
@@ -59,23 +61,21 @@ $(function(){
                 updateQuestions();
             })
             .on('change','.value',function(){
-                var $element = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent();
-                var max = 0;
-                $element.find('.answer .value').each(function(index,element){
-                    if(parseInt($(element).val()) > max)
-                        max = $(element).val();
-                });
-                $element.find('.nb_point').html(max);
-                var total = 0;
-                $('.survey .nb_point').each(function(index,element){
-                    total += parseInt($(element).html());
-                });
-                $('.total_nb_point').html(total);
+                updateValue();
             })
             .on('click','.SaveButton',function(e){
                 e.preventDefault();
                 if(verifData())
-                    $('#SaveModal').modal();
+                    if($_GET('id') == "")
+                        $('#SaveModal').modal();
+                    else {
+                        var urlTmp = url + '?action=save_survey&id=' + $_GET('id');
+                        var form = $('form').serializeArray();
+                        $.post(urlTmp, form)
+                            .done(function (data) {
+                                //TODO success
+                            });
+                    }
                 else
                     Messenger().post({
                         message: error_message,
@@ -90,7 +90,7 @@ $(function(){
                     var form = $('form').serializeArray();
                     $.post(urlTmp,form)
                         .done(function(data){
-
+                            //TODO success
                         })
                 }else{
                     Messenger().post({
@@ -100,6 +100,21 @@ $(function(){
                     });
                 }
             })
+    }
+
+    function updateValue(){
+        var total = 0;
+        $('.survey').each(function(index,element){
+            var $element = $(element);
+            var max = 0;
+            $element.find('.answer .value').each(function(index,element){
+                if(parseInt($(element).val()) > max)
+                    max = $(element).val();
+            });
+            $element.find('.nb_point').html(max);
+            total += parseInt(max);
+        });
+        $('.total_nb_point').html(total);
     }
 
     function verifData(){
@@ -168,6 +183,21 @@ $(function(){
         });
     }
 
-    //TODO Modification des questionnaires
+
+
+    function $_GET(param) {
+        var vars = {};
+        window.location.href.replace( location.hash, '' ).replace(
+            /[?&]+([^=&]+)=?([^&]*)?/gi, // regexp
+            function( m, key, value ) { // callback
+                vars[key] = value !== undefined ? value : '';
+            }
+        );
+
+        if ( param ) {
+            return vars[param] ? vars[param] : null;
+        }
+        return vars;
+    }
 
 });
