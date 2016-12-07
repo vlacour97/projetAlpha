@@ -1,7 +1,7 @@
 {
-    "general" : {
-        "date": {
-            "week": [
+    "general":{
+        "date":{
+            "week":[
                 "Monday",
                 "Tuesday",
                 "Wednesday",
@@ -10,772 +10,1198 @@
                 "Saturday",
                 "Sunday"
             ],
-            "cut_week": [
-                "Lun.",
+            "cut_week":[
+                "Mon.",
                 "Mar.",
-                "Mer.",
-                "Jeu.",
-                "Vend.",
-                "Sam.",
-                "Dim."
+                "Sea.",
+                "Thu.",
+                "Fri.",
+                "Sat.",
+                "Sun."
             ],
-            "month": [
-                "Janvier",
-                "Février",
-                "Mars",
-                "Avril",
-                "Mai",
-                "Juin",
-                "Juillet",
-                "Aout",
+            "month":[
+                "January",
+                "February",
+                "March",
+                "April",
+                "May",
+                "June",
+                "July",
+                "August",
                 "September",
                 "October",
                 "November",
                 "December"
             ],
-            "cut_month": [
+            "cut_month":[
                 "Jan.",
-                "Fév.",
-                "Mars",
-                "Avr.",
-                "Mai",
-                "Juin",
-                "Juil.",
-                "Aout",
-                "Sept.",
+                "Feb.",
+                "March",
+                "Apr.",
+                "May",
+                "June",
+                "Jul.",
+                "August",
+                "Seven.",
                 "Oct.",
                 "Nov.",
                 "Dec."
             ],
-            "connector": {
-                "at": "at",
-                "y_s": "an",
-                "m_s": "mois",
-                "d_s": "jour",
-                "h_s": "heure",
-                "min_s": "minute",
-                "s_s": "seconde",
-                "y_p": "an",
-                "m_p": "mois",
-                "d_p": "jours",
-                "h_p": "heures",
-                "min_p": "minutes",
-                "s_p": "secondes",
-                "h": "h",
-                "min": "min",
-                "s": "sec"
+            "connector":{
+                "at":"at",
+                "y_s":"year",
+                "m_s":"month",
+                "d_s":"day",
+                "h_s":"hour",
+                "min_s":"minute",
+                "s_s":"second",
+                "y_p":"year",
+                "m_p":"month",
+                "d_p":"days",
+                "h_p":"Hours",
+                "min_p":"minutes",
+                "s_p":"Seconds",
+                "h":"H",
+                "min":"Min",
+                "s":"sec"
             },
-            "format": {
-                "short_form_date": "dd/mm/yyyy",
-                "long_form_date": "d MM yyyy",
-                "long_cut_date": "d M yyyy",
-                "short_time_form": "hh{h}mm",
-                "long_time_form": "hh:mm:ss",
-                "the": "le",
-                "at": "à"
+            "format":{
+                "short_form_date":"Dd/mm/yyyy",
+                "long_form_date":"D MM yyyy",
+                "long_cut_date":"D M yyyy",
+                "short_time_form":"Hh {h} mm",
+                "long_time_form":"Hh: mm: ss",
+                "the":"the",
+                "at":"at"
             }
         },
-        "mail": {
-            "general": {
-                "part1": {
-                    "title": "Simplicité",
-                    "content": "Avec notre solution informatique, nous proposons une gestion des stages simplifiée aussi bien pour les tuteurs entreprise que pour les tuteurs écoles."
+        "mail":{
+            "general":{
+                "part1":{
+                    "title":"Simplicity",
+                    "content":"With our IT solution, we offer a simplified course management for both company tutors and school tutors."
                 },
-                "part2": {
-                    "title": "Efficacité",
-                    "content": "Nous proposons une solution qui permet aux encadrants des stagiaires de gérer rapidement les comptes rendu et la gestion des stages."
+                "part2":{
+                    "title":"Efficiency",
+                    "content":"We propose a solution that allows trainee supervisors to quickly manage reports and internship management."
                 },
-                "part3": {
-                    "title": "Ergonomie",
-                    "content": "Avec une solution Web compatible sur tous les appareils, nous proposons une nouvelle méthode pratique et intuitive pour gérer les stages en entreprise."
+                "part3":{
+                    "title":"Ergonomics",
+                    "content":"With a compatible web solution on all devices, we offer a new practical and intuitive method for managing internships."
                 }
             },
-            "activation": {
-                "subject": "Demande d'activation de votre compte",
-                "title": "Votre compte est prêt !",
-                "content": "Votre compte utilisateur est créé ! Vous pourrez commencer à l'utiliser dans quelques instants mais d'abord, veuillez confirmer votre inscription et compléter vos informations personnelles en cliquant sur le lien ci-dessous.",
-                "button_text": "Confirmation d'inscription"
+            "activation":{
+                "subject":"Request to activate your account",
+                "title":"Your account is ready!",
+                "content":"Your user account is created! You will be able to start using it in a few moments but first, please confirm your registration and complete your personal information by clicking on the link below.",
+                "button_text":"Registration confirmation"
             },
-            "confirmation": {
-                "subject": "Confirmation d'activation de votre compte",
-                "title": "Création de compte validée !",
-                "content": "Félicitation! La création de votre compte est confirmée, vous pouvez maintenant vous connecter !",
-                "button_text": "Connectez-vous"
+            "confirmation":{
+                "subject":"Confirmation of activation of your account",
+                "title":"Creation of a validated account!",
+                "content":"Congratulations! The creation of your account is confirmed, you can now log in!",
+                "button_text":"Interested in Belfast?"
             },
-            "delete": {
-                "subject": "Désactivation de votre compte",
-                "title": "Votre compte a été supprimé",
-                "content": "Votre compte gestion-stage.eu a été supprimé. Pour plus d'informations, contactez l'administrateur."
+            "delete":{
+                "subject":"Disabling Your Account",
+                "title":"Your account has been deleted",
+                "content":"Your manager-stage.eu account has been deleted. For more information, contact the administrator."
             },
-            "message": {
-                "subject": "Vous avez reçu un message de {user_name}",
-                "title": "Vous avez reçu un message !",
-                "button_text": "Répondre à {user_name}"
+            "message":{
+                "subject":"You received a message from {user_name}",
+                "title":"You received a message!",
+                "button_text":"Reply to {user_name}"
             },
-            "question": {
-                "subject": "Un questionnaire demande votre attention",
-                "title": "Un questionnaire demande votre attention",
-                "content": "De nouveaux questionnaires sont disponnibles, vous pouvez y accéder à partir de maintenant.",
-                "button_text": "Répondre au questionnaire"
+            "question":{
+                "subject":"A survey asks your attention",
+                "title":"A survey asks your attention",
+                "content":"New surveys are available, you can access them from now on.",
+                "button_text":"Reply to the survey"
             },
-            "reactivation": {
-                "subject": "Votre compte à été remis en service !",
-                "title": "Votre compte à été remis en service !",
-                "content": "Félicitation! Vous pouvez à nouveau vous connecter à votre compte {app_html_link} !",
-                "button_text": "Connectez-vous"
+            "reactivation":{
+                "subject":"Your account has been restored!",
+                "title":"Your account has been restored!",
+                "content":"Congratulations! You can sign in to your {app_html_link} account again!",
+                "button_text":"Interested in Belfast?"
             },
-            "reponse_question": {
-                "subject": "Questionnaire validé !",
-                "title": "Votre questionnaire a été validé !",
-                "content": "Un de vos questionnaires a été validé par le tuteur école."
+            "reponse_question":{
+                "subject":"Survey validated!",
+                "title":"Your survey has been validated!",
+                "content":"One of your surveys has been validated by the school tutor."
             },
-            "forgotten_password": {
-                "subject": "Mot de passe oublié ?",
-                "title": "Changement de votre mot de passe",
-                "content": "Vous avez oublié votre mots de passe et avez une demande pour le changer. Tout ce passe en cliquant sur ce bouton !",
-                "button_text": "Changer de mot de passe"
-            }
-
-        },
-        "csv_attributes": {
-            "student": {
-                "name": "Etudiant",
-                "attr": {
-                    "name": "Nom",
-                    "fname": "Prénom",
-                    "email": "Email",
-                    "group": "Groupe",
-                    "phone": "Téléphone"
-                }
-            },
-            "ti": {
-                "name": "Tuteur IUT",
-                "type": 3,
-                "attr": {
-                    "name": "Nom",
-                    "fname": "Prénom",
-                    "email": "Email",
-                    "phone": "Téléphone"
-                }
-            },
-            "te": {
-                "name": "Tuteur Entreprise",
-                "type": 2,
-                "attr": {
-                    "name": "Nom",
-                    "fname": "Prénom",
-                    "email": "Email",
-                    "phone": "Téléphone"
-                }
-            },
-            "other": "Autre"
-        },
-        "notifications" : {
-            "add_post" : {
-                "value" : "{name_user} a publié un article accessible sur votre Timeline",
-                "icon" : "fa fa-globe"
-            },
-            "comment_post" : {
-                "value" :"{name_publisher} a commenté votre publication",
-                "icon" : "fa fa-comment"
-            },
-            "like_post" : {
-                "value" : "{name_user} a aimé votre publication",
-                "icon" : "fa fa-thumbs-up"
-            },
-            "wait_survey" : {
-                "value" : "Vous avez un questionnaire en attente",
-                "icon" : "fa fa-cloud-o"
-            },
-            "complete_survey" : {
-                "value" : "L'un de vos questionnaires a été complété",
-                "icon" : "fa fa-check"
-            },
-            "validate_survey" : {
-                "value" : "L'un de vos questionnaires a été validé",
-                "icon" : "fa fa-check"
-            },
-            "autorised_publication" : {
-                "value" : "Vous êtes autorisé à publier",
-                "icon" : "fa fa-bullhorn "
+            "forgotten_password":{
+                "subject":"Forgot your password ?",
+                "title":"Changing your password",
+                "content":"You have forgotten your passwords and have a request to change it. All this happens by clicking on this button!",
+                "button_text":"Change password"
             }
         },
-        "weather" : {
-            "clearSky" : "Ciel Clair",
-            "fewClouds" : "Quelques nuages",
-            "scatteredCloud" : "Nuages Dispersés",
-            "brokenClouds" : "Nuageux",
-            "showerRain" : "Pluie Dense",
-            "rain" : "Pluie",
-            "thunderstorm" : "Orage",
-            "snow" : "Neige",
-            "mist" : "Brouillard"
-        },
-        "PDF" : {
-            "StudentList" : {
-                "ID" : "ID",
-                "student_name" : "Nom Etudiant",
-                "TI_name" : "Nom Tuteur Entreprise",
-                "TE_name" : "Nom Tuteur IUT",
-                "group" : "Groupe",
-                "mark" : "Note"
+        "csv_attributes":{
+            "student":{
+                "name":"Student",
+                "attr":{
+                    "name":"Name",
+                    "fname":"First name",
+                    "email":"E-mail",
+                    "group":"Group",
+                    "phone":"Phone"
+                }
             },
-            "SurveyList" : {
-                "address_lbl" : "Adresse",
-                "email_lbl" : "Email",
-                "phone_lbl" : "Téléphone",
-                "TE_lbl" : "Tuteur Entreprise",
-                "TI_lbl" : "Tuteur IUT",
-                "answer_lbl" : "Numéro Question",
-                "mark_lbl" : "Note",
-                "total_lbl" : "Total"
+            "ti":{
+                "name":"IUT Tutor",
+                "type":"3",
+                "attr":{
+                    "name":"Name",
+                    "fname":"First name",
+                    "email":"E-mail",
+                    "phone":"Phone"
+                }
+            },
+            "te":{
+                "name":"Company Tutor",
+                "type":"2",
+                "attr":{
+                    "name":"Name",
+                    "fname":"First name",
+                    "email":"E-mail",
+                    "phone":"Phone"
+                }
+            },
+            "other":"Other"
+        },
+        "notifications":{
+            "add_post":{
+                "value":"{Name_user} has published an accessible article on your Timeline",
+                "icon":"fa fa-globe"
+            },
+            "comment_post":{
+                "value":"{Name_publisher} commented on your post",
+                "icon":"fa fa-comment"
+            },
+            "like_post":{
+                "value":"{Name_user} liked your publication",
+                "icon":"fa fa-thumbs-up"
+            },
+            "wait_survey":{
+                "value":"You have a pending survey",
+                "icon":"fa fa-clock-o"
+            },
+            "complete_survey":{
+                "value":"One of your surveys was completed",
+                "icon":"fa fa-check"
+            },
+            "validate_survey":{
+                "value":"One of your surveys has been validated",
+                "icon":"fa fa-check"
+            },
+            "autorised_publication":{
+                "value":"You are authorized to publish",
+                "icon":"fa fa-bullhorn"
             }
         },
-        "exceptions" : {
-            "1001" : "Connexion échouée : Accés non autorisé pour l'utilisateur \"$user\"",
-            "1002" : "Connexion échouée : Base de données iconnue",
-            "1003" : "Connexion échouée : Hôte iconnue",
-            "2001" : "Connexion échouée : ",
-            "2002" : "Erreur lors de la suppression",
-            "2020" : "Mot de passe incorrect",
-            "2040" : "Veuillez accepter les termes & conditions du contrat"
-        }
+        "weather":{
+            "clearSky":"Clear sky",
+            "fewClouds":"Some clouds",
+            "scatteredCloud":"Clouds Dispersed",
+            "brokenClouds":"Mostly Cloudy",
+            "showerRain":"Rain Dense",
+            "rain":"Rain",
+            "thunderstorm":"Thunderstorm",
+            "snow":"Snow",
+            "mist":"Fog"
+        },
+        "PDF":{
+            "StudentList":{
+                "ID":"ID",
+                "student_name":"Student Name",
+                "TI_name":"Name Tutor Company",
+                "TE_name":"Name Tutor IUT",
+                "group":"Group",
+                "mark":"Note"
+            },
+            "SurveyList":{
+                "address_lbl":"Address",
+                "email_lbl":"E-mail",
+                "phone_lbl":"Phone",
+                "TE_lbl":"Company Tutor",
+                "TI_lbl":"IUT Tutor",
+                "answer_lbl":"Question Number",
+                "mark_lbl":"Note",
+                "total_lbl":"Total"
+            }
+        },
+        "exceptions":{
+            "1001":"Connection failed: Unauthorized access for user \"$ user\"",
+            "1002":"Connection failed: Unknown database",
+            "1003":"Connection failed: Host unknown",
+            "1004":"Connection failed: No login credentials",
+            "1005":"Failed connection :",
+            "1006":"Please do not include space in the prefix!",
+            "1007":"File not found",
+            "1008":"Error Importing Data",
+            "1020":"The requested user does not exist",
+            "1021":"Error Saving",
+            "1022":"Error logging in user",
+            "1023":"Error retrieving the identifier",
+            "1060":"Error on variable type",
+            "1090":"The addition of a student requests the presence of emails for the tutors IUT and Entreprise, as well as the name and the first name of the student",
+            "1110":"Error Importing CSV File",
+            "2001":"Error retrieving data",
+            "2002":"Error: Invalid data format",
+            "2010":"Error while configuring the application",
+            "2020":"The requested user does not exist",
+            "2021":"incorrect password",
+            "2022":"Invalid email address or password!",
+            "2030":"Different Passwords",
+            "2031":"The password check is not the same as the password",
+            "2032":"Please enter a longer password",
+            "2033":"Please complete all required fields",
+            "2034":"Invalid email address",
+            "2035":"E-mail address already used",
+            "2036":"Invalid user type",
+            "2037":"Please accept the terms & conditions of the contract",
+            "2040":"Please activate your account, check your emails",
+            "2050":"The survey is not complete",
+            "2060":"Error on Date Type",
+            "2070":"Error sending your message",
+            "2071":"Error sending attachments",
+            "2072":"Error Saving",
+            "2073":"Error deleting the attachment on the database: ID $ ID",
+            "2074":"Error deleting the attachment: ID $ ID",
+            "2075":"Error while adding the publication",
+            "2090":"The requested student does not exist",
+            "2091":"Error while searching for students",
+            "2092":"Error adding student",
+            "2093":"Error modifying the student",
+            "2094":"Error deleting student",
+            "2100":"Unable to reply to this message",
+            "2101":"You do not have the right to send this message!",
+            "2110":"The file is not CSV",
+            "2120":"Error recovering weather",
+            "3001":"The user is already activated",
+            "3002":"No results found for: $ search",
+            "3003":"Unable to delete: There must be at least one Active Administrator account",
+            "3004":"No key for the OpenWeatherMap API"
+        },
+        "user_type":[
+            "Administrator",
+            "Company Tutor",
+            "IUT Tutor"
+        ],
+        "page_name":{
+            "home":"Home",
+            "message":"Messages <span class = \"label label-danger nbMessage\"> {nb_message} </span>",
+            "students":"Home",
+            "students\/student_list":"List of students",
+            "students\/student_score":"Student Result",
+            "students\/student_score_pdf":"List of scores in PDF",
+            "students\/survey":"Result of the survey",
+            "students\/survey_pdf":"Result of the survey in PDF",
+            "survey":"Surveys",
+            "survey\/create_survey":"Creating a survey",
+            "survey\/survey_show":"Viewing a survey",
+            "survey\/survey_list":"Surveys Created",
+            "user":"Users",
+            "user\/user_list":"Users list",
+            "student_list":"List of students",
+            "see_survey":"Consultation of the survey",
+            "answer_survey":"Reply to the survey",
+            "profile":"My account",
+            "manage_API":"Management of the API"
+        },
+        "boolChose":[
+            "No",
+            "Yes"
+        ]
     },
-    "pages": {
-        "install" : {
-            "name" : "Installation :",
-            "navigation" : {
-                "step1" : "Base de Données",
-                "step2" : "Informations du site",
-                "step3" : "Compte Administrateur",
-                "step4" : "Confirmation"
+    "pages":{
+        "install":{
+            "name":"Installation:",
+            "navigation":{
+                "step1":"Database",
+                "step2":"Site Information",
+                "step3":"Account Administrator",
+                "step4":"Confirmation"
             },
-            "step1" : {
-                "title" : "Base de Données :",
-                "infos" : "Veuillez remplir les informations concernant votre base de données",
-                "form" : {
-                    "host" : {
-                        "lbl" : "Hôte"
+            "step1":{
+                "title":"Database :",
+                "infos":"Please fill in the information about your database",
+                "form":{
+                    "host":{
+                        "lbl":"Host"
                     },
-                    "dbname" : {
-                        "lbl" : "Nom de la base de données",
-                        "help" : "Le nom de la base de données dans laquelle vous voulez installer Gestion-Stage"
+                    "dbname":{
+                        "lbl":"Name of the data base",
+                        "help":"The name of the database in which you want to install Management-Stage"
                     },
-                    "login" : {
-                        "lbl" : "Identifiant",
-                        "help" : "L'identifiant servant à vos connecter sur la base de données MySQL"
+                    "login":{
+                        "lbl":"Help",
+                        "help":"The identifier used to connect to the MySQL database"
                     },
-                    "pwd" : {
-                        "lbl" : "Mot de passe",
-                        "help" : "... et son mot de passe MySQL"
+                    "pwd":{
+                        "lbl":"Password",
+                        "help":"... and its MySQL password"
                     },
-                    "prefix" : {
-                        "lbl" : "Préfixe de table",
-                        "help" : "Si vous désirez installer plusieurs site Gestion-Stage dans la même base de données, modifiez ce champ."
+                    "prefix":{
+                        "lbl":"Table Prefix",
+                        "help":"If you want to install more Management-Stage sites in the same database, modify this field."
                     }
                 },
-                "buttons" : {
-                    "testConnection" : "Tester la connexion à la base de données"
+                "buttons":{
+                    "testConnection":"Test the connection to the database"
                 }
             },
-            "step2" : {
-                "form" : {
-                    "siteName" : {
-                        "lbl" : "Nom de site",
-                        "help" : "Il apparaitra sur les moteurs de recherche"
+            "step2":{
+                "form":{
+                    "siteName":{
+                        "lbl":"Site Name",
+                        "help":"It will appear on search engines"
                     },
-                    "describe" : {
-                        "lbl" : "Description du site",
-                        "help" : "Elle apparaitra sur les moteurs de recherche"
+                    "describe":{
+                        "lbl":"Description of the site",
+                        "help":"It will appear on search engines"
                     },
-                    "keywords" : {
-                        "lbl" : "Mot clés du site",
-                        "help" : "Ils permettront de trouvé plus facilement votre site sur les moteurs de recherches. Mettez une <b>virgule (,) entre chaque mots clés</b>"
+                    "keywords":{
+                        "lbl":"Site Keyword",
+                        "help":"They will make it easier to find your site on the search engines. Put a <b> comma (,) between each keyword <\/ b>"
                     },
-                    "organisationName" : {
-                        "lbl" : "Nom de l'organisation"
+                    "organisationName":{
+                        "lbl":"name of the organization"
                     },
-                    "managerEmail" : {
-                        "lbl" : "Email de maintenance",
-                        "help" : "C'est sur cet email que l'on vous contactera pour la maintenance du site"
+                    "managerEmail":{
+                        "lbl":"Maintenance Email",
+                        "help":"It is on this email that we will contact you for the maintenance of the site"
                     },
-                    "deathdate" : {
-                        "lbl" : "Date Butoire des questionnaires",
-                        "help" : "C'est la date à laquelle tout les questionnaires devront être rendus"
+                    "deathdate":{
+                        "lbl":"Date Purpose of surveys",
+                        "help":"This is the date on which all surveys will be returned"
                     },
-                    "APIKey" : {
-                        "lbl" : "Clé de l'API OpenWeatherMap",
-                        "help" : "Pour obtenir des informations météo, veuillez vous inscrire sur <a href=\"http://openweathermap.org/\" target=\"_blank\">http://openweathermap.org/</a> pour obtenir une clé d'API"
+                    "APIKey":{
+                        "lbl":"OpenWeatherMap API Key",
+                        "help":"For weather information, please visit <a href=\"http://openweathermap.org/\" target=\"_blank\"> http://openweathermap.org/ <\/a> to get an API key"
                     }
                 }
             },
-            "step3" : {
-                "form" : {
-                    "name" : {
-                        "lbl" : "Nom",
-                        "help" : "Votre Nom"
+            "step3":{
+                "form":{
+                    "name":{
+                        "lbl":"Name",
+                        "help":"Your name"
                     },
-                    "fname" : {
-                        "lbl" : "Prénom",
-                        "help" : "Votre Prénom"
+                    "fname":{
+                        "lbl":"First name",
+                        "help":"Your first name"
                     },
-                    "email" : {
-                        "lbl" : "Email",
-                        "help" : "Votre email"
+                    "email":{
+                        "lbl":"E-mail",
+                        "help":"Your email"
                     },
-                    "pwd" : {
-                        "lbl" : "Mot de passe",
-                        "help" : "Votre mot de passe"
+                    "pwd":{
+                        "lbl":"Password",
+                        "help":"Your password"
                     },
-                    "pwdVerif" : {
-                        "lbl" : "Confirmation du mot de passe",
-                        "help" : "Confirmation de votre mot de passe"
+                    "pwdVerif":{
+                        "lbl":"Password Confirmation",
+                        "help":"Confirm your password"
                     },
-                    "phone" : {
-                        "lbl" : "Téléphone",
-                        "help" : "Votre numéro de téléphone"
+                    "phone":{
+                        "lbl":"Phone",
+                        "help":"Your phone number"
                     },
-                    "address" : {
-                        "lbl" : "Adresse",
-                        "help" : "Votre adresse"
+                    "address":{
+                        "lbl":"Address",
+                        "help":"Your address"
                     },
-                    "zip_code" : {
-                        "lbl" : "Code Postal",
-                        "help" : "Votre Code Postal"
+                    "zip_code":{
+                        "lbl":"Postal code",
+                        "help":"Your postal code"
                     },
-                    "city" : {
-                        "lbl" : "Ville",
-                        "help" : "Votre ville"
+                    "city":{
+                        "lbl":"City",
+                        "help":"Your city"
                     },
-                    "country" : {
-                        "lbl" : "Pays",
-                        "help" : "Votre Pays"
+                    "country":{
+                        "lbl":"Country",
+                        "help":"Your country"
                     },
-                    "language" : {
-                        "lbl" : "Langue",
-                        "help" : "Votre Langue"
+                    "language":{
+                        "lbl":"Language",
+                        "help":"Your language"
                     },
-                    "help" : "Ces Informations pourront être modifié aprés la création du compte"
+                    "help":"This information may be modified after the creation of the account"
                 }
             },
-            "step4" : {
-                "title" : "Finalisation :",
-                "infos" : "Lorsque vous cliquerez sur \"Terminez\", un questionnaire prérempli sera installé et vous pourrez vous connecté sur votre sytéme de Gestion de Stage"
+            "step4":{
+                "title":"Finalization:",
+                "infos":"When you click on \"Finish\", a pre-filled survey will be installed and you will be able to log on to your Stage Management system"
             },
-            "previous" : "Précédent",
-            "next" : "Suivant",
-            "finish" : "Terminer",
-            "script" : {
-                "DB_connect" : {
-                    "success" : "Connexion réussi",
-                    "fail" : "Impossible de se connecter à la base de données"
+            "previous":"Previous",
+            "next":"following",
+            "finish":"Finish",
+            "script":{
+                "DB_connect":{
+                    "success":"Successful login",
+                    "fail":"Unable to connect to database"
                 }
             },
-            "site-year" : "2016",
-            "site-name" : "Projet-Alpha",
-            "site-copyright" : "Gestion-Alpha"
+            "site-year":"2016",
+            "site-name":"Project-Alpha",
+            "site-copyright":"Management-Alpha"
         },
-        "login" : {
-            "name" : "Connectez-vous",
-            "emailForm" : "Nom d'utilisateur",
-            "pwdForm" : "Mot de passe",
-            "btnConnect" : "Connexion",
-            "stayConnected" : "Mémoriser",
-            "forgottenPwd" : "Mot de passe oublié ?"
+        "login":{
+            "name":"Interested in Belfast?",
+            "emailForm":"username",
+            "pwdForm":"Password",
+            "btnConnect":"Connection",
+            "stayConnected":"To memorize",
+            "forgottenPwd":"Forgot your password ?"
         },
-        "lockscreen" : {
-            "name" : "Connectez-vous",
-            "pwdLbl" : "Mot de passe",
-            "btnConnection" : "Connexion",
-            "otherClient" : "Vous n'êtes pas {username}?"
+        "lockscreen":{
+            "name":"Interested in Belfast?",
+            "pwdLbl":"Password",
+            "btnConnection":"Connection",
+            "otherClient":"You are not {username}?"
         },
-        "forbPassword" : {
-            "name" : "Mot de passe oublié",
-            "description" : "Veuillez saisir votre nom d'utilisateur",
-            "emailLbl" : "Votre e-mail",
-            "btnSubmit" : "Valider",
-            "returnLink" : "Retour à la page de connexion",
-            "successMessage" : "Un email viens de vous être envoyé pour changer votre mot de passe, vous allez être <b>redirigé d'ici peu</b>"
+        "forbPassword":{
+            "name":"Forgot your password",
+            "description":"Please enter your username",
+            "emailLbl":"Your email",
+            "btnSubmit":"Validate",
+            "returnLink":"Back to login page",
+            "successMessage":"An email has just been sent to you to change your password, you will be <b> redirected soon </b>"
         },
-        "forbPassword_part2" : {
-            "name" : "Mot de passe oublié",
-            "description" : "Veuillez changer votre mot de passe",
-            "pwdLbl" : "Mot de passe",
-            "pwdVerifLbl" : "Confirmation du mot de passe",
-            "btnSubmit" : "Valider"
+        "forbPassword_part2":{
+            "name":"Forgot your password",
+            "description":"Please change your password",
+            "pwdLbl":"Password",
+            "pwdVerifLbl":"Password Confirmation",
+            "btnSubmit":"Validate"
         },
-        "active_account" : {
-            "name" : "Inscription",
-            "form" : {
-                "name" : {
-                    "lbl" : "Nom*",
-                    "placeholder" : "Nom"
+        "active_account":{
+            "name":"Registration",
+            "form":{
+                "name":{
+                    "lbl":"Name*",
+                    "placeholder":"Name"
                 },
-                "fname" : {
-                    "lbl" : "Prénom*",
-                    "placeholder" : "Prénom"
+                "fname":{
+                    "lbl":"First name*",
+                    "placeholder":"First name"
                 },
-                "email" : {
-                    "lbl" : "Email",
-                    "placeholder" : "Email"
+                "email":{
+                    "lbl":"E-mail",
+                    "placeholder":"E-mail"
                 },
-                "pwd" : {
-                    "lbl" : "Mot de passe*",
-                    "placeholder" : "Mot de passe"
+                "pwd":{
+                    "lbl":"Password*",
+                    "placeholder":"Password"
                 },
-                "pwdVerif" : {
-                    "lbl" : "Confirmation*",
-                    "placeholder" : "Confirmation de votre mot de passe"
+                "pwdVerif":{
+                    "lbl":"Confirmation*",
+                    "placeholder":"Confirm your password"
                 },
-                "phone" : {
-                    "lbl" : "Téléphone",
-                    "placeholder" : "Numéro de téléphone"
+                "phone":{
+                    "lbl":"Phone",
+                    "placeholder":"Phone number"
                 },
-                "address" : {
-                    "lbl" : "Adresse",
-                    "placeholder" : "Adresse"
+                "address":{
+                    "lbl":"Address",
+                    "placeholder":"Address"
                 },
-                "zip_code" : {
-                    "lbl" : "Code Postal",
-                    "placeholder" : "Code Postal"
+                "zip_code":{
+                    "lbl":"Postal code",
+                    "placeholder":"Postal code"
                 },
-                "city" : {
-                    "lbl" : "Ville",
-                    "placeholder" : "Ville"
+                "city":{
+                    "lbl":"City",
+                    "placeholder":"City"
                 },
-                "country" : {
-                    "lbl" : "Pays"
+                "country":{
+                    "lbl":"Country"
                 },
-                "language" : {
-                    "lbl" : "Langue"
+                "language":{
+                    "lbl":"Language"
                 },
-                "accept_terms_and_conditions" : "J'ai lu et j'accepte les conditions générales d'utilisation du site"
+                "accept_terms_and_conditions":"I have read and accept the general conditions of use of the site"
             }
         },
-        "404" : {
-            "expression" : "OOPS !",
-            "errorname" : "ERREUR 404 :",
-            "errordef" : "La page que vous cherchez n'existe pas"
+        "dashboard":{
+            "previous":"Home",
+            "name":"Dashboard",
+            "lbl_connections":"NUMBER OF CONNECTIONS",
+            "alternative_map":"Error displaying map",
+            "evolution_title":"<span class = \"fw-semi-bold\"> Connections of <span class = \"fw-semi-bold\"> Users </span>",
+            "expand":"To expand",
+            "collapse":"Reduce",
+            "responses_rate":"Rate of <span class = \"fw-semi-bold\"> Answers </span>",
+            "responses_rate_description":"Breakdown of survey response rates"
         },
-        "email" : {
-            "chemin1" : "Général",
-            "name" : "Messages",
-            "inbox" : "Boite de reception",
-            "newmessage" : "Nouveau Message",
-            "recieved" : "Reçus",
-            "sent" : "Envoyés",
-            "deleted" : "Supprimés",
-            "answer" : "Répondre",
-            "print" : "imprimer",
-            "delete" : "Supprimer"
-        },
-        "inbox" : {
-            "chemin1" : "Général",
-            "name" : "Messages",
-            "inbox" : "Boite de reception",
-            "newmessage" : "Nouveau Message",
-            "recieved" : "Reçus",
-            "sent" : "Envoyés",
-            "deleted" : "Supprimés",
-            "select" : "Selectionner",
-            "all" : "Tout",
-            "none" : "Aucun",
-            "read" : "Lus",
-            "noread" : "Non Lus",
-            "actions" : "Actions",
-            "answer" : "Répondre",
-            "markread" : "Marquer comme lus",
-            "marknoread" : "Marquer comme non lus",
-            "deletemsg" : "Supprimer",
-            "searchmsg" : "Rechercher Messages"
-        },
-        "search" : {
-            "chemin1" : "Accueil",
-            "name" : "Recherches",
-            "resutsearch" : "Résultat des recherches pour :",
-            "users" : "Utilisateurs :",
-            "students" : "Etudiants :",
-            "messages" : "Messages :",
-            "timeline" : "Timeline :"
-        },
-        "timeline" : {
-            "chemin1" : "Accueil",
-            "name" : "Fils d'actualité",
-            "writemsg" : "Exprimez-vous !",
-            "importfile" : "Integrer un fichier",
-            "changefile" : "Changer",
-            "delete" : "Supprimer",
-            "cancel" : "Annuler",
-            "post" : "Publier"
-        },
-        "500" :  {
-            "title" : " OOPS ! ",
-            "bold" : "500 Internal Server Error",
-            "text" : " Erreur lors du lancement de l'application ",
-            "button" : "Page d'acceuil"
-        },
-        "compose" : {
-            "way": {
-                "way1": "Général",
-                "way2": "Messages"
+        "admin_studentList":{
+            "previous":"Home",
+            "name":"Management",
+            "student":"Home",
+            "btnDelete":"Remove",
+            "table":{
+                "id":"ID",
+                "student_name":"Last name First Name",
+                "TI":"IUT Tutor",
+                "TE":"Company Tutor",
+                "actions":"Actions"
             },
-            "menu": {
-                "title": "Messages - ",
-                "semi_bold": "Boîte de reception",
-                "button": "Nouveau Message",
-                "received": "Reçus",
-                "sent": "Envoyés",
-                "deleted": "Supprimés"
-            },
-            "message": {
-                "title": "Compose ",
-                "semi_bold": "Nouveau",
-                "to": "À:",
-                "object": "Objet:",
-                "attach": "Integrer un fichier",
-                "send": "Envoyer",
-                "cancel": "Annuler"
-            },
-            "profile" : {
-                "way1" : "Accueil",
-                "way2" : "Mon Compte",
-                "title" : "Mon Compte",
-                "password" : {
-                    "pwd" : {
-                        "lbl" : "Nouveau mot de passe",
-                        "help" : "Votre nouveau mot de passe"
-                    },
-                    "confirm_pwd" : {
-                        "confirm": {
-                            "lbl": "Confirmation du nouveau mot de passe",
-                            "help": "Confirmation de nouveau votre mot de passe"
-                        }
-                    },
-                    "button1" : "Modifier"
+            "modal-add":{
+                "title":"Add a student",
+                "step1":{
+                    "title":"Adding method",
+                    "choice1":"Import a CSV file",
+                    "choice2":"Add a student"
                 },
-                "form2" : {
-                    "name" : {
-                        "name" :{
-                            "lbl" : "Nom",
-                            "help" : "Votre Nom"
+                "step2":{
+                    "title":"Adding data"
+                },
+                "step3":{
+                    "title":"Finalization",
+                    "success":"The Student has been added successfully!"
+                },
+                "btnPrevious":"Previous",
+                "btnNext":"following",
+                "btnFinish":"Finish"
+            },
+            "modal-infos":{
+                "title":"Information"
+            },
+            "modal-edit":{
+                "title":"Information"
+            },
+            "modal-delete":{
+                "title":"Deletion",
+                "message":"Are you sure you want to delete this user account?",
+                "btnDelete":"Remove",
+                "btnAbord":"Cancel"
+            },
+            "modal-csv":{
+                "importfile":"Import",
+                "changefile":"Change",
+                "delete":"Remove",
+                "nb-header-cols":"Number of header columns",
+                "nb-header-rows":"Number of header lines"
+            }
+        },
+        "admin_studentScore":{
+            "previous":"Home",
+            "name":"Results",
+            "students":"Home",
+            "btn-student-list":"Go to the list of students",
+            "btn-generate-pdf":"Generate a PDF list",
+            "table":{
+                "attr1":"ID",
+                "attr2":"First name",
+                "attr3":"Name",
+                "attr4":"Group",
+                "attr5":"Status",
+                "attr6":"Note"
+            },
+            "modal-generate-pdf":{
+                "title":"Generate a PDF list",
+                "title-pdf":"List Name PDF",
+                "btnValid":"Validate"
+            }
+        },
+        "survey_read":{
+            "previous":"Home",
+            "name":"Survey",
+            "btn-generate-pdf":"Generate a PDF",
+            "infos":{
+                "part1":"Student",
+                "part2":"IUT Tutor",
+                "part3":"Company Tutor"
+            },
+            "table":{
+                "attr1":"Numero Question",
+                "attr2":"Result",
+                "total":"Total"
+            },
+            "btnComeBack":"Return"
+        },
+        "admin_create_survey":{
+            "previous":"Surveys",
+            "title":"Edition of Survey",
+            "table":{
+                "head":{
+                    "attr1":"Question Number",
+                    "attr2":"Value"
+                },
+                "add":"Add a question",
+                "foot":{
+                    "total":"Total",
+                    "pt":"Pt."
+                }
+            },
+            "save":"Record",
+            "modal_save":{
+                "title":"Register a survey",
+                "input_placeholder":"Name of the survey",
+                "save":"Record",
+                "abort":"Cancel"
+            },
+            "error":{
+                "empty_questions":"Please fill in all fields",
+                "empty_name":"Please fill in the name of the survey"
+            }
+        },
+        "admin_survey_show":{
+            "chemin1":"Management",
+            "name":"Surveys",
+            "numquestion":"Question Number",
+            "cancel":"Return"
+        },
+        "admin_surveyList":{
+            "chemin1":"Management",
+            "name":"Surveys",
+            "table":{
+                "titleID":"Id",
+                "titleSurvey":"Name Survey",
+                "titleDate":"Creation date",
+                "status":"Status",
+                "titleAction":"Actions"
+            }
+        },
+        "admin_userList":{
+            "chemin1":"Management",
+            "name":"Users",
+            "checkTE":"Company Tutor",
+            "checkTI":"IUT Tutor",
+            "checkAdmin":"Administrator",
+            "delete":"Remove",
+            "table":{
+                "titleID":"ID",
+                "nameuser":"Last name First Name",
+                "statutuser":"Status",
+                "actionuser":"Action"
+            },
+            "modal-add":{
+                "title":"Add user",
+                "step1":{
+                    "title":"Adding method",
+                    "choice1":"Import a CSV file",
+                    "choice2":"Add user"
+                },
+                "step2":{
+                    "title":"Adding data"
+                },
+                "step3":{
+                    "title":"Finalization",
+                    "success":"The User has been added successfully!"
+                },
+                "btnPrevious":"Previous",
+                "btnNext":"following",
+                "btnFinish":"Finish"
+            },
+            "modal-infos":{
+                "title":"Information"
+            },
+            "modal-edit":{
+                "title":"Information"
+            },
+            "modal-delete":{
+                "title":"Deletion",
+                "message":"Are you sure you want to delete this user account?",
+                "btnDelete":"Remove",
+                "btnAbord":"Cancel"
+            },
+            "modal-csv":{
+                "importfile":"Import",
+                "changefile":"Change",
+                "delete":"Remove",
+                "nb-header-cols":"Number of header columns",
+                "nb-header-rows":"Number of header lines"
+            }
+        },
+        "te_studentList":{
+            "chemin1":"Management",
+            "name":"Surveys",
+            "table":{
+                "titleID":"Id",
+                "titleEtud":"Student Name",
+                "titleTut":"Name Tutor IUT",
+                "titleStatut":"State",
+                "titleDate":"Deadline",
+                "titleAction":"Action"
+            },
+            "modal":{
+                "student":"Student",
+                "user":"Company Tutor"
+            }
+        },
+        "te_see_survey":{
+            "chemin1":"Management",
+            "name":"Survey",
+            "tab":{
+                "tabstudent":"Student",
+                "tabTI":"IUT Tutor"
+            },
+            "numQuestion":"Question Number",
+            "cancel":"Return"
+        },
+        "te_answer_survey":{
+            "chemin1":"Management",
+            "name":"Survey",
+            "tab":{
+                "tabstudent":"Student",
+                "tabTI":"IUT Tutor"
+            },
+            "modal-send":{
+                "title":"Confirmation",
+                "description":"Are you sure you want to send this question to the IUT tutor?",
+                "btnSend":"Yes",
+                "btnAbort":"No"
+            },
+            "messages":{
+                "saveSuccess":"Survey saved with success!",
+                "completeSurvey":"Please complete your survey and send it to the IUT tutor"
+            },
+            "nb-question":"Number of Questions",
+            "btnsave":"Record",
+            "btnsend":"To send"
+        },
+        "ti_studentList":{
+            "previous":"Management",
+            "name":"Survey",
+            "table":{
+                "titleID":"Id",
+                "titleEtud":"Student Name",
+                "titleTut":"Name Tutor IUT",
+                "titleStatut":"State",
+                "titleDate":"Deadline",
+                "titleAction":"Action"
+            },
+            "modal":{
+                "student":"Student",
+                "user":"Company Tutor"
+            },
+            "message":{
+                "refreshSuccess":"Relance sent to the company tutor"
+            }
+        },
+        "ti_see_survey":{
+            "previous":"Management",
+            "name":"Survey",
+            "tab":{
+                "tabstudent":"Student",
+                "tabTE":"Company Tutor"
+            },
+            "numQuestion":"Question Number",
+            "btnBack":"Return",
+            "btnValid":"Validate"
+        },
+        "404":{
+            "expression":"OOPS !",
+            "errorname":"ERROR 404:",
+            "errordef":"The page you are looking for does not exist",
+            "homebutton":"Back to home page"
+        },
+        "500":{
+            "title":"OOPS !",
+            "bold":"500 Internal Server Error",
+            "text":"Error launching application",
+            "button":"Back to home page"
+        },
+        "403":{
+            "title":"OOPS !",
+            "bold":"403 Forbidden",
+            "text":"Access denied !",
+            "button":"Back to home page"
+        },
+        "profile":{
+            "previous":"Home",
+            "name":"My account",
+            "form1":{
+                "pwd":{
+                    "lbl":"New Password",
+                    "help":"Your new password"
+                },
+                "confirm":{
+                    "lbl":"New password (Confirmation)",
+                    "help":"Your rewrite your new password"
+                },
+                "btnChange":"Edit"
+            },
+            "form2":{
+                "name":{
+                    "lbl":"Name",
+                    "help":"Your name"
+                },
+                "fname":{
+                    "lbl":"First name",
+                    "help":"Your first name"
+                },
+                "mail":{
+                    "lbl":"E-mail",
+                    "help":"Your email"
+                },
+                "phone":{
+                    "lbl":"Phone",
+                    "help":"Your phone"
+                },
+                "address":{
+                    "lbl":"Address",
+                    "help":"Your address"
+                },
+                "zip":{
+                    "lbl":"Postal code",
+                    "help":"your postal code"
+                },
+                "city":{
+                    "lbl":"City",
+                    "help":"Your Current City"
+                },
+                "country":{
+                    "lbl":"Country",
+                    "help":"Your current country"
+                },
+                "language":{
+                    "lbl":"Language",
+                    "help":"Your language (if available)"
+                },
+                "btnChange":"Edit",
+                "btnReset":"Cancel"
+            },
+            "message":{
+                "changePassword":"Password changed",
+                "changeDatas":"The information has been changed"
+            }
+        },
+        "manage_API":{
+            "previous":"Home",
+            "name":"Management of the API",
+            "form":{
+                "siteName":{
+                    "lbl":"Site Name",
+                    "help":"It will appear on search engines"
+                },
+                "describe":{
+                    "lbl":"Description of the site",
+                    "help":"It will appear on search engines"
+                },
+                "keywords":{
+                    "lbl":"Site Keyword",
+                    "help":"They will make it easier to find your site on the search engines. Put a <b> comma (,) between each keyword </b>"
+                },
+                "organisationName":{
+                    "lbl":"name of the organization"
+                },
+                "managerEmail":{
+                    "lbl":"Maintenance Email",
+                    "help":"It is on this email that we will contact you for the maintenance of the site"
+                },
+                "deathdate":{
+                    "lbl":"Date Purpose of surveys",
+                    "help":"This is the date on which all surveys will be returned"
+                },
+                "APIKey":{
+                    "lbl":"OpenWeatherMap API Key",
+                    "help":"For weather information, please visit <a href=\"http://openweathermap.org/\" target=\"_blank\"> http://openweathermap.org/ <\/a> to get an API key"
+                }
+            },
+            "message":{
+                "success":"Information edit successfully!"
+            }
+        },
+        "compose":{
+            "way":{
+                "way1":"General",
+                "way2":"Posts"
+            },
+            "menu":{
+                "title":"Posts -",
+                "semi_bold":"Mailbox",
+                "button":"New message",
+                "received":"Received",
+                "sent":"Sent",
+                "deleted":"Deleted"
+            },
+            "message":{
+                "title":"Compound",
+                "semi_bold":"New",
+                "to":"AT:",
+                "object":"Object:",
+                "attach":"Integrate a file",
+                "send":"To send",
+                "cancel":"Cancel"
+            },
+            "profile":{
+                "way1":"Home",
+                "way2":"My account",
+                "title":"My account",
+                "password":{
+                    "pwd":{
+                        "lbl":"New Password",
+                        "help":"Your new password"
+                    },
+                    "confirm_pwd":{
+                        "confirm":{
+                            "lbl":"Confirm new password",
+                            "help":"Confirm your password again"
                         }
                     },
-                    "fname" : {
-                        "fname" :{
-                            "lbl" : "Prénom",
-                            "help" : "Votre Prénom"
+                    "button1":"Edit"
+                },
+                "form2":{
+                    "name":{
+                        "name":{
+                            "lbl":"Name",
+                            "help":"Your name"
                         }
                     },
-                    "mail" : {
-                        "mail" : {
-                            "lbl" : "Email",
-                            "help" : "Votre email"
+                    "fname":{
+                        "fname":{
+                            "lbl":"First name",
+                            "help":"Your first name"
                         }
                     },
-                    "phone" : {
-                        "phone" : {
-                            "lbl" : "Téléphone",
-                            "help" : "Votre numéro de téléphone"
+                    "mail":{
+                        "mail":{
+                            "lbl":"E-mail",
+                            "help":"Your email"
                         }
                     },
-                    "address" :{
-                        "address" : {
-                            "lbl" : "Adresse",
-                            "help" : "Votre adresse"
+                    "phone":{
+                        "phone":{
+                            "lbl":"Phone",
+                            "help":"Your phone number"
                         }
                     },
-                    "zip_code" : {
-                        "zip" : {
-                            "lbl" : "Code Postal",
-                            "help" : "Votre Code Postal"
+                    "address":{
+                        "address":{
+                            "lbl":"Address",
+                            "help":"Your address"
                         }
                     },
-                    "city" : {
-                        "city" : {
-                            "lbl" : "Ville",
-                            "help" : "Votre ville"
+                    "zip_code":{
+                        "zip":{
+                            "lbl":"Postal code",
+                            "help":"Your postal code"
                         }
                     },
-                    "country" : {
-                        "country" : {
-                            "lbl" : "Pays",
-                            "help" : "Votre Pays"
+                    "city":{
+                        "city":{
+                            "lbl":"City",
+                            "help":"Your city"
                         }
                     },
-                    "language" : {
-                        "language" : {
-                            "lbl" : "Langue",
-                            "help" : "Votre Langue"
+                    "country":{
+                        "country":{
+                            "lbl":"Country",
+                            "help":"Your country"
                         }
                     },
-                    "button_modify" : "Modifier",
-                    "button_back" : "Retour"
+                    "language":{
+                        "language":{
+                            "lbl":"Language",
+                            "help":"Your language"
+                        }
+                    },
+                    "button_modify":"Edit",
+                    "button_back":"Return"
                 }
             }
         },
-        "dashboard" : {
-            "previous" : "Home",
-            "name" : "Dashboard",
-            "lbl_connections" : "NUMBER OF CONNEXIONS",
-            "alternative_map" : "Erreur lors de l'affichage de la carte",
-            "evolution_title" : "Evolution of the number of <span class=\"fw-semi-bold\">user connections</span>",
-            "expand" : "Expand",
-            "collapse" : "Collapse",
-            "responses_rate" : "Responses <span class=\"fw-semi-bold\">Rate</span>",
-            "responses_rate_description": "Breakdown of survey response rates"
+        "email":{
+            "chemin1":"General",
+            "name":"Posts",
+            "inbox":"Mailbox",
+            "newmessage":"New message",
+            "recieved":"Received",
+            "sent":"Sent",
+            "deleted":"Deleted",
+            "answer":"Reply",
+            "print":"to print",
+            "delete":"Remove"
         },
-        "admin_studentList" : {
-            "previous" : "Accueil",
-            "name" : "Gestion",
-            "student" : "Étudiants",
-            "btnDelete" : "Supprimer",
-            "table" : {
-                "id" : "ID",
-                "student_name" : "Nom / Prenom",
-                "TI" : "Tuteur IUT",
-                "TE" : "Tuteur Entreprise",
-                "actions" : "Actions"
-            },
-            "modal-add" : {
-                "title" : "Ajouter un étudiant",
-                "step1" : {
-                    "title" : "Méthode d'ajout",
-                    "choice1" : "Importer un fichier CSV",
-                    "choice2" : "Ajouter un étudiant"
-                },
-                "step2" : {
-                    "title" : "Ajout des données"
-                },
-                "step3" : {
-                    "title" : "Finalisation",
-                    "success" : "L'Étudiant à été ajouté avec succés !"
-                },
-                "btnPrevious" : "Précédent",
-                "btnNext" : "Suivant",
-                "btnFinish" : "Terminer"
-            },
-            "modal-infos" : {
-                "title" : "Informations"
-            },
-            "modal-edit" : {
-                "title" : "Informations"
-            },
-            "modal-delete": {
-                "title" : "Suppression",
-                "message" : "Voulez-vous vraiment supprimer ce compte utilisateur ?",
-                "btnDelete" : "Supprimer",
-                "btnAbord" : "Annuler"
-            },
-            "modal-csv" : {
-                "importfile" : "Importer",
-                "changefile" : "Changer",
-                "delete" : "Supprimer",
-                "nb-header-cols" : "Nombre de colonnes d'en-têtes",
-                "nb-header-rows" : "Nombre de lignes d'en-têtes"
+        "inbox":{
+            "chemin1":"General",
+            "name":"Posts",
+            "inbox":"Mailbox",
+            "newmessage":"New message",
+            "recieved":"Received",
+            "sent":"Sent",
+            "deleted":"Deleted",
+            "select":"To select",
+            "all":"All",
+            "none":"No",
+            "read":"Lus",
+            "noread":"Unread",
+            "actions":"Actions",
+            "answer":"Reply",
+            "markread":"Mark as read",
+            "marknoread":"Mark as Unread",
+            "deletemsg":"Remove",
+            "searchmsg":"Search Messages"
+        },
+        "search":{
+            "chemin1":"Home",
+            "name":"Research",
+            "resutsearch":"Search results for:",
+            "users":"Users:",
+            "students":"Students:",
+            "messages":"Posts:",
+            "timeline":"Timeline:"
+        },
+        "timeline":{
+            "chemin1":"Home",
+            "name":"News Feeds",
+            "writemsg":"Express yourself!",
+            "importfile":"Integrate a file",
+            "changefile":"Change",
+            "delete":"Remove",
+            "cancel":"Cancel",
+            "post":"Publish"
+        },
+        "action_report":{
+            "chemin1":"Home",
+            "name":"Report of actions",
+            "table":{
+                "titleID":"ID",
+                "nameuser":"User",
+                "content":"News",
+                "date":"Dated"
             }
-        },
-        "admin_studentScore" : {
-            "previous" : "Étudiants",
-            "name" : "Résultats",
-            "students" : "Étudiants",
-            "btn-student-list" : "Accéder à la liste des étudiants",
-            "btn-generate-pdf" : "Générer une liste PDF",
-            "table" : {
-                "attr1" : "ID",
-                "attr2" : "Prénom",
-                "attr3" : "Nom",
-                "attr4" : "Groupe",
-                "attr5" : "Status",
-                "attr6" : "Note"
-            },
-            "modal-generate-pdf" : {
-                "title" : "Générer une liste PDF",
-                "title-pdf" : "Nom de la liste PDF",
-                "btnValid" : "Valider"
-            }
-        },
-        "admin_survey_read" : {
-            "previous" : "Étudiants",
-            "name" : "Questionnaire",
-            "btn-generate-pdf" : "Générer un PDF",
-            "infos" : {
-                "part1" : "Etudiant",
-                "part2" : "Tuteur IUT",
-                "part3" : "Tuteur Entreprise"
-            },
-            "table" : {
-                "attr1" : "Numero Question",
-                "attr2" : "Résultat",
-                "total" : "Total"
-            },
-            "btnComeBack" : "Retour"
         }
-
     },
-    "components" : {
-        "sidebar" : {
-            "stats_title" : "Stats",
-            "stats_progress" : "Survey's response rate",
-            "stats_progress_description" : "{percent_response}% of users have respond"
+    "components":{
+        "sidebar":{
+            "stats_title":"Stats",
+            "stats_progress":"Survey response rate",
+            "stats_progress_description":"{Percent_response}% of users responded"
         },
-        "weather" : {
-            "today" : "TODAY",
-            "tomorrow" : "TOMORROW"
+        "weather":{
+            "today":"TODAY",
+            "tomorrow":"TOMORROW"
         },
-        "message_widget" : {
-            "from" : "De"
+        "message_widget":{
+            "from":"Of"
         },
-        "navbar" : {
-            "hamburger_title" : "Expand/Collapse the navbar",
-            "hamburger_title_2" : "Expand/Collapse aside",
-            "search_form" : "Search",
-            "updated_at" : "Updated at",
-            "account" : "My Account",
-            "inbox" : "Inbox",
-            "logout" : "Logout"
+        "navbar":{
+            "hamburger_title":"Expand/Collapse the sidebar",
+            "hamburger_title_2":"Show/Hide Sidebar",
+            "search_form":"Search",
+            "updated_at":"Update on",
+            "account":"My account",
+            "inbox":"Mailbox",
+            "logout":"Disconnection"
         },
-        "student_infos" : {
-            "deadline_lbl" : "Date butoire"
+        "student_infos":{
+            "deadline_lbl":"Deadline"
         },
-        "edit_student" : {
-            "name-lbl" : "Nom",
-            "fname-lbl" : "Prénom",
-            "email-lbl" : "Email",
-            "te-lbl" : "Tuteur Entreprise",
-            "ti-lbl" : "Tuteur IUT",
-            "group-lbl" : "Groupe",
-            "birth-date-lbl" : "Date de Naissance",
-            "phone-lbl" : "Téléphone",
-            "address-lbl" : "Adresse",
-            "zip-code-lbl" : "Code Postal",
-            "city-lbl" : "Ville",
-            "country-lbl" : "Pays",
-            "informations-lbl" : "Informations",
-            "deadline-lbl" : "Date butoire",
-            "help" : "Ces Informations pourront être modifié ultérieurement"
+        "edit_student":{
+            "name-lbl":"Name",
+            "fname-lbl":"First name",
+            "email-lbl":"E-mail",
+            "te-lbl":"Company Tutor",
+            "ti-lbl":"IUT Tutor",
+            "group-lbl":"Group",
+            "birth-date-lbl":"Birth date",
+            "phone-lbl":"Phone",
+            "address-lbl":"Address",
+            "zip-code-lbl":"Postal code",
+            "city-lbl":"City",
+            "country-lbl":"Country",
+            "informations-lbl":"Information",
+            "deadline-lbl":"Deadline",
+            "help":"These Information may be amended at a later date"
         },
-        "add_student" : {
-            "name-lbl" : "Nom",
-            "fname-lbl" : "Prénom",
-            "email-lbl" : "Email",
-            "te-lbl" : "Tuteur Entreprise",
-            "ti-lbl" : "Tuteur IUT",
-            "group-lbl" : "Groupe",
-            "birth-date-lbl" : "Date de Naissance",
-            "phone-lbl" : "Téléphone",
-            "address-lbl" : "Adresse",
-            "zip-code-lbl" : "Code Postal",
-            "city-lbl" : "Ville",
-            "country-lbl" : "Pays",
-            "informations-lbl" : "Informations",
-            "deadline-lbl" : "Date butoire",
-            "help" : "Ces Informations pourront être modifié ultérieurement"
+        "add_student":{
+            "name-lbl":"Name",
+            "fname-lbl":"First name",
+            "email-lbl":"E-mail",
+            "te-lbl":"Company Tutor",
+            "ti-lbl":"IUT Tutor",
+            "birth-date-lbl":"Birth date",
+            "phone-lbl":"Phone",
+            "address-lbl":"Address",
+            "zip-code-lbl":"Postal code",
+            "city-lbl":"City",
+            "country-lbl":"Country",
+            "informations-lbl":"Information",
+            "deadline-lbl":"Deadline",
+            "help":"These Information may be amended at a later date"
         },
-        "parts" : {
-            "see-survey" : "Voir le questionnaire",
-            "answer-survey" : "Répondre au questionnaire",
-            "refresh-te" : "Relancer le tuteur entreprise",
-            "translate_btn" : "Translate this text ?"
+        "add_survey":{
+            "title":"Question",
+            "responses":"Replies:"
+        },
+        "answer_survey":{
+            "response":"Reply",
+            "value":"Value"
+        },
+        "survey_list_element":{
+            "view":"To consult",
+            "edit":"Edit",
+            "remove":"Remove"
+        },
+        "parts":{
+            "see-survey":"See the survey",
+            "answer-survey":"Reply to the survey",
+            "refresh-te":"Relaunch the company tutor",
+            "translate_btn":"Translate this text?",
+            "translate_btn_back":"Go back to the original language?",
+            "user_actions":{
+                "contact":"Contact",
+                "edit":"Edit",
+                "remove":"Remove"
+            }
+        },
+        "answer_survey2":{
+            "addComment":"Click to add a comment",
+            "textarea_descript":"Write your comment in a few lines ..."
+        },
+        "feedBack":{
+            "title":"Send an error report",
+            "object-lbl":"Object",
+            "message-lbl":"Message",
+            "close":"Cancel",
+            "send":"To send",
+            "message":"Fixed issue reminder!"
+        },
+        "edit_user":{
+            "name-lbl":"Name",
+            "fname-lbl":"First name",
+            "email-lbl":"E-mail",
+            "type-lbl":"Type of user",
+            "group-lbl":"Group",
+            "birth-date-lbl":"Birth date",
+            "phone-lbl":"Phone",
+            "address-lbl":"Address",
+            "zip-code-lbl":"Postal code",
+            "city-lbl":"City",
+            "country-lbl":"Country",
+            "language-lbl":"Language",
+            "publication-lbl":"Allow this user to post articles",
+            "help":"These Information may be amended at a later date"
+        },
+        "add_user":{
+            "name-lbl":"Name",
+            "fname-lbl":"First name",
+            "email-lbl":"E-mail",
+            "type-lbl":"Type of user",
+            "group-lbl":"Group",
+            "birth-date-lbl":"Birth date",
+            "phone-lbl":"Phone",
+            "address-lbl":"Address",
+            "zip-code-lbl":"Postal code",
+            "city-lbl":"City",
+            "country-lbl":"Country",
+            "language-lbl":"Language",
+            "publication-lbl":"Allow this user to post articles",
+            "help":"These Information may be amended at a later date"
+        },
+        "search":{
+            "no_result":"No results",
+            "user_card":{
+                "sendMessage":"Send a message"
+            },
+            "message_card":{
+                "from":"from"
+            }
         }
     }
 }
