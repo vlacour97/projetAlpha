@@ -243,8 +243,45 @@ class Language extends \mainClass{
             );
             $gabarit = str_replace($replace,$by,$gabarit);
         }
+        $gabarit = str_replace('{btn_infos}',self::getHelpModalAndBtn(implode('/',array_slice(explode('/',$short_path),1))),$gabarit);
 
         return $gabarit;
+    }
+
+    /**
+     * Récupére le bouton et le modal d'aide
+     * @param string $page_name
+     * @return string
+     */
+    static private function getHelpModalAndBtn($page_name){
+
+        $path_btn = ROOT.self::$html_views_dir_path.'components/parts/btn_infos.html';
+        $btn_html = file_get_contents($path_btn);
+        $btn_text = self::get_component_text('parts')['btn_infos'];
+        $btn_infos = str_replace('{btn_infos}',$btn_text,$btn_html);
+        $path_modal = ROOT.self::$html_views_dir_path.'components/modal_infos.html';
+        $modal_html = file_get_contents($path_modal);
+        $modal_infos = str_replace(['{content}','{title}'], [self::getModalText($page_name),self::get_component_text('modal_infos')['title']],$modal_html);
+
+        return $btn_infos.$modal_infos;
+    }
+
+    /**
+     * Récupére le texte pour un modal
+     * @param string $page_name
+     * @return string
+     * @throws \Exception
+     */
+    static private function getModalText($page_name){
+        $textModal = ROOT.self::$html_views_dir_path.'help/'.$page_name.'.html';
+
+        if(!is_file($textModal))
+            return '';
+
+        if(!($content = file_get_contents($textModal)))
+            throw new \Exception('Erreur lors de la récupération du contenu de la page',1);
+
+        return $content;
     }
 
     /**

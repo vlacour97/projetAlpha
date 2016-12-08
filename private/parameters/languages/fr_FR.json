@@ -874,6 +874,7 @@
         "manage_API" : {
             "previous" : "Accueil",
             "name" : "Gestion de l'API",
+            "title" : "Modifiez ces champs pour reconfigurer votre API :",
             "form": {
                 "siteName": {
                     "lbl": "Nom de site",
@@ -1155,7 +1156,8 @@
                 "contact" : "Contacter",
                 "edit" : "Modifier",
                 "remove" : "Supprimer"
-            }
+            },
+            "btn_infos" : "Infos"
         },
         "answer_survey2" : {
             "addComment" : "Cliquez pour ajouter un commentaire",
@@ -1209,6 +1211,9 @@
             "message_card" : {
                 "from" : "De"
             }
+        },
+        "modal_infos" : {
+            "title" : "Aide"
         }
 
     }
