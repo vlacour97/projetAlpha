@@ -110,9 +110,9 @@ class Notifications extends \mainClass{
      */
     static function add_post($id_post){
         if(!is_int($id_post))
-            throw new \Exception('Erreur : Format de données invalide',2);
+            throw new \PersonalizeException(2002);
         if(($users = PDOQueries::show_all_users()) == false || !(($id_user = PDOQueries::get_publisher_id($id_post)) > 0))
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{add_post}{id_user/'.$id_user.'}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Timeline::$post_id_page.'#'.$id_post;
         foreach ($users as $content)
@@ -129,7 +129,7 @@ class Notifications extends \mainClass{
      */
     static function comment_post($id_comment){
         if(!(($id_user = PDOQueries::get_post_publisher_id_by_comment($id_comment)) > 0) || !(($id_post = PDOQueries::get_post_id_by_comment($id_comment)) > 0) || !(($id_publisher = PDOQueries::get_publisher_id($id_post)) > 0))
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{comment_post}{id_publisher/'.$id_user.'}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Timeline::$post_id_page.'#'.$id_post.$id_comment;
         return PDOQueries::add_notification($id_publisher,$marker,$link);
@@ -144,7 +144,7 @@ class Notifications extends \mainClass{
      */
     static function like_post($id_post,$id_liker){
         if(!(($id_user = PDOQueries::get_publisher_id($id_post)) > 0))
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{like_post}{id_user/'.$id_liker.'}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Timeline::$post_id_page.'#'.$id_post;
         return PDOQueries::add_notification($id_user,$marker,$link);
@@ -158,7 +158,7 @@ class Notifications extends \mainClass{
      */
     static function wait_survey($id_student){
         if(!($id_user = PDOQueries::get_TE_ID_of_student($id_student)) > 0)
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{wait_survey}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_complete_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);
@@ -172,7 +172,7 @@ class Notifications extends \mainClass{
      */
     static function complete_survey($id_student){
         if(!($id_user = PDOQueries::get_TI_ID_of_student($id_student)) > 0)
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{complete_survey}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);
@@ -186,7 +186,7 @@ class Notifications extends \mainClass{
      */
     static function validate_survey($id_student){
         if(!($id_user = PDOQueries::get_TE_ID_of_student($id_student)) > 0)
-            throw new \Exception('Erreur : La récupération des données a échoué',2);
+            throw new \PersonalizeException(2001);
         $marker = '{validate_survey}';
         $link = 'index.php?'.Navigation::$navigation_marker.'='.Answer::$survey_id_page.'&'.Answer::$survey_marker.'='.crypt::encrypt($id_student);
         return PDOQueries::add_notification($id_user,$marker,$link);

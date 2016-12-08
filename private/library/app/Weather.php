@@ -84,7 +84,7 @@ class Weather {
         $this->unit = $unit;
         $this->APIKey = Config::getWeatherAPIKey();
         if($this->APIKey == "")
-            throw new \Exception('Pas de clé pour l\'API OpenWeatherMap',3);
+            throw new \PersonalizeException(3004);
         $this->datas = json_decode(file_get_contents("http://api.openweathermap.org/data/2.5/forecast/daily?q=$city,$zip_code&mode=json&cnt=5&units=metric&appid=".$this->APIKey));
     }
 
@@ -97,7 +97,7 @@ class Weather {
     public function getWeather(){
         $datas = $this->datas;
         if(empty($datas))
-            throw new \Exception('Erreur lors de la réxupération de la météo',2);
+            throw new \PersonalizeException(2120);
         $response = new WeatherDatas();
         $response->city = $datas->city->name;
         $response->country = $datas->city->country;

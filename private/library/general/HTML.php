@@ -278,7 +278,7 @@ class HTML {
         'messenger/build/js/messenger-theme-flat.js'
     );
     private $basic_script = array('settings.js','app.js','main.js');
-    private $favicon_path = "";
+    private $favicon_path = "/public/img/favicon.png";
 
     /**
      * Génére le header d'une page HTML
@@ -298,7 +298,7 @@ class HTML {
             <!-- Applications Links -->
             <?php $linker->css($links) ?>
             <?php $linker->css($links_ie,true) ?>
-            <link rel="shortcut icon" href="<?php echo $this->favicon_path ?>">
+            <link rel="shortcut icon" href="<?php echo HOST.$this->favicon_path ?>">
             <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
             <meta name="description" content="<?php echo Config::getDescription() ?>">
             <meta name="keywords" content="<?php echo Config::getKeywords() ?>">

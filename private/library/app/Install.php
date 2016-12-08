@@ -90,7 +90,7 @@ class Install {
      */
     static function PDO_install($host,$dbname,$user,$password,$prefix = ""){
         if(strpos($prefix,' '))
-            throw new \Exception('Veuillez ne pas insérer d\'espace dans le préfixe ! ',1);
+            throw new \PersonalizeException(1006);
 
         //Test de connexion
         try{
@@ -103,14 +103,14 @@ class Install {
         try{
             $script = file_get_contents(ROOT.self::$SQL_install_script);
         }catch (\Exception $e){
-            throw new \Exception('Fichier non trouvé');
+            throw new \PersonalizeException(1007);
         }
         $script = str_replace('{prefix}',$prefix,$script);
 
         //Execution du script SQL
         /** @var $PDO \PDO */
         if(!$PDO->prepare($script)->execute())
-            throw new \Exception('Erreur lors de l\'importation des données',2);
+            throw new \PersonalizeException(1008);
 
         //Création du fichier de configuration
         try{
@@ -376,7 +376,7 @@ class Install {
                     throw new \PersonalizeException(1003);
                     break;
             }
-            throw new \PersonalizeException(2001);
+            throw new \PersonalizeException(1005);
         }
         if($return_PDO_object)
             return $PDO;
@@ -402,7 +402,7 @@ class Install {
             'prefix' => $prefix
         );
         if(!file_put_contents(ROOT.self::$db_datas_path,json_encode($datas)))
-            throw new \Exception('Erreur lors de la configuation de l\'application',2);
+            throw new \PersonalizeException(2010);
         return true;
     }
 

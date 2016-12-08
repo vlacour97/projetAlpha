@@ -31,7 +31,7 @@ class Answer extends \mainClass{
      */
     static function get_answers($id_student){
         if(!PDOQueries::isset_student($id_student))
-            throw new \Exception('L\'étudiant demandé n\'existe pas',2);
+            throw new \PersonalizeException(2090);
         $answer = PDOQueries::show_answer($id_student);
         $id_survey = $answer[0]['id_survey'];
         if(is_null($id_survey))
@@ -74,7 +74,7 @@ class Answer extends \mainClass{
      */
     static function get_scale_survey($survey){
         if(!is_int($survey) && !is_object($survey))
-            throw new \Exception('Erreur sur le type de variable',1);
+            throw new \PersonalizeException(1060);
         if(is_int($survey))
             $survey = self::get_survey($survey);
         $total = 0;
@@ -98,14 +98,14 @@ class Answer extends \mainClass{
      */
     static function set_answer($answer,$id_survey,$id_student,$publish = false){
         if(!is_array($answer) || !is_int($id_survey) || !is_int($id_student) || !is_bool($publish))
-            throw new \Exception('Erreur sur le type de variable',1);
+            throw new \PersonalizeException(1060);
         foreach($answer as $key=>$content)
             PDOQueries::add_answer($id_student,$id_survey,$key,$content['response'],$content['comment']);
 
         if($publish)
         {
             if(!self::survey_is_completed($answer,$id_survey))
-                throw new \Exception('Le questionnaire n\'est pas complet',2);
+                throw new \PersonalizeException(2050);
             return PDOQueries::update_answer_status($id_student,$publish) && mail::send_answer_email(PDOQueries::get_TI_ID_of_student($id_student)) && Notifications::complete_survey($id_student);
         }
 
@@ -148,7 +148,7 @@ class Answer extends \mainClass{
         if(is_int($id_student)){
             //Récupération des données utilisateur
             if(!($student = User::get_student($id_student)))
-                throw new \Exception('Erreur lors de la récupération des données',2);
+                throw new \PersonalizeException(2090);
             $replace = array('{fname_student}','{name_student}');
             $by = array($student->fname,$student->name);
             $json_content = str_replace($replace,$by,$json_content);
@@ -305,7 +305,7 @@ class Answer extends \mainClass{
      */
     static function survey_is_completed($answer,$id_survey){
         if(!is_array($answer) || !is_int($id_survey))
-            throw new \Exception('Erreur sur le type de variable',1);
+            throw new \PersonalizeException(1060);
         $survey = self::get_survey($id_survey);
         if(count($survey->questions) != count($answer))
             return false;
@@ -356,7 +356,7 @@ class Answer extends \mainClass{
      */
     static function set_deadline($id_student,$date = null){
         if(!is_null($date) && !is_string($date) && !is_a($date,'\general\Date'))
-            throw new \Exception('Erreur sur le type de la date',2);
+            throw new \PersonalizeException(2060);
         if($date == null)
             $date = self::get_static_deadline();
         if(is_a($date,'\general\Date'))
@@ -382,7 +382,7 @@ class Answer extends \mainClass{
 
         //Formattage des variables
         if(!is_null($date) && !is_string($date) && !is_a($date,'\general\Date'))
-            throw new \Exception('Erreur sur le type de la date',2);
+            throw new \PersonalizeException(2060);
         if($date == null)
             $date = self::get_static_deadline();
         if(is_string($date))
@@ -405,7 +405,7 @@ class Answer extends \mainClass{
      */
     static function can_complete_survey($id_student){
         if(!PDOQueries::isset_student($id_student))
-            throw new \Exception('L\'étudiant demandé n\'existe pas',2);
+            throw new \PersonalizeException(2001);
         $student = new \DateTime(self::get_deadline($id_student)->format());
         $now = new \DateTime('now');
         if($student <= $now)

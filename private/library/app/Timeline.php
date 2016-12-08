@@ -158,7 +158,7 @@ class Timeline extends \mainClass{
 
         //ajout de poste
         if(!PDOQueries::add_post($id_user, $content))
-            throw new \Exception('Erreur lors de l\'ajout de la publication',2);
+            throw new \PersonalizeException(2075);
 
         //récup id
         $id_post = PDOQueries::get_max_post_id();

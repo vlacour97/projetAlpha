@@ -294,11 +294,11 @@ class User extends \mainClass{
         is_null($phone) && $phone = "";
 
         if(!filter_var($email,FILTER_VALIDATE_EMAIL))
-            throw new \Exception('Adresse mail invalide',2);
+            throw new \PersonalizeException(2034);
         if(PDOQueries::verification_email($email))
-            throw new \Exception('Adresse mail déjà utilisé',2);
+            throw new \PersonalizeException(2035);
         if(!($type>0 && $type<4))
-            throw new \Exception('Type d\'utilisateur invalide',2);
+            throw new \PersonalizeException(2036);
         return PDOQueries::add_user($name,$fname,$type,$email,$phone,$address,$zip_code,$city,$country,$language,$publication_entitled) && (($send_mail && mail::send_activation_email(PDOQueries::get_UserID_with_email($email))) || !$send_mail);
     }
 
@@ -342,9 +342,9 @@ class User extends \mainClass{
         }
 
         if(!PDOQueries::isTE($id_te) || !PDOQueries::isTI($id_ti))
-            throw new \Exception('Erreur lors de l\'ajout de l\'Étudiant',2);
+            throw new \PersonalizeException(2092);
         if(!PDOQueries::add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone,$address,$zip_code,$city,$country,$information,$deadline_date->format('yyyy-mm-dd'),$birth_date))
-            throw new \Exception('Erreur lors de l\'ajout de l\'Etudiant',2);
+            throw new \PersonalizeException(2092);
         return true;
     }
 
@@ -359,9 +359,9 @@ class User extends \mainClass{
     static function upload_and_analyses_csv($csv_file,$nb_rows_begin = 0,$nb_cols_begin = 0){
         $extension = file::file_infos($csv_file)->extension;
         if($extension != 'csv')
-            throw new \Exception('Le fichier n\'est pas de type CSV',2);
+            throw new \PersonalizeException(2110);
         if(!file::upload(TEMP_PATH,$csv_file,null,Log::get_id().'.csv'))
-            throw new \Exception('Erreur lors de l\importation du fichier CSV');
+            throw new \PersonalizeException(1110);
         $file_path = TEMP_PATH.Log::get_id().'.csv';
         $csv_object = new parseCSV($file_path);
         $datas = array();
@@ -386,7 +386,7 @@ class User extends \mainClass{
         //Vérification de la forme (Si étudiant email tuteurs presents)
         if(preg_grep ('/^student\/(\w+)/i', $attr_response))
             if(!preg_grep ('/^ti\/email/i', $attr_response) || !preg_grep ('/^te\/email/i', $attr_response) || !(preg_grep ('/^student\/name/i', $attr_response) && preg_grep ('/^student\/fname/i', $attr_response)))
-                throw new \Exception('L\'ajout d\'un étudiant demande la présence d\'email pour les tuteurs IUT et Entreprise, ainsi que le nom et le prénom de l\'étudiant',1);
+                throw new \PersonalizeException(1090);
 
         $te_datas = array();
         $ti_datas = array();
@@ -395,7 +395,7 @@ class User extends \mainClass{
 
         //Vérification de l'existence du fichier
         if(!is_file($file_path))
-            throw new AddCSVDataException('Erreur lors de la récupération des données',2);
+            throw new \PersonalizeException(2001);
 
         $csv_object = new parseCSV($file_path);
 
@@ -580,7 +580,7 @@ class User extends \mainClass{
      */
     static function get_user($id){
         if(!($datas = PDOQueries::show_user($id)))
-            throw new \Exception('Erreur lors de la récupération des données',2);
+            throw new \PersonalizeException(2001);
         $users = new UserDatas();
         ReturnDatas::format_datas($datas,$users);
         return $users;
@@ -594,7 +594,7 @@ class User extends \mainClass{
      */
     static function get_student($id){
         if(!($datas = PDOQueries::show_student($id)))
-            throw new \Exception('Erreur lors de la récupération des données',2);
+            throw new \PersonalizeException(2001);
         if($datas['deadline_date'] == "0000-00-00")
             $datas['deadline_date'] = \app\Config::getDeadlineDate();
         try{
@@ -657,7 +657,7 @@ class User extends \mainClass{
      */
     static function set_student($id,$id_te = null,$id_ti = null,$name = null,$fname = null ,$group = null,$email = null,$phone =null,$address = null,$zip_code = null,$city = null,$country = null,$birth_date = null,$information = null,$deadline_date = null){
         if((!is_null($id_te) && !PDOQueries::isTE($id_te)) || (!is_null($id_ti) && !PDOQueries::isTI($id_ti)))
-            throw new \Exception('Erreur lors de la modification de l\'Étudiant',2);
+            throw new \PersonalizeException(2093);
 
         $args = func_get_args();
 
@@ -696,7 +696,7 @@ class User extends \mainClass{
      */
     static function delete_user($id){
         if(PDOQueries::get_User_type($id) == 1 && PDOQueries::count_admin() == 1)
-            throw new \Exception('Suppression impossible : Il doit y avoir au moins un compte administrateur actif');
+            throw new \PersonalizeException(3003);
         return PDOQueries::delete_user($id);
     }
 
@@ -708,7 +708,7 @@ class User extends \mainClass{
      */
     static function delete_student($id){
         if(!PDOQueries::delete_student($id))
-            throw new \PersonalizeException(2002);
+            throw new \PersonalizeException(2094);
         return true;
     }
 

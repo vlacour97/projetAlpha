@@ -234,11 +234,55 @@
         "exceptions" : {
             "1001" : "Connexion échouée : Accés non autorisé pour l'utilisateur \"$user\"",
             "1002" : "Connexion échouée : Base de données iconnue",
-            "1003" : "Connexion échouée : Hôte iconnue",
-            "2001" : "Connexion échouée : ",
-            "2002" : "Erreur lors de la suppression",
-            "2020" : "Mot de passe incorrect",
-            "2040" : "Veuillez accepter les termes & conditions du contrat"
+            "1003" : "Connexion échouée : Hôte iconnu",
+            "1004" : "Connexion échouée : Pas d'identifiants de connexion",
+            "1005" : "Connexion échouée : ",
+            "1006" : "Veuillez ne pas insérer d'espace dans le préfixe !",
+            "1007" : "Fichier non trouvé",
+            "1008" : "Erreur lors de l'importation des données",
+            "1020" : "L'utilisateur demandé n'existe pas",
+            "1021" : "Erreur lors de l'enregistrement",
+            "1022" : "Erreur lors de la connexion de l'utilisateur",
+            "1023" : "Erreur lors de la récupération de l'identifiant",
+            "1060" : "Erreur sur le type de variable",
+            "1090" : "L'ajout d'un étudiant demande la présence d'email pour les tuteurs IUT et Entreprise, ainsi que le nom et le prénom de l'étudiant",
+            "1110" : "Erreur lors de l'importation du fichier CSV",
+            "2001" : "Erreur lors de la récupération des données",
+            "2002" : "Erreur : Format de données invalide",
+            "2010" : "Erreur lors de la configuration de l'application",
+            "2020" : "L'utilisateur demandé n'existe pas",
+            "2021" : "Mot de passe incorrect",
+            "2022" : "Adresse email ou mot de passe incorrect !",
+            "2030" : "Mots de passe différents",
+            "2031" : "La vérification du mot de passe n'est pas identique au mot de passe",
+            "2032" : "Veuillez renseigner un mot de passe plus long",
+            "2033" : "Veuillez remplir les champs obligatoires",
+            "2034" : "Adresse mail invalide",
+            "2035" : "Adresse mail déjà utilisée",
+            "2036" : "Type d'utilisateur invalide",
+            "2037" : "Veuillez accepter les termes & conditions du contrat",
+            "2040" : "Veuillez activer votre compte, vérifiez vos mails",
+            "2050" : "Le questionnaire n'est pas complet",
+            "2060" : "Erreur sur le type de la date",
+            "2070" : "Erreur lors de l'envoi de votre message",
+            "2071" : "Erreur lors de l'envoi de pièces jointes",
+            "2072" : "Erreur lors de l'enregistrement",
+            "2073" : "Erreur lors de la suppression de la pièce jointe sur la base de donnée : N° $ID",
+            "2074" : "Erreur lors de la supression de la pièce jointe : N° $ID",
+            "2075" : "Erreur lors de l'ajout de la publication",
+            "2090" : "L'étudiant demandé n'existe pas",
+            "2091" : "Erreur lors de la recherche des étudiants",
+            "2092" : "Erreur lors de l'ajout de l'étudiant",
+            "2093" : "Erreur lors de la modification de l'étudiant",
+            "2094" : "Erreur lors de la suppression de l'étudiant",
+            "2100" : "Impossible de repondre à ce message",
+            "2101" : "Vous n'avez pas le droit d'envoyer ce message !",
+            "2110" : "Le fichier n'est pas de type CSV",
+            "2120" : "Erreur lors de la réxupération de la météo",
+            "3001" : "L'utilisateur est déjà activé",
+            "3002" : "Aucun résultat pour : $search",
+            "3003" : "Suppression impossible : Il doit y avoir au moins un compte administrateur actif",
+            "3004" : "Pas de clé pour l'API OpenWeatherMap"
         },
         "user_type" : [
             "Administrateur",
@@ -636,18 +680,18 @@
                 "actionuser": "Action"
             },
             "modal-add": {
-                "title": "Ajouter un étudiant",
+                "title": "Ajouter un utilisateur",
                 "step1": {
                     "title": "Méthode d'ajout",
                     "choice1": "Importer un fichier CSV",
-                    "choice2": "Ajouter un étudiant"
+                    "choice2": "Ajouter un utilisateur"
                 },
                 "step2": {
                     "title": "Ajout des données"
                 },
                 "step3": {
                     "title": "Finalisation",
-                    "success": "L'Étudiant à été ajouté avec succés !"
+                    "success": "L'Utilisateur à été ajouté avec succés !"
                 },
                 "btnPrevious": "Précédent",
                 "btnNext": "Suivant",
@@ -1126,6 +1170,22 @@
             "message" : "Note de correctif envoyé !"
         },
         "edit_user" : {
+            "name-lbl" : "Nom",
+            "fname-lbl" : "Prénom",
+            "email-lbl" : "Email",
+            "type-lbl" : "Type d'utilisateur",
+            "group-lbl" : "Groupe",
+            "birth-date-lbl" : "Date de Naissance",
+            "phone-lbl" : "Téléphone",
+            "address-lbl" : "Adresse",
+            "zip-code-lbl" : "Code Postal",
+            "city-lbl" : "Ville",
+            "country-lbl" : "Pays",
+            "language-lbl" : "Langue",
+            "publication-lbl" : "Autoriser cet utilisateur à publier des articles",
+            "help" : "Ces Informations pourront être modifié ultérieurement"
+        },
+        "add_user" : {
             "name-lbl" : "Nom",
             "fname-lbl" : "Prénom",
             "email-lbl" : "Email",

@@ -238,13 +238,13 @@ class Message extends \mainClass
     static function send_message($id_user,$id_dest,$objet,$content,$attachment_files = array(),$attachment_descriptions = array(),$reply = null)
     {
         if(!is_null($reply) && is_null(PDOQueries::show_message($reply)))
-            throw new \Exception('Impossible de repondre à ce message',2);
+            throw new \PersonalizeException(2100);
 
         if(is_null($reply) && !self::can_send_message($id_user,$id_dest))
-            throw new \Exception('Vous n\'avez pas le droit d\'envoyer ce message !',2);
+            throw new \PersonalizeException(2101);
 
         if(!PDOQueries::publish_message($id_user,$id_dest,$objet,$content,$reply))
-            throw new \Exception('Erreur lors l\'envoi de votre message',2);
+            throw new \PersonalizeException(2070);
 
         $id_message = PDOQueries::get_max_message_id();
         $exceptions = array();
@@ -334,7 +334,7 @@ class Message extends \mainClass
             $link = MESSAGE_ATTACHMENT_PATH.$filename;
 
             if(!PDOQueries::add_message_attachment($id_message,$link,$description,$type))
-                throw new \Exception('Erreur lors de l\'enregistrement',2);
+                throw new \PersonalizeException(1021);
             try{
                 file::upload($repo_path,$file,1024*1024*10,$filename);
             }catch(\Exception $e){
@@ -350,7 +350,7 @@ class Message extends \mainClass
             $link = MESSAGE_ATTACHMENT_PATH.$id_message_attachments.'.zip';
 
             if(!PDOQueries::add_message_attachment($id_message,$link,$description,$type))
-                throw new \Exception('Erreur lors de l\'enregistrement',2);
+                throw new \PersonalizeException(1021);
 
             //Upload d'un fichier temporaire
             try{
@@ -386,9 +386,9 @@ class Message extends \mainClass
         foreach($message_attachments as $message_attachment) {
             /** @var $message_attachment MessageAttachmentDatas */
             if(!PDOQueries::delete_message_attachments($message_attachment->ID))
-                $exceptions[] = new \Exception('Erreur lors de la suppression de la pièce jointe sur la base de donnée : N°'.$message_attachment->ID,2);
+                $exceptions[] = new \PersonalizeException(2073,['ID' => $message_attachment->ID]);
             if(!file::delete(ROOT.$message_attachment->link))
-                $exceptions[] = new \Exception('Erreur lors de la suppression de la pièce jointe : N°'.$message_attachment->ID,2);
+                $exceptions[] = new \PersonalizeException(2074,['ID' => $message_attachment->ID]);
         }
         if(count($exceptions)!=0)
             throw new MessageException('Erreur lors de la suppression',2,$exceptions);

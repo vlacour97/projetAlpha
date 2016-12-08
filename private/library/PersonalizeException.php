@@ -19,6 +19,6 @@ class PersonalizeException extends Exception{
      */
     public function __construct($code, $var = array(), Exception $previous = null)
     {
-        parent::__construct(\general\Language::get_exception_text($code,$var), $code, $previous);
+        parent::__construct(\general\Language::get_exception_text($code,$var).' ('.$code.')', $code, $previous);
     }
 }

@@ -36,7 +36,7 @@ class Search extends \mainClass{
                 $datas = PDOQueries::search_students_of_TI($search,$user_id);
                 break;
             default:
-                throw new \Exception('Erreur lors de la recherche des étudiants',2);
+                throw new \PersonalizeException(2091);
         }
 
         foreach($datas as $student){
@@ -78,7 +78,7 @@ class Search extends \mainClass{
         }
 
         if(count($response) == 0)
-            throw new \Exception('Aucun résultat pour : '.$search,3);
+            throw new \PersonalizeException(3002,['search'=>$search]);
 
         return $response;
     }
@@ -100,7 +100,7 @@ class Search extends \mainClass{
         }
 
         if(count($response) == 0)
-            throw new \Exception('Aucun résultat pour : '.$search,3);
+            throw new \PersonalizeException(3002,['search'=>$search]);
 
         return $response;
     }
@@ -122,7 +122,7 @@ class Search extends \mainClass{
         }
 
         if(count($response) == 0)
-            throw new \Exception('Aucun résultat pour : '.$search,3);
+            throw new \PersonalizeException(3002,['search'=>$search]);
 
         return $response;
     }
