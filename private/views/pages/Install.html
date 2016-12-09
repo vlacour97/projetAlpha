@@ -1,0 +1,227 @@
+<body class="background-two text-center">
+    <div class="wrap">
+        <div class="container container-fluid">
+            <div class="span10">
+                <header class="page-header">
+                    <h1>{name}</h1>
+                </header>
+            </div>
+            <div class="widget col-md-8 col-md-push-2">
+                <div id="wizard" class="form-wizard">
+                    <ul class="nav-justified mb-sm">
+                        <li><a href="#step1" data-toggle="tab">
+                            <small>1.</small>
+                            {navigation/step1}</a></li>
+                        <li><a href="#step2" data-toggle="tab">
+                            <small>2.</small>
+                            {navigation/step2}</a></li>
+                        <li><a href="#step3" data-toggle="tab">
+                            <small>3.</small>
+                            {navigation/step3}</a></li>
+                        <li><a href="#step4" data-toggle="tab">
+                            <small>4.</small>
+                            {navigation/step4}</a></li>
+                    </ul>
+                    <div id="bar" class="progress progress-xs">
+                        <div class="progress-bar progress-bar-gray-light"></div>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane bg-gray-lighter" id="step1">
+                            <h3>{step1/title}</h3>
+                            <span>{step1/infos}<br>&nbsp;</span>
+                            <form action='' method="post" data-parsley-priority-enabled="false" novalidate="novalidate">
+                                <fieldset>
+                                    <div class="form-group">
+                                        <!-- Hôte -->
+                                        <label for="host">{step1/form/host/lbl}</label>
+                                        <input type="text" id="host" name="host" placeholder="" class="form-control text-center" required="required">
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Nom de la base de données -->
+                                        <label for="bdname">{step1/form/dbname/lbl}</label>
+                                        <input type="text" id="bdname" name="bdname" placeholder="" class="form-control text-center" required="required">
+                                        <span class="help-block">{step1/form/dbname/help}</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Identifiant -->
+                                        <label for="username">{step1/form/login/lbl}</label>
+                                        <input type="text" id="username" name="username" placeholder="" class="form-control text-center" required="required">
+                                        <span class="help-block">{step1/form/login/help}</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Mot de passe -->
+                                        <label for="password">{step1/form/pwd/lbl}</label>
+                                        <input type="password" id="password" name="password" placeholder="" class="form-control text-center" required="required">
+                                        <span class="help-block">{step1/form/pwd/help}</span>
+                                    </div>
+                                    <div class="form-group">
+                                        <!-- Préfixe de table -->
+                                        <label for="prefix">{step1/form/prefix/lbl}</label>
+                                        <input type="text" id="prefix" name="prefix" value="gs_" class="form-control text-center">
+                                        <span class="help-block">{step1/form/prefix/help}</span>
+                                    </div>
+                                    <button class="btn btn-default" id="testBDD"><i class="fa fa-play-circle-o"></i> {step1/buttons/testConnection}</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="tab-pane bg-gray-lighter" id="step2">
+                            <form action='' method="POST" data-parsley-priority-enabled="false" novalidate="novalidate">
+                            <fieldset>
+                                <div class="form-group">
+                                    <!-- Nom du site -->
+                                    <label for="config_name">{step2/form/siteName/lbl}</label>
+                                    <input type="text" id="config_name" name="config_name" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step2/form/siteName/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Description du site -->
+                                    <label for="config_description">{step2/form/describe/lbl}</label>
+                                    <textarea rows="4" class="form-control" id="config_description" name="config_description"></textarea>
+                                    <span class="help-block">{step2/form/describe/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Mot clés du site -->
+                                    <label for="config_description">{step2/form/keywords/lbl}</label>
+                                    <textarea rows="4" class="form-control" id="config_keyword" name="config_keyword"></textarea>
+                                    <span class="help-block">{step2/form/keywords/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Nom de l'organisation -->
+                                    <label for="config_author">{step2/form/organisationName/lbl}</label>
+                                    <input type="text" id="config_author" name="config_author" placeholder="" class="form-control text-center" required="required">
+                                </div>
+                                <div class="form-group">
+                                    <!-- Email de maintenance -->
+                                    <label for="config_admin_mail">{step2/form/managerEmail/lbl}</label>
+                                    <input type="email" id="config_admin_mail" name="config_admin_mail" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step2/form/managerEmail/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Date Butoire des questionnaires -->
+                                    <label for="config_deadline">{step2/form/deathdate/lbl}</label>
+                                    <input type="text" id="config_deadline" name="config_deadline" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step2/form/deathdate/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Clé de l'API météo -->
+                                    <label for="config_owp_key">{step2/form/APIKey/lbl}</label>
+                                    <input type="text" id="config_owp_key" name="config_APIKey" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step2/form/APIKey/help}</span>
+                                </div>
+                            </fieldset>
+                        </form>
+                        </div>
+                        <div class="tab-pane bg-gray-lighter" id="step3">
+                            <form action='' method="POST">
+                            <fieldset>
+                                <div class="form-group col-md-6">
+                                    <!-- Nom -->
+                                    <label for="admin_name">{step3/form/name/lbl}</label>
+                                    <input type="text" id="admin_name" name="admin_name" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step3/form/name/help}</span>
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <!-- Prénom -->
+                                    <label for="admin_fname">{step3/form/fname/lbl}</label>
+                                    <input type="text" id="admin_fname" name="admin_fname" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step3/form/fname/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Email -->
+                                    <label for="admin_email">{step3/form/email/lbl}</label>
+                                    <input type="text" id="admin_email" name="admin_email" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step3/form/email/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Mot de passe -->
+                                    <label for="admin_password">{step3/form/pwd/lbl}</label>
+                                    <input type="password" id="admin_password" name="admin_password" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step3/form/pwd/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Confirmation du mot de passe -->
+                                    <label for="admin_password_confirmation">{step3/form/pwdVerif/lbl}</label>
+                                    <input type="password" id="admin_password_confirmation" name="admin_password_confirmation" placeholder="" class="form-control text-center" required="required">
+                                    <span class="help-block">{step3/form/pwdVerif/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Téléphone -->
+                                    <label for="admin_phone">{step3/form/phone/lbl}</label>
+                                    <input type="tel" id="admin_phone" name="admin_phone" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step3/form/phone/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Adresse -->
+                                    <label for="admin_address">{step3/form/address/lbl}</label>
+                                    <input type="tel" id="admin_address" name="admin_address" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step3/form/address/help}</span>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <!-- Code Postal -->
+                                    <label for="admin_zip_code">{step3/form/zip_code/lbl}</label>
+                                    <input type="tel" id="admin_zip_code" name="admin_zip_code" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step3/form/city/help}</span>
+                                </div>
+                                <div class="form-group col-md-8">
+                                    <!-- Ville -->
+                                    <label for="admin_city">{step3/form/city/lbl}</label>
+                                    <input type="tel" id="admin_city" name="admin_city" placeholder="" class="form-control text-center">
+                                    <span class="help-block">{step3/form/city/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Pays -->
+                                    <label for="admin_country">{step3/form/country/lbl}</label>
+                                    <select name="admin_country" id="admin_country" data-placeholder="Pays" class="chzn-select form-control">
+                                        {select/countries}
+                                    </select>
+                                    <span class="help-block">{step3/form/country/help}</span>
+                                </div>
+                                <div class="form-group">
+                                    <!-- Langue -->
+                                    <label for="admin_language">{step3/form/language/lbl}</label>
+                                    <select name="admin_language" id="admin_language" data-placeholder="Pays" class="chzn-select form-control">
+                                        {select/language}
+                                    </select>
+                                    <span class="help-block">{step3/form/language/help}</span>
+                                </div>
+                            </fieldset>
+                                <span class="help-block text-left">* {step3/form/help}</span>
+                        </form>
+                    </div>
+                        <div class="tab-pane bg-gray-lighter" id="step4">
+                        <h2>{step4/title}</h2>
+
+                        <p>{step4/infos}</p>
+                    </div>
+                        <ul class="pager wizard">
+                            <li class="previous">
+                                <button class="btn btn-default btn-rounded pull-left">
+                                    <i class="fa fa-caret-left"></i> &nbsp; {previous}
+                                </button>
+                            </li>
+                            <li class="next">
+                                <button class="btn btn-primary btn-rounded pull-right" >
+                                    {next} &nbsp; <i class="fa fa-caret-right"></i></button>
+                            </li>
+                            <li class="finish" style="display: none">
+                                <button class="btn btn-success btn-rounded pull-right finish" >
+                                    {finish} &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                                </button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="page-footer col-md-12">
+                {site-year} &copy; {site-name} - {site-copyright}
+            </footer>
+        </div>
+    </div>
+    <script>
+        var DB_connect = new Object();
+        DB_connect.success = '{script/DB_connect/success}';
+        DB_connect.fail = '{script/DB_connect/fail}';
+        var Step = new Object();
+        Step.value = '{script/step}';
+    </script>

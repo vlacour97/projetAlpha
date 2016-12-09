@@ -1,0 +1,66 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        {translate_button} {btn_infos}
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
+
+
+        <section class="row bg-white">
+            <div class="col-md-12">
+                <div class="col-md-offset-1 col-md-6 mt-xlg">
+                    <h2> {student-fname} <span class="fw-semi-bold">{student-name}</span></h2>
+                </div>
+                <div class="col-md-4 mt-lg">
+                    <div class="clearfix">
+                        <ul id="myTabs" class="nav nav-tabs"> <!-- remove pull-left to get a cool effect too -->
+                            <li class="active"><a href="#student" data-toggle="tab">{tab/tabstudent}</a></li>
+                            <li class=""><a href="#TE" data-toggle="tab">{tab/tabTE}</a></li>
+                        </ul>
+                    </div>
+                    <div id="TableStudentTI" class="tab-content mb-lg">
+                        <div class="tab-pane clearfix active" id="student">
+                            <h2>{student-fname} {student-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{student-phone">{student-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{student-email}">{student-email}</a></p>
+                        </div>
+                        <div class="tab-pane clearfix" id="TE">
+                            <h2>{te-fname} {te-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{ti-phone}">{te-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{ti-email}">{te-email}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <table class="table unbordered-first-line">
+                <colgroup>
+                    <col class="col-md-2">
+                    <col class="col-md-8">
+                    <col class="col-md-2">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold">{numQuestion}</span></h5></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {survey_datas}
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="col-md-12 text-center mt-n mb-lg">
+                            <a href="{validate_link}"  class="btn btn-success">{btnValid}</a>
+                            <button type="button" class="btn btn-default">{btnBack}</button>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+        </section>
+    </main>
+</div>

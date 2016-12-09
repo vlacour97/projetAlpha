@@ -1,0 +1,56 @@
+table.border-survey tr td{
+    border-top: 0;
+}
+
+table.border-survey tr td:last-child{
+    border-left: 1px solid #dddddd;
+}
+
+table.border-survey tr td table tr td:last-child{
+    border-top: 0;
+    border-left : 0;
+}
+
+table.unbordered-first-line tr:first-child td{
+    border-top: 0;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}
+
+.loader-wrap{
+    z-index: 999;
+}
+
+table.border-survey tfoot tr{
+    background: #eee;
+    border: 1px solid #ddd;
+}
+
+.btnFeedBack{
+    z-index: 999;
+    position: fixed;
+    bottom: 20px; right: 20px;
+    display: block;
+    width: 60px; height: 60px;
+    border-radius: 100%;
+    background: rgb(86,86,86);
+    border: 2px solid #FFF;
+    -moz-box-shadow: 0px 0px 100px 5px #656565;
+    -webkit-box-shadow: 0px 0px 100px 5px #656565;
+    -o-box-shadow: 0px 0px 100px 5px #656565;
+    box-shadow: 0px 0px 100px 5px #656565;
+    filter:progid:DXImageTransform.Microsoft.Shadow(color=#656565, Direction=NaN, Strength=100);
+    color: #FFF;
+    font-size: 25px;
+    transition: all .3s ease-in-out;
+}
+
+.btnFeedBack:focus{
+    background: #FFF;
+    color: rgb(86,86,86);
+    border: 2px solid rgb(86,86,86);
+    outline: none;
+}

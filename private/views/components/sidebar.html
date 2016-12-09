@@ -1,0 +1,40 @@
+<body>
+<nav id="sidebar" class="sidebar" role="navigation">
+    <!-- need this .js class to initiate slimscroll -->
+    <div class="js-sidebar-content">
+        <header class="logo hidden-xs">
+            <a href="#">{site_name_initial}</a>
+        </header>
+        <!-- seems like lots of recent admin template have this feature of user info in the sidebar.
+             looks good, so adding it and enhancing with notifications -->
+        <div class="sidebar-status visible-xs">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span class="thumb-sm avatar pull-right">
+                    <img class="img-circle" src="{profile_img_link}" alt="...">
+                </span>
+                <!-- .circle is a pretty cool way to add a bit of beauty to raw data.
+                     should be used with bg-* and text-* classes for colors -->
+                <span class="circle bg-warning fw-bold text-gray-dark">
+                    {nb_notifications}
+                </span>
+                &nbsp;
+                {user_fname} <strong>{user_name}</strong>
+                <b class="caret"></b>
+            </a>
+            <!-- #notifications-dropdown-menu goes here when screen collapsed to xs or sm -->
+        </div>
+        {navigation_control}
+        <h5 class="sidebar-nav-title">{stats_title}</h5>
+        <!-- A place for sidebar notifications & alerts -->
+        <div class="sidebar-alerts">
+            <div class="alert fade in">
+                <a href="#" class="close" data-dismiss="alert" aria-hidden="true">&times;</a>
+                <span class="text-white fw-semi-bold">{stats_progress}</span> <br>
+                <div class="progress progress-xs mt-xs mb-0">
+                    <div class="progress-bar progress-bar-gray-light" style="width: {percent_response}%"></div>
+                </div>
+                <small>{stats_progress_description}</small>
+            </div>
+        </div>
+    </div>
+</nav>

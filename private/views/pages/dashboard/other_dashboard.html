@@ -1,0 +1,51 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        {btn_infos}
+        <h1 class="page-title">{name}</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="col-md-12">
+                    {weather_widget}
+                </div>
+                <div class="col-md-12 mt-lg">
+                    {message_widget}
+                </div>
+            </div>
+            <div class="col-md-6">
+                <section class="widget">
+                    <header>
+                        <h4>
+                            {responses_rate}
+                        </h4>
+                        <div class="widget-controls">
+                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
+                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
+                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
+                        </div>
+                    </header>
+                    <div class="widget-body">
+                        <div id="DonutStatsTE">
+                        </div>
+                        <p class="fs-mini text-muted">
+                            {responses_rate_description}
+                        </p>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+    </main>
+</div>
+
+<script>
+    var page = 'other';
+    var responses = new Object();
+    responses.empty = {responses_empty};
+    responses.finish = {responses_finish};
+    responses.validate = {responses_validate};
+</script>

@@ -1,0 +1,17 @@
+[
+    {
+        "id" : 1,
+        "name" : "Administrateur",
+        "rights" : ["home","students/student_list","students/student_score","students/student_score_pdf","students/survey","students/survey_pdf","survey/create_survey","survey/survey_show","survey/survey_list","user/user_list","profile","manage_API"]
+    },
+    {
+        "id" : 2,
+        "name" : "Tuteur Entreprise",
+        "rights" : ["home","student_list","see_survey","answer_survey","profile"]
+    },
+    {
+        "id" : 3,
+        "name" : "Tuteur IUT",
+        "rights" : ["home","student_list","see_survey","profile"]
+    }
+]
