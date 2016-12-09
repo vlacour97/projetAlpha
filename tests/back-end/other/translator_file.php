@@ -17,7 +17,7 @@ translate_datas($datas,$response);
 echo '<pre>';
 var_dump($response);
 
-file_put_contents('ja_JA.json',json_encode($response));
+file_put_contents('ru_RU.json',json_encode($response));
 
 
 
@@ -28,7 +28,7 @@ function translate_datas($arrayToTranslate, &$response){
         if(is_array($row)){
             translate_datas($row,$response[$key]);
         }else{
-            $response[$key] = \general\Language::translate_text($row,'fr_FR','ja_JA');
+            $response[$key] = \general\Language::translate_text($row,'fr_FR','ru_RU');
         }
     }
 }

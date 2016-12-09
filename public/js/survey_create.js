@@ -43,7 +43,7 @@ $(function(){
             .on('click','.addAnswer',function(){
                 var $this = $(this);
                 var id_answer = $this.parent().parent().prev().data('id');
-                var id_survey = $this.parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().data('id');
+                var id_survey = $this.parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().data('id');
                 var urlTmp = url + '?action=get_answer_form&id_survey=' + id_survey + '&id_answer=' +(id_answer+1);
                 $.get(urlTmp)
                     .done(function(datas){
@@ -51,14 +51,19 @@ $(function(){
                     })
             })
             .on('click','.rmvAnswer',function(){
-                var id_survey = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().data('id');
+                var id_survey = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().data('id');
                 $(this).parent().parent().remove();
                 updateAnswers(id_survey);
             })
             .on('click','.rmvQuestion',function(){
-                var $group = $(this).parent().parent().parent().parent().parent().parent().parent().parent();
-                $group.remove();
-                updateQuestions();
+                //var $group = $(this).parent().parent().parent().parent().parent().parent().parent().parent();
+                //$group.remove();
+                //updateQuestions();
+                Messenger().post({
+                    message: 'Vous ne pouvez pas supprimer cette question pour le moment',
+                    type: 'error',
+                    showCloseButton: true
+                });
             })
             .on('change','.value',function(){
                 updateValue();

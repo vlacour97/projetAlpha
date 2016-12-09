@@ -873,6 +873,7 @@
         "manage_API":{
             "previous":"\u6b53\u8fce",
             "name":"\u7ba1\u7406API",
+            "title" : "あなたのAPIを再構成するために、これらのフィールドを変更します。",
             "form":{
                 "siteName":{
                     "lbl":"\u30b5\u30a4\u30c8\u306e\u540d\u524d",
@@ -1148,7 +1149,8 @@
                 "contact":"\u30b3\u30f3\u30bf\u30af\u30c8",
                 "edit":"\u5909\u66f4",
                 "remove":"\u524a\u9664\u3057\u307e\u3059"
-            }
+            },
+            "btn_infos" : "インフォ"
         },
         "answer_survey2":{
             "addComment":"\u30b3\u30e1\u30f3\u30c8\u3092\u8ffd\u52a0\u3059\u308b\u5834\u5408\u306b\u30af\u30ea\u30c3\u30af\u3057\u307e\u3059",
@@ -1202,6 +1204,9 @@
             "message_card":{
                 "from":"\u306e"
             }
+        },
+        "modal_infos" : {
+            "title" : "助けます"
         }
     }
 }

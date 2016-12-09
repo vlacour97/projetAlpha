@@ -873,6 +873,7 @@
         "manage_API":{
             "previous":"bienvenida",
             "name":"API de administraci\u00f3n",
+            "title" : "Cambie estos campos para volver a configurar la API:",
             "form":{
                 "siteName":{
                     "lbl":"Nombre del sitio",
@@ -1149,7 +1150,8 @@
                 "contact":"contacto",
                 "edit":"cambio",
                 "remove":"eliminar"
-            }
+            },
+            "btn_infos" : "Información"
         },
         "answer_survey2":{
             "addComment":"Haga clic para a\u00f1adir un comentario",
@@ -1203,6 +1205,9 @@
             "message_card":{
                 "from":"de"
             }
+        },
+        "modal_infos" : {
+            "title" : "Ayudar"
         }
     }
 }

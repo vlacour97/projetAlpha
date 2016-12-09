@@ -829,6 +829,7 @@
         "manage_API":{
             "previous":"Willkommen",
             "name":"Management-API",
+            "title" : "Ändern Sie diese Felder Ihre API neu zu konfigurieren:",
             "form":{
                 "siteName":{
                     "lbl":"Site-Name",
@@ -1104,7 +1105,8 @@
                 "contact":"Kontakt",
                 "edit":"Ver\u00e4nderung",
                 "remove":"entfernen"
-            }
+            },
+            "btn_infos" : "Info"
         },
         "answer_survey2":{
             "addComment":"Klicken Sie auf einen Kommentar hinzuf\u00fcgen",
@@ -1158,6 +1160,9 @@
             "message_card":{
                 "from":"von"
             }
+        },
+        "modal_infos" : {
+            "title" : "Hilfe"
         }
     }
 }

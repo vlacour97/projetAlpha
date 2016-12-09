@@ -1,50 +1,5 @@
-<div class="content-wrap">
-    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
-    <main id="content" class="content" role="main">
-        <ol class="breadcrumb">
-            <li>{previous}</li>
-            <li class="active">{name}</li>
-        </ol>
-        <h1 class="page-title">{name}</h1>
-        <div class="row">
-            <div class="col-md-6">
-                <div class="col-md-12">
-                    {weather_widget}
-                </div>
-                <div class="col-md-12 mt-lg">
-                    {message_widget}
-                </div>
-            </div>
-            <div class="col-md-6">
-                <section class="widget">
-                    <header>
-                        <h4>
-                            {responses_rate}
-                        </h4>
-                        <div class="widget-controls">
-                            <a data-widgster="expand" title="Expand" href="#"><i class="glyphicon glyphicon-chevron-up"></i></a>
-                            <a data-widgster="collapse" title="Collapse" href="#"><i class="glyphicon glyphicon-chevron-down"></i></a>
-                            <a href="#" data-widgster="close"><i class="glyphicon glyphicon-remove"></i></a>
-                        </div>
-                    </header>
-                    <div class="widget-body">
-                        <div id="DonutStatsTE">
-                        </div>
-                        <p class="fs-mini text-muted">
-                            {responses_rate_description}
-                        </p>
-                    </div>
-                </section>
-            </div>
-
-        </div>
-    </main>
-</div>
-
-<script>
-    var page = 'other';
-    var responses = new Object();
-    responses.empty = {responses_empty};
-    responses.finish = {responses_finish};
-    responses.validate = {responses_validate};
-</script>
+<h1>Accueil du site</h1>
+<p>Suite à votre inscription, vous avez accès à l’ensemble du site Gestion Stage. Comme vous pouvez le constater, le site est divisé en plusieurs sections, cette notice va vous permettre de vous y retrouver.</p>
+<img src="{webroot}/public/img/docs/o11.png" class="img-responsive img-thumbnail" alt="Responsive image">
+<p>Sur la page d’accueil, différentes options s’offrent à vous. Tout d’abord une statistique sur le taux de réponses au questionnaire vous est présenté. De plus, une option multi-langue vous permettant de changer la langue du site (français, anglais, allemand, espagnol, japonais) vous est accessible en cliquant sur le petit globe à côté de votre nom. Une petite carte indiquant la météo de votre ville (si cette dernière est renseignée dans votre profil) est visible.  En cliquant sur votre nom, vous avez accès aux différentes notifications reçues. Vous pouvez aussi modifier votre profil en cliquant sur <kbd><i class="fa fa-cog"></i></kbd> puis sur <kbd>Mon Compte</kbd>.</p>
+<img src="{webroot}/public/img/docs/o12.png" class="img-responsive img-thumbnail" alt="Responsive image">

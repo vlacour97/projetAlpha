@@ -242,8 +242,8 @@ class Language extends \mainClass{
                 HOST
             );
             $gabarit = str_replace($replace,$by,$gabarit);
+            $gabarit = str_replace('{btn_infos}',self::getHelpModalAndBtn(implode('/',array_slice(explode('/',$short_path),1))),$gabarit);
         }
-        $gabarit = str_replace('{btn_infos}',self::getHelpModalAndBtn(implode('/',array_slice(explode('/',$short_path),1))),$gabarit);
 
         return $gabarit;
     }
@@ -261,7 +261,7 @@ class Language extends \mainClass{
         $btn_infos = str_replace('{btn_infos}',$btn_text,$btn_html);
         $path_modal = ROOT.self::$html_views_dir_path.'components/modal_infos.html';
         $modal_html = file_get_contents($path_modal);
-        $modal_infos = str_replace(['{content}','{title}'], [self::getModalText($page_name),self::get_component_text('modal_infos')['title']],$modal_html);
+        $modal_infos = str_replace(['{content}','{title}','{webroot}'], [self::getModalText($page_name),self::get_component_text('modal_infos')['title'],HOST],$modal_html);
 
         return $btn_infos.$modal_infos;
     }
