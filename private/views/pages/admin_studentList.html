@@ -1,0 +1,218 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{previous}</li>
+            <li class="active">{name}</li>
+        </ol>
+        <button class="add_user_and_student btn btn-default pull-right ml-md"><i class="fa fa-plus"></i></button>{btn_infos}
+        <h1 class="page-title">{name} - <span class="fw-semi-bold">{student}</span></h1>
+        <section class="widget ">
+            <header>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+
+            </header>
+            <div class="widget-body">
+                <div class="mt">
+                    <button class="btn btn-default center-block delete_multiple">{btnDelete}</button>
+                    <table id="student-table" class="table table-striped table-hover">
+                        <thead>
+                        <tr>
+                            <th>{table/id}</th>
+                            <th class="hidden-xs no-sort"><div class="checkbox"><input data-action="check-all" type="checkbox" id="check-all"><label for="check-all"></label></div></th>
+                            <th>{table/student_name}</th>
+                            <th class="hidden-xs">{table/TI}</th>
+                            <th class="hidden-xs">{table/TE}</th>
+                            <th class="no-sort text-center">{table/actions}</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
+    </main>
+</div>
+
+
+<div class="modal fade bs-example-modal-lg" id="AddStudentModal" tabindex="-1" role="dialog" aria-labelledby="AddStudentModal">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{modal-add/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <div class="widget col-md-12">
+            <div id="wizard" class="form-wizard">
+            <ul class="nav-justified mb-sm">
+                <li><a href="#step1" data-toggle="tab">
+                    <small>1.</small>
+                    {modal-add/step1/title}</a></li>
+                <li><a href="#step2" data-toggle="tab">
+                    <small>2.</small>
+                    {modal-add/step2/title}</a></li>
+                <li><a href="#step3" data-toggle="tab">
+                    <small>3.</small>
+                    {modal-add/step3/title}</a></li>
+            </ul>
+            <div id="bar" class="progress progress-xs">
+                <div class="progress-bar progress-bar-gray-light"></div>
+            </div>
+            <div class="tab-content">
+                <div class="tab-pane bg-gray-lighter" id="step1">
+                    <h3>{modal-add/step1/title} :</h3>
+                    <hr><hr>
+                    <div class="col-md-6">
+                        <a id="addByCSV">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-file-text fa-stack-1x fa-inverse"></i>
+                        </span>
+                            <h5>{modal-add/step1/choice1}</h5>
+                        </a>
+                    </div>
+                    <div class="col-md-6">
+                        <a id="addByHand">
+                        <span class="fa-stack fa-2x">
+                            <i class="fa fa-circle fa-stack-2x"></i>
+                            <i class="fa fa-pencil fa-stack-1x fa-inverse" aria-hidden="true"></i>
+                        </span>
+                            <h5>{modal-add/step1/choice2}</h5>
+                        </a>
+                    </div>
+                    &nbsp;
+                </div>
+                <div class="tab-pane bg-gray-lighter" id="step2">
+
+                </div>
+                <div class="tab-pane bg-gray-lighter" id="step3">
+                    <div class="success">
+                        <h2>{modal-add/step3/title} :</h2>
+
+                        <p>{modal-add/step1/success}</p>
+                    </div>
+                    <div class="error hidden">
+                        <h2>Finalisation :</h2>
+
+                        <p class="description"></p>
+                        <table class="table">
+
+                        </table>
+                    </div>
+                </div>
+                <ul class="pager wizard">
+                    <li class="previous">
+                        <button class="btn btn-default btn-rounded pull-left">
+                            <i class="fa fa-caret-left"></i> &nbsp; {modal-add/btnPrevious}
+                        </button>
+                    </li>
+                    <li class="next">
+                        <button class="btn btn-primary btn-rounded pull-right" disabled>
+                            {modal-add/btnNext} &nbsp; <i class="fa fa-caret-right"></i></button>
+                    </li>
+                    <li class="finish" style="display: none">
+                        <button class="btn btn-success btn-rounded pull-right" >
+                            {modal-add/btnFinish} &nbsp; <i class="glyphicon glyphicon-ok"></i>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            </div>
+            </div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Students -->
+<div class="modal fade" id="StudentsModal" tabindex="-1" role="dialog" aria-labelledby="StudentsModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" >{modal-infos/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Change -->
+<div class="modal fade" id="ChangeModal" tabindex="-1" role="dialog" aria-labelledby="ChangeModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title">{modal-edit/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary center-block" id="change-submit">Modifier</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Modal Suppression -->
+<div class="modal fade" id="DeleteModal" tabindex="-1" role="dialog" aria-labelledby="DeleteModal">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="StudentModalLabel">{modal-delete/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h3> <span class="fw-semi-bold">{modal-delete/message}</span></h3>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+                <button type="button" class="btn btn-danger" id="deleteLine"><i class="fa fa-ban" aria-hidden="true"></i>{modal-delete/btnDelete}</button>
+                <button type="button" class="btn btn-default" onclick="$('#DeleteModal').modal('hide')">{modal-delete/btnAbord}</button>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/html" id="CSVForm">
+    <form method="post" enctype="multipart/form-data">
+        <fieldset>
+            <div class="fileinput fileinput-new input-group col-md-6 col-md-offset-3 col-xs-12" id="post_file_input" data-provides="fileinput">
+                <div class="form-control" data-trigger="fileinput">
+                    <i class="glyphicon glyphicon-file fileinput-exists"></i>
+                    <span class="fileinput-filename"></span>
+                </div>
+                                                <span class="input-group-addon btn btn-default btn-file">
+                                                    <span class="fileinput-new">{modal-csv/importfile}</span>
+                                                    <span class="fileinput-exists">{modal-csv/changefile}</span>
+                                                    <input type="hidden"><input id="csv" name="csv" type="file">
+                                                </span>
+                <a href="#" class="input-group-addon btn btn-default fileinput-exists" data-dismiss="fileinput">{modal-csv/delete}</a>
+            </div>
+            <div class="form-group col-md-6">
+                <!-- Nombre de Lignes à passer -->
+                <label for="nb_row">{modal-csv/nb-header-rows}</label>
+                <input type="number" min="0" id="nb_row" value="0" name="nb_row" placeholder="" class="form-control text-center">
+            </div>
+            <div class="form-group col-md-6">
+                <!-- Nombre de colonnes à passer -->
+                <label for="nb_col">{modal-csv/nb-header-cols}</label>
+                <input type="number" min="0" id="nb_col" value="0" name="nb_col" placeholder="" class="form-control text-center">
+            </div>
+        </fieldset>
+    </form>
+</script>

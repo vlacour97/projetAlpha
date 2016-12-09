@@ -1,0 +1,103 @@
+[
+    {
+        "id" : "home",
+        "logo" : "fa fa-home",
+        "inNavigation" : true
+    },
+    {
+        "id" : "message",
+        "logo" : "fa fa-envelope",
+        "inNavigation" : true
+    },
+    {
+        "id" : "students",
+        "logo" : "fa fa-list",
+        "inNavigation" : true,
+        "pages" : [
+            {
+                "id" : "student_list",
+                "logo" : "",
+                "inNavigation" : true
+            },
+            {
+                "id" : "student_score",
+                "logo" : "",
+                "inNavigation" : true
+            },
+            {
+                "id" : "student_score_pdf",
+                "logo" : "",
+                "inNavigation" : false
+            },
+            {
+                "id" : "survey",
+                "logo" : "",
+                "inNavigation" : false
+            },
+            {
+                "id" : "survey_pdf",
+                "logo" : "",
+                "inNavigation" : false
+            }
+        ]
+    },
+    {
+        "id" : "survey",
+        "logo" : "fa fa-list-ol",
+        "inNavigation" : true,
+        "pages" : [
+            {
+                "id" : "create_survey",
+                "logo" : "",
+                "inNavigation" : true
+            },
+            {
+                "id" : "survey_show",
+                "logo" : "",
+                "inNavigation" : false
+            },
+            {
+                "id" : "survey_list",
+                "logo" : "",
+                "inNavigation" : true
+            }
+        ]
+    },
+    {
+        "id" : "user",
+        "logo" : "fa fa-user",
+        "inNavigation" : true,
+        "pages" : [
+            {
+                "id" : "user_list",
+                "logo" : "",
+                "inNavigation" : true
+            }
+        ]
+    },
+    {
+        "id" : "student_list",
+        "logo" : "fa fa-list",
+        "inNavigation" : true
+    },
+    {
+        "id" : "see_survey",
+        "logo" : "",
+        "inNavigation" : false
+    },
+    {
+        "id" : "answer_survey",
+        "logo" : "",
+        "inNavigation" : false
+    },
+    {
+        "id" : "profile",
+        "logo" : "",
+        "inNavigation" : false
+    },
+    {
+        "id" : "manage_API",
+        "logo" : "fa fa-rocket",
+        "inNavigation" : true
+    }
+]

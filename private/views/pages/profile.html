@@ -1,0 +1,110 @@
+<div class="content-wrap">
+<!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+<main id="content" class="content" role="main">
+    <ol class="breadcrumb">
+        <li>{previous}</li>
+        <li class="active">{name}</li>
+    </ol>
+    <h1 class="page-title">{name}</span></h1>
+    <div class="row">
+        <div class="col-md-6">
+            <!-- Utiliser dans recherche -->
+            <section class="widget" id="userCard">
+                {user_card}
+            </section>
+            <section class="widget text-center">
+                <form id="passwordForm" method="POST">
+                    <fieldset>
+                        <div class="form-group">
+                            <!-- Mot de passe -->
+                            <label for="admin_password">{form1/pwd/lbl}</label>
+                            <input type="password" id="admin_password" name="admin_password" placeholder="" class="form-control text-center" required="required">
+                            <span class="help-block">{form1/pwd/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Confirmation du mot de passe -->
+                            <label for="admin_password_confirmation">{form1/confirm/lbl}</label>
+                            <input type="password" id="admin_password_confirmation" name="admin_password_confirmation" placeholder="" class="form-control text-center" required="required">
+                            <span class="help-block">{form1/confirm/help}</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btnPassword">{form1/btnChange}</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+        <div class="col-md-6">
+            <section class="widget text-center">
+                <form id="otherForm" method="POST">
+                    <fieldset>
+                        <div class="form-group col-md-6">
+                            <!-- Nom -->
+                            <label for="admin_name">{form2/name/lbl}</label>
+                            <input type="text" id="admin_name" name="admin_name" placeholder="" value="{user-name}" class="form-control text-center" required="required">
+                            <span class="help-block">{form2/name/help}</span>
+                        </div>
+                        <div class="form-group col-md-6">
+                            <!-- Prénom -->
+                            <label for="admin_fname">{form2/fname/lbl}</label>
+                            <input type="text" id="admin_fname" name="admin_fname" placeholder="" value="{user-fname}" class="form-control text-center" required="required">
+                            <span class="help-block">{form2/fname/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Email -->
+                            <label for="admin_email">{form2/mail/lbl}</label>
+                            <input type="text" id="admin_email" name="admin_email" placeholder="" value="{user-email}" class="form-control text-center" required="required">
+                            <span class="help-block">{form2/mail/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Téléphone -->
+                            <label for="admin_phone">{form2/phone/lbl}</label>
+                            <input type="tel" id="admin_phone" name="admin_phone" placeholder="" value="{user-phone}" class="form-control text-center">
+                            <span class="help-block">{form2/phone/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Adresse -->
+                            <label for="admin_address">{form2/address/lbl}</label>
+                            <input type="tel" id="admin_address" name="admin_address" placeholder="" value="{user-address}" class="form-control text-center">
+                            <span class="help-block">{form2/address/help}</span>
+                        </div>
+                        <div class="form-group col-md-4">
+                            <!-- Code Postal -->
+                            <label for="admin_zip_code">{form2/zip/lbl}</label>
+                            <input type="tel" id="admin_zip_code" name="admin_zip_code" placeholder="" value="{user-zip}" class="form-control text-center">
+                            <span class="help-block">{form2/zip/help}</span>
+                        </div>
+                        <div class="form-group col-md-8">
+                            <!-- Ville -->
+                            <label for="admin_city">{form2/city/lbl}</label>
+                            <input type="tel" id="admin_city" name="admin_city" placeholder="" value="{user-city}" class="form-control text-center">
+                            <span class="help-block">{form2/city/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Pays -->
+                            <label for="admin_country">{form2/country/lbl}</label>
+                            <select name="admin_country" id="admin_country" data-placeholder="{form2/country/lbl}" tabindex="-1"  class="select2 form-control">
+                                {select/countries}
+                            </select>
+                            <span class="help-block">{form2/country/help}</span>
+                        </div>
+                        <div class="form-group">
+                            <!-- Langue -->
+                            <label for="admin_language">{form2/language/lbl}</label>
+                            <select name="admin_language" id="admin_language" data-placeholder="{form2/language/lbl}" tabindex="-1" class="select2 form-control">
+                                {select/language}
+                            </select>
+                            <span class="help-block">{form2/language/help}</span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btnChange">{form2/btnChange}</button>
+                        <button type="reset" class="btn btn-default">{form2/btnReset}</button>
+                    </fieldset>
+                </form>
+            </section>
+        </div>
+    </div>
+</main>
+</div>
+<script>
+    var message = new Object();
+    message.changePassword = "{message/changePassword}";
+    message.changeDatas = "{message/changeDatas}";
+</script>

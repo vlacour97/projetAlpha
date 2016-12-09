@@ -1,0 +1,81 @@
+<nav class="page-controls navbar navbar-default">
+    <div class="container-fluid">
+        <!-- .navbar-header contains links seen on xs & sm screens -->
+        <div class="navbar-header">
+            <ul class="nav navbar-nav">
+                <li>
+                    <!-- whether to automatically collapse sidebar on mouseleave. If activated acts more like usual admin templates -->
+                    <a class="hidden-sm hidden-xs" id="nav-state-toggle" href="#" title="{hamburger_title}" data-placement="bottom">
+                        <i class="fa fa-bars fa-lg"></i>
+                    </a>
+                    <!-- shown on xs & sm screen. collapses and expands navigation -->
+                    <a class="visible-sm visible-xs" id="nav-collapse-toggle" href="#" title="{hamburger_title_2}" data-placement="bottom">
+                        <span class="rounded rounded-lg bg-gray text-white visible-xs"><i class="fa fa-bars fa-lg"></i></span>
+                        <i class="fa fa-bars fa-lg hidden-xs"></i>
+                    </a>
+                </li>
+            </ul>
+            <!-- xs & sm screen logo -->
+            <a class="navbar-brand visible-xs" href="{home_page}">
+                <i class="fa fa-circle text-gray mr-n-sm"></i>
+                <i class="fa fa-circle text-warning"></i>
+                &nbsp;
+                {site-name}
+                &nbsp;
+                <i class="fa fa-circle text-warning mr-n-sm"></i>
+                <i class="fa fa-circle text-gray"></i>
+            </a>
+        </div>
+
+        <!-- this part is hidden for xs screens -->
+        <div class="collapse navbar-collapse">
+            <!-- search form! link it to your search server -->
+            <form class="navbar-form navbar-left" id="searchForm" role="search">
+                <div class="form-group">
+                    <div class="input-group input-group-no-border">
+                        <span class="input-group-addon">
+                            <i class="fa fa-search"></i>
+                        </span>
+                        <input id="searchBar" class="form-control" type="text" placeholder="{search_form}">
+                    </div>
+                </div>
+            </form>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle dropdown-toggle-notifications" id="notifications-dropdown-toggle" data-toggle="dropdown">
+                        <span class="thumb-sm avatar pull-left">
+                            <img class="img-circle" src="{profile_img_link}" alt="...">
+                        </span>
+                        &nbsp;
+                        {user_fname} <strong>{user_name}</strong>&nbsp;
+                        <span class="nbNotifications">{nb_notifications}</span>
+                        <b class="caret"></b></a>
+
+                    <div class="dropdown-menu animated fadeInUp" id="notifications-dropdown-menu">
+                        <section class="panel notifications">
+                            <div id="notifications-list" class="list-group thin-scroll">
+                                {notifications}
+                            </div>
+                            <footer class="panel-footer text-sm">
+                                <span class="fs-mini">{updated_at} : {now-date}</span>
+                            </footer>
+                        </section>
+                    </div>
+                </li>
+                {language_switcher}
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="fa fa-cog fa-lg"></i>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="{account_link}"><i class="glyphicon glyphicon-user"></i> &nbsp; {account}</a></li>
+                        <li class="divider"></li>
+                        <li><a class="disabled btn"  href="{inbox_link}">{inbox} &nbsp;&nbsp;<span class="badge bg-danger animated bounceIn nbMessage">{nb_message}</span></a></li>
+                        <li class="divider"></li>
+                        <li><a href="{logout_link}"><i class="fa fa-sign-out"></i> &nbsp; {logout}</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>

@@ -1,0 +1,98 @@
+<div class="content-wrap">
+    <!-- main page content. the place to put widgets in. usually consists of .row > .col-md-* > .widget.  -->
+    <main id="content" class="content" role="main">
+        <ol class="breadcrumb">
+            <li>{chemin1}</li>
+            <li class="active">{name}</li>
+        </ol>
+        {translate_button}{btn_infos}
+        <h1 class="page-title"><span class="fw-semi-bold">{name}</span></h1>
+
+
+        <section class="row bg-white">
+            <div class="col-md-12">
+                <div class="col-md-offset-1 col-md-6 mt-xlg">
+                    <h2> {student-fname} <span class="fw-semi-bold">{student-name}</span></h2>
+                </div>
+                <div class="col-md-4 mt-lg">
+                    <div class="clearfix">
+                        <ul id="myTabs" class="nav nav-tabs"> <!-- remove pull-left to get a cool effect too -->
+                            <li class="active"><a href="#student" data-toggle="tab">{tab/tabstudent}</a></li>
+                            <li class=""><a href="#TI" data-toggle="tab">{tab/tabTI}</a></li>
+                        </ul>
+                    </div>
+                    <div id="TableStudentTI" class="tab-content mb-lg">
+                        <div class="tab-pane clearfix active" id="student">
+                            <h2>{student-fname} {student-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{student-phone">{student-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{student-email}">{student-email}</a></p>
+                        </div>
+                        <div class="tab-pane clearfix" id="TI">
+                            <h2>{ti-fname} {ti-name}</h2>
+                            <p><i class="fa fa-phone"></i> : <a href="callto:{ti-phone}">{ti-phone}</a></p>
+                            <p><i class="fa fa-envelope"></i> : <a href="mailto:{ti-email}">{ti-email}</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <table class="table unbordered-first-line" data-id="{ID_Student}">
+                <colgroup>
+                    <col class="col-md-2">
+                    <col class="col-md-8">
+                    <col class="col-md-2">
+                </colgroup>
+                <tbody>
+                <tr>
+                    <td class="text-center"> <h5> <span class="fw-semi-bold">{nb-question}</span></h5></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                {survey_datas}
+                <tr>
+                    <td></td>
+                    <td>
+                        <div class="col-md-12 text-center mt-n mb-lg">
+                            <button type="button" class="btn btn-info btnSave">{btnsave}</button>
+                            <button type="button" class="btn btn-primary btnSend">{btnsend}</button>
+                        </div>
+                    </td>
+                    <td></td>
+                </tr>
+                </tbody>
+            </table>
+
+
+        </section>
+    </main>
+</div>
+
+
+<div class="modal fade" id="sendConfirm" tabindex="-1" role="dialog" aria-labelledby="sendConfirm">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="TIModalLabel">{modal-send/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <h3> <span class="fw-semi-bold">{modal-send/description}</span></h3>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+                <button type="button" class="btn btn-success" id="sendSurvey"><i class="fa fa-check" aria-hidden="true"></i> {modal-send/btnSend}</button>
+                <button type="button" class="btn btn-danger" data-dismiss="modal" ><i class="fa fa-times" aria-hidden="true"></i> {modal-send/btnAbort}</button>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var message = new Object();
+    message.saveSuccess = "{messages/saveSuccess}";
+    message.completeSurvey = "{messages/completeSurvey}";
+    message.returnPath = "{returnPath}";
+</script>
