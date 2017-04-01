@@ -45,5 +45,5 @@ if(!\app\Log::isLogged()){
 
 \app\Navigation::get_pages();
 
-//\app\Log::set_stat();
+\app\Log::set_stat();
 
