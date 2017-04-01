@@ -1,13 +1,13 @@
 <tr data-id="{ID}" class="survey">
 
-    <td class="text-center"> <h4 class="fw-semi-bold mt-n">{ID}-</h4> </td>
+    <td class="text-center"> <h4 class="fw-semi-bold mt-n"><span class="survey-id">{ID}</span>-</h4> </td>
     <td class="text-center">
         <div class="panel-group mt-xs" id="accordion-{ID}">
             <div class="panel panel-default">
                 <div class="panel-heading collapsed">
                     <h4 class="panel-title">
                         <a class="collapsed" data-toggle="collapse" data-parent="#accordion-{ID}" href="#collapse-{ID}">
-                            {title} {ID} <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times rmvQuestion"></i></div></a>
+                            {title} <span class="survey-id">{ID}</span> <div class="pull-right"><i class="fa fa-angle-down"></i>&nbsp;&nbsp;<i class="fa fa-times rmvQuestion"></i></div></a>
                     </h4>
                 </div>
                 <div id="collapse-{ID}" class="panel-collapse collapse in">

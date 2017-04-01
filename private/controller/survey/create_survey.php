@@ -73,7 +73,7 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
                 if(!\app\Answer::isset_survey($id))
                     header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
 
-                \app\Answer::set_survey($datas,\app\Answer::getSurveyName($id),$id);
+                \app\Answer::set_survey($datas,\app\Answer::get_survey_name($id),$id);
             }else{
                 header($_SERVER['SERVER_PROTOCOL'] . ' 500 Internal Server Error', true, 500);
             }

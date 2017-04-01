@@ -31,8 +31,8 @@ foreach($survey_list as $key=>$survey){
         $status = "<i class='fa fa-check'></i>";
     else
         $status = "<i class='fa fa-times'></i>";
-    $replace = array('{ID}','{name}','{date}','{status}','{ID_crypt}');
-    $by = array($key+1,$survey->name,$survey->modification_date,$status,\general\crypt::encrypt($key+1));
+    $replace = array('{ID}','{name}','{CreationDate}','{ModificationDate}','{status}','{ID_crypt}');
+    $by = array($key+1,$survey->name,$survey->creation_date,$survey->modification_date,$status,\general\crypt::encrypt($key+1));
     $surveys .= str_replace($replace,$by,$survey_gabarit);
 }
 

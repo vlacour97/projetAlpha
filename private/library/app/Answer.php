@@ -261,7 +261,7 @@ class Answer extends \mainClass{
      * @param int $id
      * @return mixed
      */
-    static private function get_survey_name($id){
+    static function get_survey_name($id){
         return self::get_survey($id)->name;
     }
 
@@ -289,11 +289,10 @@ class Answer extends \mainClass{
      */
     static private function get_new_id(){
         $files = scandir(ROOT.self::$survey_path);
-        if(count($files) == 2)
-            return 1;
-        $last_file = $files[count($files) - 1];
-        $last_file_name = file::file_infos(ROOT.self::$survey_path.$last_file)->name;
-        return $last_file_name + 1;
+        $iterator = 1;
+        while(in_array($iterator.'.json',$files))
+            $iterator++;
+        return $iterator;
     }
 
     /**
@@ -546,17 +545,6 @@ class Answer extends \mainClass{
         $html2pdf->pdf->SetDisplayMode('fullpage');
         $html2pdf->writeHTML($gabarit);
         $html2pdf->Output('StudentList.pdf');
-    }
-
-
-    /**
-     * Récupére le nom d'un questionnaire
-     * @param int $id
-     * @return string
-     * @throws \Exception
-     */
-    static function getSurveyName($id){
-        return self::get_survey($id)->name;
     }
 
 } 

@@ -54,24 +54,22 @@ $(function(){
                 var id_survey = $(this).parent().parent().parent().parent().parent().parent().parent().parent().parent().parent().data('id');
                 $(this).parent().parent().remove();
                 updateAnswers(id_survey);
+                updateValue();
             })
             .on('click','.rmvQuestion',function(){
-                //var $group = $(this).parent().parent().parent().parent().parent().parent().parent().parent();
-                //$group.remove();
-                //updateQuestions();
-                Messenger().post({
-                    message: 'Vous ne pouvez pas supprimer cette question pour le moment',
-                    type: 'error',
-                    showCloseButton: true
-                });
+                var $group = $(this).parent().parent().parent().parent().parent().parent().parent().parent();
+                $group.remove();
+                updateQuestions();
+                updateValue();
             })
             .on('change','.value',function(){
                 updateValue();
             })
             .on('click','.SaveButton',function(e){
                 e.preventDefault();
+                console.log($_GET('id'));
                 if(verifData())
-                    if($_GET('id') == "")
+                    if($_GET('id') == "" || $_GET('id') == null)
                         $('#SaveModal').modal();
                     else {
                         var urlTmp = url + '?action=save_survey&id=' + $_GET('id');
@@ -95,7 +93,7 @@ $(function(){
                     var form = $('form').serializeArray();
                     $.post(urlTmp,form)
                         .done(function(data){
-                            //TODO success
+                            location.reload();
                         })
                 }else{
                     Messenger().post({
@@ -157,34 +155,17 @@ $(function(){
 
     //TODO Mise à jour des questions
     function updateQuestions(){
-        var iterator = 1;
         $('.survey').each(function(index,element){
-            var name = $(element).find('.question-name').val();
-            var urlTmp = url + '?action=get_survey_form_with_args&name=' + name + '&id=' + iterator;
-            $.get(urlTmp)
-                .done(function(data){
-                    var data_answer = new Object();
-                    data_answer.response = [];
-                    data_answer.value = [];
-                    $(element).find('.answer').each(function(index2,element2){
-                        data_answer.response[index2] = $(element2).find('.response').val();
-                        data_answer.value[index2] = $(element2).find('.value').val();
-                    });
-                    //$(element).replaceWith(data);
-                    $('.survey[data-id='+ (index+1) +']').find('.answer').remove();
-                    for(var i =0; i<data_answer.response.length;i++){
-                        var urlTmp = url + '?action=get_answer_form_with_args&response=' + data_answer.response[i] + '&value=' + data_answer.value[i] + '&id_survey=' + iterator + '&id_answer=' + (i+1);
-                        console.log(urlTmp);
-                        $.get(urlTmp)
-                            .done(function(datas){
-                                $(element).find('.head_answer').after(datas);
-                                console.log($(element).find('.answer[data-id='+ (i+1) +']'),datas);
-                                init();
-                            });
-                    }
-                    init();
-                });
-            iterator++;
+            var iterator = index+1;
+            var $this = $(this);
+            $this.attr('data-id',iterator);
+            $this.find('.survey-id').html(iterator);
+            $this.find('[id*=accordion-]').attr('id','accordion-'+iterator);
+            $this.find('[data-parent*=accordion-]').attr('data-parent','#accordion-'+iterator);
+            $this.find('[href*=collapse-]').attr('href','#collapse-'+iterator);
+            $this.find('[id*=collapse-]').attr('id','collapse-'+iterator);
+            $this.find('[name*=question-name-]').attr('name','question-name-'+iterator);
+            updateAnswers(iterator);
         });
     }
 
