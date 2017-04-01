@@ -645,7 +645,7 @@
                 "abort" : "Annuler"
             },
             "error" : {
-                "empty_questions" : "Veuillez remplir tout les champs de réponses",
+                "empty_questions" : "Veuillez remplir tout les champs de réponses et de question",
                 "empty_name" : "Veuillez renseigner le nom du questionnaire"
             }
         },
@@ -661,7 +661,8 @@
             "table": {
                 "titleID": "Id",
                 "titleSurvey": "Nom Questionnaire",
-                "titleDate": "Date de création",
+                "titleCreationDate": "Date de création",
+                "titleModificationDate": "Date de modification",
                 "status" : "Status",
                 "titleAction": "Actions"
             }
@@ -1122,7 +1123,7 @@
             "email-lbl" : "Email",
             "te-lbl" : "Tuteur Entreprise",
             "ti-lbl" : "Tuteur IUT",
-
+            "group-lbl" : "Groupe",
             "birth-date-lbl" : "Date de Naissance",
             "phone-lbl" : "Téléphone",
             "address-lbl" : "Adresse",

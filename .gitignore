@@ -3,6 +3,11 @@
 ### Mac OS ###
 .DS_Store
 
+### Project ###
+/private/parameters/surveys/*.json
+/private/parameters/app/db_datas.json
+/private/parameters/app_config.json
+
 ### PhpStorm ###
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio and Webstorm
 # Reference: https://intellij-support.jetbrains.com/hc/en-us/articles/206544839

@@ -20,6 +20,7 @@ define('AVATAR_IMG','/private/datas/users/');
 define('POST_CONTENT',$_SERVER['DOCUMENT_ROOT'].'/private/datas/posts/');
 define('PATH_CONTROLLER',$_SERVER['DOCUMENT_ROOT'].'/private/controller/');
 define('MESSAGE_ATTACHMENT_PATH','/private/datas/messages/');
+define('CURRENT_LINK',(isset($_SERVER['HTTPS']) ? "https" : "http") . "://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]");
 
 //Autres
 define('CRYPT_KEY','alpha');

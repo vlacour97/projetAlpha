@@ -10,7 +10,9 @@ namespace general;
 
 
 use app\Config;
+use app\Log;
 use app\Navigation;
+use app\Stats;
 
 class mail extends \mainClass{
 
@@ -44,7 +46,7 @@ class mail extends \mainClass{
 
         // En-têtes additionnels
         $headers .= 'From:' . $from_long . "\r\n";
-        $headers .= 'Cc:' . $from_short . "\r\n";
+        $headers .= 'Cc:' . $from_short . "\r\n"; //TODO À désactiver à la livraison
 
         // Envoi du mail HTML et test d'envoi
         if(!mail($mail,$sujet,$message,$headers))
@@ -494,9 +496,17 @@ class mail extends \mainClass{
     }
 
     static function feedback_bug($subject,$content,$author){
-        $content = 'Contenu du message : <br>'.$content.'<br><br> Auteur : '.$author;
+        $contentMail  = '<b>Ticket #'.time().'</b><br>';
+        $contentMail .= '<b>Contenu du message :</b> <br>'.nl2br($content).'<br>';
+        $contentMail .= '<b>Auteur :</b> '.$author.'<br>';
+        $contentMail .= '<b>Page de soumission :</b> '.$_SERVER['HTTP_REFERER'].'<br>';
+        $contentMail .= '<b>Platforme :</b> '.link_parameters('general/platforms')[Log::get_platform()].'<br>';
+        $contentMail .= '<b>OS :</b> '.Log::get_os_name(Log::get_OS()).'<br>';
+        $contentMail .= '<b>Navigateur :</b> '.Log::get_browser_name(Log::get_browser()).'<br>';
+        $contentMail .= '<b>Langue :</b> '.link_parameters('languages/dictionnary')[Log::get_lang()];
+        $subject = 'Ticket #' . time() . ' - ' . $subject;
         $mail = Config::getAdminMail();
-        return self::send_email($mail,$subject,$content);
+        return self::send_email($mail,$subject,$contentMail);
     }
 
 } 

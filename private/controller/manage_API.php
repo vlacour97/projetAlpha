@@ -43,7 +43,7 @@ $scripts_vendor = array(
     'messenger/build/js/messenger.js',
     'messenger/build/js/messenger-theme-flat.js'
 );
-$scripts = ['manage_APi.js'];
+$scripts = ['manage_API.js'];
 
 $deadlineDate = new \general\Date(\app\Config::getDeadlineDate());
 

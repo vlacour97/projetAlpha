@@ -369,19 +369,23 @@ class User extends \mainClass{
             if($key >= $nb_rows_begin)
                 foreach($content as $key2=>$content2)
                     if($key2 >= $nb_cols_begin)
-                        $datas[$key][$key2] = utf8_encode($content2);
+                        $datas[$key][] = utf8_encode($content2);
         return $datas;
     }
 
     /**
      * Partie 2 de l'import par CSV : Enregistrement dans la BDD
-     * @param array $attr_response
+     * @param array $temp_attr_response
      * @param int $nb_rows_begin
      * @param int $nb_cols_begin
      * @throws AddCSVDataException
      * @throws \Exception
      */
-    static function save_csv_datas($attr_response,$nb_rows_begin = 0,$nb_cols_begin = 0){
+    static function save_csv_datas($temp_attr_response,$nb_rows_begin = 0,$nb_cols_begin = 0){
+
+        for($i=0; $i<count($temp_attr_response)+$nb_cols_begin;$i++){
+            if($i<$nb_cols_begin) $attr_response[$i] = ""; else $attr_response[$i] = $temp_attr_response[$i-$nb_cols_begin];
+        }
 
         //Vérification de la forme (Si étudiant email tuteurs presents)
         if(preg_grep ('/^student\/(\w+)/i', $attr_response))
@@ -457,12 +461,14 @@ class User extends \mainClass{
 
         //Aménagement des données pour les étudiant + Ajout des données
         foreach($students_datas as $key=>$content){
-            $id_te = $te_datas[$content['te_email']]['id'];
-            $id_ti = $ti_datas[$content['ti_email']]['id'];
-            $name = $content['name'];
-            $fname = $content['fname'];
-            if(!self::add_student($id_te,$id_ti,$content['name'],$content['fname']))
-                $exceptions['student'][] = "Erreur lors de l'ajout ({$fname} {$name})";
+            if(isset($content['name'],$content['fname'])){
+                $id_te = $te_datas[$content['te_email']]['id'];
+                $id_ti = $ti_datas[$content['ti_email']]['id'];
+                $name = $content['name'];
+                $fname = $content['fname'];
+                if(!self::add_student($id_te,$id_ti,$content['name'],$content['fname']))
+                    $exceptions['student'][] = "Erreur lors de l'ajout ({$fname} {$name})";
+            }
         }
 
         //Suppression du fichier temporaire

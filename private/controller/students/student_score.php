@@ -33,8 +33,8 @@ if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQU
 
                 $data[] = array(
                     sprintf('%04d',$student->ID),
-                    htmlentities($student->name),
                     htmlentities($student->fname),
+                    htmlentities($student->name),
                     htmlentities($student->group),
                     "<p class='text-center'><i class='fa $status'></i></p>",
                     $mark

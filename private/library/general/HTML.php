@@ -279,6 +279,7 @@ class HTML {
     );
     private $basic_script = array('settings.js','app.js','main.js');
     private $favicon_path = "/public/img/favicon.png";
+    private $social_image_path = "/public/img/social_card.jpg";
 
     /**
      * Génére le header d'une page HTML
@@ -307,6 +308,10 @@ class HTML {
             <meta http-equiv="Content-Language" content="<?php echo Log::get_lang() ?>" />
             <meta charset="utf-8">
             <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+            <meta property="og:title" content="<?php if(Log::isLogged()) echo Navigation::get_title(); elseif(Install::APP_is_installed()) echo Config::getName(); ?>" />
+            <meta property="og:type" content="website" />
+            <meta property="og:url" content="<?php echo CURRENT_LINK; ?>" />
+            <meta property="og:image" content="<?php echo HOST.$this->social_image_path ?>" />
         </head>
         <?php
         echo ob_get_clean();

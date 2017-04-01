@@ -274,6 +274,30 @@ class Log extends \mainClass
     }
 
     /**
+     * Récupére le nom du navigateur
+     * @param $id
+     * @return string
+     */
+    static function get_browser_name($id){
+        $data = link_parameters('general/browsers');
+        foreach($data as $content)
+            if($content['id'] == $id) return $content['name'];
+        return 'Inconnu';
+    }
+
+    /**
+     * Récupére le nom de l'OS
+     * @param $id
+     * @return string
+     */
+    static function get_os_name($id){
+        $data = link_parameters('general/os');
+        foreach($data as $content)
+            if($content['id'] == $id) return $content['name'];
+        return 'Inconnu';
+    }
+
+    /**
      * Récupere l'identifiant du type de platform
      * @return string
      */
