@@ -461,7 +461,7 @@ class Answer extends \mainClass{
 
         //Student Infos
         $link = HOST.'/index.php?'.Navigation::$navigation_marker.'='.self::$survey_public_id_page.'&'.self::$survey_marker.'='.crypt::encrypt($id_student);
-        $replace = ['{student_fname}','{student_name}','{student_group}','{student_address}','{student_email}','{student_phone}','{student_TE}','{student_TI}','{survey_link}'];
+        $replace = ['{student-fname}','{student-name}','{student-group}','{student-address}','{student-email}','{student-phone}','{student-TE}','{student-TI}','{survey_link}'];
         $by = [$student_datas->fname,$student_datas->name,$student_datas->group,$student_datas->address,$student_datas->email,$student_datas->phone,$student_datas->name_TE,$student_datas->name_TI,$link];
         $gabarit = str_replace($replace,$by,$gabarit);
 
@@ -473,7 +473,7 @@ class Answer extends \mainClass{
             $survey_content .= '<tr>
             <td class="text-center"><h4 class="fw-semi-bold mt-n">'.($key+1).'-</h4></td>
             <td class="text-center"><h3>';
-            $survey_content .= $content->questionLbl;
+            $survey_content .= str_replace($replace,$by,$content->questionLbl);
             $survey_content .=  '</h3><p class="text-center">';
             foreach($content as $question){
                 if(is_a($question,'StdClass')){
