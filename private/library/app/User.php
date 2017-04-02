@@ -417,6 +417,7 @@ class User extends \mainClass{
             if($id_rows >= $nb_rows_begin)
             {
                 foreach($rows as $id_cols=>$cols){
+                    $cols = utf8_encode($cols);
                     if($id_cols >= $nb_cols_begin)
                     {
                         if(preg_match('/^te\/(\w+)/i',$attr_response[$id_cols]))
@@ -466,7 +467,10 @@ class User extends \mainClass{
                 $id_ti = $ti_datas[$content['ti_email']]['id'];
                 $name = $content['name'];
                 $fname = $content['fname'];
-                if(!self::add_student($id_te,$id_ti,$content['name'],$content['fname']))
+                $email = is_null($content['email']) ? "" : $content['email'];
+                $group = is_null($content['group']) ? "" : $content['group'];
+                $phone = is_null($content['phone']) ? "" : $content['phone'];
+                if(!self::add_student($id_te,$id_ti,$name,$fname,$group,$email,$phone))
                     $exceptions['student'][] = "Erreur lors de l'ajout ({$fname} {$name})";
             }
         }

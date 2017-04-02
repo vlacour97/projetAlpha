@@ -95,8 +95,6 @@ $(function(){
             })
     }
 
-    //TODO Màj des données
-
     var notification_timer = setInterval(get_notification,1000);
     var message_timer = setInterval(get_nb_message,1000);
 
