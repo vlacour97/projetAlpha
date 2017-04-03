@@ -30,3 +30,29 @@
         </section>
     </main>
 </div>
+<div class="modal fade" id="activateChoise" tabindex="-1" role="dialog" aria-labelledby="activateChoise">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="TIModalLabel">{modal-activate/title}</h4>
+            </div>
+            <div class="modal-body text-center">
+                <p> <span class="fw-semi-bold">{modal-activate/description}</span></p>
+                <div class="col-md-12">
+                    &nbsp
+                </div>
+                <button type="button" class="btn btn-primary btnNext"><i class="fa fa-forward" aria-hidden="true"></i> {modal-activate/btnNext}</button>
+                <button type="button" class="btn btn-danger btnDelete" ><i class="fa fa-ban" aria-hidden="true"></i> {modal-activate/btnDelete}</button>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+    var message = new Object();
+    message.errorDeleteAnswer = "{error/deleteAnswer}";
+    message.errorUpdateSurvey = "{error/updateSurvey}";
+    message.errorCheckAvailability = "{error/checkAvailability}";
+</script>

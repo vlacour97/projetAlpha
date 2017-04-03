@@ -6,6 +6,25 @@
  * Time: 15:05
  */
 
+if(!empty($_SERVER['HTTP_X_REQUESTED_WITH']) && strtolower($_SERVER['HTTP_X_REQUESTED_WITH']) == 'xmlhttprequest') {
+
+    include "../../config.php";
+    switch($_GET['action']){
+        case 'check_availability':
+            echo json_encode(['response'=>\general\PDOQueries::isset_answers()]);
+            break;
+        case 'delete_answer':
+            $teList = \general\PDOQueries::show_te_was_answered();
+            echo json_encode(['response'=>\general\PDOQueries::delete_all_answer_for_all_students() && \general\mail::send_update_survey_notification($teList) && \app\Notifications::update_survey()]);
+            break;
+        case 'change_survey':
+            $id = \general\crypt::decrypt($_GET['id']);
+            echo json_encode(['response'=>\app\Answer::set_able_survey_id($id)]);
+            break;
+    }
+    die();
+}
+
 $html = new \general\HTML();
 $gabarit = \general\Language::translate_gabarit('pages/admin_surveyList');
 
@@ -27,12 +46,10 @@ $survey_list = \app\Answer::get_all_survey();
 $survey_gabarit = \general\Language::translate_gabarit('components/survey_list_element');
 
 foreach($survey_list as $key=>$survey){
-    if($survey->able)
-        $status = "<i class='fa fa-check'></i>";
-    else
-        $status = "<i class='fa fa-times'></i>";
-    $replace = array('{ID}','{name}','{CreationDate}','{ModificationDate}','{status}','{ID_crypt}');
-    $by = array($key+1,$survey->name,$survey->creation_date,$survey->modification_date,$status,\general\crypt::encrypt($key+1));
+    $status = $survey->able ? "<i class='fa fa-check'></i>" : "<i class='fa fa-times'></i>";
+    $hidden_option = $survey->able ? 'hidden' : '';
+    $replace = array('{ID}','{name}','{CreationDate}','{ModificationDate}','{status}','{ID_crypt}','{hidden-option}');
+    $by = array($key+1,$survey->name,$survey->creation_date,$survey->modification_date,$status,\general\crypt::encrypt($key+1),$hidden_option);
     $surveys .= str_replace($replace,$by,$survey_gabarit);
 }
 

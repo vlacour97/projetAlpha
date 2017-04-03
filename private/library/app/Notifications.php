@@ -203,4 +203,20 @@ class Notifications extends \mainClass{
         return PDOQueries::add_notification($id_user,$marker,$link);
     }
 
+    /**
+     * Envoi un notification lorsqu'un le questionnaire courrant change
+     * @param null|array $users
+     * @return bool
+     */
+    static function update_survey($users = null){
+        is_null($users) && $users = PDOQueries::show_all_users();
+        $response = true;
+        foreach($users as $user){
+            $id_user = intval($user['ID']);
+            $marker = '{update_survey}';
+            $link = 'index.php?'.Navigation::$navigation_marker.'='.User::$student_list_ti_te_page_id;
+            $response = PDOQueries::add_notification($id_user,$marker,$link) && $response;
+        }
+        return $response;
+    }
 } 

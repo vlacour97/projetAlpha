@@ -341,6 +341,62 @@ class mail extends \mainClass{
     }
 
     /**
+     * Permet l'envoi d'un email de notification de changement de tous les questionnaires
+     * @param null|array $teList
+     * @return bool
+     * @throws \Exception
+     */
+    static function send_update_survey_notification($teList = null){
+
+        is_null($teList) && $teList = PDOQueries::show_te_users();
+        $response = true;
+
+        foreach($teList as $user_datas){
+
+            //On récupére les contenus à utiliser
+            $user_datas['language'] == "" && $user_datas['language'] = \mainClass::$lang;
+            $texts = Language::get_mail_text($user_datas['language']);
+            $app_name = Config::getName();
+
+            //On génére un lien pour l'activation
+            $link = "http://".$_SERVER["HTTP_HOST"].self::$answer_page;
+
+            //On récupére le gabarit du mail
+            $gabarit = self::get_gabarit('update_survey_notification');
+
+            //On organise les données à inserer
+            $img_path = "http://".$_SERVER["HTTP_HOST"].self::$img_path;
+            $general_text = $texts['general'];
+            $current_text = $texts['update_survey_notification'];
+
+            //Replace les marqueurs du gabarit avec des données valables
+            $what_changes = array(
+                '{img_path}' => $img_path,
+                '{part1_title}' => $general_text['part1']['title'],
+                '{part1_content}' => $general_text['part1']['content'],
+                '{part2_title}' => $general_text['part2']['title'],
+                '{part2_content}' => $general_text['part2']['content'],
+                '{part3_title}' => $general_text['part3']['title'],
+                '{part3_content}' => $general_text['part3']['content'],
+                '{app_name}' => $app_name,
+                '{button_text}' => $current_text['button_text'],
+                '{content}' => $current_text['content'],
+                '{title}' => $current_text['title'],
+                '{button_link}' => $link
+            );
+            foreach($what_changes as $key=>$content)
+                $gabarit = str_replace($key,$content,$gabarit);
+
+            //On définie le sujet du mail
+            $subject = $current_text['subject'];
+
+            //On envoi le mail et on renvoi un booleen de succés
+            $response = self::send_email($user_datas['email'],$subject,$gabarit) && $response;
+        }
+        return $response;
+    }
+
+    /**
      * Envoi un message d'information quant à la remise en service d'un compte utilisateur
      * @param $id_user
      * @return bool

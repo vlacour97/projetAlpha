@@ -160,4 +160,80 @@ $(function(){
     SingApp.onPageLoad(pageLoad);
     $('[data-toggle="tooltip"]').tooltip();
 
+    $('.activate').on('click',function(){
+        currentLineId = $(this).attr('data-id');
+        $.getJSON(url + '?action=check_availability&id=' + currentLineId)
+            .done(function(data){
+                if(data.response){
+                    $('#activateChoise').modal();
+                }else
+                    change_survey(currentLineId);
+            })
+            .fail(function(){
+                Messenger().post({
+                    message: message.errorCheckAvailability,
+                    type: 'error',
+                    showCloseButton: true
+                });
+            })
+    });
+
+    $('#activateChoise .btnNext').on('click',function(){
+        change_survey(currentLineId);
+        $('#activateChoise').modal('toggle');
+    });
+    $('#activateChoise .btnDelete').on('click',function(){
+        delete_answers();
+        $('#activateChoise').modal('toggle');
+    });
+
+    function delete_answers(){
+        $.getJSON(url + '?action=delete_answer')
+            .done(function(data){
+                if(data.response){
+                    change_survey(currentLineId);
+                }else{
+                    Messenger().post({
+                        message: message.errorDeleteAnswer,
+                        type: 'error',
+                        showCloseButton: true
+                    });
+                }
+            })
+            .fail(function(data){
+                Messenger().post({
+                    message: message.errorDeleteAnswer,
+                    type: 'error',
+                    showCloseButton: true
+                });
+            });
+    }
+
+    function change_survey(survey_id){
+        $.getJSON(url + '?action=change_survey&id=' + survey_id)
+            .done(function(data){
+                if(data.response){
+                    update_change(survey_id);
+                }else{
+                    Messenger().post({
+                        message: message.errorUpdateSurvey,
+                        type: 'error',
+                        showCloseButton: true
+                    });
+                }
+            })
+            .fail(function(data){
+                Messenger().post({
+                    message: message.errorUpdateSurvey,
+                    type: 'error',
+                    showCloseButton: true
+                });
+            });
+    }
+
+    function update_change(id){
+        $(':not(.activate[data-id="' + id + '"])').removeAttr('hidden').parent().parent().find('.status .fa-check').removeClass('fa-check').addClass('fa-times');
+        $('.activate[data-id="' + id + '"]').attr('hidden',true).parent().parent().find('.status .fa-times').removeClass('fa-times').addClass('fa-check');
+    }
+
 });

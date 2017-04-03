@@ -304,6 +304,10 @@ DROP TABLE IF EXISTS `{prefix}show_unactivated_users`;
 
 CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `{prefix}show_unactivated_users`  AS  select `{prefix}users`.`ID` AS `ID`,`{prefix}users`.`name` AS `name`,`{prefix}users`.`fname` AS `fname`,`{prefix}users`.`type` AS `type`,`{prefix}users`.`email` AS `email`,`{prefix}users`.`pwd` AS `pwd`,`{prefix}users`.`phone` AS `phone`,`{prefix}users`.`address` AS `address`,`{prefix}users`.`zip_code` AS `zip_code`,`{prefix}users`.`city` AS `city`,`{prefix}users`.`country` AS `country`,`{prefix}users`.`language` AS `language`,`{prefix}users`.`registration_date` AS `registration_date`,`{prefix}users`.`activation_date` AS `activation_date`,`{prefix}users`.`delete_date` AS `delete_date`,`{prefix}users`.`last_login_date` AS `last_login_date`,`{prefix}users`.`publication_entitled` AS `publication_entitled`,`s1`.`viewing_date` AS `viewing_date`,`s1`.`ID_USER` AS `ID_USER`,`s1`.`last_ip_viewer` AS `last_ip_viewer`,`s1`.`country_viewer` AS `country_viewer`,`s1`.`platform_viewer` AS `platform_viewer`,`s1`.`os_viewer` AS `os_viewer`,`s1`.`browser_viewer` AS `browser_viewer`,(case when isnull(`{prefix}users`.`activation_date`) then 0 else 1 end) AS `activated` from (`{prefix}users` left join `{prefix}show_last_stats_by_user` `s1` on((`{prefix}users`.`ID` = `s1`.`ID_USER`))) where (isnull(`{prefix}users`.`delete_date`) and isnull(`{prefix}users`.`activation_date`)) ;
 
+DROP TABLE IF EXISTS `{prefix}show_te_was_answered`;
+
+CREATE ALGORITHM=UNDEFINED SQL SECURITY DEFINER VIEW `{prefix}show_te_was_answered`  AS  select distinct `{prefix}users`.* from `{prefix}users`,`{prefix}students`,`{prefix}answers` where `{prefix}answers`.ID_student = `{prefix}students`.ID and `{prefix}students`.ID_TE = `{prefix}users`.ID;
+
 
 
 DROP PROCEDURE IF EXISTS `{prefix}activate_user`;

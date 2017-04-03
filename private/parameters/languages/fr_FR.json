@@ -118,6 +118,12 @@
                 "content": "De nouveaux questionnaires sont disponnibles, vous pouvez y accéder à partir de maintenant.",
                 "button_text": "Répondre au questionnaire"
             },
+            "update_survey_notification" : {
+                "subject": "IMPORTANT : remplissage des questionnaires",
+                "title": "Les Questionnaires ont été mis à jour...",
+                "content": "Notre questionnaire a été mis à jour, si vous aviez déjà complété un ou plusieurs questionnaires, vous allez devoir les recompleter<br>Merci de votre compréhension",
+                "button_text": "Répondre à mes questionnaires"
+            },
             "reactivation": {
                 "subject": "Votre compte à été remis en service !",
                 "title": "Votre compte à été remis en service !",
@@ -198,6 +204,10 @@
             "autorised_publication" : {
                 "value" : "Vous êtes autorisé à publier",
                 "icon" : "fa fa-bullhorn "
+            },
+            "update_survey" : {
+                "value" : "Les questionnaires ont été mis à jour et les réponses aux questionnairex supprimés",
+                "icon" : "fa fa-exclamation-triangle "
             }
         },
         "weather" : {
@@ -665,6 +675,17 @@
                 "titleModificationDate": "Date de modification",
                 "status" : "Status",
                 "titleAction": "Actions"
+            },
+            "modal-activate" : {
+                "title" : "Changement de questionnaire",
+                "description" : "Des étudiants utilisent le questionnaire courrant, voulez-vous supprimer leur questionnaire ou affecter le nouveau questionnaire aux prochains étudiants ?",
+                "btnNext" : "Affecter ce questionnaires aux futures étudiants",
+                "btnDelete" : "Supprimer les questionnaires remplis "
+            },
+            "error" : {
+                "deleteAnswer" : "Erreur lors de la suppression des questionnaires",
+                "updateSurvey" : "Erreur lors du changement de questionnaire",
+                "checkAvailability" : "Erreur lors de la vérification du changement de questionnaire"
             }
         },
         "admin_userList": {
@@ -1145,7 +1166,8 @@
         "survey_list_element" : {
             "view" : "Consulter",
             "edit" : "Modifier",
-            "remove" : "Supprimer"
+            "remove" : "Supprimer",
+            "activate" : "Activer"
         },
         "parts" : {
             "see-survey" : "Voir le questionnaire",

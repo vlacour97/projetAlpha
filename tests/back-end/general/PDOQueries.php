@@ -27,4 +27,4 @@ echo '</table>';*/
 //var_dump(\general\PDOQueries::like_post(6,7));
 
 //var_dump(\general\PDOQueries::get_max_post_id());
-var_dump(\general\PDOQueries::get_TI_ID_of_student(11));
+//var_dump(\general\PDOQueries::get_TI_ID_of_student(11));

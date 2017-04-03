@@ -21,6 +21,7 @@ try{
 //var_dump(\app\Notifications::complete_survey(269));
 //var_dump(\app\Notifications::validate_survey(269));
 //var_dump(\app\Notifications::autorised_publication(9));
+var_dump(\app\Notifications::update_survey());
 $notifications = \app\Notifications::get_notifications();
 
 echo '<ul>';

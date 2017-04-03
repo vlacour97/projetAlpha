@@ -73,6 +73,10 @@ class PDOQueries extends \mainClass{
         return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_unactivated_users')->fetchAll();
     }
 
+    static function show_te_was_answered(){
+        return self::$PDO->query('SELECT * FROM '.self::$prefix.'show_te_was_answered')->fetchAll();
+    }
+
     //Procedure
     /**
      * Active un utilisateur
@@ -890,6 +894,16 @@ class PDOQueries extends \mainClass{
         $query = self::$PDO->prepare('SELECT '.self::$prefix.'isset_student(:id_student)');
         $query->execute(array(':id_student'=>$id_student));
         return $query->fetchAll()[0][0];
+    }
+
+    /**
+     * Determine si les questionnaires ont déjà été utilisé ou non
+     * @return bool
+     */
+    static function isset_answers(){
+        $query = self::$PDO->prepare('SELECT count(ID) FROM '.self::$prefix.'answers');
+        $query->execute();
+        return boolval($query->fetchAll()[0][0]);
     }
 
     /**

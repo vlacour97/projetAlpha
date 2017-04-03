@@ -270,6 +270,7 @@ Class UserDatas extends ReturnDatas{
 class User extends \mainClass{
 
     public static $user_marker = "id";
+    public static $student_list_ti_te_page_id = "student_list";
 
     /**
      * Permet l'inscription d'utilisateur par un administrateur
