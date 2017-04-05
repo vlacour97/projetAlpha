@@ -23,6 +23,8 @@ class Language extends \mainClass{
     static $html_views_dir_path = '/private/views/';
     static $datas = null;
     static $regex_marker = '#\\{([^}]+)\\}#';
+    static $tagKeeperReplace = ['{student-fname}','{student-name}'];
+    static $tagKeeperBy = ['{1}','{2}'];
 
     static function init(){
        self::$datas = link_parameters('languages/'.Log::get_lang());
@@ -328,9 +330,10 @@ class Language extends \mainClass{
             $target = Log::get_lang();
         if(is_null($source))
             $source = \mainClass::$lang;
+        $text = str_replace(self::$tagKeeperReplace,self::$tagKeeperBy,$text);
         $target = substr($target,0,2);
         $source = substr($source,0,2);
-        return GoogleTranslate::translate($source,$target,$text);
+        return str_replace(self::$tagKeeperBy,self::$tagKeeperReplace,GoogleTranslate::translate($source,$target,$text));
     }
 
 } 
