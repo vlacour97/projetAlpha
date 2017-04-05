@@ -319,7 +319,8 @@
             "see_survey" : "Consultation du questionnaire",
             "answer_survey" : "Répondre au questionnaire",
             "profile" : "Mon Compte",
-            "manage_API" : "Gestion de l'API"
+            "manage_API" : "Gestion de l'API",
+            "about" : "À propos"
         },
         "boolChose" : [
             "Non",
@@ -937,6 +938,52 @@
                 "success" : "Informations modifier avec succès !"
             }
         },
+        "about" : {
+            "previous" : "Accueil",
+            "name" : "À propos",
+            "subtitle" : "Quels sont les créateurs de ce site ?",
+            "persons" : {
+                "1" : {
+                    "fname" : "Paul",
+                    "name" : "Bigourd",
+                    "description" : "Web Developper",
+                    "email" : "paulbigourd@gmail.com"
+                },
+                "2" : {
+                    "fname" : "Jean-Baptiste",
+                    "name" : "Calandreau",
+                    "description" : "Gestion Base de Données",
+                    "email" : "Jeanbaptiste.calandreau@gmail.com"
+                },
+                "3" : {
+                    "fname" : "Valentin",
+                    "name" : "Lacour",
+                    "description" : "Chef de Projet | Web Developper | Intégrateur",
+                    "email" : "vlacour97@icloud.com",
+                    "phone" : "0673591245",
+                    "linkedin" : "vlacour97"
+                },
+                "4" : {
+                    "fname" : "Rémi",
+                    "name" : "Lemaire",
+                    "description" : "Web Developper",
+                    "email" : "remi80.lemaire@gmail.com"
+                },
+                "5" : {
+                    "fname" : "Antoine",
+                    "name" : "Richard",
+                    "description" : "Web Designer",
+                    "email" : "antoiner.info@gmail.com",
+                    "linkedin" : "antoine-richard-438a6113b"
+                },
+                "6" : {
+                    "fname" : "Nicolas",
+                    "name" : "Rocroy",
+                    "description" : "Gestion Documentation & Image",
+                    "email" : "nicolas-rocroy@hotmail.com"
+                }
+            }
+        },
 
         "compose": {
             "way": {
@@ -1101,7 +1148,6 @@
             }
         }
 
-
     },
     "components" : {
         "sidebar" : {
@@ -1123,6 +1169,7 @@
             "updated_at" : "Mise à jour le",
             "account" : "Mon Compte",
             "inbox" : "Boite de réception",
+            "about" : "À propos",
             "logout" : "Déconnexion"
         },
         "student_infos" : {

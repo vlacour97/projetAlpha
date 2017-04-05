@@ -230,7 +230,7 @@ class Language extends \mainClass{
         //Variables globales
         if(Install::APP_is_installed()){
             $lastUpdate = new Date(Config::getLastUpdate());
-            $replace = array('{site-name}','{site-copyright}','{site-year}','{site-author}','{site_name_initial}','{logout_link}','{home_page}','{account_link}','{inbox_link}','{site-domain}');
+            $replace = array('{site-name}','{site-copyright}','{site-year}','{site-author}','{site_name_initial}','{logout_link}','{home_page}','{account_link}','{inbox_link}','{about_link}','{site-domain}');
             $by = array(
                 Config::getName(),
                 Config::getCopyright(),
@@ -241,6 +241,7 @@ class Language extends \mainClass{
                 '?'.Navigation::$navigation_marker.'='.Navigation::$default_page,
                 '?'.Navigation::$navigation_marker.'='.Log::$account_marker,
                 '?'.Navigation::$navigation_marker.'=messages',
+                '?'.Navigation::$navigation_marker.'=about',
                 HOST
             );
             $gabarit = str_replace($replace,$by,$gabarit);

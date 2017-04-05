@@ -99,5 +99,10 @@
         "id" : "manage_API",
         "logo" : "fa fa-rocket",
         "inNavigation" : true
+    },
+    {
+        "id" : "about",
+        "logo" : "fa fa-globe",
+        "inNavigation" : true
     }
 ]

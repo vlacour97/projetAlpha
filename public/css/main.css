@@ -54,3 +54,11 @@ table.border-survey tfoot tr{
     border: 2px solid rgb(86,86,86);
     outline: none;
 }
+
+.social{
+    font-size: 20px;
+}
+
+.social a{
+    color: #555;
+}
