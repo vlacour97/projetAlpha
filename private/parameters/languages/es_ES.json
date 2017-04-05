@@ -6,7 +6,7 @@
                 "martes",
                 "mi\u00e9rcoles",
                 "jueves",
-                "viernes",
+                "Viernes",
                 "s\u00e1bado",
                 "domingo"
             ],
@@ -14,7 +14,7 @@
                 "Lun.",
                 "Marzo",
                 "Mi\u00e9rcoles",
-                "Jueves",
+                "Jue",
                 "Vende.",
                 "S\u00e1bado",
                 "Domingo"
@@ -22,90 +22,90 @@
             "month":[
                 "enero",
                 "febrero",
-                "marzo",
-                "abril",
-                "mayo",
+                "Marte",
+                "Abril",
+                "Mayo",
                 "junio",
                 "julio",
-                "agosto",
-                "septiembre",
+                "Augusto",
+                "Septiembre",
                 "octubre",
-                "noviembre",
+                "Noviembre",
                 "diciembre"
             ],
             "cut_month":[
                 "Enero",
                 "febrero",
-                "marzo",
+                "Marte",
                 "abril",
-                "mayo",
+                "Mayo",
                 "junio",
                 "julio",
-                "agosto",
+                "Augusto",
                 "Septiembre",
                 "Octubre",
                 "Noviembre",
                 "Diciembre"
             ],
             "connector":{
-                "at":"a",
+                "at":"para",
                 "y_s":"a\u00f1o",
-                "m_s":"mes",
+                "m_s":"meses",
                 "d_s":"d\u00eda",
                 "h_s":"tiempo",
                 "min_s":"minuto",
-                "s_s":"segundo",
+                "s_s":"la segunda",
                 "y_p":"a\u00f1o",
-                "m_p":"mes",
+                "m_p":"meses",
                 "d_p":"d\u00edas",
                 "h_p":"horas",
-                "min_p":"acta",
-                "s_p":"segundos",
+                "min_p":"minutos",
+                "s_p":"segundo",
                 "h":"h",
                 "min":"min",
                 "s":"seco"
             },
             "format":{
                 "short_form_date":"dd/mm/aaaa",
-                "long_form_date":"d MM aaaa",
+                "long_form_date":"de MM aaaa",
                 "long_cut_date":"d M aaaa",
                 "short_time_form":"hh {h} mm",
                 "long_time_form":"hh: mm: ss",
                 "the":"la",
-                "at":"a"
+                "at":"para"
             }
         },
         "mail":{
             "general":{
                 "part1":{
                     "title":"sencillez",
-                    "content":"Con nuestra soluci\u00f3n de TI, ofrecemos unos cursos de gesti\u00f3n simplificados para estancias de negocios como guardianes de los tutores escolares."
+                    "content":"Con nuestra soluci\u00f3n de TI, ofrecemos unos cursos de gesti\u00f3n simplificados, tanto para los negocios como guardianes de tutores escolares."
                 },
                 "part2":{
                     "title":"efectividad",
-                    "content":"Ofrecemos una soluci\u00f3n que permite a los supervisores de los alumnos gestionar de forma r\u00e1pida rendir cuentas y cursos de gesti\u00f3n."
+                    "content":"Ofrecemos una soluci\u00f3n que permite a los supervisores de los alumnos logran r\u00e1pidamente rendir cuentas y cursos de gesti\u00f3n."
                 },
                 "part3":{
                     "title":"ergonom\u00eda",
-                    "content":"Con una soluci\u00f3n Web es compatible con todos los dispositivos, se propone un nuevo m\u00e9todo pr\u00e1ctico e intuitivo para la gesti\u00f3n de las pr\u00e1cticas."
+                    "content":"Con una soluci\u00f3n basada en web es compatible con todos los dispositivos, ofrecemos un nuevo m\u00e9todo conveniente e intuitiva para la gesti\u00f3n de las pr\u00e1cticas."
                 }
             },
             "activation":{
                 "subject":"Solicitar la activaci\u00f3n de su cuenta",
                 "title":"Su cuenta est\u00e1 lista!",
-                "content":"se crea la cuenta de usuario! Usted puede comenzar a usarlo en un momento, pero primero, por favor confirmar su registro y completar su registro haciendo clic en el enlace de m\u00e1s abajo.",
-                "button_text":"Confirmaci\u00f3n de Registro"
+                "content":"se crea la cuenta de usuario! Usted puede comenzar a usarlo en un momento, pero primero, por favor confirmar su registro y completar su informaci\u00f3n personal haciendo clic en el enlace de m\u00e1s abajo.",
+                "button_text":"Confirmaci\u00f3n de registro"
             },
             "confirmation":{
-                "subject":"confirmaci\u00f3n de la activaci\u00f3n de su cuenta",
+                "subject":"Confirmar la activaci\u00f3n de su cuenta",
                 "title":"permiti\u00f3 la creaci\u00f3n de cuentas!",
-                "content":"\u00a1Enhorabuena! La creaci\u00f3n de su cuenta se confirma, ahora se puede abrir una sesi\u00f3n!",
+                "content":"Felicitaciones! Creaci\u00f3n de una cuenta se confirma, ahora se puede abrir una sesi\u00f3n!",
                 "button_text":"login"
             },
             "delete":{
-                "subject":"Al desactivar su cuenta",
+                "subject":"Desactivar su cuenta",
                 "title":"Su cuenta ha sido eliminada",
-                "content":"Gestion-stage.eu su cuenta ha sido borrada. Para obtener m\u00e1s informaci\u00f3n, p\u00f3ngase en contacto con el administrador."
+                "content":"Gestion-stage.eu Tu cuenta ha sido eliminada. Para obtener m\u00e1s informaci\u00f3n, p\u00f3ngase en contacto con el administrador."
             },
             "message":{
                 "subject":"Ha recibido un mensaje de {nombre_usuario}",
@@ -115,13 +115,19 @@
             "question":{
                 "subject":"Un cuestionario solicitar su atenci\u00f3n",
                 "title":"Un cuestionario solicitar su atenci\u00f3n",
-                "content":"Los nuevos cuestionarios est\u00e1n disponibles, se puede acceder a ella a partir de ahora.",
-                "button_text":"el cuestionario"
+                "content":"Nuevos estudios est\u00e1n disponibles, se puede acceder a ella a partir de ahora.",
+                "button_text":"Completar el cuestionario"
+            },
+            "update_survey_notification":{
+                "subject":"cuestionarios de llenado: IMPORTANTE",
+                "title":"Los cuestionarios se han actualizado ...",
+                "content":"Nuestro cuestionario se ha actualizado, si ya hab\u00eda realizado uno o m\u00e1s cuestionarios, hay que reponer los <br> Gracias por la comprensi\u00f3n",
+                "button_text":"Responder a mis cuestionarios"
             },
             "reactivation":{
                 "subject":"Su cuenta ha sido devuelto al servicio!",
                 "title":"Su cuenta ha sido devuelto al servicio!",
-                "content":"\u00a1Enhorabuena! De nuevo, puede acceder a su cuenta {} app_html_link!",
+                "content":"Felicitaciones! De nuevo, puede acceder a su cuenta  app_html_link!",
                 "button_text":"login"
             },
             "reponse_question":{
@@ -132,7 +138,7 @@
             "forgotten_password":{
                 "subject":"Contrase\u00f1a olvidada ?",
                 "title":"Cambiar su contrase\u00f1a",
-                "content":"\u00bfHa olvidado su contrase\u00f1a y tener una solicitud de cambio. Todo sucede haciendo clic en este bot\u00f3n!",
+                "content":"\u00bfHa olvidado su contrase\u00f1a y tiene una petici\u00f3n para cambiarlo. Todo pasa por hacer clic en este bot\u00f3n!",
                 "button_text":"Cambiar contrase\u00f1a"
             }
         },
@@ -140,31 +146,31 @@
             "student":{
                 "name":"estudiante",
                 "attr":{
-                    "name":"nombre",
-                    "fname":"primer nombre",
+                    "name":"Appellido",
+                    "fname":"Nombre de pila",
                     "email":"e-mail",
                     "group":"grupo",
-                    "phone":"tel\u00e9fono"
+                    "phone":"Tel\u00e9fono"
                 }
             },
             "ti":{
-                "name":"tutor IUT",
+                "name":"IUT tutor",
                 "type":"3",
                 "attr":{
-                    "name":"nombre",
-                    "fname":"primer nombre",
+                    "name":"Appellido",
+                    "fname":"Nombre de pila",
                     "email":"e-mail",
-                    "phone":"tel\u00e9fono"
+                    "phone":"Tel\u00e9fono"
                 }
             },
             "te":{
                 "name":"tutor de la empresa",
                 "type":"2",
                 "attr":{
-                    "name":"nombre",
-                    "fname":"primer nombre",
+                    "name":"Appellido",
+                    "fname":"Nombre de pila",
                     "email":"e-mail",
-                    "phone":"tel\u00e9fono"
+                    "phone":"Tel\u00e9fono"
                 }
             },
             "other":"otro"
@@ -172,18 +178,18 @@
         "notifications":{
             "add_post":{
                 "value":"{name_user} public\u00f3 un art\u00edculo accesible en la l\u00ednea de tiempo",
-                "icon":"fa-fa globo"
+                "icon":"fa-fa mundo"
             },
             "comment_post":{
-                "value":"Name_publisher {} comentado publicaci\u00f3n",
+                "value":"Name_publisher  comentado publicaci\u00f3n",
                 "icon":"fa fa-how"
             },
             "like_post":{
-                "value":"Name_user {} le gusta tu publicaci\u00f3n",
+                "value":"{name_user} le gusta su publicaci\u00f3n",
                 "icon":"fa fa-pulgar hacia arriba"
             },
             "wait_survey":{
-                "value":"Usted tiene una prueba en espera",
+                "value":"Usted tiene una prueba pendientes",
                 "icon":"fa fa-o-reloj"
             },
             "complete_survey":{
@@ -197,6 +203,10 @@
             "autorised_publication":{
                 "value":"Se le permite publicar",
                 "icon":"fa-fa meg\u00e1fono"
+            },
+            "update_survey":{
+                "value":"Los cuestionarios se actualizaron y respuestas a questionnairex borrado",
+                "icon":"fa fa-exclamaci\u00f3n-delta"
             }
         },
         "weather":{
@@ -213,99 +223,100 @@
         "PDF":{
             "StudentList":{
                 "ID":"identificaci\u00f3n",
-                "student_name":"nombre del estudiante",
+                "student_name":"Nombre del estudiante",
                 "TI_name":"Nombre de la empresa Guardi\u00e1n",
-                "TE_name":"Nombre del tutor IUT",
+                "TE_name":"Nombrar tutor IUT",
                 "group":"grupo",
                 "mark":"nota"
             },
             "SurveyList":{
                 "address_lbl":"direcci\u00f3n",
                 "email_lbl":"e-mail",
-                "phone_lbl":"tel\u00e9fono",
+                "phone_lbl":"Tel\u00e9fono",
                 "TE_lbl":"tutor de la empresa",
-                "TI_lbl":"tutor IUT",
+                "TI_lbl":"IUT tutor",
                 "answer_lbl":"n\u00famero de la pregunta",
                 "mark_lbl":"nota",
                 "total_lbl":"total"
             }
         },
         "exceptions":{
-            "1001":"La conexi\u00f3n fall\u00f3: No Accesible para el usuario \"$ user\"",
-            "1002":"La conexi\u00f3n fall\u00f3: Bases de datos Desconocido",
-            "1003":"La conexi\u00f3n fall\u00f3: Host desconocido",
-            "1004":"La conexi\u00f3n fall\u00f3: No hay credenciales de acceso",
-            "1005":"conexi\u00f3n fallida:",
+            "1001":"La conexi\u00f3n fall\u00f3: No Accesible para el usuario \"$ usuario\"",
+            "1002":"Conexi\u00f3n fallida: Bases de datos Desconocida",
+            "1003":"Error de conexi\u00f3n: Host desconocido",
+            "1004":"La conexi\u00f3n fall\u00f3: No hay datos de acceso",
+            "1005":"Error de conexi\u00f3n:",
             "1006":"Por favor, no inserte un espacio en el prefijo!",
             "1007":"Archivo no encontrado",
             "1008":"Importaci\u00f3n de datos de error",
-            "1020":"El usuario solicitado no existe",
-            "1021":"error de grabaci\u00f3n",
+            "1020":"El usuario solicitada no existe",
+            "1021":"grabaci\u00f3n de error",
             "1022":"Error del usuario Iniciar sesi\u00f3n",
-            "1023":"Error al recuperar el identificador",
+            "1023":"Recuperaci\u00f3n de Errores ID",
             "1060":"Error en el tipo de variable",
-            "1090":"La adici\u00f3n de un estudiante solicita la presencia de correo electr\u00f3nico para IUT y tutores de la empresa, as\u00ed como el nombre y apellido del estudiante",
+            "1090":"La adici\u00f3n de un estudiante solicita la presencia de correo electr\u00f3nico para IUT y los guardianes de la empresa, y el nombre y el nombre del estudiante",
             "1110":"Error al importar el archivo CSV",
-            "2001":"Error de datos de recuperaci\u00f3n",
+            "2001":"Error de recuperaci\u00f3n de datos",
             "2002":"Error: Formato de datos no v\u00e1lidos",
             "2010":"Configuraci\u00f3n de la aplicaci\u00f3n de error",
-            "2020":"El usuario solicitado no existe",
+            "2020":"El usuario solicitada no existe",
             "2021":"c\u00f3digo incorrecto",
-            "2022":"direcci\u00f3n de correo electr\u00f3nico o contrase\u00f1a incorrecta!",
+            "2022":"E-mail o contrase\u00f1a incorrecta!",
             "2030":"diferentes contrase\u00f1as",
             "2031":"La verificaci\u00f3n de la contrase\u00f1a no es id\u00e9ntica a la contrase\u00f1a",
             "2032":"Por favor, introduzca una contrase\u00f1a m\u00e1s larga",
             "2033":"Por favor completar todos los campos requeridos",
             "2034":"direcci\u00f3n de email no es v\u00e1lida",
-            "2035":"mail ya utilizado",
+            "2035":"correo electr\u00f3nico ya se utiliza",
             "2036":"Tipo de usuario no v\u00e1lido",
-            "2037":"Por favor, estar de acuerdo con los t\u00e9rminos y condiciones del contrato",
+            "2037":"Por favor, acepta los t\u00e9rminos y condiciones del contrato",
             "2040":"Active su cuenta, consultar su correo electr\u00f3nico",
-            "2050":"El cuestionario no es completa",
-            "2060":"Tipo de error de fecha",
+            "2050":"El amor no es completa",
+            "2060":"Tipo de error de la fecha",
             "2070":"Error al enviar su mensaje",
             "2071":"Error al enviar archivos adjuntos",
-            "2072":"error de grabaci\u00f3n",
-            "2073":"Error al eliminar el archivo adjunto en la base de datos: ID N\u00ba $",
+            "2072":"grabaci\u00f3n de error",
+            "2073":"Error al eliminar el archivo adjunto a la base de datos: No ID $",
             "2074":"Error al eliminar el archivo adjunto: No ID $",
             "2075":"Error al a\u00f1adir la publicaci\u00f3n",
             "2090":"El estudiante solicitada no existe",
-            "2091":"estudiantes de investigaci\u00f3n de error",
+            "2091":"estudiantes de b\u00fasqueda de error",
             "2092":"Error al a\u00f1adir el estudiante",
-            "2093":"modificaci\u00f3n estudiante de error",
-            "2094":"la supresi\u00f3n de errores del estudiante",
-            "2100":"No se puede responder a este mensaje",
+            "2093":"cambios estudiantes de error",
+            "2094":"supresi\u00f3n de errores del estudiante",
+            "2100":"Incapaz de responder a este mensaje",
             "2101":"Usted no tiene el derecho de enviar este mensaje!",
             "2110":"El archivo no es CSV",
-            "2120":"El tiempo de recuperaci\u00f3n de errores",
+            "2120":"Error de tiempo recuperar",
             "3001":"El usuario ya est\u00e1 activado",
             "3002":"No hay resultados para la b\u00fasqueda: $",
-            "3003":"No se puede eliminar: Debe haber al menos una cuenta de administrador de activos",
-            "3004":"Sin OpenWeatherMap clave de API"
+            "3003":"No se puede eliminar: Debe haber al menos una cuenta de administrador activa",
+            "3004":"Sin OpenWeatherMap clave de API",
+            "3005":"Usted tiene permiso para realizar esta acci\u00f3n"
         },
         "user_type":[
             "administrador",
             "tutor de la empresa",
-            "tutor IUT"
+            "IUT tutor"
         ],
         "page_name":{
-            "home":"bienvenida",
-            "message":"Mensajes <span class =\"label label-danger nbMessage\"> {nb_message} </span>",
+            "home":"Recepci\u00f3n",
+            "message":"Mensajes <class = \"etiqueta etiqueta-safe nbMessage\" span> {nb_message} </span>",
             "students":"estudiantes",
             "students/student_list":"Lista de los estudiantes",
-            "students/student_score":"resultado estudiante",
+            "students/student_score":"estudiantes resultan",
             "students/student_score_pdf":"Lista de las puntuaciones en PDF",
-            "students/survey":"Resultado del cuestionario",
+            "students/survey":"El resultado del cuestionario",
             "students/survey_pdf":"Resultados del cuestionario en formato PDF",
             "survey":"cuestionarios",
-            "survey/create_survey":"Creaci\u00f3n de pruebas",
+            "survey/create_survey":"La creaci\u00f3n de un cuestionario",
             "survey/survey_show":"Visualizaci\u00f3n de una encuesta",
             "survey/survey_list":"Creado cuestionarios",
             "user":"usuarios",
             "user/user_list":"Lista de usuarios",
             "student_list":"Lista de los estudiantes",
             "see_survey":"Cuestionario de consulta",
-            "answer_survey":"el cuestionario",
+            "answer_survey":"Completar el cuestionario",
             "profile":"Mi cuenta",
             "manage_API":"API de administraci\u00f3n"
         },
@@ -332,19 +343,19 @@
                     },
                     "dbname":{
                         "lbl":"Nombre de la base de datos",
-                        "help":"El nombre de la base de datos en la que desea instalar Administraci\u00f3n-Etapa"
+                        "help":"El nombre de la base de datos en la que desea instalar Gesti\u00f3n-Etapa"
                     },
                     "login":{
                         "lbl":"login",
-                        "help":"El identificador de la se\u00f1al en la base de datos MySQL"
+                        "help":"El identificador de la conexi\u00f3n en la base de datos MySQL"
                     },
                     "pwd":{
                         "lbl":"Contrase\u00f1a",
-                        "help":"... Y la contrase\u00f1a de MySQL"
+                        "help":"... y la contrase\u00f1a de MySQL"
                     },
                     "prefix":{
                         "lbl":"Prefijo de tabla",
-                        "help":"Si desea instalar m\u00faltiples sitios-Etapa de tratamiento en la misma base de datos, cambie este campo."
+                        "help":"Si desea instalar m\u00faltiples sitios-Etapa de tratamiento en la misma base de datos, cambiar este campo."
                     }
                 },
                 "buttons":{
@@ -359,7 +370,7 @@
                     },
                     "describe":{
                         "lbl":"Descripci\u00f3n del sitio",
-                        "help":"Ella aparecer\u00e1 en los motores de b\u00fasqueda"
+                        "help":"Que aparecer\u00e1 en los motores de b\u00fasqueda"
                     },
                     "keywords":{
                         "lbl":"sitio de palabras clave",
@@ -373,7 +384,7 @@
                         "help":"Es en este correo electr\u00f3nico nos pondremos en contacto para el mantenimiento del sitio"
                     },
                     "deathdate":{
-                        "lbl":"Fecha cuestionarios Butoire",
+                        "lbl":"cuestionarios fecha Butoire",
                         "help":"Esta es la fecha que se deben devolver todos los cuestionarios"
                     },
                     "APIKey":{
@@ -385,11 +396,11 @@
             "step3":{
                 "form":{
                     "name":{
-                        "lbl":"nombre",
+                        "lbl":"Appellido",
                         "help":"Su nombre"
                     },
                     "fname":{
-                        "lbl":"primer nombre",
+                        "lbl":"Nombre de pila",
                         "help":"Vuestro nombre"
                     },
                     "email":{
@@ -405,7 +416,7 @@
                         "help":"Confirmar su contrase\u00f1a"
                     },
                     "phone":{
-                        "lbl":"tel\u00e9fono",
+                        "lbl":"Tel\u00e9fono",
                         "help":"Su n\u00famero de tel\u00e9fono"
                     },
                     "address":{
@@ -414,7 +425,7 @@
                     },
                     "zip_code":{
                         "lbl":"C\u00f3digo postal",
-                        "help":"su C\u00f3digo Postal"
+                        "help":"Su C\u00f3digo Postal"
                     },
                     "city":{
                         "lbl":"ciudad",
@@ -425,48 +436,48 @@
                         "help":"Su pais"
                     },
                     "language":{
-                        "lbl":"idioma",
+                        "lbl":"Lengua",
                         "help":"su idioma"
                     },
-                    "help":"Dicha informaci\u00f3n puede ser cambiada despu\u00e9s de crear la cuenta"
+                    "help":"Dicha informaci\u00f3n puede ser cambiada despu\u00e9s de la creaci\u00f3n de la cuenta"
                 }
             },
             "step4":{
                 "title":"finalizaci\u00f3n:",
-                "infos":"Al hacer clic en \"Finalizar\", se instalar\u00e1 un cuestionario precargada y los hu\u00e9spedes se registran en su Sytem gesti\u00f3n de pr\u00e1cticas"
+                "infos":"Al hacer clic en \"Finalizar\", se instalar\u00e1 un cuestionario precargada y se puede conectar a su Sytem gesti\u00f3n de pr\u00e1cticas"
             },
             "previous":"anterior",
-            "next":"siguiente",
+            "next":"Pr\u00f3ximo",
             "finish":"acabado",
             "script":{
                 "DB_connect":{
-                    "success":"Inicio de sesi\u00f3n exitoso",
+                    "success":"inicio de sesi\u00f3n correcto",
                     "fail":"No se puede conectar a la base de datos"
                 }
             },
             "site-year":"2016",
-            "site-name":"proyecto alfa",
+            "site-name":"Proyecto-Alfa",
             "site-copyright":"Gesti\u00f3n-Alfa"
         },
         "login":{
             "name":"login",
             "emailForm":"nombre del usuario",
             "pwdForm":"Contrase\u00f1a",
-            "btnConnect":"iniciar la sesi\u00f3n",
+            "btnConnect":"acceder",
             "stayConnected":"memorizar",
             "forgottenPwd":"Contrase\u00f1a olvidada ?"
         },
         "lockscreen":{
             "name":"login",
             "pwdLbl":"Contrase\u00f1a",
-            "btnConnection":"iniciar la sesi\u00f3n",
-            "otherClient":"No eres {usuario}?"
+            "btnConnection":"acceder",
+            "otherClient":"Usted no es {usuario}?"
         },
         "forbPassword":{
             "name":"contrase\u00f1a olvidada",
             "description":"Por favor, introduzca su nombre de usuario",
             "emailLbl":"Su email",
-            "btnSubmit":"validar",
+            "btnSubmit":"Validar",
             "returnLink":"Volver a la p\u00e1gina de acceso",
             "successMessage":"Un correo electr\u00f3nico acaba de enviar a usted para cambiar su contrase\u00f1a, se le <b> redirecciones en breve </b>"
         },
@@ -475,18 +486,18 @@
             "description":"Por favor, cambie su contrase\u00f1a",
             "pwdLbl":"Contrase\u00f1a",
             "pwdVerifLbl":"Confirmaci\u00f3n de contrase\u00f1a",
-            "btnSubmit":"validar"
+            "btnSubmit":"Validar"
         },
         "active_account":{
-            "name":"registro",
+            "name":"Registro",
             "form":{
                 "name":{
-                    "lbl":"nombre *",
-                    "placeholder":"nombre"
+                    "lbl":"Appellido*",
+                    "placeholder":"Appellido"
                 },
                 "fname":{
-                    "lbl":"Nombre *",
-                    "placeholder":"primer nombre"
+                    "lbl":"Nombre de pila*",
+                    "placeholder":"Nombre de pila"
                 },
                 "email":{
                     "lbl":"e-mail",
@@ -501,7 +512,7 @@
                     "placeholder":"Confirmar su contrase\u00f1a"
                 },
                 "phone":{
-                    "lbl":"tel\u00e9fono",
+                    "lbl":"Tel\u00e9fono",
                     "placeholder":"N\u00famero de tel\u00e9fono"
                 },
                 "address":{
@@ -520,38 +531,44 @@
                     "lbl":"pa\u00eds"
                 },
                 "language":{
-                    "lbl":"idioma"
+                    "lbl":"Lengua"
                 },
-                "accept_terms_and_conditions":"He le\u00eddo y acepto las condiciones de uso"
+                "accept_terms_and_conditions":"He le\u00eddo y acepto las condiciones de uso de"
             }
         },
         "dashboard":{
-            "previous":"bienvenida",
+            "previous":"Recepci\u00f3n",
             "name":"Salpicadero",
             "lbl_connections":"N\u00famero de conexiones",
-            "alternative_map":"Error en el mapa de visualizaci\u00f3n",
-            "evolution_title":"Cambio en el n\u00famero de <span class=\"fw-semi-bold\"> Conexiones </span> <span class = \"FW-semi-negrita\"> Usuarios </span>",
+            "alternative_map":"visualizaci\u00f3n del mapa de error",
+            "evolution_title":"Cambio en el n\u00famero de <span class = \"FW-semi-Bold\"> Conexiones </span> <span class = \"FW-seminegrita\"> Usuarios </span>",
             "expand":"ampliar",
             "collapse":"reducir",
-            "responses_rate":"<span class=\"fw-semi-bold\"> tasa de respuestas </span>",
-            "responses_rate_description":"tasa de respuesta de la distribuci\u00f3n de los cuestionarios"
+            "responses_rate":"<Span class = \"FW-seminegrita\"> tasa de respuestas </span>",
+            "responses_rate_description":"tasa de respuesta de la distribuci\u00f3n de los cuestionarios",
+            "widget" : {
+                "empty" : "vacío cuestionarios",
+                "finish" : "cuestionarios rellenados",
+                "validate" : "cuestionarios validados",
+                "nbConnection" : "Número de conexiones"
+            }
         },
         "admin_studentList":{
-            "previous":"bienvenida",
+            "previous":"Recepci\u00f3n",
             "name":"administraci\u00f3n",
             "student":"estudiantes",
-            "btnDelete":"eliminar",
+            "btnDelete":"Quitar",
             "table":{
                 "id":"identificaci\u00f3n",
                 "student_name":"Apellido nombre",
-                "TI":"tutor IUT",
+                "TI":"IUT tutor",
                 "TE":"tutor de la empresa",
                 "actions":"valores"
             },
             "modal-add":{
                 "title":"A\u00f1adir Estudiante",
                 "step1":{
-                    "title":"Al a\u00f1adir?",
+                    "title":"M\u00e9todo de a\u00f1adir",
                     "choice1":"Importar archivo CSV",
                     "choice2":"A\u00f1adir Estudiante"
                 },
@@ -559,11 +576,11 @@
                     "title":"Adici\u00f3n de datos"
                 },
                 "step3":{
-                    "title":"Finalizaci\u00f3n",
-                    "success":"El estudiante ha sido a\u00f1adido!"
+                    "title":"finalizaci\u00f3n",
+                    "success":"El estudiante se a\u00f1adi\u00f3 correctamente!"
                 },
                 "btnPrevious":"anterior",
-                "btnNext":"siguiente",
+                "btnNext":"Pr\u00f3ximo",
                 "btnFinish":"acabado"
             },
             "modal-infos":{
@@ -575,15 +592,15 @@
             "modal-delete":{
                 "title":"supresi\u00f3n",
                 "message":"\u00bfRealmente desea eliminar este usuario?",
-                "btnDelete":"eliminar",
-                "btnAbord":"cancelar"
+                "btnDelete":"Quitar",
+                "btnAbord":"anular"
             },
             "modal-csv":{
                 "importfile":"importaci\u00f3n",
-                "changefile":"cambio",
-                "delete":"eliminar",
+                "changefile":"cambiar",
+                "delete":"Quitar",
                 "nb-header-cols":"N\u00famero de cabeceras de las columnas",
-                "nb-header-rows":"N\u00famero de l\u00edneas de cabecera"
+                "nb-header-rows":"N\u00famero de filas de encabezado"
             }
         },
         "admin_studentScore":{
@@ -594,8 +611,8 @@
             "btn-generate-pdf":"Generar una lista PDF",
             "table":{
                 "attr1":"identificaci\u00f3n",
-                "attr2":"primer nombre",
-                "attr3":"nombre",
+                "attr2":"Nombre de pila",
+                "attr3":"Appellido",
                 "attr4":"grupo",
                 "attr5":"estatus",
                 "attr6":"nota"
@@ -603,16 +620,16 @@
             "modal-generate-pdf":{
                 "title":"Generar una lista PDF",
                 "title-pdf":"Nombre de la lista PDF",
-                "btnValid":"validar"
+                "btnValid":"Validar"
             }
         },
         "survey_read":{
             "previous":"estudiantes",
             "name":"cuestionario",
-            "btn-generate-pdf":"Generar un PDF",
+            "btn-generate-pdf":"generar PDF",
             "infos":{
                 "part1":"estudiante",
-                "part2":"tutor IUT",
+                "part2":"IUT tutor",
                 "part3":"tutor de la empresa"
             },
             "table":{
@@ -620,7 +637,7 @@
                 "attr2":"resultado",
                 "total":"total"
             },
-            "btnComeBack":"retorno"
+            "btnComeBack":"regreso"
         },
         "admin_create_survey":{
             "previous":"cuestionarios",
@@ -639,12 +656,12 @@
             "save":"registro",
             "modal_save":{
                 "title":"Guardar un cuestionario",
-                "input_placeholder":"cuestionario Nombre",
+                "input_placeholder":"love Nombre",
                 "save":"registro",
-                "abort":"cancelar"
+                "abort":"anular"
             },
             "error":{
-                "empty_questions":"Por favor, complete todos los campos respuestas",
+                "empty_questions":"Por favor completar todos los campos y responde preguntas",
                 "empty_name":"Por favor, introduzca el nombre del cuestionario"
             }
         },
@@ -652,26 +669,38 @@
             "chemin1":"administraci\u00f3n",
             "name":"cuestionarios",
             "numquestion":"n\u00famero de la pregunta",
-            "cancel":"retorno"
+            "cancel":"regreso"
         },
         "admin_surveyList":{
             "chemin1":"administraci\u00f3n",
             "name":"cuestionarios",
             "table":{
                 "titleID":"identificaci\u00f3n",
-                "titleSurvey":"nombrar Cuestionario",
-                "titleDate":"Fecha de creaci\u00f3n",
+                "titleSurvey":"Nombre Cuestionario",
+                "titleCreationDate":"Fecha de creaci\u00f3n",
+                "titleModificationDate":"fecha de modificaci\u00f3n",
                 "status":"estatus",
                 "titleAction":"valores"
+            },
+            "modal-activate":{
+                "title":"Cuestionario de cambio",
+                "description":"Los estudiantes usan el cuestionario actual no se quita su cuestionario o afectan el nuevo cuestionario para los futuros estudiantes?",
+                "btnNext":"Asignar este cuestionario para los futuros estudiantes",
+                "btnDelete":"Eliminar los cuestionarios completados"
+            },
+            "error":{
+                "deleteAnswer":"Error al eliminar cuestionarios",
+                "updateSurvey":"Error cambio cuestionario",
+                "checkAvailability":"Comprobaci\u00f3n de errores cambio cuestionario"
             }
         },
         "admin_userList":{
             "chemin1":"administraci\u00f3n",
             "name":"usuarios",
             "checkTE":"tutor de la empresa",
-            "checkTI":"tutor IUT",
+            "checkTI":"IUT tutor",
             "checkAdmin":"administrador",
-            "delete":"eliminar",
+            "delete":"Quitar",
             "table":{
                 "titleID":"identificaci\u00f3n",
                 "nameuser":"Apellido nombre",
@@ -681,7 +710,7 @@
             "modal-add":{
                 "title":"Agregar usuario",
                 "step1":{
-                    "title":"Al a\u00f1adir?",
+                    "title":"M\u00e9todo de a\u00f1adir",
                     "choice1":"Importar archivo CSV",
                     "choice2":"Agregar usuario"
                 },
@@ -689,11 +718,11 @@
                     "title":"Adici\u00f3n de datos"
                 },
                 "step3":{
-                    "title":"Finalizaci\u00f3n",
+                    "title":"finalizaci\u00f3n",
                     "success":"Se a\u00f1adi\u00f3 el usuario correctamente!"
                 },
                 "btnPrevious":"anterior",
-                "btnNext":"siguiente",
+                "btnNext":"Pr\u00f3ximo",
                 "btnFinish":"acabado"
             },
             "modal-infos":{
@@ -705,15 +734,15 @@
             "modal-delete":{
                 "title":"supresi\u00f3n",
                 "message":"\u00bfRealmente desea eliminar este usuario?",
-                "btnDelete":"eliminar",
-                "btnAbord":"cancelar"
+                "btnDelete":"Quitar",
+                "btnAbord":"anular"
             },
             "modal-csv":{
                 "importfile":"importaci\u00f3n",
-                "changefile":"cambio",
-                "delete":"eliminar",
+                "changefile":"cambiar",
+                "delete":"Quitar",
                 "nb-header-cols":"N\u00famero de cabeceras de las columnas",
-                "nb-header-rows":"N\u00famero de l\u00edneas de cabecera"
+                "nb-header-rows":"N\u00famero de filas de encabezado"
             }
         },
         "te_studentList":{
@@ -721,8 +750,8 @@
             "name":"cuestionarios",
             "table":{
                 "titleID":"identificaci\u00f3n",
-                "titleEtud":"nombre del estudiante",
-                "titleTut":"Nombre del tutor IUT",
+                "titleEtud":"Nombre del estudiante",
+                "titleTut":"Nombrar tutor IUT",
                 "titleStatut":"estado",
                 "titleDate":"fecha Butoire",
                 "titleAction":"acci\u00f3n"
@@ -737,17 +766,17 @@
             "name":"cuestionario",
             "tab":{
                 "tabstudent":"estudiante",
-                "tabTI":"tutor IUT"
+                "tabTI":"IUT tutor"
             },
             "numQuestion":"n\u00famero de la pregunta",
-            "cancel":"retorno"
+            "cancel":"regreso"
         },
         "te_answer_survey":{
             "chemin1":"administraci\u00f3n",
             "name":"cuestionario",
             "tab":{
                 "tabstudent":"estudiante",
-                "tabTI":"tutor IUT"
+                "tabTI":"IUT tutor"
             },
             "modal-send":{
                 "title":"confirmaci\u00f3n",
@@ -757,19 +786,19 @@
             },
             "messages":{
                 "saveSuccess":"Cuestionario guardado correctamente!",
-                "completeSurvey":"Por favor, complete el cuestionario en su totalidad para enviar al tutor IUT"
+                "completeSurvey":"Rellene completamente el cuestionario para enviar al tutor IUT"
             },
             "nb-question":"N\u00famero de preguntas",
             "btnsave":"registro",
-            "btnsend":"enviar"
+            "btnsend":"Mandar"
         },
         "ti_studentList":{
             "previous":"administraci\u00f3n",
             "name":"cuestionario",
             "table":{
                 "titleID":"identificaci\u00f3n",
-                "titleEtud":"nombre del estudiante",
-                "titleTut":"Nombre del tutor IUT",
+                "titleEtud":"Nombre del estudiante",
+                "titleTut":"Nombrar tutor IUT",
                 "titleStatut":"estado",
                 "titleDate":"fecha Butoire",
                 "titleAction":"acci\u00f3n"
@@ -779,7 +808,7 @@
                 "user":"tutor de la empresa"
             },
             "message":{
-                "refreshSuccess":"Est\u00edmulo cercano envi\u00f3 el tutor de la empresa"
+                "refreshSuccess":"Recuperaci\u00f3n cercana envi\u00f3 el tutor de la empresa"
             }
         },
         "ti_see_survey":{
@@ -790,8 +819,8 @@
                 "tabTE":"tutor de la empresa"
             },
             "numQuestion":"n\u00famero de la pregunta",
-            "btnBack":"retorno",
-            "btnValid":"validar"
+            "btnBack":"regreso",
+            "btnValid":"Validar"
         },
         "404":{
             "expression":"OOPS!",
@@ -812,7 +841,7 @@
             "button":"Volver a la p\u00e1gina principal"
         },
         "profile":{
-            "previous":"bienvenida",
+            "previous":"Recepci\u00f3n",
             "name":"Mi cuenta",
             "form1":{
                 "pwd":{
@@ -827,11 +856,11 @@
             },
             "form2":{
                 "name":{
-                    "lbl":"nombre",
+                    "lbl":"Appellido",
                     "help":"Su nombre"
                 },
                 "fname":{
-                    "lbl":"primer nombre",
+                    "lbl":"Nombre de pila",
                     "help":"Vuestro nombre"
                 },
                 "mail":{
@@ -839,7 +868,7 @@
                     "help":"Su email"
                 },
                 "phone":{
-                    "lbl":"tel\u00e9fono",
+                    "lbl":"Tel\u00e9fono",
                     "help":"su tel\u00e9fono"
                 },
                 "address":{
@@ -859,11 +888,11 @@
                     "help":"Su pa\u00eds actual"
                 },
                 "language":{
-                    "lbl":"idioma",
+                    "lbl":"Lengua",
                     "help":"Su idioma (si est\u00e1 disponible)"
                 },
                 "btnChange":"cambio",
-                "btnReset":"cancelar"
+                "btnReset":"anular"
             },
             "message":{
                 "changePassword":"Contrase\u00f1a cambiada",
@@ -871,9 +900,9 @@
             }
         },
         "manage_API":{
-            "previous":"bienvenida",
+            "previous":"Recepci\u00f3n",
             "name":"API de administraci\u00f3n",
-            "title" : "Cambie estos campos para volver a configurar la API:",
+            "title":"Cambiar estos campos para volver a configurar el API:",
             "form":{
                 "siteName":{
                     "lbl":"Nombre del sitio",
@@ -881,7 +910,7 @@
                 },
                 "describe":{
                     "lbl":"Descripci\u00f3n del sitio",
-                    "help":"Ella aparecer\u00e1 en los motores de b\u00fasqueda"
+                    "help":"Que aparecer\u00e1 en los motores de b\u00fasqueda"
                 },
                 "keywords":{
                     "lbl":"sitio de palabras clave",
@@ -895,7 +924,7 @@
                     "help":"Es en este correo electr\u00f3nico nos pondremos en contacto para el mantenimiento del sitio"
                 },
                 "deathdate":{
-                    "lbl":"Fecha cuestionarios Butoire",
+                    "lbl":"cuestionarios fecha Butoire",
                     "help":"Esta es la fecha que se deben devolver todos los cuestionarios"
                 },
                 "APIKey":{
@@ -913,10 +942,10 @@
                 "way2":"mensajes"
             },
             "menu":{
-                "title":"- mensajes",
+                "title":"mensajes -",
                 "semi_bold":"Bandeja de entrada",
                 "button":"Mensaje nuevo",
-                "received":"recibido",
+                "received":"ingresos",
                 "sent":"enviado",
                 "deleted":"suprimido"
             },
@@ -924,13 +953,13 @@
                 "title":"componer",
                 "semi_bold":"nuevo",
                 "to":"a:",
-                "object":"Asunto:",
+                "object":"asunto:",
                 "attach":"La integraci\u00f3n de un archivo",
-                "send":"enviar",
-                "cancel":"cancelar"
+                "send":"Mandar",
+                "cancel":"anular"
             },
             "profile":{
-                "way1":"bienvenida",
+                "way1":"Recepci\u00f3n",
                 "way2":"Mi cuenta",
                 "title":"Mi cuenta",
                 "password":{
@@ -941,7 +970,7 @@
                     "confirm_pwd":{
                         "confirm":{
                             "lbl":"Confirmar nueva contrase\u00f1a",
-                            "help":"La confirmaci\u00f3n de la nueva contrase\u00f1a"
+                            "help":"Confirmar su nueva contrase\u00f1a"
                         }
                     },
                     "button1":"cambio"
@@ -949,13 +978,13 @@
                 "form2":{
                     "name":{
                         "name":{
-                            "lbl":"nombre",
+                            "lbl":"Appellido",
                             "help":"Su nombre"
                         }
                     },
                     "fname":{
                         "fname":{
-                            "lbl":"primer nombre",
+                            "lbl":"Nombre de pila",
                             "help":"Vuestro nombre"
                         }
                     },
@@ -967,7 +996,7 @@
                     },
                     "phone":{
                         "phone":{
-                            "lbl":"tel\u00e9fono",
+                            "lbl":"Tel\u00e9fono",
                             "help":"Su n\u00famero de tel\u00e9fono"
                         }
                     },
@@ -980,7 +1009,7 @@
                     "zip_code":{
                         "zip":{
                             "lbl":"C\u00f3digo postal",
-                            "help":"su C\u00f3digo Postal"
+                            "help":"Su C\u00f3digo Postal"
                         }
                     },
                     "city":{
@@ -997,12 +1026,12 @@
                     },
                     "language":{
                         "language":{
-                            "lbl":"idioma",
+                            "lbl":"Lengua",
                             "help":"su idioma"
                         }
                     },
                     "button_modify":"cambio",
-                    "button_back":"retorno"
+                    "button_back":"regreso"
                 }
             }
         },
@@ -1011,55 +1040,55 @@
             "name":"mensajes",
             "inbox":"Bandeja de entrada",
             "newmessage":"Mensaje nuevo",
-            "recieved":"recibido",
+            "recieved":"ingresos",
             "sent":"enviado",
             "deleted":"suprimido",
-            "answer":"respuesta",
+            "answer":"Responder",
             "print":"impresi\u00f3n",
-            "delete":"eliminar"
+            "delete":"Quitar"
         },
         "inbox":{
             "chemin1":"general",
             "name":"mensajes",
             "inbox":"Bandeja de entrada",
             "newmessage":"Mensaje nuevo",
-            "recieved":"recibido",
+            "recieved":"ingresos",
             "sent":"enviado",
             "deleted":"suprimido",
             "select":"seleccionar",
-            "all":"todos",
+            "all":"Todo",
             "none":"no",
             "read":"leer",
             "noread":"no le\u00eddo",
             "actions":"valores",
-            "answer":"respuesta",
+            "answer":"Responder",
             "markread":"Marcar como le\u00eddo",
             "marknoread":"Marcar como no le\u00eddo",
-            "deletemsg":"eliminar",
+            "deletemsg":"Quitar",
             "searchmsg":"b\u00fasqueda Mensaje"
         },
         "search":{
-            "chemin1":"bienvenida",
+            "chemin1":"Recepci\u00f3n",
             "name":"investigaci\u00f3n",
             "resutsearch":"Resultado de la b\u00fasqueda para:",
             "users":"usuarios:",
-            "students":"Los estudiantes",
-            "messages":"Publicaciones:",
+            "students":"estudiantes",
+            "messages":"mensajes:",
             "timeline":"l\u00ednea de tiempo:"
         },
         "timeline":{
-            "chemin1":"bienvenida",
+            "chemin1":"Recepci\u00f3n",
             "name":"hijo t\u00f3pica",
             "writemsg":"Expresarse!",
             "importfile":"La integraci\u00f3n de un archivo",
-            "changefile":"cambio",
-            "delete":"eliminar",
-            "cancel":"cancelar",
+            "changefile":"cambiar",
+            "delete":"Quitar",
+            "cancel":"anular",
             "post":"publicar"
         },
         "action_report":{
-            "chemin1":"bienvenida",
-            "name":"informe de existencias",
+            "chemin1":"Recepci\u00f3n",
+            "name":"Informe de acciones",
             "table":{
                 "titleID":"identificaci\u00f3n",
                 "nameuser":"usuario",
@@ -1072,7 +1101,7 @@
         "sidebar":{
             "stats_title":"estad\u00edsticas",
             "stats_progress":"La tasa de respuesta al cuestionario",
-            "stats_progress_description":"Percent_response {}% de los usuarios respondi\u00f3"
+            "stats_progress_description":"{percent_response}% de los usuarios respondi\u00f3"
         },
         "weather":{
             "today":"HOY",
@@ -1082,9 +1111,9 @@
             "from":"de"
         },
         "navbar":{
-            "hamburger_title":"Expandir/Contraer barra lateral",
+            "hamburger_title":"Expandir/contraer la barra lateral",
             "hamburger_title_2":"Mostrar/Ocultar barra lateral",
-            "search_form":"b\u00fasqueda",
+            "search_form":"Buscar",
             "updated_at":"actualizado",
             "account":"Mi cuenta",
             "inbox":"Bandeja de entrada",
@@ -1094,14 +1123,14 @@
             "deadline_lbl":"fecha butoire"
         },
         "edit_student":{
-            "name-lbl":"nombre",
-            "fname-lbl":"primer nombre",
+            "name-lbl":"Appellido",
+            "fname-lbl":"Nombre de pila",
             "email-lbl":"e-mail",
             "te-lbl":"tutor de la empresa",
-            "ti-lbl":"tutor IUT",
+            "ti-lbl":"IUT tutor",
             "group-lbl":"grupo",
             "birth-date-lbl":"Fecha de nacimiento",
-            "phone-lbl":"tel\u00e9fono",
+            "phone-lbl":"Tel\u00e9fono",
             "address-lbl":"direcci\u00f3n",
             "zip-code-lbl":"C\u00f3digo postal",
             "city-lbl":"ciudad",
@@ -1111,14 +1140,14 @@
             "help":"Esta informaci\u00f3n se puede cambiar m\u00e1s adelante"
         },
         "add_student":{
-            "name-lbl":"nombre",
-            "fname-lbl":"primer nombre",
+            "name-lbl":"Appellido",
+            "fname-lbl":"Nombre de pila",
             "email-lbl":"e-mail",
             "te-lbl":"tutor de la empresa",
-            "ti-lbl":"tutor IUT",
+            "ti-lbl":"IUT tutor",
             "group-lbl":"grupo",
             "birth-date-lbl":"Fecha de nacimiento",
-            "phone-lbl":"tel\u00e9fono",
+            "phone-lbl":"Tel\u00e9fono",
             "address-lbl":"direcci\u00f3n",
             "zip-code-lbl":"C\u00f3digo postal",
             "city-lbl":"ciudad",
@@ -1138,20 +1167,21 @@
         "survey_list_element":{
             "view":"consultar",
             "edit":"cambio",
-            "remove":"eliminar"
+            "remove":"Quitar",
+            "activate":"activar"
         },
         "parts":{
-            "see-survey":"V\u00e9ase la encuesta",
-            "answer-survey":"el cuestionario",
+            "see-survey":"Ver el cuestionario",
+            "answer-survey":"Completar el cuestionario",
             "refresh-te":"Relanzar el tutor de la empresa",
             "translate_btn":"Traducir este texto?",
-            "translate_btn_back":"Volver a la lengua original?",
+            "translate_btn_back":"Volver al idioma original?",
             "user_actions":{
                 "contact":"contacto",
                 "edit":"cambio",
-                "remove":"eliminar"
+                "remove":"Quitar"
             },
-            "btn_infos" : "Información"
+            "btn_infos":"info"
         },
         "answer_survey2":{
             "addComment":"Haga clic para a\u00f1adir un comentario",
@@ -1161,40 +1191,40 @@
             "title":"Enviar un informe de error",
             "object-lbl":"objeto",
             "message-lbl":"mensaje",
-            "close":"cancelar",
-            "send":"enviar",
+            "close":"anular",
+            "send":"Mandar",
             "message":"Nota Patch envi\u00f3!"
         },
         "edit_user":{
-            "name-lbl":"nombre",
-            "fname-lbl":"primer nombre",
+            "name-lbl":"Appellido",
+            "fname-lbl":"Nombre de pila",
             "email-lbl":"e-mail",
             "type-lbl":"Tipo de usuario",
             "group-lbl":"grupo",
             "birth-date-lbl":"Fecha de nacimiento",
-            "phone-lbl":"tel\u00e9fono",
+            "phone-lbl":"Tel\u00e9fono",
             "address-lbl":"direcci\u00f3n",
             "zip-code-lbl":"C\u00f3digo postal",
             "city-lbl":"ciudad",
             "country-lbl":"pa\u00eds",
-            "language-lbl":"idioma",
-            "publication-lbl":"Permitir a este usuario publicar art\u00edculos",
+            "language-lbl":"Lengua",
+            "publication-lbl":"Permitir que este usuario publicar art\u00edculos",
             "help":"Esta informaci\u00f3n se puede cambiar m\u00e1s adelante"
         },
         "add_user":{
-            "name-lbl":"nombre",
-            "fname-lbl":"primer nombre",
+            "name-lbl":"Appellido",
+            "fname-lbl":"Nombre de pila",
             "email-lbl":"e-mail",
             "type-lbl":"Tipo de usuario",
             "group-lbl":"grupo",
             "birth-date-lbl":"Fecha de nacimiento",
-            "phone-lbl":"tel\u00e9fono",
+            "phone-lbl":"Tel\u00e9fono",
             "address-lbl":"direcci\u00f3n",
             "zip-code-lbl":"C\u00f3digo postal",
             "city-lbl":"ciudad",
             "country-lbl":"pa\u00eds",
-            "language-lbl":"idioma",
-            "publication-lbl":"Permitir a este usuario publicar art\u00edculos",
+            "language-lbl":"Lengua",
+            "publication-lbl":"Permitir que este usuario publicar art\u00edculos",
             "help":"Esta informaci\u00f3n se puede cambiar m\u00e1s adelante"
         },
         "search":{
@@ -1206,8 +1236,8 @@
                 "from":"de"
             }
         },
-        "modal_infos" : {
-            "title" : "Ayudar"
+        "modal_infos":{
+            "title":"Ayuda"
         }
     }
 }

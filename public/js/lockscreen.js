@@ -26,7 +26,7 @@ $(function(){
             .done(function(datas){
                 datas = jQuery.parseJSON(datas);
                 if(datas.response)
-                    document.location.href= window.location.href;
+                    window.location.reload();
                 else
                 {
                     switch (Math.floor(datas.code/1000)){

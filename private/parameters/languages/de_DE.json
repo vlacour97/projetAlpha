@@ -22,7 +22,7 @@
             "month":[
                 "Januar",
                 "Februar",
-                "M\u00e4rz",
+                "Mars",
                 "April",
                 "Mai",
                 "Juni",
@@ -36,7 +36,7 @@
             "cut_month":[
                 "Januar",
                 "Februar",
-                "M\u00e4rz",
+                "Mars",
                 "April",
                 "Mai",
                 "Juni",
@@ -66,8 +66,8 @@
                 "s":"trocken"
             },
             "format":{
-                "short_form_date":"tt \/ mm \/ jjjj",
-                "long_form_date":"d MM JJJJ",
+                "short_form_date":"tt/mm/jjjj",
+                "long_form_date":"von MM yyyy",
                 "long_cut_date":"d M yyyy",
                 "short_time_form":"hh {h} mm",
                 "long_time_form":"hh: mm: ss",
@@ -79,7 +79,7 @@
             "general":{
                 "part1":{
                     "title":"Einfachheit",
-                    "content":"Mit unserer IT-L\u00f6sung bieten wir eine vereinfachte Management-Kurse sowohl f\u00fcr Gesch\u00e4ftsreisende als W\u00e4chter f\u00fcr die Schule Tutoren."
+                    "content":"Mit unserer IT-L\u00f6sung, bieten wir eine vereinfachte Management-Kurse sowohl f\u00fcr Gesch\u00e4ftsreisende als W\u00e4chter f\u00fcr Schullehrer."
                 },
                 "part2":{
                     "title":"Wirksamkeit",
@@ -87,23 +87,23 @@
                 },
                 "part3":{
                     "title":"Ergonomie",
-                    "content":"Mit einer Web-L\u00f6sung, die alle Ger\u00e4te unterst\u00fctzt, schlagen wir eine neue praktische und intuitive Methode Praktika f\u00fcr die Verwaltung."
+                    "content":"Mit einer Web-basierten L\u00f6sung, die alle Ger\u00e4te unterst\u00fctzt, bieten wir eine neue bequeme und intuitive Methode Praktika f\u00fcr die Verwaltung."
                 }
             },
             "activation":{
-                "subject":"Fordern Sie Ihr Kontoaktivierung",
+                "subject":"Fordern Sie Ihre Kontoaktivierung",
                 "title":"Ihr Konto ist fertig!",
-                "content":"Ihr Benutzerkonto erstellt! Sie k\u00f6nnen mit ihm in einem Moment starten, aber zuerst m\u00fcssen Sie nur Ihre Anmeldung best\u00e4tigen und Ihre Registrierung abzuschlie\u00dfen, indem Sie den folgenden Link klicken.",
+                "content":"Ihr Benutzerkonto erstellt! Sie k\u00f6nnen mit ihm in einem Moment starten, aber zuerst bitte Ihre Anmeldung best\u00e4tigen und Ihre pers\u00f6nlichen Daten vervollst\u00e4ndigen, indem Sie den folgenden Link klicken.",
                 "button_text":"Anmeldebest\u00e4tigung"
             },
             "confirmation":{
-                "subject":"Best\u00e4tigung der Aktivierung Ihres Kontos",
+                "subject":"Best\u00e4tigen Sie die Aktivierung Ihres Kontos",
                 "title":"Kontoerstellung aktiviert!",
-                "content":"Herzlichen Gl\u00fcckwunsch! Ihr Konto zu erstellen, wird best\u00e4tigt, k\u00f6nnen Sie sich nun einloggen!",
+                "content":"Herzlichen Gl\u00fcckwunsch! Erstellen Ihres Kontos best\u00e4tigt wird, k\u00f6nnen Sie sich nun einloggen!",
                 "button_text":"Login"
             },
             "delete":{
-                "subject":"Die Deaktivierung Ihres Kontos",
+                "subject":"Deaktivieren Sie Ihr Konto",
                 "title":"Ihr Konto wurde gel\u00f6scht",
                 "content":"Gestion-stage.eu Ihr Konto wurde gel\u00f6scht. Weitere Informationen erhalten Sie vom Administrator."
             },
@@ -115,24 +115,30 @@
             "question":{
                 "subject":"Ein Fragebogen anfordern Ihre Aufmerksamkeit",
                 "title":"Ein Fragebogen anfordern Ihre Aufmerksamkeit",
-                "content":"Neue Frageb\u00f6gen zur Verf\u00fcgung stehen, k\u00f6nnen Sie es ab sofort zugreifen k\u00f6nnen.",
-                "button_text":"Der Fragebogen"
+                "content":"Neue Umfragen sind verf\u00fcgbar, k\u00f6nnen Sie es ab sofort zugreifen k\u00f6nnen.",
+                "button_text":"Ausf\u00fcllen des Fragebogens"
+            },
+            "update_survey_notification":{
+                "subject":"WICHTIG: F\u00fcllen Frageb\u00f6gen",
+                "title":"Frageb\u00f6gen wurden aktualisiert ...",
+                "content":"Unser Fragebogen wurde aktualisiert, wenn Sie bereits eine oder Frageb\u00f6gen mehr abgeschlossen hatten, haben Sie die <br> f\u00fcr das Verst\u00e4ndnis Danke aufzuf\u00fcllen",
+                "button_text":"Antworten auf meine Frageb\u00f6gen"
             },
             "reactivation":{
                 "subject":"Ihr Konto wurde wieder in Betrieb genommen!",
                 "title":"Ihr Konto wurde wieder in Betrieb genommen!",
-                "content":"Herzlichen Gl\u00fcckwunsch! Auch hier k\u00f6nnen Sie in Ihrem Konto anmelden {} app_html_link!",
+                "content":"Herzlichen Gl\u00fcckwunsch! Auch hier k\u00f6nnen Sie in Ihrem Konto anmelden {app_html_link} !",
                 "button_text":"Login"
             },
             "reponse_question":{
                 "subject":"Validierten Fragebogens!",
-                "title":"Ihr Fragebogen wurde validiert!",
+                "title":"Ihr Fragebogen wurde best\u00e4tigt!",
                 "content":"Einer Ihrer Fragebogen wurde von der Tutor Schule best\u00e4tigt."
             },
             "forgotten_password":{
                 "subject":"Passwort vergessen?",
                 "title":"\u00c4ndern Sie Ihr Passwort",
-                "content":"Haben Sie Ihr Passwort ein und haben f\u00fcr die \u00c4nderung eine Anfrage. Alles geschieht auf diese Schaltfl\u00e4che, indem Sie auf!",
+                "content":"Haben Sie Ihr Passwort ein und hat eine Anfrage zu \u00e4ndern. Alles geschieht auf diese Schaltfl\u00e4che, indem Sie auf!",
                 "button_text":"Passwort \u00e4ndern"
             }
         },
@@ -148,7 +154,7 @@
                 }
             },
             "ti":{
-                "name":"IUT Tutor",
+                "name":"Tutor IUT",
                 "type":"3",
                 "attr":{
                     "name":"Name",
@@ -171,40 +177,44 @@
         },
         "notifications":{
             "add_post":{
-                "value":"{} Name_user ver\u00f6ffentlichte eine zug\u00e4ngliche Artikel auf Ihrer Timeline",
-                "icon" : "fa fa-globe"
+                "value":"/ Name_user ver\u00f6ffentlichte einen zug\u00e4nglichen Artikel auf Ihrer Timeline",
+                "icon":"fa-fa Globus"
             },
             "comment_post":{
-                "value":"Name_publisher {} auf Ver\u00f6ffentlichung kommentiert",
-                "icon" : "fa fa-comment"
+                "value":"{name_publisher} auf Ver\u00f6ffentlichung kommentiert",
+                "icon":"fa fa-how"
             },
             "like_post":{
-                "value":"Name_user {} mochte Ihre Publikation",
-                "icon" : "fa fa-thumbs-up"
+                "value":"{name_user} mochte Ihre Publikation",
+                "icon":"fa fa-Daumen-up"
             },
             "wait_survey":{
                 "value":"Sie haben eine anh\u00e4ngige Quiz",
-                "icon" : "fa fa-clock-o"
+                "icon":"fa fa-o-Uhr"
             },
             "complete_survey":{
                 "value":"Einer Ihrer Frageb\u00f6gen wurden ausgef\u00fcllt",
-                "icon" : "fa fa-check"
+                "icon":"fa-fa-Check"
             },
             "validate_survey":{
                 "value":"Einer Ihrer Fragebogen wurde validiert",
-                "icon" : "fa fa-check"
+                "icon":"fa-fa-Check"
             },
             "autorised_publication":{
-                "value":"Sie sind berechtigt, zu ver\u00f6ffentlichen",
-                "icon" : "fa fa-bullhorn "
+                "value":"Sie sind berechtigt, ver\u00f6ffentlichen",
+                "icon":"fa-fa Megafon"
+            },
+            "update_survey":{
+                "value":"Die Frageb\u00f6gen wurden aktualisiert und Antworten auf gel\u00f6scht questionnairex",
+                "icon":"fa fa-Ausrufungs-Delta"
             }
         },
         "weather":{
-            "clearSky":"klaren Himmel",
+            "clearSky":"klarer Himmel",
             "fewClouds":"Ein paar Wolken",
             "scatteredCloud":"Aufgelockert bew\u00f6lkt",
-            "brokenClouds":"bew\u00f6lkt",
-            "showerRain":"Dichtes regen",
+            "brokenClouds":"tr\u00fcb",
+            "showerRain":"dichtes regen",
             "rain":"regen",
             "thunderstorm":"Sturm",
             "snow":"Schnee",
@@ -213,9 +223,9 @@
         "PDF":{
             "StudentList":{
                 "ID":"Identifikation",
-                "student_name":"Sch\u00fclernamen",
+                "student_name":"Sch\u00fclername",
                 "TI_name":"Firmenname W\u00e4chter",
-                "TE_name":"Tutor Name IUT",
+                "TE_name":"Name des Tutor IUT",
                 "group":"Gruppe",
                 "mark":"Notiz"
             },
@@ -224,46 +234,91 @@
                 "email_lbl":"E-Mail",
                 "phone_lbl":"Telefon",
                 "TE_lbl":"Tutor Unternehmen",
-                "TI_lbl":"IUT Tutor",
+                "TI_lbl":"Tutor IUT",
                 "answer_lbl":"Frage Nummer",
                 "mark_lbl":"Notiz",
                 "total_lbl":"gesamt"
             }
         },
         "exceptions":{
-            "1001":"Anmeldung fehlgeschlagen: Kein Zugriff f\u00fcr Benutzer \"$ user\"",
-            "1002":"Fehler bei der Anmeldung: Unbekannt Datenbanken",
-            "1003":"Anmeldung fehlgeschlagen: Unbekannter Host",
-            "2001":"Verbindung fehlgeschlagen:",
-            "2002":"Fehlerbeseitigung",
-            "2020":"Falsches Passwort",
-            "2040":"Bitte stimmen Sie den Gesch\u00e4ftsbedingungen des Vertrages"
+            "1001":"Anmeldung fehlgeschlagen: Kein Zugriff f\u00fcr Benutzer \u201e$ user\u201c",
+            "1002":"Verbindung fehlgeschlagen: Unknown-Datenbanken",
+            "1003":"Verbindung fehlgeschlagen: Unbekannter Host",
+            "1004":"Anmeldung fehlgeschlagen: Keine Login-Daten",
+            "1005":"Verbindung fehlgeschlagen:",
+            "1006":"Bitte keinen Raum in dem Pr\u00e4fix einf\u00fcgen!",
+            "1007":"Die Datei wurde nicht gefunden",
+            "1008":"Fehler beim Importieren von Daten",
+            "1020":"Der Benutzer angefordert nicht vorhanden",
+            "1021":"Fehleraufzeichnung",
+            "1022":"Fehler Benutzer-Login",
+            "1023":"Fehlerbehebungs ID",
+            "1060":"Fehler auf dem Variablentyp",
+            "1090":"das Vorhandensein von E-Mail f\u00fcr IUT und Erziehungsberechtigte Gesellschaft fordert ein Student das Hinzuf\u00fcgen und den Namen und den Namen des Teilnehmers",
+            "1110":"Fehler beim Import von CSV-Datei",
+            "2001":"Fehler beim Abrufen der Daten",
+            "2002":"Fehler: ung\u00fcltiges Datenformat",
+            "2010":"Fehler Anwendungskonfiguration",
+            "2020":"Der Benutzer angefordert nicht vorhanden",
+            "2021":"Falsches Passwort",
+            "2022":"E-Mail oder Passwort falsch!",
+            "2030":"verschiedene Passw\u00f6rter",
+            "2031":"\u00dcberpr\u00fcfung des Passworts ist nicht identisch mit dem Passwort",
+            "2032":"Bitte geben Sie ein l\u00e4ngeres Passwort",
+            "2033":"Bitte f\u00fcllen Sie alle erforderlichen Felder aus",
+            "2034":"ung\u00fcltige E-Mail-Adresse",
+            "2035":"Mail-Adresse bereits verwendet",
+            "2036":"Typ ung\u00fcltige Benutzer",
+            "2037":"Bitte akzeptieren Sie die Allgemeinen Gesch\u00e4ftsbedingungen des Vertrages",
+            "2040":"Bitte aktivieren Sie Ihr Konto, \u00fcberpr\u00fcfen Sie Ihre E-Mails",
+            "2050":"Die Liebe ist nicht abgeschlossen",
+            "2060":"Fehlertyp des Datums",
+            "2070":"Fehler Ihre Nachricht zu senden",
+            "2071":"Fehler beim Senden der Anh\u00e4nge",
+            "2072":"Fehleraufzeichnung",
+            "2073":"Fehler bei der Befestigung an der Datenbank zu entfernen: No ID $",
+            "2074":"Fehler beim Entfernen Befestigung: Nein ID $",
+            "2075":"Fehler beim Hinzuf\u00fcgen der Ver\u00f6ffentlichung",
+            "2090":"Der Student beantragt existiert nicht",
+            "2091":"Fehlersuche Studenten",
+            "2092":"Fehler beim Hinzuf\u00fcgen der Sch\u00fcler",
+            "2093":"Fehler Student \u00c4nderungen",
+            "2094":"Fehlerunterdr\u00fcckung von Studenten",
+            "2100":"Nicht imstande, auf diese Nachricht zu reagieren,",
+            "2101":"Sie haben nicht das Recht, diese Nachricht zu senden!",
+            "2110":"Die Datei ist nicht CSV",
+            "2120":"Fehler beim Abrufen des Wetter",
+            "3001":"Der Benutzer ist bereits aktiviert",
+            "3002":"Keine Ergebnisse f\u00fcr: $ search",
+            "3003":"Kann nicht l\u00f6schen: Es muss mindestens ein aktives Administrator-Konto sein",
+            "3004":"Kein API-Schl\u00fcssel Openweathermap",
+            "3005":"Sie haben die Erlaubnis, diese Aktion auszuf\u00fchren"
         },
         "user_type":[
             "Verwalter",
             "Tutor Unternehmen",
-            "IUT Tutor"
+            "Tutor IUT"
         ],
         "page_name":{
-            "home":"Willkommen",
-            "message":"Nachrichten <span class=\"label label-danger nbMessage\">{nb_message}</span>",
+            "home":"willkommen",
+            "message":"Nachrichten <span class = \"label-safe-Label nbMessage\"> {nb_message} </span>",
             "students":"Studenten",
             "students/student_list":"Liste der Studenten",
-            "students/student_score":"Student Ergebnis",
+            "students/student_score":"Studenten f\u00fchren",
             "students/student_score_pdf":"Liste der Partituren in PDF",
             "students/survey":"Ergebnis des Fragebogens",
             "students/survey_pdf":"Fragebogen-Ergebnisse in PDF",
             "survey":"Frageb\u00f6gen",
-            "survey/create_survey":"Erstellen Sie ein Quiz",
+            "survey/create_survey":"Erstellen eines Fragebogens",
             "survey/survey_show":"Anzeigen einer Umfrage",
             "survey/survey_list":"Frageb\u00f6gen Erstellt",
             "user":"Benutzer",
             "user/user_list":"Benutzerliste",
             "student_list":"Liste der Studenten",
             "see_survey":"Beratung Fragebogen",
-            "answer_survey":"Der Fragebogen",
+            "answer_survey":"Ausf\u00fcllen des Fragebogens",
             "profile":"mein Konto",
-            "manage_API":"Management-API"
+            "manage_API":"Management API"
         },
         "boolChose":[
             "nicht",
@@ -281,26 +336,26 @@
             },
             "step1":{
                 "title":"Datenbank:",
-                "infos":"Bitte f\u00fcllen Sie die Informationen \u00fcber Ihre Datenbank",
+                "infos":"Bitte geben Sie die Informationen \u00fcber Ihre Datenbank",
                 "form":{
                     "host":{
                         "lbl":"Gastgeber"
                     },
                     "dbname":{
-                        "lbl":"Name der Datenbank",
-                        "help":"Der Name der Datenbank, in der Sie-Management-B\u00fchne installiert werden soll"
+                        "lbl":"Der Name der Datenbank",
+                        "help":"Der Name der Datenbank, in der Sie-Management-Stufe installiert werden soll"
                     },
                     "login":{
                         "lbl":"Login",
-                        "help":"Die Kennung f\u00fcr Ihr Zeichen auf der MySQL-Datenbank"
+                        "help":"Die Kennung f\u00fcr Ihren Anschluss auf der MySQL-Datenbank"
                     },
                     "pwd":{
                         "lbl":"Kennwort",
-                        "help":"... Und MySQL Passwort"
+                        "help":"... und MySQL Passwort"
                     },
                     "prefix":{
                         "lbl":"Tabelle Pr\u00e4fix",
-                        "help":"Wenn Sie mehrere Website-Stage Management in der gleichen Datenbank installieren m\u00f6chten, \u00e4ndern Sie dieses Feld."
+                        "help":"Wenn Sie mehr Website-Stage Management in der gleichen Datenbank installieren m\u00f6gen, \u00e4ndern Sie dieses Feld."
                     }
                 },
                 "buttons":{
@@ -310,12 +365,12 @@
             "step2":{
                 "form":{
                     "siteName":{
-                        "lbl":"Site-Name",
-                        "help":"Es wird in den Suchmaschinen erscheinen"
+                        "lbl":"Site Name",
+                        "help":"Es wird auf Suchmaschinen erscheinen"
                     },
                     "describe":{
-                        "lbl":"Beschreibung der Website",
-                        "help":"Sie wird in den Suchmaschinen erscheinen"
+                        "lbl":"Site-Beschreibung",
+                        "help":"Es wird auf Suchmaschinen erscheinen"
                     },
                     "keywords":{
                         "lbl":"Keyword-Site",
@@ -326,7 +381,7 @@
                     },
                     "managerEmail":{
                         "lbl":"Wartung E-Mail",
-                        "help":"Es ist auf diese E-Mail werden wir Sie kontaktieren f\u00fcr Wartung vor Ort"
+                        "help":"Es ist auf dieser E-Mail wir Sie Wartung vor Ort kontaktieren"
                     },
                     "deathdate":{
                         "lbl":"Datum Butoire Frageb\u00f6gen",
@@ -334,7 +389,7 @@
                     },
                     "APIKey":{
                         "lbl":"API-Schl\u00fcssel Openweathermap",
-                        "help":"F\u00fcr Wetterinformationen, registrieren Sie sich bitte an <a target=\"_blank\"> href = \"http://openweathermap.org/\" http://openweathermap.org/ </a> f\u00fcr einen API-Schl\u00fcssel"
+                        "help":"F\u00fcr Wetterinformationen, registrieren Sie sich bitte an <a target=\"_blank\"> href = \"http://openweathermap.org/\" http://openweathermap.org/</a> f\u00fcr einen API-Schl\u00fcssel"
                     }
                 }
             },
@@ -342,11 +397,11 @@
                 "form":{
                     "name":{
                         "lbl":"Name",
-                        "help":"Ihren Namen"
+                        "help":"Ihr Name"
                     },
                     "fname":{
                         "lbl":"Vorname",
-                        "help":"Ihren Namen"
+                        "help":"Ihr Name"
                     },
                     "email":{
                         "lbl":"E-Mail",
@@ -384,12 +439,12 @@
                         "lbl":"Sprache",
                         "help":"Ihre Sprache"
                     },
-                    "help":"Solche Informationen k\u00f6nnen sich nach dem Erstellen des Kontos ge\u00e4ndert werden"
+                    "help":"Solche Informationen k\u00f6nnen nach der Kontoerstellung ge\u00e4ndert werden"
                 }
             },
             "step4":{
                 "title":"Fertigstellung:",
-                "infos":"Wenn Sie auf \"Fertig stellen\" klicken, wird ein vorgef\u00fcllten Fragebogen werden installiert und die G\u00e4ste in Ihr Praktikum Management Sytem angemeldet"
+                "infos":"Wenn Sie auf \u201eFertig stellen\u201c klicken, wird ein vorgef\u00fcllten Fragebogen werden k\u00f6nnen, um Ihr Praktikum Management Sytem installiert und angeschlossen"
             },
             "previous":"fr\u00fcher",
             "next":"folgende",
@@ -397,11 +452,11 @@
             "script":{
                 "DB_connect":{
                     "success":"Anmeldung erfolgreich",
-                    "fail":"Kann nicht zur Datenbank verbinden"
+                    "fail":"Kann nicht Datenbank verbinden"
                 }
             },
             "site-year":"2016",
-            "site-name":"Alpha-Projekt",
+            "site-name":"Projekt-Alpha",
             "site-copyright":"Management-Alpha"
         },
         "login":{
@@ -416,14 +471,14 @@
             "name":"Login",
             "pwdLbl":"Kennwort",
             "btnConnection":"einloggen",
-            "otherClient":"Du bist nicht {username}?"
+            "otherClient":"Sie sind nicht {username}?"
         },
         "forbPassword":{
             "name":"Passwort vergessen",
             "description":"Bitte geben Sie Ihren Benutzernamen",
             "emailLbl":"Ihre E-Mail",
             "btnSubmit":"best\u00e4tigen",
-            "returnLink":"Zur\u00fcck zur Login-Seite",
+            "returnLink":"Zur\u00fcck zum Login-Seite",
             "successMessage":"Eine E-Mail nur an Sie gesendet werden, Ihr Passwort zu \u00e4ndern, m\u00fcssen Sie <b> umgeleitet in K\u00fcrze </b>"
         },
         "forbPassword_part2":{
@@ -478,19 +533,25 @@
                 "language":{
                     "lbl":"Sprache"
                 },
-                "accept_terms_and_conditions":"Ich habe die Nutzungsbedingungen gelesen und akzeptiert"
+                "accept_terms_and_conditions":"Ich habe gelesen und akzeptiere die Nutzungsbedingungen von"
             }
         },
         "dashboard":{
             "previous":"Willkommen",
             "name":"Armaturenbrett",
             "lbl_connections":"Anzahl der Anschl\u00fcsse",
-            "alternative_map":"Fehler Karte anzeigen",
+            "alternative_map":"Fehler Kartenanzeige",
             "evolution_title":"Ver\u00e4nderung der Anzahl der <span class = \"fw-semi-bold\"> Verbindungen </span> <span class = \"fw-semi-bold\"> Benutzer </span>",
             "expand":"erweitern",
             "collapse":"reduzieren",
             "responses_rate":"Rate <span class = \"fw-semi-bold\"> Antworten </span>",
-            "responses_rate_description":"Response-Rate der Verteilung der Frageb\u00f6gen"
+            "responses_rate_description":"Ansprechrate der Verteilung der Frageb\u00f6gen",
+            "widget" : {
+                "empty" : "Vakuumen Fragebögen",
+                "finish" : "Fragebögen Gefüllt",
+                "validate" : "Validierten Fragebögen",
+                "nbConnection" : "Anzahl der Anschlüsse"
+            }
         },
         "admin_studentList":{
             "previous":"Willkommen",
@@ -499,15 +560,15 @@
             "btnDelete":"entfernen",
             "table":{
                 "id":"Identifikation",
-                "student_name":"Name / Vorname",
-                "TI":"IUT Tutor",
+                "student_name":"Name/Vorname",
+                "TI":"Tutor IUT",
                 "TE":"Tutor Unternehmen",
                 "actions":"Lager"
             },
             "modal-add":{
                 "title":"In Studenten",
                 "step1":{
-                    "title":"Anf\u00fcgen",
+                    "title":"Verfahren des Zugebens",
                     "choice1":"CSV-Datei importieren",
                     "choice2":"In Studenten"
                 },
@@ -515,7 +576,7 @@
                     "title":"Hinzuf\u00fcgen von Daten"
                 },
                 "step3":{
-                    "title":"Die Finalisierung",
+                    "title":"Abschluss",
                     "success":"Der Student wurde erfolgreich hinzugef\u00fcgt!"
                 },
                 "btnPrevious":"fr\u00fcher",
@@ -530,7 +591,7 @@
             },
             "modal-delete":{
                 "title":"Unterdr\u00fcckung",
-                "message":"Wollen Sie wirklich diesen Benutzer zu l\u00f6schen?",
+                "message":"Wollen Sie wirklich diesen Benutzer l\u00f6schen?",
                 "btnDelete":"entfernen",
                 "btnAbord":"stornieren"
             },
@@ -546,7 +607,7 @@
             "previous":"Studenten",
             "name":"Ergebnisse",
             "students":"Studenten",
-            "btn-student-list":"Rufen Sie die Liste der Studenten",
+            "btn-student-list":"Zugriff auf die Liste der Studenten",
             "btn-generate-pdf":"Generieren Sie eine PDF-Liste",
             "table":{
                 "attr1":"Identifikation",
@@ -565,10 +626,10 @@
         "survey_read":{
             "previous":"Studenten",
             "name":"Fragebogen",
-            "btn-generate-pdf":"Generieren Sie eine PDF",
+            "btn-generate-pdf":"PDF generieren",
             "infos":{
                 "part1":"Student",
-                "part2":"IUT Tutor",
+                "part2":"Tutor IUT",
                 "part3":"Tutor Unternehmen"
             },
             "table":{
@@ -595,12 +656,12 @@
             "save":"Rekord",
             "modal_save":{
                 "title":"Speichern Sie einen Fragebogen",
-                "input_placeholder":"Fragebogen-Name",
+                "input_placeholder":"Liebe-Namen",
                 "save":"Rekord",
                 "abort":"stornieren"
             },
             "error":{
-                "empty_questions":"Bitte f\u00fcllen Sie alle Felder Antworten",
+                "empty_questions":"Bitte f\u00fcllen Sie alle Felder und beantwortet Fragen",
                 "empty_name":"Bitte geben Sie den Namen des Fragebogens"
             }
         },
@@ -615,29 +676,41 @@
             "name":"Frageb\u00f6gen",
             "table":{
                 "titleID":"Identifikation",
-                "titleSurvey":"Name Fragebogen",
-                "titleDate":"Erstellungsdatum",
+                "titleSurvey":"nennen Fragebogen",
+                "titleCreationDate":"Erstellungsdatum",
+                "titleModificationDate":"\u00c4nderungsdatum",
                 "status":"Status",
                 "titleAction":"Lager"
+            },
+            "modal-activate":{
+                "title":"\u00e4ndern Fragebogen",
+                "description":"Die Teilnehmer verwenden den aktuellen Fragebogen haben Sie ihren Fragebogen entfernen oder den neuen Fragebogen an zuk\u00fcnftige Studenten auswirken?",
+                "btnNext":"Weisen Sie diesen Fragebogen an zuk\u00fcnftige Studenten",
+                "btnDelete":"L\u00f6schen f\u00fcllten Frageb\u00f6gen"
+            },
+            "error":{
+                "deleteAnswer":"Fehler beim L\u00f6schen der Frageb\u00f6gen",
+                "updateSurvey":"Fehler Fragebogen \u00e4ndern",
+                "checkAvailability":"Fehlerpr\u00fcfung Fragebogen \u00e4ndern"
             }
         },
         "admin_userList":{
             "chemin1":"Management",
             "name":"Benutzer",
             "checkTE":"Tutor Unternehmen",
-            "checkTI":"IUT Tutor",
+            "checkTI":"Tutor IUT",
             "checkAdmin":"Verwalter",
             "delete":"entfernen",
             "table":{
                 "titleID":"Identifikation",
-                "nameuser":"Name / Vorname",
+                "nameuser":"Name/Vorname",
                 "statutuser":"Status",
                 "actionuser":"Aktion"
             },
             "modal-add":{
                 "title":"Benutzer hinzuf\u00fcgen",
                 "step1":{
-                    "title":"Anf\u00fcgen",
+                    "title":"Verfahren des Zugebens",
                     "choice1":"CSV-Datei importieren",
                     "choice2":"Benutzer hinzuf\u00fcgen"
                 },
@@ -645,7 +718,7 @@
                     "title":"Hinzuf\u00fcgen von Daten"
                 },
                 "step3":{
-                    "title":"Die Finalisierung",
+                    "title":"Abschluss",
                     "success":"Der Benutzer wurde erfolgreich hinzugef\u00fcgt!"
                 },
                 "btnPrevious":"fr\u00fcher",
@@ -660,7 +733,7 @@
             },
             "modal-delete":{
                 "title":"Unterdr\u00fcckung",
-                "message":"Wollen Sie wirklich diesen Benutzer zu l\u00f6schen?",
+                "message":"Wollen Sie wirklich diesen Benutzer l\u00f6schen?",
                 "btnDelete":"entfernen",
                 "btnAbord":"stornieren"
             },
@@ -677,8 +750,8 @@
             "name":"Frageb\u00f6gen",
             "table":{
                 "titleID":"Identifikation",
-                "titleEtud":"Sch\u00fclernamen",
-                "titleTut":"Tutor Name IUT",
+                "titleEtud":"Sch\u00fclername",
+                "titleTut":"Name des Tutor IUT",
                 "titleStatut":"Zustand",
                 "titleDate":"Datum Butoire",
                 "titleAction":"Aktion"
@@ -693,7 +766,7 @@
             "name":"Fragebogen",
             "tab":{
                 "tabstudent":"Student",
-                "tabTI":"IUT Tutor"
+                "tabTI":"Tutor IUT"
             },
             "numQuestion":"Frage Nummer",
             "cancel":"R\u00fcckkehr"
@@ -703,17 +776,17 @@
             "name":"Fragebogen",
             "tab":{
                 "tabstudent":"Student",
-                "tabTI":"IUT Tutor"
+                "tabTI":"Tutor IUT"
             },
             "modal-send":{
                 "title":"Best\u00e4tigung",
-                "description":"Sind Sie sicher, dass Sie diese Frage an den IUT Tutor zu schicken?",
+                "description":"Sind Sie sicher, dass Sie diese Frage an den IUT Tutor schicken?",
                 "btnSend":"ja",
                 "btnAbort":"nicht"
             },
             "messages":{
-                "saveSuccess":"Fragebogen wurden erfolgreich gespeichert!",
-                "completeSurvey":"Bitte f\u00fcllen Sie Ihren Fragebogen vollst\u00e4ndig dem IUT Tutor zu schicken"
+                "saveSuccess":"Frageb\u00f6gen wurden erfolgreich gespeichert!",
+                "completeSurvey":"Bitte f\u00fcllen vollst\u00e4ndig Ihren Fragebogen an die IUT Tutor zu schicken"
             },
             "nb-question":"Anzahl der Fragen",
             "btnsave":"Rekord",
@@ -724,8 +797,8 @@
             "name":"Fragebogen",
             "table":{
                 "titleID":"Identifikation",
-                "titleEtud":"Sch\u00fclernamen",
-                "titleTut":"Tutor Name IUT",
+                "titleEtud":"Sch\u00fclername",
+                "titleTut":"Name des Tutor IUT",
                 "titleStatut":"Zustand",
                 "titleDate":"Datum Butoire",
                 "titleAction":"Aktion"
@@ -735,7 +808,7 @@
                 "user":"Tutor Unternehmen"
             },
             "message":{
-                "refreshSuccess":"Stimulus geschickt in der N\u00e4he der Firma Tutor"
+                "refreshSuccess":"Recovery geschickt in der N\u00e4he der Firma Tutor"
             }
         },
         "ti_see_survey":{
@@ -772,7 +845,7 @@
             "name":"mein Konto",
             "form1":{
                 "pwd":{
-                    "lbl":"Neues Passwort",
+                    "lbl":"neues Passwort",
                     "help":"Ihr neues Passwort"
                 },
                 "confirm":{
@@ -784,11 +857,11 @@
             "form2":{
                 "name":{
                     "lbl":"Name",
-                    "help":"Ihren Namen"
+                    "help":"Ihr Name"
                 },
                 "fname":{
                     "lbl":"Vorname",
-                    "help":"Ihren Namen"
+                    "help":"Ihr Name"
                 },
                 "mail":{
                     "lbl":"E-Mail",
@@ -812,7 +885,7 @@
                 },
                 "country":{
                     "lbl":"Land",
-                    "help":"Ihre aktuellen Land"
+                    "help":"Ihr aktuelles Land"
                 },
                 "language":{
                     "lbl":"Sprache",
@@ -828,16 +901,16 @@
         },
         "manage_API":{
             "previous":"Willkommen",
-            "name":"Management-API",
-            "title" : "Ändern Sie diese Felder Ihre API neu zu konfigurieren:",
+            "name":"Management API",
+            "title":"\u00c4ndern Sie diese Felder Ihre API neu zu konfigurieren:",
             "form":{
                 "siteName":{
-                    "lbl":"Site-Name",
-                    "help":"Es wird in den Suchmaschinen erscheinen"
+                    "lbl":"Site Name",
+                    "help":"Es wird auf Suchmaschinen erscheinen"
                 },
                 "describe":{
-                    "lbl":"Beschreibung der Website",
-                    "help":"Sie wird in den Suchmaschinen erscheinen"
+                    "lbl":"Site-Beschreibung",
+                    "help":"Es wird auf Suchmaschinen erscheinen"
                 },
                 "keywords":{
                     "lbl":"Keyword-Site",
@@ -848,7 +921,7 @@
                 },
                 "managerEmail":{
                     "lbl":"Wartung E-Mail",
-                    "help":"Es ist auf diese E-Mail werden wir Sie kontaktieren f\u00fcr Wartung vor Ort"
+                    "help":"Es ist auf dieser E-Mail wir Sie Wartung vor Ort kontaktieren"
                 },
                 "deathdate":{
                     "lbl":"Datum Butoire Frageb\u00f6gen",
@@ -856,7 +929,7 @@
                 },
                 "APIKey":{
                     "lbl":"API-Schl\u00fcssel Openweathermap",
-                    "help":"F\u00fcr Wetterinformationen, registrieren Sie sich bitte an <a target=\"_blank\"> href = \"http://openweathermap.org/\" http://openweathermap.org/ </a> f\u00fcr einen API-Schl\u00fcssel"
+                    "help":"F\u00fcr Wetterinformationen, registrieren Sie sich bitte an <a target=\"_blank\"> href = \"http://openweathermap.org/\" http://openweathermap.org/</a> f\u00fcr einen API-Schl\u00fcssel"
                 }
             },
             "message":{
@@ -872,16 +945,16 @@
                 "title":"Nachrichten -",
                 "semi_bold":"Posteingang",
                 "button":"neue Nachricht",
-                "received":"erhalten",
+                "received":"Eink\u00fcnfte",
                 "sent":"geschickt",
                 "deleted":"gel\u00f6scht"
             },
             "message":{
                 "title":"komponieren",
                 "semi_bold":"neu",
-                "to":"To:",
+                "to":"an:",
                 "object":"Thema:",
-                "attach":"Die Integration einer Datei",
+                "attach":"Die Integration eine Datei",
                 "send":"senden",
                 "cancel":"stornieren"
             },
@@ -891,13 +964,13 @@
                 "title":"mein Konto",
                 "password":{
                     "pwd":{
-                        "lbl":"Neues Passwort",
+                        "lbl":"neues Passwort",
                         "help":"Ihr neues Passwort"
                     },
                     "confirm_pwd":{
                         "confirm":{
                             "lbl":"Neues Passwort best\u00e4tigen",
-                            "help":"Best\u00e4tigung des neuen Passworts"
+                            "help":"Best\u00e4tigen Sie Ihr neues Passwort"
                         }
                     },
                     "button1":"Ver\u00e4nderung"
@@ -906,13 +979,13 @@
                     "name":{
                         "name":{
                             "lbl":"Name",
-                            "help":"Ihren Namen"
+                            "help":"Ihr Name"
                         }
                     },
                     "fname":{
                         "fname":{
                             "lbl":"Vorname",
-                            "help":"Ihren Namen"
+                            "help":"Ihr Name"
                         }
                     },
                     "mail":{
@@ -967,7 +1040,7 @@
             "name":"Beitr\u00e4ge",
             "inbox":"Posteingang",
             "newmessage":"neue Nachricht",
-            "recieved":"erhalten",
+            "recieved":"Eink\u00fcnfte",
             "sent":"geschickt",
             "deleted":"gel\u00f6scht",
             "answer":"Antwort",
@@ -979,7 +1052,7 @@
             "name":"Beitr\u00e4ge",
             "inbox":"Posteingang",
             "newmessage":"neue Nachricht",
-            "recieved":"erhalten",
+            "recieved":"Eink\u00fcnfte",
             "sent":"geschickt",
             "deleted":"gel\u00f6scht",
             "select":"w\u00e4hlen",
@@ -997,7 +1070,7 @@
         "search":{
             "chemin1":"Willkommen",
             "name":"Forschung",
-            "resutsearch":"Suchergebnis f\u00fcr:",
+            "resutsearch":"Sucher f\u00fcr:",
             "users":"Benutzer:",
             "students":"Studenten",
             "messages":"Beitr\u00e4ge:",
@@ -1007,7 +1080,7 @@
             "chemin1":"Willkommen",
             "name":"Topical Sohn",
             "writemsg":"Express yourself!",
-            "importfile":"Die Integration einer Datei",
+            "importfile":"Die Integration eine Datei",
             "changefile":"Ver\u00e4nderung",
             "delete":"entfernen",
             "cancel":"stornieren",
@@ -1015,7 +1088,7 @@
         },
         "action_report":{
             "chemin1":"Willkommen",
-            "name":"Bestandsbericht",
+            "name":"Bericht von Aktien",
             "table":{
                 "titleID":"Identifikation",
                 "nameuser":"Benutzer",
@@ -1027,8 +1100,8 @@
     "components":{
         "sidebar":{
             "stats_title":"Statistiken",
-            "stats_progress":"Antworten auf den Fragebogen",
-            "stats_progress_description":"Percent_response {}% der Nutzer Fragen"
+            "stats_progress":"Ansprechrate auf den Fragebogen",
+            "stats_progress_description":"{percent_response}% der Nutzer Fragen"
         },
         "weather":{
             "today":"HEUTE",
@@ -1038,8 +1111,8 @@
             "from":"von"
         },
         "navbar":{
-            "hamburger_title":"Expand / Collapse Sidebar",
-            "hamburger_title_2":"Show / Hide Sidebar",
+            "hamburger_title":"Expand/collapse der Seitenleiste",
+            "hamburger_title_2":"Show/Hide Sidebar",
             "search_form":"Suche",
             "updated_at":"Aktualisiert",
             "account":"mein Konto",
@@ -1054,7 +1127,7 @@
             "fname-lbl":"Vorname",
             "email-lbl":"E-Mail",
             "te-lbl":"Tutor Unternehmen",
-            "ti-lbl":"IUT Tutor",
+            "ti-lbl":"Tutor IUT",
             "group-lbl":"Gruppe",
             "birth-date-lbl":"Geburtsdatum",
             "phone-lbl":"Telefon",
@@ -1071,7 +1144,8 @@
             "fname-lbl":"Vorname",
             "email-lbl":"E-Mail",
             "te-lbl":"Tutor Unternehmen",
-            "ti-lbl":"IUT Tutor",
+            "ti-lbl":"Tutor IUT",
+            "group-lbl":"Gruppe",
             "birth-date-lbl":"Geburtsdatum",
             "phone-lbl":"Telefon",
             "address-lbl":"Adresse",
@@ -1093,11 +1167,12 @@
         "survey_list_element":{
             "view":"konsultieren",
             "edit":"Ver\u00e4nderung",
-            "remove":"entfernen"
+            "remove":"entfernen",
+            "activate":"aktivieren"
         },
         "parts":{
-            "see-survey":"Siehe Umfrage",
-            "answer-survey":"Der Fragebogen",
+            "see-survey":"Sehen Sie den Fragebogen",
+            "answer-survey":"Ausf\u00fcllen des Fragebogens",
             "refresh-te":"Neubelebung der Firma Tutor",
             "translate_btn":"Diesen Text \u00fcbersetzen?",
             "translate_btn_back":"Zur\u00fcck zur urspr\u00fcnglichen Sprache?",
@@ -1106,7 +1181,7 @@
                 "edit":"Ver\u00e4nderung",
                 "remove":"entfernen"
             },
-            "btn_infos" : "Info"
+            "btn_infos":"Info"
         },
         "answer_survey2":{
             "addComment":"Klicken Sie auf einen Kommentar hinzuf\u00fcgen",
@@ -1161,8 +1236,8 @@
                 "from":"von"
             }
         },
-        "modal_infos" : {
-            "title" : "Hilfe"
+        "modal_infos":{
+            "title":"Hilfe"
         }
     }
 }

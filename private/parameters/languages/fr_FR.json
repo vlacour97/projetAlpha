@@ -546,7 +546,13 @@
             "expand": "Étendre",
             "collapse": "Réduire",
             "responses_rate": "Taux de <span class=\"fw-semi-bold\">Réponses</span>",
-            "responses_rate_description": "Répartition de taux de réponses des questionnaires"
+            "responses_rate_description": "Répartition de taux de réponses des questionnaires",
+            "widget" : {
+                "empty" : "Questionnaires Vides",
+                "finish" : "Questionnaires Remplis",
+                "validate" : "Questionnaires Validés",
+                "nbConnection" : "Nombre de connexions"
+            }
         },
         "admin_studentList": {
             "previous": "Accueil",

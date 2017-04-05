@@ -36,7 +36,7 @@ function initLineStats(){
                     xLabelFormat: function(d){
                         return d.getDate()+'/'+(d.getMonth()+1);
                     },
-                    labels: ['Nombre de connexions'],
+                    labels: [widgetText.nbConnection],
                     lineColors: ['#88C4EE']
                 });
             }
@@ -48,9 +48,9 @@ function initDonutStatsAdmin(){
     Morris.Donut({
         element: 'DonutStatsAdmin',
         data: [
-            {label: "Questionnaires Vides", value: responses.empty},
-            {label: "Questionnaires Remplis", value: responses.finish},
-            {label: "Questionnaires Validés", value: responses.validate}
+            {label: widgetText.empty, value: responses.empty},
+            {label: widgetText.finish, value: responses.finish},
+            {label: widgetText.validate, value: responses.validate}
         ],
         colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
     });
@@ -62,9 +62,9 @@ function initDonutStatsTE(){
     Morris.Donut({
         element: 'DonutStatsTE',
         data: [
-            {label: "Questionnaires Vides", value: responses.empty},
-            {label: "Questionnaires Remplis", value: responses.finish},
-            {label: "Questionnaires Validés", value: responses.validate}
+            {label: widgetText.empty, value: responses.empty},
+            {label: widgetText.finish, value: responses.finish},
+            {label: widgetText.validate, value: responses.validate}
         ],
         colors: ['#F7653F', '#F8C0A2', '#e6e6e6']
     });
