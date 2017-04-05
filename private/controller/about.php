@@ -10,11 +10,8 @@ $html = new \general\HTML();
 $gabarit = \general\Language::translate_gabarit('pages/about');
 
 //Integration des fichiers
-$script_vendor = array(
-    'messenger/build/js/messenger.js',
-    'messenger/build/js/messenger-theme-flat.js'
-);
-$script = array('create_account.js');
+$script_vendor = array();
+$script = array();
 
 $html->open();
 $html->sidebar();
