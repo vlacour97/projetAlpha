@@ -178,35 +178,35 @@
         "notifications":{
             "add_post":{
                 "value":"/ Name_user ver\u00f6ffentlichte einen zug\u00e4nglichen Artikel auf Ihrer Timeline",
-                "icon":"fa-fa Globus"
+                "icon":"fa-fa globe"
             },
             "comment_post":{
                 "value":"{name_publisher} auf Ver\u00f6ffentlichung kommentiert",
-                "icon":"fa fa-how"
+                "icon":"fa fa-comment"
             },
             "like_post":{
                 "value":"{name_user} mochte Ihre Publikation",
-                "icon":"fa fa-Daumen-up"
+                "icon":"fa fa-thumbs-up"
             },
             "wait_survey":{
                 "value":"Sie haben eine anh\u00e4ngige Quiz",
-                "icon":"fa fa-o-Uhr"
+                "icon":"fa fa-clock-o"
             },
             "complete_survey":{
                 "value":"Einer Ihrer Frageb\u00f6gen wurden ausgef\u00fcllt",
-                "icon":"fa-fa-Check"
+                "icon":"fa fa-check"
             },
             "validate_survey":{
                 "value":"Einer Ihrer Fragebogen wurde validiert",
-                "icon":"fa-fa-Check"
+                "icon":"fa fa-check"
             },
             "autorised_publication":{
                 "value":"Sie sind berechtigt, ver\u00f6ffentlichen",
-                "icon":"fa-fa Megafon"
+                "icon":"fa fa-bullhorn"
             },
             "update_survey":{
                 "value":"Die Frageb\u00f6gen wurden aktualisiert und Antworten auf gel\u00f6scht questionnairex",
-                "icon":"fa fa-Ausrufungs-Delta"
+                "icon":"fa fa-exclamation-triangle"
             }
         },
         "weather":{

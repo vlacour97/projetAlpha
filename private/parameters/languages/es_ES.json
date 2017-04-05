@@ -178,35 +178,35 @@
         "notifications":{
             "add_post":{
                 "value":"{name_user} public\u00f3 un art\u00edculo accesible en la l\u00ednea de tiempo",
-                "icon":"fa-fa mundo"
+                "icon":"fa fa-globe"
             },
             "comment_post":{
                 "value":"Name_publisher  comentado publicaci\u00f3n",
-                "icon":"fa fa-how"
+                "icon":"fa fa-comment"
             },
             "like_post":{
                 "value":"{name_user} le gusta su publicaci\u00f3n",
-                "icon":"fa fa-pulgar hacia arriba"
+                "icon":"fa fa-thumbs-up"
             },
             "wait_survey":{
                 "value":"Usted tiene una prueba pendientes",
-                "icon":"fa fa-o-reloj"
+                "icon":"fa fa-clock-o"
             },
             "complete_survey":{
                 "value":"Uno de los cuestionarios se completaron",
-                "icon":"fa-fa cheque"
+                "icon":"fa fa-check"
             },
             "validate_survey":{
                 "value":"Uno de su cuestionario ha sido validado",
-                "icon":"fa-fa cheque"
+                "icon":"fa fa-check"
             },
             "autorised_publication":{
                 "value":"Se le permite publicar",
-                "icon":"fa-fa meg\u00e1fono"
+                "icon":"fa fa-bullhorn"
             },
             "update_survey":{
                 "value":"Los cuestionarios se actualizaron y respuestas a questionnairex borrado",
-                "icon":"fa fa-exclamaci\u00f3n-delta"
+                "icon":"fa fa-exclamation-triangle"
             }
         },
         "weather":{

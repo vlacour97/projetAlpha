@@ -178,35 +178,35 @@
         "notifications":{
             "add_post":{
                 "value":"{name_user} \u306f\u3001\u3042\u306a\u305f\u306e\u30bf\u30a4\u30e0\u30e9\u30a4\u30f3\u4e0a\u3067\u30a2\u30af\u30bb\u30b9\u53ef\u80fd\u306a\u8a18\u4e8b\u3092\u63b2\u8f09\u3057\u307e\u3057\u305f",
-                "icon":"FA-FA\u30b0\u30ed\u30fc\u30d6"
+                "icon":"fa-fa globe"
             },
             "comment_post":{
                 "value":"{name_publisher}\u51fa\u7248\u7269\u306b\u30b3\u30e1\u30f3\u30c8",
-                "icon":"FA FA-\u65b9\u6cd5"
+                "icon":"fa fa-comment"
             },
             "like_post":{
                 "value":"\u306f{Name_user}\u3042\u306a\u305f\u306e\u51fa\u7248\u7269\u3092\u8a00\u3063\u3066\u3044\u307e\u3059",
-                "icon":"FA FA-\u89aa\u6307\u30a2\u30c3\u30d7"
+                "icon":"fa fa-thumbs-up"
             },
             "wait_survey":{
                 "value":"\u3042\u306a\u305f\u306f\u4fdd\u7559\u4e2d\u306e\u30af\u30a4\u30ba\u3092\u6301\u3063\u3066\u3044\u307e\u3059",
-                "icon":"FA FA-O-\u30af\u30ed\u30c3\u30af"
+                "icon":"fa fa-clock-o"
             },
             "complete_survey":{
                 "value":"\u3042\u306a\u305f\u306e\u30a2\u30f3\u30b1\u30fc\u30c8\u306e\u4e00\u3064\u304c\u5b8c\u6210\u3057\u307e\u3057\u305f",
-                "icon":"FA-FA\u30c1\u30a7\u30c3\u30af"
+                "icon":"fa fa-check"
             },
             "validate_survey":{
                 "value":"\u3042\u306a\u305f\u306e\u30a2\u30f3\u30b1\u30fc\u30c8\u306e\u4e00\u3064\u306f\u691c\u8a3c\u3055\u308c\u3066\u3044\u307e\u3059",
-                "icon":"FA-FA\u30c1\u30a7\u30c3\u30af"
+                "icon":"fa fa-check"
             },
             "autorised_publication":{
                 "value":"\u3042\u306a\u305f\u306f\u516c\u958b\u3092\u8a31\u53ef\u3055\u308c\u3066\u3044\u307e\u3059",
-                "icon":"FA-FA\u62e1\u58f0\u5668"
+                "icon":"fa fa-bullhorn"
             },
             "update_survey":{
                 "value":"\u30a2\u30f3\u30b1\u30fc\u30c8\u306f\u524a\u9664questionnairex\u306b\u66f4\u65b0\u3068\u5fdc\u7b54\u3057\u3001",
-                "icon":"FA FA-\u611f\u5606\u7b26\u30fb\u30c7\u30eb\u30bf"
+                "icon":"fa fa-exclamation-triangle"
             }
         },
         "weather":{
