@@ -293,7 +293,7 @@ class HTML {
         ob_start();
         ?>
         <!DOCTYPE html>
-        <html>
+        <html lang="<?php echo substr(Log::get_lang(),0,2) ?>">
         <head>
             <title><?php if(Log::isLogged()) echo Navigation::get_title(); elseif(Install::APP_is_installed()) echo Config::getName(); ?></title>
             <!-- Applications Links -->
