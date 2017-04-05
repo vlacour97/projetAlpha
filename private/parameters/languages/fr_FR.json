@@ -292,7 +292,8 @@
             "3001" : "L'utilisateur est déjà activé",
             "3002" : "Aucun résultat pour : $search",
             "3003" : "Suppression impossible : Il doit y avoir au moins un compte administrateur actif",
-            "3004" : "Pas de clé pour l'API OpenWeatherMap"
+            "3004" : "Pas de clé pour l'API OpenWeatherMap",
+            "3005" : "Vous n'avez les droits suffisants pour effectuer cette action"
         },
         "user_type" : [
             "Administrateur",

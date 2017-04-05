@@ -379,7 +379,6 @@ $(function(){
                 checkedLines.each(function (key, content) {
                     values[key] = $(content).data('id');
                 });
-                console.log(values);
                 values.forEach(function (content) {
                     var urlTmp = url + '?action=delete_student&id=' + content;
                     $.get(urlTmp)
@@ -413,7 +412,7 @@ $(function(){
                         datas = jQuery.parseJSON(datas);
                         if (datas.response) {
                             $('#DeleteModal').modal('hide');
-                            $("a[data-id=" + currentLineId + "]").parent().parent().addClass('selected');
+                            $("a[data-id=" + currentLineId + "]").parent().parent().parent().addClass('selected');
                             table.row('.selected').remove().draw(false);
                         }
                         else {
@@ -559,5 +558,4 @@ $(function(){
             });
         });
     }
-
 });
