@@ -103,6 +103,6 @@
     {
         "id" : "about",
         "logo" : "fa fa-globe",
-        "inNavigation" : true
+        "inNavigation" : false
     }
 ]
